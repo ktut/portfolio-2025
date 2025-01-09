@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "vue": "^3.2.13"
+    "vue": "^3.0.0",
+    "vue-class-component": "^8.0.0-0",
+    "vue-router": "^4.0.12"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -18,7 +20,10 @@
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
     "eslint": "^7.32.0",
-    "eslint-plugin-vue": "^8.0.3"
+    "eslint-plugin-vue": "^8.0.3",
+    "sass": "^1.48.0",
+    "sass-loader": "^10.2.1",
+    "typescript": "4.9.5"
   },
   "eslintConfig": {
     "root": true,
@@ -26,18 +31,32 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/vue3-essential",
-      "eslint:recommended"
+      "plugin:vue/vue3-recommended",
+      "eslint:recommended",
+      "@vue/prettier",
+      "@vue/typescript"
     ],
     "parserOptions": {
-      "parser": "@babel/eslint-parser"
+      "parser": "@typescript-eslint/parser"
     },
-    "rules": {}
+    "rules": {
+      "vue/component-tags-order": [
+        "warn",
+        {
+          "order": [
+            "script",
+            "template",
+            "style"
+          ]
+        }
+      ],
+      "vue/attribute-hyphenation": "off",
+      "vue/require-default-prop": "off"
+    }
   },
   "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead",
-    "not ie 11"
+    "> 0.5%",
+    "not IE 11",
+    "not dead"
   ]
 }
