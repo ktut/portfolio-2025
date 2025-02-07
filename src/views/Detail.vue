@@ -1,13 +1,14 @@
 <script>
-import { RouterLink } from "vue-router";
 export default {
-  name: "DetailView",
-};
+  name: 'DetailView'
+}
 </script>
 
 <template>
   <div>
-    <RouterLink to="/"> back to home </RouterLink>
+    <RouterLink to="/">
+      back to home
+    </RouterLink>
   </div>
   <figure>
     <img
@@ -15,7 +16,7 @@ export default {
       alt="test image"
       src="../assets/test.jpg"
       style="width: 100%"
-    />
+    >
   </figure>
 </template>
 

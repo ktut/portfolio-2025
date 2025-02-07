@@ -1,34 +1,28 @@
 <script>
-import HelloWorld from "@/components/HelloWorld.vue";
+import HelloWorld from '@/components/HelloWorld.vue'
+import { startViewTransition } from 'vue-view-transitions'
 
 export default {
-  name: "HomeView",
+  name: 'HomeView',
   components: {
-    HelloWorld,
+    HelloWorld
   },
   methods: {
     async animate() {
-      const viewTransition = startViewTransition();
-      await viewTransition.captured;
-      style.value.backgroundColor =
-        style.value.backgroundColor === "aqua" ? "crimson" : "aqua";
+      const viewTransition = startViewTransition()
+      await viewTransition.captured
     },
     async transform() {
-      const viewTransition = startViewTransition();
-      await viewTransition.captured;
-      currentFigure.value =
-        currentFigure.value === "square" ? "circle" : "square";
+      const viewTransition = startViewTransition()
+      await viewTransition.captured
     },
     async delayTransform() {
       const viewTransition = startViewTransition(async () => {
-        await wait(1000);
-      });
-      await viewTransition.captured;
-      currentFigure.value =
-        currentFigure.value === "square" ? "circle" : "square";
-    },
-  },
-};
+      })
+      await viewTransition.captured
+    }
+  }
+}
 </script>
 
 <template>
@@ -39,12 +33,17 @@ export default {
         v-view-transition-name="'img'"
         src="../assets/test.jpg"
         style="width: 200px"
-      />
+      >
       <figcaption>
-        <RouterLink to="/detail">detail</RouterLink>
+        <RouterLink to="/detail">
+          detail
+        </RouterLink>
       </figcaption>
     </figure>
-    <img alt="Vue logo" src="../assets/logo.png" />
+    <img
+      alt="Vue logo"
+      src="../assets/logo.png"
+    >
     <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
 </template>
