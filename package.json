@@ -24,10 +24,12 @@
     "@vue/eslint-config-typescript": "^11.0.3",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^9.0.0",
-    "prettier": "^2.8.8",
+    "prettier": "^2.x",
     "sass": "^1.83.4",
     "sass-loader": "^10.2.1",
-    "typescript": "4.9.5"
+    "typescript": "4.9.5",
+    "eslint-config-prettier": "^8.x",
+    "eslint-plugin-prettier": "^4.x"
   },
   "eslintConfig": {
     "root": true,
@@ -55,7 +57,9 @@
         }
       ],
       "vue/attribute-hyphenation": "off",
-      "vue/require-default-prop": "off"
+      "vue/require-default-prop": "off",
+      "indent": ["error", 2],
+      "vue/script-indent": ["error", 2, { "baseIndent": 0 }]
     }
   },
   "browserslist": [
