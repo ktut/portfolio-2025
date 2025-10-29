@@ -38,7 +38,9 @@ export default {
   transition: transform 0.6s ease-out;
 
   video {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 250px;
     height: 522px;
     display: block;
@@ -46,7 +48,9 @@ export default {
     border-radius: 45px;
     -webkit-filter: drop-shadow(5px 13px 9px rgba(0, 0, 0, .8));
     filter: drop-shadow(5px 13px 9px rgba(0, 0, 0, .8));
-    z-index: 2;
+    -webkit-transform: translateZ(5px);
+    transform: translateZ(5px);
+    z-index: 3;
   }
 
   &:before {
@@ -61,28 +65,10 @@ export default {
     background-image: linear-gradient(to bottom, hsl(0, 0%, 50%), hsl(0, 0%, 75%));
     -webkit-border-radius: 45px;
     border-radius: 45px;
-    -webkit-transform: translateZ(-10px);
-    transform: translateZ(-10px);
+    -webkit-transform: translateZ(-5px);
+    transform: translateZ(-5px);
     pointer-events: none;
     z-index: 0;
-  }
-
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 10px;
-    height: 522px;
-    background-color: #1a1a1a;
-    background-image: -webkit-linear-gradient(left, hsl(0, 0%, 10%), hsl(0, 0%, 25%));
-    background-image: linear-gradient(to right, hsl(0, 0%, 10%), hsl(0, 0%, 25%));
-    -webkit-transform: translateX(-5px) rotateY(90deg);
-    transform: translateX(-5px) rotateY(90deg);
-    -webkit-transform-origin: right center;
-    transform-origin: right center;
-    pointer-events: none;
-    z-index: 1;
   }
 }
 </style>
