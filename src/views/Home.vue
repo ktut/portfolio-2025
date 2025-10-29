@@ -36,15 +36,14 @@ export default {
 
 <template>
   <div class="home" v-bind:class="{ loaded: loaded }">
-    <h2>Page transition</h2>
-    <figure style="margin: 0">
-      <img v-view-transition-name="'img'" src="../assets/test.jpg" style="width: 200px">
-      <figcaption>
-        <RouterLink to="/detail">
-          detail
-        </RouterLink>
-      </figcaption>
-    </figure>
+    <RouterLink to="/chase">
+      <figure style="margin: 0">
+        <img v-view-transition-name="'img'" src="../assets/test.jpg" style="width: 200px">
+        <figcaption>
+          Chase Performance Dashboard
+        </figcaption>
+      </figure>
+    </RouterLink>
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
