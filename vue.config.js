@@ -8,5 +8,13 @@ module.exports = defineConfig({
         additionalData: `@import "@/styles/_variables.scss";`
       }
     }
+  },
+  chainWebpack: (config) => {
+    config.module
+      .rule('mov')
+      .test(/\.mov$/)
+      .use('file-loader')
+      .loader('file-loader')
+      .end()
   }
 })
