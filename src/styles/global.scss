@@ -1,0 +1,32 @@
+// Global Styles
+// This file contains global styles that apply to the entire application
+
+// Reset and base styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.webkitForceHardwareAcceleration {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// You can add more global styles here:
+// - Typography
+// - Colors (variables)
+// - Mixins
+// - Layout utilities
+// - etc.

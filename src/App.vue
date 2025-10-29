@@ -1,18 +1,25 @@
 <script>
+import NavBar from './components/NavBar.vue'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    NavBar
+  },
+  data() {
+    return {
+      // is app loaded
+      loaded: false,
+    }
+  },
+  mounted() {
+    this.loaded = true;
+  },
 }
 </script>
 
 <template>
-  <nav>
-    <router-link to="/">
-      Home
-    </router-link>
-    <router-link to="/about">
-      About
-    </router-link>
-  </nav>
+  <NavBar v-bind:class="{ loaded: loaded }" />
   <router-view />
 </template>
 
@@ -23,19 +30,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
 }
 </style>
