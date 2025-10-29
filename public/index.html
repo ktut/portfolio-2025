@@ -1,17 +1,100 @@
 <!DOCTYPE html>
 <html lang="">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-26343135-2"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'UA-26343135-2')
+    </script>
+
+    <title>Ramzi Dreessen — RKDVIS.COM</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- SEO meta tags -->
+    <meta
+      name="description"
+      content="I'm a web developer, designer, photographer and videographer based in Chicago."
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="https://rkdvis.com/favicon.png"
+    />
+
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="Portfolio of web developer, designer, photographer and videographer Ramzi Dreessen"
+    />
+    <meta property=”og:image”
+    content=”https://ktut.github.io/portfolio/assets/william.jpg” />
+    <meta property="og:url" content="https://www.rkdvis.com/" />
+    <meta property="og:site_name" content="RKDVIS.COM" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:description"
+      content="Portfolio of web developer, designer, photographer and videographer Ramzi Dreessen"
+    />
+    <meta name="twitter:title" content="Ramzi Dreessen" />
+    <meta name="twitter:site" content="@rdreessen" />
+    <meta name="twitter:creator" content="@rdreessen" />
   </head>
   <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
+    <!-- Vue app renders here -->
     <div id="app"></div>
-    <!-- built files will be auto injected -->
+
+    <!-- If no JS or older browser, just show some text -->
+    <style>
+      @supports not (display: flex) {
+        .older-browser {
+          display: block !important;
+        }
+        #app {
+          display: none !important;
+        }
+      }
+    </style>
+
+    <noscript>
+      <style>
+        .older-browser {
+          display: block !important;
+        }
+        #app {
+          display: none !important;
+        }
+      </style>
+    </noscript>
+    <div class="older-browser" style="display: none">
+      <p>
+        Looks like you’re using an older browser or you've disabled Javascript.
+        So much for all the flashy stuff I was going to show you.
+      </p>
+      <p>
+        Anyways, I'm Ramzi. I’m a web designer and developer, photographer,
+        videographer, and more.
+      </p>
+      <p>
+        Reach out to me at
+        <a href="mailto:ramzidreessen@gmail.com">ramzidreessen@gmail.com</a> if
+        you'd like to connect.
+      </p>
+    </div>
   </body>
 </html>
