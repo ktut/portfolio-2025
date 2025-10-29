@@ -21,6 +21,6 @@ export default {
 </script>
 
 <template>
-  <NavBar v-bind:class="{ loaded: loaded }" />
+  <NavBar :class="{ loaded: loaded }" />
   <router-view />
 </template>

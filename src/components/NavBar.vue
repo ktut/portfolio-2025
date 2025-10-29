@@ -8,16 +8,16 @@ export default {
   <nav>
     <div class="logo">
       <div class="letter r webkitForceHardwareAcceleration">
-        <div class="top webkitForceHardwareAcceleration"></div>
-        <div class="bottom webkitForceHardwareAcceleration"></div>
+        <div class="top webkitForceHardwareAcceleration" />
+        <div class="bottom webkitForceHardwareAcceleration" />
       </div>
       <div class="letter k webkitForceHardwareAcceleration">
-        <div class="top webkitForceHardwareAcceleration"></div>
-        <div class="bottom webkitForceHardwareAcceleration"></div>
+        <div class="top webkitForceHardwareAcceleration" />
+        <div class="bottom webkitForceHardwareAcceleration" />
       </div>
       <div class="letter d webkitForceHardwareAcceleration">
-        <div class="top webkitForceHardwareAcceleration"></div>
-        <div class="bottom webkitForceHardwareAcceleration"></div>
+        <div class="top webkitForceHardwareAcceleration" />
+        <div class="bottom webkitForceHardwareAcceleration" />
       </div>
     </div>
     <div class="nav-links">
@@ -40,17 +40,17 @@ nav {
 
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: $textColor;
 
     &.router-link-exact-active {
-      color: color(display-p3 0.15 0.81 0.42);
+      color: $linkActiveColor;
     }
   }
 
   .letter,
   .letter>div,
   .letter>div>div {
-    border: 0px solid #2c3e50;
+    border: 0px solid $textColor;
     border-radius: 0px;
     opacity: 0;
   }

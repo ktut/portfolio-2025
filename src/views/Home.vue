@@ -9,6 +9,9 @@ export default {
       loaded: false,
     }
   },
+  mounted() {
+    this.loaded = true;
+  },
   methods: {
     async animate() {
       const viewTransition = startViewTransition()
@@ -24,17 +27,21 @@ export default {
       await viewTransition.captured
     }
   },
-  mounted() {
-    this.loaded = true;
-  },
 }
 </script>
 
 <template>
-  <div class="home" v-bind:class="{ loaded: loaded }">
+  <div
+    class="home"
+    :class="{ loaded: loaded }"
+  >
     <RouterLink to="/chase">
       <figure style="margin: 0">
-        <img v-view-transition-name="'img'" src="../assets/test.jpg" style="width: 200px">
+        <img
+          v-view-transition-name="'img'"
+          src="../assets/test.jpg"
+          style="width: 200px"
+        >
         <figcaption>
           Chase Performance Dashboard
         </figcaption>

@@ -1,8 +1,8 @@
 // Global Styles
 // This file contains global styles that apply to the entire application
 
-// - Colors (variables)
-$redPunch: color(display-p3 1 0 0.1);
+// Import variables
+@import './variables';
 
 // Reset and base styles
 * {
@@ -22,11 +22,11 @@ html {
 }
 
 body {
-  background: #eee;
+  background: $backgroundColor;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  color: $textColor;
 }
 
 #app {
@@ -34,13 +34,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: $textColor;
 }
 
 // - Typography
-body {
-  background: #eee;
-}
 
 h1,
 h2 {
@@ -58,7 +55,7 @@ h2 {
   line-height: 130%;
   margin-bottom: 20px;
   margin-top: 20px;
-  color: #333;
+  color: $headingColor;
 }
 
 p {

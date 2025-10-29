@@ -12,7 +12,12 @@ export default {
       </RouterLink>
     </div>
     <figure>
-      <img v-view-transition-name="'img'" alt="test image" src="../assets/test.jpg" style="width: 100%">
+      <img
+        v-view-transition-name="'img'"
+        alt="test image"
+        src="../assets/test.jpg"
+        style="width: 100%"
+      >
     </figure>
   </div>
 </template>
