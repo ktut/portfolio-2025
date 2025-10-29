@@ -50,7 +50,7 @@ nav {
   .letter,
   .letter>div,
   .letter>div>div {
-    border: 0px solid black;
+    border: 0px solid #2c3e50;
     border-radius: 0px;
     opacity: 0;
   }
@@ -93,7 +93,7 @@ nav {
 
   .logo {
     display: flex;
-    width: 150px;
+    width: 140px;
   }
 
   &.loaded {
@@ -115,24 +115,24 @@ nav {
 
     .r {
       >div {
-        border-left: 10px solid black;
+        border-left: 10px solid #2c3e50;
         border-top-right-radius: 10em;
       }
 
       .top {
-        border-right: 10px solid black;
+        border-right: 10px solid #2c3e50;
         border-bottom-right-radius: 10em;
       }
 
       .bottom {
-        border-right: 10px solid black;
+        border-right: 10px solid #2c3e50;
       }
     }
 
     .k {
       >div {
-        border-left: 10px solid black;
-        border-right: 10px solid black;
+        border-left: 10px solid #2c3e50;
+        border-right: 10px solid #2c3e50;
       }
 
       .top {
@@ -146,8 +146,8 @@ nav {
 
     .d {
       >div {
-        border-left: 10px solid black;
-        border-right: 10px solid black;
+        border-left: 10px solid #2c3e50;
+        border-right: 10px solid #2c3e50;
       }
 
       .top {
