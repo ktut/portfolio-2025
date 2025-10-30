@@ -92,12 +92,56 @@ export default {
         </p>
       </div>
 
+      <div class="mobile-section">
+        <div class="mobile-showcase">
+          <iPhone />
+        </div>
+        <p>The mobile interface provides advertisers with on-the-go access to campaign performance, enabling quick
+          decision-making and real-time optimization.</p>
+        <p>Built with responsive design principles, the dashboard adapts seamlessly across devices. Advertisers can
+          monitor campaign metrics, adjust budgets, and analyze performance trends directly from their mobile devices,
+          ensuring they never miss critical insights or opportunities for optimization.</p>
+      </div>
+
       <div class="metrics-section">
         <h2 class="section-title">Platform Impact</h2>
         <div class="metrics-grid">
           <div v-for="metric in metrics" :key="metric.label" class="metric-card">
             <div class="metric-value">{{ metric.value }}</div>
             <div class="metric-label">{{ metric.label }}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail-section">
+        <h2 class="section-title">Design Details</h2>
+        <p class="section-intro">
+          Every interaction was carefully crafted to provide a seamless user experience. From advanced filtering to
+          real-time search feedback, these details showcase the polish and precision built into the platform.
+        </p>
+        <div class="detail-grid">
+          <div class="detail-item">
+            <video autoplay loop muted playsinline src="@/assets/PD-detail-campaigns.mov"></video>
+            <h3>Campaign Filtering</h3>
+            <p>Sophisticated filtering system with intuitive controls and smooth transitions for managing complex
+              campaign hierarchies.</p>
+          </div>
+          <div class="detail-item large">
+            <video autoplay loop muted playsinline src="@/assets/PD-detail-dates.mov"></video>
+            <h3>Custom Date Picker</h3>
+            <p>Built with TypeScript and D3.js, featuring segment selection and precise date range controls for detailed
+              analytics.</p>
+          </div>
+          <div class="detail-item large">
+            <video autoplay loop muted playsinline src="@/assets/PD-detail-download.mov"></video>
+            <h3>Report Downloads</h3>
+            <p>Streamlined report generation with format options and progress indicators for exporting campaign data.
+            </p>
+          </div>
+          <div class="detail-item">
+            <video autoplay loop muted playsinline src="@/assets/PD-detail-search.mov"></video>
+            <h3>Real-time Search</h3>
+            <p>Instant search feedback with live copy updates as you type, providing immediate visual confirmation.</p>
           </div>
         </div>
       </div>
@@ -113,14 +157,6 @@ export default {
         </ul>
       </div>
 
-      <div class="mobile-section">
-        <h2 class="section-title">Mobile Experience</h2>
-        <p>The mobile interface provides advertisers with on-the-go access to campaign performance, enabling quick
-          decision-making and real-time optimization.</p>
-        <div class="mobile-showcase">
-          <iPhone />
-        </div>
-      </div>
     </section>
   </div>
 </template>
@@ -324,6 +360,61 @@ export default {
   }
 }
 
+.detail-section {
+  margin-bottom: 4rem;
+
+  .section-intro {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #4a4a4a;
+    margin-bottom: 3rem;
+    max-width: 800px;
+  }
+
+  .detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+
+  .detail-item {
+    video {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      margin-bottom: 1rem;
+      display: block;
+      background-color: #f5f5f5;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #4a4a4a;
+      margin: 0;
+    }
+
+    &.large {
+      grid-column: span 2;
+
+      video {
+        max-width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
 .features-section {
   margin-bottom: 4rem;
 
@@ -349,18 +440,48 @@ export default {
 
 .mobile-section {
   margin-bottom: 4rem;
+  display: flow-root;
 
   p {
     font-size: 1.05rem;
     line-height: 1.8;
     color: #4a4a4a;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
   }
 
   .mobile-showcase {
-    display: flex;
-    justify-content: center;
-    padding: 2rem 0;
+    float: right;
+    margin-left: 3rem;
+    margin-bottom: 1.5rem;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .detail-section {
+    .detail-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .detail-item.large {
+      grid-column: span 1;
+
+      video {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .mobile-section {
+    .mobile-showcase {
+      float: none;
+      margin-left: 0;
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+    }
   }
 }
 
