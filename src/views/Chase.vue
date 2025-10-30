@@ -126,22 +126,22 @@ export default {
             <p>Sophisticated filtering system with intuitive controls and smooth transitions for managing complex
               campaign hierarchies.</p>
           </div>
-          <div class="detail-item large">
+          <div class="detail-item">
             <video autoplay loop muted playsinline src="@/assets/PD-detail-dates.mov"></video>
             <h3>Custom Date Picker</h3>
             <p>Built with TypeScript and D3.js, featuring segment selection and precise date range controls for detailed
               analytics.</p>
           </div>
-          <div class="detail-item large">
-            <video autoplay loop muted playsinline src="@/assets/PD-detail-download.mov"></video>
-            <h3>Report Downloads</h3>
-            <p>Streamlined report generation with format options and progress indicators for exporting campaign data.
-            </p>
-          </div>
           <div class="detail-item">
             <video autoplay loop muted playsinline src="@/assets/PD-detail-search.mov"></video>
             <h3>Real-time Search</h3>
             <p>Instant search feedback with live copy updates as you type, providing immediate visual confirmation.</p>
+          </div>
+          <div class="detail-item full-width">
+            <video autoplay loop muted playsinline src="@/assets/PD-detail-download.mov"></video>
+            <h3>Report Downloads</h3>
+            <p>Streamlined report generation with format options and progress indicators for exporting campaign data.
+            </p>
           </div>
         </div>
       </div>
@@ -223,9 +223,21 @@ export default {
 }
 
 .content-wrapper {
-  max-width: 1000px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 4rem 2rem;
+
+  h2,
+  h3,
+  p {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  p {
+    text-align: left;
+  }
 }
 
 .project-header {
@@ -373,20 +385,29 @@ export default {
 
   .detail-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 3rem;
     margin-top: 2rem;
+
+    @media (min-width: 840px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 
   .detail-item {
+    text-align: center;
+
     video {
       width: 100%;
+      max-width: 400px;
       height: auto;
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       margin-bottom: 1rem;
       display: block;
       background-color: #f5f5f5;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     h3 {
@@ -401,15 +422,22 @@ export default {
       line-height: 1.6;
       color: #4a4a4a;
       margin: 0;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    &.large {
-      grid-column: span 2;
+    &.full-width {
+      @media (min-width: 840px) {
+        grid-column: 1 / -1;
+      }
 
       video {
-        max-width: 70%;
-        margin-left: auto;
-        margin-right: auto;
+        max-width: 800px;
+      }
+
+      p {
+        max-width: 800px;
       }
     }
   }
@@ -440,7 +468,6 @@ export default {
 
 .mobile-section {
   margin-bottom: 4rem;
-  display: flow-root;
 
   p {
     font-size: 1.05rem;
@@ -458,21 +485,6 @@ export default {
 }
 
 @media (max-width: 768px) {
-  .detail-section {
-    .detail-grid {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-
-    .detail-item.large {
-      grid-column: span 1;
-
-      video {
-        max-width: 100%;
-      }
-    }
-  }
-
   .mobile-section {
     .mobile-showcase {
       float: none;
