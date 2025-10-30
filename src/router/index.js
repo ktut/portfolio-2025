@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import ChaseView from '../views/Chase.vue'
+import ChicagoMagView from '../views/ChicagoMag.vue'
 import { startViewTransition } from 'vue-view-transitions'
 
 const routes = [
@@ -19,6 +20,11 @@ const routes = [
     path: '/chase',
     name: 'chase',
     component: ChaseView
+  },
+  {
+    path: '/chicagomagazine',
+    name: 'chicagomagazine',
+    component: ChicagoMagView
   }
 ]
 

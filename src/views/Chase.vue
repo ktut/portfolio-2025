@@ -167,39 +167,6 @@ export default {
   background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
 }
 
-.back-link {
-  padding: 2rem 2rem 0;
-  max-width: 1200px;
-  margin: 0 auto;
-
-  a {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #2c3e50;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 0.95rem;
-    -webkit-transition: color 0.2s ease;
-    transition: color 0.2s ease;
-
-    .arrow {
-      font-size: 1.2rem;
-      -webkit-transition: transform 0.2s ease;
-      transition: transform 0.2s ease;
-    }
-
-    &:hover {
-      color: $redPunch;
-
-      .arrow {
-        -webkit-transform: translateX(-4px);
-        transform: translateX(-4px);
-      }
-    }
-  }
-}
-
 .hero {
   max-width: 1400px;
   margin: 0 auto;

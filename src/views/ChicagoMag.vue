@@ -14,6 +14,11 @@ export default {
 
 <template>
   <div class="chicago-mag" :class="{ loaded: loaded }">
+    <div class="back-link">
+      <RouterLink to="/">
+        <span class="arrow">←</span> Back to Home
+      </RouterLink>
+    </div>
     <div class="video-bg">
       <video src="../assets/vid-1.mov" autoplay loop muted playsinline></video>
     </div>

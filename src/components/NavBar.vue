@@ -37,9 +37,6 @@ export default {
           <line x1="3.5" y1="11.5" x2="11.5" y2="11.5" stroke="currentColor" stroke-width="1" />
           <line x1="3.5" y1="14" x2="11.5" y2="14" stroke="currentColor" stroke-width="1" />
           <line x1="3.5" y1="16.5" x2="11.5" y2="16.5" stroke="currentColor" stroke-width="1" />
-          <!-- Download icon box (overlapping on the right) -->
-          <rect x="16" y="8" width="14" height="14" rx="2" fill="currentColor" opacity="0.1" stroke="currentColor"
-            stroke-width="1.5" />
           <!-- Download arrow -->
           <polyline points="20 15 23 18 26 15" stroke="currentColor" stroke-width="1.8" fill="none" />
           <line x1="23" y1="18" x2="23" y2="11" stroke="currentColor" stroke-width="1.8" />
