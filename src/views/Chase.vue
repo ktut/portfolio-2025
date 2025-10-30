@@ -17,7 +17,7 @@ export default {
       </RouterLink>
     </div>
     <figure class="chase-image">
-      <img v-view-transition-name="'img'" alt="test image" src="../assets/test.jpg" style="width: 100%">
+      <img v-view-transition-name="'img'" alt="test image" src="../assets/Chase-portfolio-mock.jpg" style="width: 100%">
     </figure>
     <iPhone />
   </div>
