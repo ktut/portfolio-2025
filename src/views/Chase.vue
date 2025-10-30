@@ -47,11 +47,6 @@ export default {
 
 <template>
   <div class="chase">
-    <div class="back-link">
-      <RouterLink to="/">
-        <span class="arrow">←</span> Back to Home
-      </RouterLink>
-    </div>
 
     <section class="hero">
       <figure class="hero-image">

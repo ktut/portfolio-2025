@@ -1,12 +1,27 @@
 <script>
 export default {
-  name: 'NavBar'
+  name: 'NavBar',
+  computed: {
+    isHomePage() {
+      return this.$route.name === 'home'
+    }
+  },
+  methods: {
+    goHome() {
+      this.$router.push('/')
+    }
+  }
 }
 </script>
 
 <template>
   <nav>
-    <div class="logo">
+    <div :class="{ 'back-link': true, 'home-page': isHomePage }">
+      <RouterLink to="/">
+        <span class="arrow">←</span> Back to Home
+      </RouterLink>
+    </div>
+    <div class="logo" @click="goHome">
       <div class="letter r webkitForceHardwareAcceleration">
         <div class="top webkitForceHardwareAcceleration" />
         <div class="bottom webkitForceHardwareAcceleration" />
@@ -127,6 +142,7 @@ nav {
   }
 
   .logo {
+    cursor: pointer;
     transform: scaleX(0.0) scaleY(0.5);
   }
 

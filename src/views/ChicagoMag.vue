@@ -42,11 +42,6 @@ export default {
 
 <template>
   <div class="chicago-mag">
-    <div class="back-link">
-      <RouterLink to="/">
-        <span class="arrow">←</span> Back to Home
-      </RouterLink>
-    </div>
 
 
     <section class="hero">

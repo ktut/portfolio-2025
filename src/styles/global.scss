@@ -121,22 +121,16 @@ img {
 
 .back-link {
   text-align: left;
-  margin-bottom: 20px;
-  a {
-    color: $redPunch;
+  &.home-page {
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
   }
-}
-
-.back-link {
-  padding: 2rem 2rem 0;
-  max-width: 1200px;
-  margin: 0 auto;
-
   a {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    color: #2c3e50;
+    color: $redPunch;
     text-decoration: none;
     font-weight: 500;
     font-size: 0.95rem;
