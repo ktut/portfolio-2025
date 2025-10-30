@@ -144,8 +144,16 @@ figure {
 // Home page
 .home {
   .project-link {
+    position: relative;
     text-decoration: none;
     color: inherit;
+    &.cover .video-composite {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      @media (min-width: 840px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+    }
   }
 
   figure {

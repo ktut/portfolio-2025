@@ -30,6 +30,18 @@ export default {
         </figcaption>
       </figure>
     </RouterLink>
+    <RouterLink to="/chicagomagazine" class="project-link cover">
+      <figure>
+        <div class="video-composite">
+          <!-- <video src="../assets/Chicago-Magazine-portfolio-mock.mov" autoplay loop muted playsinline></video> -->
+        </div>
+        <figcaption>
+          <h3 class="title">Chicago Magazine editorial web design</h3>
+          <button class="cta">
+            View Projects <span class="unicode">&#x2197;</span></button>
+        </figcaption>
+      </figure>
+    </RouterLink>
 
     <LogoSlider />
   </main>
