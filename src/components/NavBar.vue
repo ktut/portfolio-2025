@@ -21,6 +21,30 @@ export default {
       </div>
     </div>
     <div class="nav-links">
+      <a href="/Resume-Ramzi-Dreessen-2025.pdf" download="Resume-Ramzi-Dreessen-2025.pdf"
+        class="social-icon resume-icon" aria-label="Download Resume">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="22" viewBox="0 0 32 24" fill="none"
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <!-- Back paper -->
+          <rect x="3" y="1" width="13" height="18" rx="1" fill="currentColor" opacity="0.15" stroke="none" />
+          <!-- Middle paper -->
+          <rect x="2" y="2" width="13" height="18" rx="1" fill="currentColor" opacity="0.25" stroke="none" />
+          <!-- Front paper -->
+          <rect x="1" y="3" width="13" height="18" rx="1" fill="none" stroke="currentColor" />
+          <!-- CV text lines -->
+          <line x1="3.5" y1="6" x2="6" y2="6" stroke="currentColor" stroke-width="1" />
+          <line x1="3.5" y1="9" x2="11.5" y2="9" stroke="currentColor" stroke-width="1" />
+          <line x1="3.5" y1="11.5" x2="11.5" y2="11.5" stroke="currentColor" stroke-width="1" />
+          <line x1="3.5" y1="14" x2="11.5" y2="14" stroke="currentColor" stroke-width="1" />
+          <line x1="3.5" y1="16.5" x2="11.5" y2="16.5" stroke="currentColor" stroke-width="1" />
+          <!-- Download icon box (overlapping on the right) -->
+          <rect x="16" y="8" width="14" height="14" rx="2" fill="currentColor" opacity="0.1" stroke="currentColor"
+            stroke-width="1.5" />
+          <!-- Download arrow -->
+          <polyline points="20 15 23 18 26 15" stroke="currentColor" stroke-width="1.8" fill="none" />
+          <line x1="23" y1="18" x2="23" y2="11" stroke="currentColor" stroke-width="1.8" />
+        </svg>
+      </a>
       <a href="https://www.linkedin.com/in/ramzidreessen/" target="_blank" rel="noopener noreferrer" class="social-icon"
         aria-label="LinkedIn">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -81,6 +105,12 @@ nav {
       svg {
         width: 20px;
         height: 20px;
+      }
+
+      &.resume-icon svg {
+        width: 32px;
+        height: 22px;
+        margin-right: -10px;
       }
 
       &:hover {
