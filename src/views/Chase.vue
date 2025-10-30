@@ -2,10 +2,10 @@
 import iPhone from '@/components/iPhone.vue'
 
 export default {
+  name: 'ChaseView',
   components: {
     iPhone
   },
-  name: 'ChaseView',
   data() {
     return {
       technologies: [
@@ -47,35 +47,64 @@ export default {
 
 <template>
   <main class="chase">
-
     <section class="hero">
       <figure class="hero-image">
-        <img v-view-transition-name="'img'" alt="Chase Performance Dashboard" src="../assets/Chase-portfolio-mock.jpg">
+        <img
+          v-view-transition-name="'img'"
+          alt="Chase Performance Dashboard"
+          src="../assets/Chase-portfolio-mock.jpg"
+        >
       </figure>
     </section>
 
     <section class="content-wrapper">
       <header class="project-header">
         <h1 class="project-title">
-          <img src="@/assets/chase-logo.png" alt="Chase Logo" class="chase-logo" />
+          <img
+            src="@/assets/chase-logo.png"
+            alt="Chase Logo"
+            class="chase-logo"
+          >
           JPMorgan Chase Performance Dashboard
         </h1>
-        <p class="project-subtitle">A card-linked offers web platform</p>
+        <p class="project-subtitle">
+          A card-linked offers web platform
+        </p>
 
         <div class="tech-stack">
-          <div v-for="tech in technologies" :key="tech.name" class="tech-pill">
-            <svg v-if="tech.type !== 'image'" xmlns="http://www.w3.org/2000/svg" :viewBox="tech.viewBox"
-              class="tech-icon">
-              <path v-for="(path, index) in tech.paths" :key="index" :d="path.d" :fill="path.fill" />
+          <div
+            v-for="tech in technologies"
+            :key="tech.name"
+            class="tech-pill"
+          >
+            <svg
+              v-if="tech.type !== 'image'"
+              xmlns="http://www.w3.org/2000/svg"
+              :viewBox="tech.viewBox"
+              class="tech-icon"
+            >
+              <path
+                v-for="(path, index) in tech.paths"
+                :key="index"
+                :d="path.d"
+                :fill="path.fill"
+              />
             </svg>
-            <img v-else :src="tech.src" :alt="tech.name" class="tech-icon" />
+            <img
+              v-else
+              :src="tech.src"
+              :alt="tech.name"
+              class="tech-icon"
+            >
             <span>{{ tech.name }}</span>
           </div>
         </div>
       </header>
 
       <div class="project-overview">
-        <h2 class="section-title">Overview</h2>
+        <h2 class="section-title">
+          Overview
+        </h2>
         <p class="lead">
           An always-on performance dashboard for Chase Media Solutions' card-linked offers program, enabling brands to
           drive conversion, acquire new customers, and inspire incremental sales through real-time data insights.
@@ -91,58 +120,105 @@ export default {
         <div class="mobile-showcase">
           <iPhone />
         </div>
-        <p>The mobile interface provides advertisers with on-the-go access to campaign performance, enabling quick
-          decision-making and real-time optimization.</p>
-        <p>Built with responsive design principles, the dashboard adapts seamlessly across devices. Advertisers can
+        <p>
+          The mobile interface provides advertisers with on-the-go access to campaign performance, enabling quick
+          decision-making and real-time optimization.
+        </p>
+        <p>
+          Built with responsive design principles, the dashboard adapts seamlessly across devices. Advertisers can
           monitor campaign metrics, adjust budgets, and analyze performance trends directly from their mobile devices,
-          ensuring they never miss critical insights or opportunities for optimization.</p>
+          ensuring they never miss critical insights or opportunities for optimization.
+        </p>
       </div>
 
       <div class="metrics-section">
-        <h2 class="section-title">Platform Impact</h2>
+        <h2 class="section-title">
+          Platform Impact
+        </h2>
         <div class="metrics-grid">
-          <div v-for="metric in metrics" :key="metric.label" class="metric-card">
-            <div class="metric-value">{{ metric.value }}</div>
-            <div class="metric-label">{{ metric.label }}</div>
+          <div
+            v-for="metric in metrics"
+            :key="metric.label"
+            class="metric-card"
+          >
+            <div class="metric-value">
+              {{ metric.value }}
+            </div>
+            <div class="metric-label">
+              {{ metric.label }}
+            </div>
           </div>
         </div>
       </div>
 
       <div class="detail-section">
-        <h2 class="section-title">Design Details</h2>
+        <h2 class="section-title">
+          Design Details
+        </h2>
         <p class="section-intro">
           Every interaction was carefully crafted to provide a seamless user experience. From advanced filtering to
           real-time search feedback, these details showcase the polish and precision built into the platform.
         </p>
         <div class="detail-grid">
           <div class="detail-item">
-            <video autoplay loop muted playsinline src="@/assets/PD-detail-campaigns.mov"></video>
+            <video
+              autoplay
+              loop
+              muted
+              playsinline
+              src="@/assets/PD-detail-campaigns.mov"
+            />
             <h3>Campaign Filtering</h3>
-            <p>Sophisticated filtering system with intuitive controls and smooth transitions for managing complex
-              campaign hierarchies.</p>
+            <p>
+              Sophisticated filtering system with intuitive controls and smooth transitions for managing complex
+              campaign hierarchies.
+            </p>
           </div>
           <div class="detail-item">
-            <video autoplay loop muted playsinline src="@/assets/PD-detail-dates.mov"></video>
+            <video
+              autoplay
+              loop
+              muted
+              playsinline
+              src="@/assets/PD-detail-dates.mov"
+            />
             <h3>Custom Date Picker</h3>
-            <p>Built with TypeScript and D3.js, featuring segment selection and precise date range controls for detailed
-              analytics.</p>
+            <p>
+              Built with TypeScript and D3.js, featuring segment selection and precise date range controls for detailed
+              analytics.
+            </p>
           </div>
           <div class="detail-item">
-            <video autoplay loop muted playsinline src="@/assets/PD-detail-search.mov"></video>
+            <video
+              autoplay
+              loop
+              muted
+              playsinline
+              src="@/assets/PD-detail-search.mov"
+            />
             <h3>Real-time Search</h3>
             <p>Instant search feedback with live copy updates as you type, providing immediate visual confirmation.</p>
           </div>
           <div class="detail-item full-width">
-            <video autoplay loop muted playsinline src="@/assets/PD-detail-download.mov"></video>
+            <video
+              autoplay
+              loop
+              muted
+              playsinline
+              src="@/assets/PD-detail-download.mov"
+            />
             <h3>Report Downloads</h3>
-            <p>Streamlined report generation with format options and progress indicators for exporting campaign data.
+            <p>
+              Streamlined report generation with format options and progress indicators for exporting campaign data.
             </p>
           </div>
         </div>
       </div>
 
       <div class="features-section">
-        <h2 class="section-title">Key Features</h2>
+        <h2 class="section-title">
+          Key Features
+        </h2>
         <ul class="features-list">
           <li>Real-time performance tracking with budget utilization, ROAS, and sales data</li>
           <li>Advanced audience targeting based on transaction history (new, lapsed, and loyal customers)</li>
@@ -151,7 +227,6 @@ export default {
           <li>Multi-tenant architecture supporting thousands of concurrent campaigns</li>
         </ul>
       </div>
-
     </section>
   </main>
 </template>

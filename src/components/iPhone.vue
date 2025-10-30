@@ -2,7 +2,7 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 
 export default {
-  name: 'iPhone',
+  name: 'IPhone',
   setup() {
     const iphoneVideo = ref(null)
     const isRotated = ref(false)
@@ -41,8 +41,19 @@ export default {
 
 <template>
   <div class="iphone-container">
-    <div ref="iphoneVideo" class="iphone-video" :class="{ rotated: isRotated }">
-      <video width="100%" autoplay loop muted playsinline src="@/assets/PD-mobile-walkthrough.mov"></video>
+    <div
+      ref="iphoneVideo"
+      class="iphone-video"
+      :class="{ rotated: isRotated }"
+    >
+      <video
+        width="100%"
+        autoplay
+        loop
+        muted
+        playsinline
+        src="@/assets/PD-mobile-walkthrough.mov"
+      />
     </div>
   </div>
 </template>

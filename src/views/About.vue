@@ -8,35 +8,51 @@ export default {
   <main class="about">
     <section class="content-wrapper">
       <header class="project-header">
-        <img src="../assets/me-burgundy-square.jpg" alt="Ramzi Dreessen" class="float">
+        <img
+          src="../assets/me-burgundy-square.jpg"
+          alt="Ramzi Dreessen"
+          class="float"
+        >
         <h1 class="project-title">
           A little about me.
         </h1>
       </header>
-      <p> Hi! I’m <b>Ramzi Dreessen</b>, a web developer with <b><span>7</span> years of experience,</b> along with
+      <p>
+        Hi! I’m <b>Ramzi Dreessen</b>, a web developer with <b><span>7</span> years of experience,</b> along with
         <b>6
           years of print and web design experience</b>, living in Chicago.
       </p>
-      <p> I’ve never aligned myself to a particular job title. I enjoy planning, creating, reviewing, tearing apart
+      <p>
+        I’ve never aligned myself to a particular job title. I enjoy planning, creating, reviewing, tearing apart
         my
-        own work, rebuilding, finally shipping... any and all parts of the creative process. </p>
-      <p> As a creator, I keep things simple. Good art, proper use of negative space, relevant typography, and
+        own work, rebuilding, finally shipping... any and all parts of the creative process.
+      </p>
+      <p>
+        As a creator, I keep things simple. Good art, proper use of negative space, relevant typography, and
         staying
         in-tune with the “why” of the project. I’m aware that design without direction is just an aesthetics
         contest.
         With web design, I specialize in performative solutions that are fully responsive and utilize progressive
-        enhancement. </p>
-      <p> I understand component-based design, but I don’t believe in keeping design elements “sacred” across
+        enhancement.
+      </p>
+      <p>
+        I understand component-based design, but I don’t believe in keeping design elements “sacred” across
         projects
         - to me, that’s just laziness. If you want someone to build you a cookie-cutter website filled with
         buzzwords
-        and stock images (like one of these <a href="http://tiffzhang.com/startup" target="_blank"
-          rel="noreferrer noopener">fake startup websites</a>), I’m probably not your guy. I value a strong art team
-        and strong content, and working with others. </p>
-      <p> I’m not afraid of complexity, but I also have a guideline: If I can't fully explain how something works to
+        and stock images (like one of these <a
+          href="http://tiffzhang.com/startup"
+          target="_blank"
+          rel="noreferrer noopener"
+        >fake startup websites</a>), I’m probably not your guy. I value a strong art team
+        and strong content, and working with others.
+      </p>
+      <p>
+        I’m not afraid of complexity, but I also have a guideline: If I can't fully explain how something works to
         a
         non-technical person, in a concise manner, I find myself wondering why it was necessary to include in the
-        first place. </p>
+        first place.
+      </p>
     </section>
   </main>
 </template>

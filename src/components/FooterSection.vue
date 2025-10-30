@@ -21,17 +21,29 @@ export default {
         <p>&copy; {{ currentYear }} Ramzi Dreessen</p>
       </div>
       <div class="footer-links">
-        <a href="https://www.linkedin.com/in/ramzidreessen/" target="_blank" rel="noopener noreferrer"
-          aria-label="LinkedIn">
+        <a
+          href="https://www.linkedin.com/in/ramzidreessen/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
           LinkedIn
         </a>
         <span class="separator">|</span>
-        <a href="https://github.com/ktut" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <a
+          href="https://github.com/ktut"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
           GitHub
         </a>
         <span class="separator">|</span>
-        <a href="/Resume-Ramzi-Dreessen-2025.pdf" download="Resume-Ramzi-Dreessen-2025.pdf"
-          aria-label="Download Resume">
+        <a
+          href="/Resume-Ramzi-Dreessen-2025.pdf"
+          download="Resume-Ramzi-Dreessen-2025.pdf"
+          aria-label="Download Resume"
+        >
           Resume
         </a>
       </div>
