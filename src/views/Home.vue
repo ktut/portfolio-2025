@@ -1,7 +1,10 @@
 <script>
-
+import HomepageTopText from '../components/HomepageTopText.vue' 
 export default {
   name: 'HomeView',
+  components: {
+    HomepageTopText
+  },
   data() {
     return {
       // is app loaded
@@ -16,6 +19,7 @@ export default {
 
 <template>
   <main :class="{ loaded: loaded }">
+    <HomepageTopText />
     <RouterLink
       to="/chase"
       class="project-link"
