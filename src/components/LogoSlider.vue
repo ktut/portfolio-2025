@@ -7,86 +7,86 @@ export default {
 <template>
   <div class="outer-logo-slider">
     <div class="inner-logo-slider">
-      <div class="brandlogo"><img src="https://ktut.github.io/portfolio/assets/logos-upload/ada25-min.png"
-          class="lazy loading" data-was-processed="true" style="height: 50px;">
+      <div class="brandlogo"><img src="@/assets/logos/ada25-min.png" class="lazy loading" data-was-processed="true"
+          style="height: 50px;">
         <div class="tooltip"><span class="tooltip-inner"> Portrait photography </span></div>
       </div>
-      <div class="brandlogo"><img src="https://ktut.github.io/portfolio/assets/logos-upload/avant-min.png"
-          class="lazy loading" data-was-processed="true" style="height: 50px;">
+      <div class="brandlogo"><img src="@/assets/logos/avant-min.png" class="lazy loading" data-was-processed="true"
+          style="height: 50px;">
         <div class="tooltip"><span class="tooltip-inner"> Portrait, event photography </span></div>
       </div>
-      <div class="brandlogo"><img src="https://ktut.github.io/portfolio/assets/logos-upload/barrys-min.png"
-          class="lazy loading" data-was-processed="true" style="height: 40px;">
+      <div class="brandlogo"><img src="@/assets/logos/barrys-min.png" class="lazy loading" data-was-processed="true"
+          style="height: 40px;">
         <div class="tooltip"><span class="tooltip-inner"> Event photography </span></div>
       </div>
-      <div class="brandlogo"><img src="https://ktut.github.io/portfolio/assets/logos-upload/cct-min.png"
-          class="lazy loading" data-was-processed="true" style="height: 75px;">
+      <div class="brandlogo"><img src="@/assets/logos/cct-min.png" class="lazy loading" data-was-processed="true"
+          style="height: 75px;">
         <div class="tooltip"><span class="tooltip-inner"> Portrait, event photography </span></div>
       </div>
-      <div class="brandlogo"><img src="https://ktut.github.io/portfolio/assets/logos-upload/chimag-min.png"
-          class="lazy loading" data-was-processed="true" style="height: 60px;">
+      <div class="brandlogo"><img src="@/assets/logos/chimag-min.png" class="lazy loading" data-was-processed="true"
+          style="height: 60px;">
         <div class="tooltip"><span class="tooltip-inner"> Web design, development, admin work, photo, video, print
             design </span></div>
       </div>
-      <div class="brandlogo"><img src="https://ktut.github.io/portfolio/assets/logos-upload/conagra-min.png"
-          class="lazy loading" data-was-processed="true" style="height: 90px;">
+      <div class="brandlogo"><img src="@/assets/logos/conagra-min.png" class="lazy loading" data-was-processed="true"
+          style="height: 90px;">
         <div class="tooltip"><span class="tooltip-inner"> Portrait photography </span></div>
       </div>
-      <div class="brandlogo"><img src="https://ktut.github.io/portfolio/assets/logos-upload/cps-min.png"
-          class="lazy loading" data-was-processed="true" style="height: 70px;">
+      <div class="brandlogo"><img src="@/assets/logos/cps-min.png" class="lazy loading" data-was-processed="true"
+          style="height: 70px;">
         <div class="tooltip"><span class="tooltip-inner"> Portrait, event photography </span></div>
       </div>
-      <div class="brandlogo"><img src="https://ktut.github.io/portfolio/assets/logos-upload/cruises-min.png"
-          class="lazy loading" data-was-processed="true" style="height: 30px;">
+      <div class="brandlogo"><img src="@/assets/logos/cruises-min.png" class="lazy loading" data-was-processed="true"
+          style="height: 30px;">
         <div class="tooltip"><span class="tooltip-inner"> Videography </span></div>
       </div>
-      <div class="brandlogo"><img src="https://ktut.github.io/portfolio/assets/logos-upload/dalhousie-min.png"
-          class="lazy loading" data-was-processed="true" style="height: 50px;">
+      <div class="brandlogo"><img src="@/assets/logos/dalhousie-min.png" class="lazy loading" data-was-processed="true"
+          style="height: 50px;">
         <div class="tooltip"><span class="tooltip-inner"> Portrait photography </span></div>
       </div>
-      <div class="brandlogo"><img src="https://ktut.github.io/portfolio/assets/logos-upload/firsttee-min.png"
-          class="lazy loading" data-was-processed="true" style="height: 50px;">
+      <div class="brandlogo"><img src="@/assets/logos/firsttee-min.png" class="lazy loading" data-was-processed="true"
+          style="height: 50px;">
         <div class="tooltip"><span class="tooltip-inner"> Event photography </span></div>
       </div>
-      <div class="brandlogo"><img src="https://ktut.github.io/portfolio/assets/logos-upload/fitch-min.png"
-          class="lazy loading" data-was-processed="true" style="height: 70px;">
+      <div class="brandlogo"><img src="@/assets/logos/fitch-min.png" class="lazy loading" data-was-processed="true"
+          style="height: 70px;">
         <div class="tooltip"><span class="tooltip-inner"> Web development, design </span></div>
       </div>
-      <div class="brandlogo"><img src="https://ktut.github.io/portfolio/assets/logos-upload/h5g-min.png"
-          class="lazy loading" data-was-processed="true" style="height: 60px;">
+      <div class="brandlogo"><img src="@/assets/logos/h5g-min.png" class="lazy loading" data-was-processed="true"
+          style="height: 60px;">
         <div class="tooltip"><span class="tooltip-inner"> Web development </span></div>
       </div>
-      <div class="brandlogo"><img src="https://ktut.github.io/portfolio/assets/logos-upload/hb-min.png"
-          class="lazy loading" data-was-processed="true" style="height: 60px;">
+      <div class="brandlogo"><img src="@/assets/logos/hb-min.png" class="lazy loading" data-was-processed="true"
+          style="height: 60px;">
         <div class="tooltip"><span class="tooltip-inner"> Web development, design, video production </span></div>
       </div>
-      <div class="brandlogo"><img src="https://ktut.github.io/portfolio/assets/logos-upload/knstrct-min.png"
-          class="lazy loading" data-was-processed="true" style="height: 30px;">
+      <div class="brandlogo"><img src="@/assets/logos/knstrct-min.png" class="lazy loading" data-was-processed="true"
+          style="height: 30px;">
         <div class="tooltip"><span class="tooltip-inner"> Portrait photography </span></div>
       </div>
-      <div class="brandlogo"><img src="https://ktut.github.io/portfolio/assets/logos-upload/marianos-min.png"
-          class="lazy loading" data-was-processed="true" style="height: 70px;">
+      <div class="brandlogo"><img src="@/assets/logos/marianos-min.png" class="lazy loading" data-was-processed="true"
+          style="height: 70px;">
         <div class="tooltip"><span class="tooltip-inner"> Portrait, event, product photography </span></div>
       </div>
-      <div class="brandlogo"><img src="https://ktut.github.io/portfolio/assets/logos-upload/printavo-min.png"
-          class="lazy loading" data-was-processed="true" style="height: 50px;">
+      <div class="brandlogo"><img src="@/assets/logos/printavo-min.png" class="lazy loading" data-was-processed="true"
+          style="height: 50px;">
         <div class="tooltip"><span class="tooltip-inner"> Videography, photography </span></div>
       </div>
-      <div class="brandlogo"><img src="https://ktut.github.io/portfolio/assets/logos-upload/rag-and-bone-min.png"
-          class="lazy loading" data-was-processed="true" style="height: 50px;">
+      <div class="brandlogo"><img src="@/assets/logos/rag-and-bone-min.png" class="lazy loading"
+          data-was-processed="true" style="height: 50px;">
         <div class="tooltip"><span class="tooltip-inner"> Interior photography </span></div>
       </div>
-      <div class="brandlogo"><img src="https://ktut.github.io/portfolio/assets/logos-upload/reuters-min.png"
-          class="lazy loading" data-was-processed="true" style="height: 50px;">
+      <div class="brandlogo"><img src="@/assets/logos/reuters-min.png" class="lazy loading" data-was-processed="true"
+          style="height: 50px;">
         <div class="tooltip"><span class="tooltip-inner"> Photography assistance </span></div>
       </div>
-      <div class="brandlogo"><img src="https://ktut.github.io/portfolio/assets/logos-upload/splash-min.png"
-          class="lazy loading" data-was-processed="true" style="height: 45px;">
+      <div class="brandlogo"><img src="@/assets/logos/splash-min.png" class="lazy loading" data-was-processed="true"
+          style="height: 45px;">
         <div class="tooltip"><span class="tooltip-inner"> Web design, development, admin work; photo, video, print
             design </span></div>
       </div>
-      <div class="brandlogo"><img src="https://ktut.github.io/portfolio/assets/logos-upload/suntimes-min.png"
-          class="lazy loading" data-was-processed="true" style="height: 72px;">
+      <div class="brandlogo"><img src="@/assets/logos/suntimes-min.png" class="lazy loading" data-was-processed="true"
+          style="height: 72px;">
         <div class="tooltip"><span class="tooltip-inner"> Web design, development, admin work; photo, video, print
             design </span></div>
       </div>
@@ -95,6 +95,11 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.outer-logo-slider {
+  overflow-x: hidden;
+  padding-bottom: 50px;
+}
+
 .brandlogo {
   position: relative;
   flex-shrink: 0;
