@@ -1,11 +1,10 @@
 <script>
-import { startViewTransition } from 'vue-view-transitions'
 import LogoSlider from '@/components/LogoSlider.vue'
 
 export default {
   name: 'HomeView',
   components: {
-    LogoSlider,
+    LogoSlider
   },
   data() {
     return {
@@ -25,12 +24,13 @@ export default {
       <figure>
         <img v-view-transition-name="'img'" src="../assets/Chase-portfolio-mock.jpg">
         <figcaption>
-          <span class="title">JPMorgan Chase Performance Dashboard</span>
+          <h3 class="title">JPMorgan Chase Performance Dashboard</h3>
           <button class="cta">
             View Project <span class="unicode">&#x2197;</span></button>
         </figcaption>
       </figure>
     </RouterLink>
+
     <LogoSlider />
   </main>
 </template>
