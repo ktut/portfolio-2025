@@ -121,6 +121,14 @@ figure {
   }
 }
 
+.back-link {
+  text-align: left;
+  margin-bottom: 20px;
+  a {
+    color: $redPunch;
+  }
+}
+
 // Home page
 .home {
   .project-link {
