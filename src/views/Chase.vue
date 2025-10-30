@@ -46,7 +46,7 @@ export default {
 </script>
 
 <template>
-  <div class="chase">
+  <main class="chase">
 
     <section class="hero">
       <figure class="hero-image">
@@ -153,7 +153,7 @@ export default {
       </div>
 
     </section>
-  </div>
+  </main>
 </template>
 
 <style lang="scss" scoped>
