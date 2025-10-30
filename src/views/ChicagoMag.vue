@@ -51,7 +51,7 @@ export default {
 
     <section class="hero">
       <figure class="hero-image">
-        <img v-view-transition-name="'img'" alt="Chicago magazine print editions" src="../assets/chimag-mag-spread.png">
+        <img alt="Chicago magazine print editions" src="../assets/chimag-mag-spread.png">
       </figure>
     </section>
 
