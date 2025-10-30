@@ -9,11 +9,11 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "file-loader": "^6.2.0",
     "vue": "^3.0.0",
     "vue-class-component": "^8.0.0-0",
     "vue-router": "^4.0.12",
-    "vue-view-transitions": "^1.2.1",
-    "file-loader": "^6.2.0"
+    "vue-view-transitions": "^1.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -24,13 +24,13 @@
     "@vue/eslint-config-prettier": "^7.1.0",
     "@vue/eslint-config-typescript": "^11.0.3",
     "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.x",
+    "eslint-plugin-prettier": "^4.x",
     "eslint-plugin-vue": "^9.0.0",
     "prettier": "^2.x",
     "sass": "^1.83.4",
     "sass-loader": "^10.2.1",
-    "typescript": "4.9.5",
-    "eslint-config-prettier": "^8.x",
-    "eslint-plugin-prettier": "^4.x"
+    "typescript": "4.9.5"
   },
   "eslintConfig": {
     "root": true,

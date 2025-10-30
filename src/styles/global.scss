@@ -1,5 +1,5 @@
 // Global Styles
-@import './variables';
+@use './variables' as *;
 
 // Reset and base styles
 * {

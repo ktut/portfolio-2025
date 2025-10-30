@@ -68,18 +68,16 @@ export default {
 
   img {
     width: 200px;
-
     margin: 5px auto 15px;
+    border-radius: 175px;
+    -webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, .3);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, .3);
 
     @media (min-width: 540px) {
       width: 300px;
       float: right;
       margin: 5px 5px 15px 15px;
     }
-
-    border-radius: 175px;
-    -webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, .3);
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, .3);
   }
 }
 </style>
