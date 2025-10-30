@@ -1,6 +1,11 @@
 <script>
 export default {
   name: 'NavBar',
+  data() {
+    return {
+      mobileMenuOpen: false
+    }
+  },
   computed: {
     isHomePage() {
       return this.$route.name === 'home'
@@ -9,6 +14,12 @@ export default {
   methods: {
     goHome() {
       this.$router.push('/')
+    },
+    toggleMobileMenu() {
+      this.mobileMenuOpen = !this.mobileMenuOpen
+    },
+    closeMobileMenu() {
+      this.mobileMenuOpen = false
     }
   }
 }
@@ -38,12 +49,24 @@ export default {
         <div class="bottom webkitForceHardwareAcceleration" />
       </div>
     </div>
-    <div class="nav-links">
+    <button
+      :class="{ 'hamburger-button': true, 'active': mobileMenuOpen }"
+      aria-label="Toggle menu"
+      @click="toggleMobileMenu"
+    >
+      <span />
+      <span />
+      <span />
+    </button>
+    <div
+      :class="{ 'nav-links': true, 'mobile-open': mobileMenuOpen }"
+    >
       <a
         href="/Resume-Ramzi-Dreessen-2025.pdf"
         download="Resume-Ramzi-Dreessen-2025.pdf"
         class="social-icon resume-icon"
         aria-label="Download Resume"
+        @click="closeMobileMenu"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -152,6 +175,7 @@ export default {
         rel="noopener noreferrer"
         class="social-icon"
         aria-label="LinkedIn"
+        @click="closeMobileMenu"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -171,6 +195,7 @@ export default {
         rel="noopener noreferrer"
         class="social-icon"
         aria-label="GitHub"
+        @click="closeMobileMenu"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -184,10 +209,16 @@ export default {
           />
         </svg>
       </a>
-      <router-link to="/">
+      <router-link
+        to="/"
+        @click="closeMobileMenu"
+      >
         Work
       </router-link>
-      <router-link to="/about">
+      <router-link
+        to="/about"
+        @click="closeMobileMenu"
+      >
         About
       </router-link>
     </div>
@@ -207,6 +238,43 @@ nav {
 
   @media (min-width: 768px) {
     padding: 24px;
+  }
+
+  .hamburger-button {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+
+    span {
+      width: 100%;
+      height: 3px;
+      background-color: $textColor;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+      transform-origin: center;
+    }
+
+    &.active {
+      span:nth-child(1) {
+        transform: translateY(9.5px) rotate(45deg);
+      }
+
+      span:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+
+      span:nth-child(3) {
+        transform: translateY(-9.5px) rotate(-45deg);
+      }
+    }
   }
 
   .nav-links {
@@ -381,6 +449,90 @@ nav {
 nav {
   transition: opacity 1s cubic-bezier(0.77, 0, 0.175, 1) 1.2s,
     height 0.4s cubic-bezier(0.77, 0, 0.175, 1) 1.2s;
+}
+
+// Mobile menu styles (only active at 450px and below)
+@media (max-width: 450px) {
+  nav {
+    .hamburger-button {
+      display: flex;
+    }
+
+    .nav-links {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      flex-direction: column;
+      background: white;
+      padding: 0;
+      margin: 0;
+      gap: 0;
+      border-radius: 0 0 0 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                  opacity 0.3s ease;
+      pointer-events: none;
+
+      &.mobile-open {
+        max-height: 400px;
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      a, a.social-icon {
+        width: 100%;
+        padding: 16px 24px;
+        text-align: left;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease,
+                    background-color 0.2s ease, color 0.2s ease;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        svg {
+          margin-right: 10px;
+        }
+
+        &.resume-icon svg {
+          margin-right: 0;
+        }
+      }
+
+      &.mobile-open {
+        a, a.social-icon {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        // Staggered animation for each link
+        a:nth-child(1), a.social-icon:nth-child(1) {
+          transition-delay: 0.05s;
+        }
+
+        a:nth-child(2), a.social-icon:nth-child(2) {
+          transition-delay: 0.1s;
+        }
+
+        a:nth-child(3), a.social-icon:nth-child(3) {
+          transition-delay: 0.15s;
+        }
+
+        a:nth-child(4), a.social-icon:nth-child(4) {
+          transition-delay: 0.2s;
+        }
+
+        a:nth-child(5), a.social-icon:nth-child(5) {
+          transition-delay: 0.25s;
+        }
+      }
+    }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
