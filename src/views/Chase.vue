@@ -40,11 +40,8 @@ export default {
   padding: 20px;
 
   .chase-image {
-    @media (min-width: 768px) {
-      width: 550px;
-      float: right;
-    }
-
+    margin: 0 auto;
+    width: 840px;
     max-width: 100%;
 
     img {
