@@ -90,7 +90,7 @@ nav {
     text-decoration: none;
 
     &.router-link-exact-active {
-      color: $linkActiveColor;
+      color: $redPunch;
     }
 
     &.social-icon {
@@ -111,7 +111,7 @@ nav {
       }
 
       &:hover {
-        color: $linkActiveColor;
+        color: $redPunch;
         -webkit-transform: translateY(-2px);
         transform: translateY(-2px);
       }

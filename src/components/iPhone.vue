@@ -70,8 +70,6 @@ export default {
       -webkit-transform: rotateY(0deg) rotateZ(0deg);
       transform: rotateY(0deg) rotateZ(0deg);
     }
-
-
   }
 }
 

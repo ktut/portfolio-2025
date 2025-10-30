@@ -293,3 +293,357 @@ main {
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
   }
 }
+
+// individual pages
+
+.hero {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+
+  .hero-image {
+    margin: 0;
+    padding: 0;
+    -webkit-border-radius: 16px;
+    border-radius: 16px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+}
+
+.content-wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+
+  h2,
+  h3,
+  p {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  p {
+    text-align: left;
+  }
+}
+
+.project-header {
+  margin-bottom: 4rem;
+  text-align: center;
+
+  .project-title {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+
+    .chase-logo {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+    }
+  }
+
+  .project-subtitle {
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+}
+
+.tech-stack {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+
+  .tech-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background: white;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    border: 1px solid #e0e0e0;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #2c3e50;
+    -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+    .tech-icon {
+      width: 20px;
+      height: 20px;
+
+      &[src] {
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.section-title {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+}
+
+.project-overview {
+  margin-bottom: 4rem;
+
+  .lead {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #4a4a4a;
+  }
+}
+
+.metrics-section {
+  margin-bottom: 4rem;
+
+  .metrics-grid {
+    display: grid;
+    margin-top: 2rem;
+  }
+
+  .metric-card {
+    border-bottom: 2px solid #e8e8e8;
+    -webkit-transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease;
+
+    &:hover {
+      border-bottom-color: #2c3e50;
+    }
+
+    .metric-value {
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+
+    .metric-label {
+      font-weight: 500;
+      color: #666;
+      letter-spacing: 0.02em;
+      line-height: 1.4;
+    }
+  }
+}
+
+.detail-section {
+  margin-bottom: 4rem;
+  clear: both;
+
+  .section-intro {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #4a4a4a;
+    margin-bottom: 3rem;
+    max-width: 800px;
+  }
+
+  .detail-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem 0rem;
+    margin-top: 2rem;
+
+    @media (min-width: 840px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .detail-item {
+    text-align: center;
+
+    video {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      margin-bottom: 1rem;
+      display: block;
+      background-color: #f5f5f5;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #4a4a4a;
+      margin: 0;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &.full-width {
+      @media (min-width: 840px) {
+        grid-column: 1 / -1;
+      }
+
+      video {
+        max-width: 800px;
+      }
+
+      p {
+        max-width: 800px;
+      }
+    }
+  }
+}
+
+.features-section {
+  margin-bottom: 4rem;
+
+  .features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #4a4a4a;
+      padding: 1rem 0;
+      padding-left: 2rem;
+      position: relative;
+
+      & + li {
+        border-top: 1px solid #e8e8e8;
+      }
+    }
+  }
+}
+
+.mobile-section {
+  margin-bottom: 4rem;
+
+  p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #4a4a4a;
+    margin-bottom: 1.5rem;
+  }
+
+  .mobile-showcase {
+    float: none;
+    margin-left: 0;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+
+    @media (min-width: 769px) {
+      float: right;
+      margin-left: 5rem;
+      margin-bottom: 1.5rem;
+      max-width: 350px;
+      display: block;
+      margin-top: 0;
+      padding-left: 80px;
+      left: -150px;
+      position: relative;
+    }
+  }
+}
+
+.project-header {
+  .project-title {
+    font-size: 2.5rem;
+
+    @media (min-width: 769px) {
+      font-size: 3.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+  }
+
+  .project-subtitle {
+    font-size: 1.2rem;
+
+    @media (min-width: 769px) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.metrics-section {
+  .metrics-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+
+    @media (min-width: 769px) {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+      max-width: 800px;
+      margin-left: auto;
+    }
+  }
+
+  .metric-card {
+    padding: 1.5rem 1rem;
+
+    @media (min-width: 769px) {
+      padding: 2rem 1.5rem;
+    }
+
+    .metric-value {
+      font-size: 1.75rem;
+
+      @media (min-width: 769px) {
+        font-size: 2.25rem;
+      }
+    }
+
+    .metric-label {
+      font-size: 0.8rem;
+
+      @media (min-width: 769px) {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+.section-title {
+  font-size: 1.75rem;
+
+  @media (min-width: 769px) {
+    font-size: 2rem;
+  }
+}

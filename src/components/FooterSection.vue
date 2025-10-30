@@ -1,7 +1,7 @@
 <script>
 import LogoSlider from './LogoSlider.vue'
 export default {
-  name: 'Footer',
+  name: 'FooterSection',
   components: {
     LogoSlider
   },
@@ -49,25 +49,8 @@ export default {
 <style lang="scss" scoped>
 footer {
   position: relative;
-  background: linear-gradient(to bottom, #e8eaed 0%, #d4d7db 100%);
-  padding: 4rem 2rem 2rem;
+  padding: 0 2rem 2rem;
   margin-top: 6rem;
-
-  // Artistic blend at the top
-  &::before {
-    content: '';
-    position: absolute;
-    top: -3rem;
-    left: 0;
-    right: 0;
-    height: 3rem;
-    background: linear-gradient(to bottom,
-        rgba(232, 234, 237, 0) 0%,
-        rgba(232, 234, 237, 0.3) 40%,
-        rgba(232, 234, 237, 0.7) 80%,
-        rgba(232, 234, 237, 1) 100%);
-    pointer-events: none;
-  }
 
   .footer-content {
     max-width: 1200px;
@@ -110,7 +93,7 @@ footer {
       transition: color 0.2s ease;
 
       &:hover {
-        color: $linkActiveColor;
+        color: $redPunch;
       }
     }
 

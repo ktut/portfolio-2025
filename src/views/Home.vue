@@ -1,11 +1,7 @@
 <script>
-import LogoSlider from '@/components/LogoSlider.vue'
 
 export default {
   name: 'HomeView',
-  components: {
-    LogoSlider
-  },
   data() {
     return {
       // is app loaded
