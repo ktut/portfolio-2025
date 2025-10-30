@@ -14,8 +14,8 @@ export default {
 
 <style lang="scss" scoped>
 .iphone-container {
-  width: 250px;
-  height: 540px;
+  width: 375px;
+  height: 810px;
   margin: 0 auto;
   -webkit-perspective: 1500px;
   perspective: 1500px;
@@ -30,8 +30,8 @@ export default {
 
 .iphone-video {
   position: relative;
-  width: 250px;
-  height: 522px;
+  width: 375px;
+  height: 783px;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   -webkit-transition: transform 0.6s ease-out;
@@ -41,11 +41,11 @@ export default {
     position: absolute;
     top: 0;
     left: 0;
-    width: 250px;
-    height: 522px;
+    width: 375px;
+    height: 783px;
     display: block;
-    -webkit-border-radius: 45px;
-    border-radius: 45px;
+    -webkit-border-radius: 67.5px;
+    border-radius: 67.5px;
     -webkit-filter: drop-shadow(5px 13px 9px rgba(0, 0, 0, .8));
     filter: drop-shadow(5px 13px 9px rgba(0, 0, 0, .8));
     -webkit-transform: translateZ(5px);
@@ -58,15 +58,15 @@ export default {
     position: absolute;
     top: 0;
     left: 0;
-    width: 250px;
-    height: 522px;
+    width: 375px;
+    height: 783px;
     background-color: #a3a3a3;
     background-image: -webkit-linear-gradient(top, hsl(0, 0%, 50%), hsl(0, 0%, 75%));
     background-image: linear-gradient(to bottom, hsl(0, 0%, 50%), hsl(0, 0%, 75%));
-    -webkit-border-radius: 45px;
-    border-radius: 45px;
-    -webkit-transform: translateZ(-10px);
-    transform: translateZ(-10px);
+    -webkit-border-radius: 67.5px;
+    border-radius: 67.5px;
+    -webkit-transform: translateZ(-15px);
+    transform: translateZ(-15px);
     pointer-events: none;
     z-index: 0;
   }
