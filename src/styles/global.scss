@@ -111,7 +111,7 @@ figure {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 540px;
+  max-width: 840px;
   padding: 16px;
 
   figcaption {
@@ -140,6 +140,9 @@ figure {
       margin-top: 20px;
       font-size: 1.5rem;
       font-weight: 700;
+      .title {
+        margin-right: 16px;
+      }
     }
 
     .cta {
@@ -147,7 +150,7 @@ figure {
       border: 2px solid $redPunch;
       -webkit-border-radius: 8px;
       border-radius: 8px;
-      padding: 12px 24px;
+      padding: 6px;
       font-size: 1rem;
       font-weight: 600;
       cursor: pointer;
@@ -155,6 +158,8 @@ figure {
       display: inline-block;
       -webkit-transition: all 0.3s ease;
       transition: all 0.3s ease;
+      color: $redPunch;
+      text-transform: uppercase;
 
       .unicode {
         color: $redPunch;
@@ -162,8 +167,9 @@ figure {
         transition: transform 0.3s ease;
         display: inline-block;
       }
-
-      &:hover {
+    }
+    &:hover {
+      .cta {
         background: $redPunch;
         color: white;
 

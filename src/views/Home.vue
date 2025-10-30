@@ -21,7 +21,7 @@ export default {
       <figure>
         <img v-view-transition-name="'img'" src="../assets/Chase-portfolio-mock.jpg">
         <figcaption>
-          Chase Performance Dashboard
+          <span class="title">Chase Performance Dashboard</span>
           <button class="cta">
             View Project <span class="unicode">&#x2197;</span></button>
         </figcaption>
