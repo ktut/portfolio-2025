@@ -61,8 +61,11 @@ export default {
 
     <section class="content-wrapper">
       <header class="project-header">
-        <h1 class="project-title">Chase Performance Dashboard</h1>
-        <p class="project-subtitle">Card-Linked Offers Platform</p>
+        <h1 class="project-title">
+          <img src="@/assets/chase-logo.png" alt="Chase Logo" class="chase-logo" />
+          JPMorgan Chase Performance Dashboard
+        </h1>
+        <p class="project-subtitle">A card-linked offers web platform</p>
 
         <div class="tech-stack">
           <div v-for="tech in technologies" :key="tech.name" class="tech-pill">
@@ -200,6 +203,19 @@ export default {
     line-height: 1.1;
     margin-bottom: 0.5rem;
     color: #1a1a1a;
+
+    @media (min-width: 768px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .chase-logo {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+    }
   }
 
   .project-subtitle {
@@ -323,14 +339,6 @@ export default {
       padding: 1rem 0;
       padding-left: 2rem;
       position: relative;
-
-      &::before {
-        content: '→';
-        position: absolute;
-        left: 0;
-        color: $redPunch;
-        font-weight: 700;
-      }
 
       &+li {
         border-top: 1px solid #e8e8e8;

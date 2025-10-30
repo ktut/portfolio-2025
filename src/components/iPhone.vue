@@ -22,9 +22,14 @@ export default {
   -webkit-perspective-origin: center center;
   perspective-origin: center center;
 
-  &:hover .iphone-video {
+  .iphone-video {
     -webkit-transform: rotateY(-25deg) rotateZ(10deg);
     transform: rotateY(-25deg) rotateZ(10deg);
+
+    &:hover {
+      -webkit-transform: rotateY(0deg) rotateZ(0deg);
+      transform: rotateY(0deg) rotateZ(0deg);
+    }
   }
 }
 
