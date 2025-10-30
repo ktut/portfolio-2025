@@ -32,14 +32,13 @@ export default {
         }
       ],
       metrics: [
-        { label: 'Total Users', value: '1,390' },
-        { label: 'Total Advertisers', value: '7,140' },
-        { label: 'Total Campaigns', value: '8,620' },
-        { label: 'Total Deals', value: '12,952' },
-        { label: 'Deal Redemptions', value: '37,228,211' },
+        { label: 'Advertisers', value: '7,140' },
+        { label: 'Campaigns', value: '8,620' },
+        { label: 'Deals', value: '12,952' },
+        { label: 'Redemptions', value: '37.2M' },
         { label: 'Revenue Processed', value: '$3.6B' },
-        { label: 'Client Budget Delivered', value: '$211.2M' },
-        { label: 'Report Requests', value: '9,664' }
+        { label: 'Budget Delivered', value: '$211.2M' },
+        { label: 'Reports Generated', value: '9,664' }
       ]
     }
   }
@@ -67,7 +66,8 @@ export default {
 
         <div class="tech-stack">
           <div v-for="tech in technologies" :key="tech.name" class="tech-pill">
-            <svg v-if="tech.type !== 'image'" xmlns="http://www.w3.org/2000/svg" :viewBox="tech.viewBox" class="tech-icon">
+            <svg v-if="tech.type !== 'image'" xmlns="http://www.w3.org/2000/svg" :viewBox="tech.viewBox"
+              class="tech-icon">
               <path v-for="(path, index) in tech.paths" :key="index" :d="path.d" :fill="path.fill" />
             </svg>
             <img v-else :src="tech.src" :alt="tech.name" class="tech-icon" />
@@ -79,10 +79,13 @@ export default {
       <div class="project-overview">
         <h2 class="section-title">Overview</h2>
         <p class="lead">
-          An always-on performance dashboard for Chase Media Solutions' card-linked offers program, enabling brands to drive conversion, acquire new customers, and inspire incremental sales through real-time data insights.
+          An always-on performance dashboard for Chase Media Solutions' card-linked offers program, enabling brands to
+          drive conversion, acquire new customers, and inspire incremental sales through real-time data insights.
         </p>
         <p>
-          The platform leverages first-party transaction data to deliver targeted offers to Chase cardholders across digital channels. Customers discover offers based on their purchase history, activate them via the Chase app, and receive cash back when making purchases at participating merchants.
+          The platform leverages first-party transaction data to deliver targeted offers to Chase cardholders across
+          digital channels. Customers discover offers based on their purchase history, activate them via the Chase app,
+          and receive cash back when making purchases at participating merchants.
         </p>
       </div>
 
@@ -109,7 +112,8 @@ export default {
 
       <div class="mobile-section">
         <h2 class="section-title">Mobile Experience</h2>
-        <p>The mobile interface provides advertisers with on-the-go access to campaign performance, enabling quick decision-making and real-time optimization.</p>
+        <p>The mobile interface provides advertisers with on-the-go access to campaign performance, enabling quick
+          decision-making and real-time optimization.</p>
         <div class="mobile-showcase">
           <iPhone />
         </div>
@@ -267,42 +271,39 @@ export default {
 
 .metrics-section {
   margin-bottom: 4rem;
-  padding: 3rem;
-  background: white;
-  -webkit-border-radius: 16px;
-  border-radius: 16px;
-  -webkit-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 
   .metrics-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
     margin-top: 2rem;
   }
 
   .metric-card {
-    text-align: center;
-    padding: 1.5rem;
-    -webkit-border-radius: 12px;
-    border-radius: 12px;
-    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-    border: 1px solid #e8e8e8;
+    padding: 2rem 1.5rem;
+    border-bottom: 2px solid #e8e8e8;
+    -webkit-transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease;
+
+    &:hover {
+      border-bottom-color: #2c3e50;
+    }
 
     .metric-value {
-      font-size: 2rem;
-      font-weight: 700;
-      color: $redPunch;
-      margin-bottom: 0.5rem;
-      letter-spacing: -0.01em;
+      font-size: 2.25rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+      line-height: 1;
     }
 
     .metric-label {
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       font-weight: 500;
       color: #666;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.02em;
+      line-height: 1.4;
     }
   }
 }
@@ -331,7 +332,7 @@ export default {
         font-weight: 700;
       }
 
-      & + li {
+      &+li {
         border-top: 1px solid #e8e8e8;
       }
     }
@@ -367,16 +368,20 @@ export default {
   }
 
   .metrics-section {
-    padding: 2rem 1.5rem;
-
     .metrics-grid {
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
       gap: 1rem;
     }
 
     .metric-card {
+      padding: 1.5rem 1rem;
+
       .metric-value {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
+      }
+
+      .metric-label {
+        font-size: 0.8rem;
       }
     }
   }
