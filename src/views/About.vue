@@ -8,14 +8,14 @@ export default {
   <main class="about">
     <section class="content-wrapper">
       <header class="project-header">
+        <img src="../assets/me-burgundy-square.jpg" alt="Ramzi Dreessen" class="float">
         <h1 class="project-title">
           A little about me.
         </h1>
       </header>
-      <img src="../assets/me-burgundy-square.jpg" alt="Ramzi Dreessen" class="float">
       <p> Hi! I’m <b>Ramzi Dreessen</b>, a web developer with <b><span>7</span> years of experience,</b> along with
         <b>6
-          years of print and web design experience</b>, living in New York and Chicago.
+          years of print and web design experience</b>, living in Chicago.
       </p>
       <p> I’ve never aligned myself to a particular job title. I enjoy planning, creating, reviewing, tearing apart
         my
@@ -46,14 +46,21 @@ export default {
   background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
 
   h1 {
+    text-align: left;
     font-size: 2rem;
   }
 
   img {
-    float: right;
     width: 200px;
-    max-width: 42vw;
-    margin: 5px 5px 15px 15px;
+
+    margin: 5px auto 15px;
+
+    @media (min-width: 540px) {
+      width: 300px;
+      float: right;
+      margin: 5px 5px 15px 15px;
+    }
+
     border-radius: 175px;
     -webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, .3);
     box-shadow: 2px 2px 10px rgba(0, 0, 0, .3);

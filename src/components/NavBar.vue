@@ -18,7 +18,7 @@ export default {
   <nav>
     <div :class="{ 'back-link': true, 'home-page': isHomePage }">
       <RouterLink to="/">
-        <span class="arrow">←</span> Back to Home
+        <span class="arrow">←</span> Back
       </RouterLink>
     </div>
     <div class="logo" @click="goHome">
