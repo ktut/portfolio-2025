@@ -121,6 +121,9 @@ img {
 
 .back-link {
   text-align: left;
+  @media (min-width: 720px) {
+    min-width: 227px;
+  }
   &.home-page {
     pointer-events: none;
     opacity: 0;
