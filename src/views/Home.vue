@@ -17,7 +17,7 @@ export default {
 
 <template>
   <div class="home" :class="{ loaded: loaded }">
-    <RouterLink to="/chase">
+    <RouterLink to="/chase" class="project-link">
       <figure>
         <img v-view-transition-name="'img'" src="../assets/Chase-portfolio-mock.jpg">
         <figcaption>

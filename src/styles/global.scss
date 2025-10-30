@@ -1,7 +1,4 @@
 // Global Styles
-// This file contains global styles that apply to the entire application
-
-// Import variables
 @import './variables';
 
 // Reset and base styles
@@ -11,15 +8,15 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+  scrollbar-gutter: stable;
+}
+
 .webkitForceHardwareAcceleration {
   -webkit-transform: translate3d(0, 0, 0);
   -webkit-backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;
-}
-
-html {
-  font-size: 16px;
-  scrollbar-gutter: stable;
 }
 
 #app {
@@ -32,12 +29,7 @@ html {
   color: $textColor;
 }
 
-// - Typography
-
-.unicode {
-  font-family: 'Arial Unicode MS', sans-serif !important;
-}
-
+// Typography
 h1,
 h2 {
   font-weight: 700;
@@ -52,24 +44,19 @@ h1 {
 h2 {
   font-size: 1.5rem;
   line-height: 130%;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin: 20px 0;
   color: $headingColor;
 }
 
 p {
   font-size: 1rem;
   font-weight: 300;
-}
-
-p,
-ul {
   margin-bottom: 25px;
-}
-
-p,
-li {
   line-height: 155%;
+
+  em {
+    font-style: italic;
+  }
 }
 
 b {
@@ -78,6 +65,21 @@ b {
 
 ul {
   list-style-position: inside;
+  margin: 0 auto 25px;
+}
+
+li {
+  line-height: 155%;
+}
+
+a {
+  color: $redPunch;
+  text-decoration: underline;
+  cursor: pointer;
+
+  &:hover {
+    color: $redPunch;
+  }
 }
 
 img {
@@ -86,6 +88,24 @@ img {
   height: auto;
 }
 
+// Utility classes
+.unicode {
+  font-family: 'Arial Unicode MS', sans-serif !important;
+}
+
+.small {
+  font-size: 0.7rem;
+
+  &.caps {
+    line-height: 80%;
+  }
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+// Components
 figure {
   display: flex;
   flex-direction: column;
@@ -98,59 +118,71 @@ figure {
     text-align: left;
     color: $textColor !important;
     text-decoration: none !important;
-    text-decoration-style: none !important;
   }
 }
 
-figure button.cta {
-  background: $redPunch;
-  color: white;
-  border: none;
-  padding: 10px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.3px;
-  margin-top: 15px;
-  transition: all 0.3s ease;
+// Home page
+.home {
+  .project-link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  figure {
+    cursor: pointer;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    figcaption {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .cta {
+      background: transparent;
+      border: 2px solid $redPunch;
+      -webkit-border-radius: 8px;
+      border-radius: 8px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 12px;
+      display: inline-block;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+
+      .unicode {
+        color: $redPunch;
+        -webkit-transition: transform 0.3s ease;
+        transition: transform 0.3s ease;
+        display: inline-block;
+      }
+
+      &:hover {
+        background: $redPunch;
+        color: white;
+
+        .unicode {
+          color: white;
+          -webkit-transform: translate(2px, -2px);
+          transform: translate(2px, -2px);
+        }
+      }
+    }
+  }
 }
 
+// Media queries
 @media (min-width: 451px) {
   li a.thumb:hover {
+    -webkit-transform: translate(-3px, -3px);
     transform: translate(-3px, -3px);
+    -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
   }
-}
-
-p em {
-  font-style: italic;
-}
-
-.small {
-  font-size: 0.7rem;
-}
-
-.caps {
-  text-transform: uppercase;
-}
-
-.small.caps {
-  line-height: 80%;
-}
-
-a {
-  color: $redPunch;
-  text-decoration: underline;
-}
-
-a:hover {
-  color: $redPunch;
-  cursor: pointer;
-  cursor: hand;
-}
-
-ul {
-  margin: 0 auto;
 }
