@@ -1,8 +1,12 @@
 <script>
 import { startViewTransition } from 'vue-view-transitions'
+import LogoSlider from '@/components/LogoSlider.vue'
 
 export default {
   name: 'HomeView',
+  components: {
+    LogoSlider,
+  },
   data() {
     return {
       // is app loaded
@@ -27,5 +31,6 @@ export default {
         </figcaption>
       </figure>
     </RouterLink>
+    <LogoSlider />
   </main>
 </template>
