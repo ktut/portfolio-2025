@@ -5,9 +5,10 @@ export default {
 </script>
 <template>
   <section class="homepage-top-text">
-<h1>Hi, I'm Ramzi Dreessen.</h1>
-<p>I build websites that thousands of people poke and prod with their tiny screens. More formally, I’m a multimedia “do-it-all” with high-level experience in building frontends, web/print design, photography and video.
-</p>
+    <h1>Hi, I'm Ramzi Dreessen.</h1>
+    <p>I build websites that thousands of people poke and prod with their tiny screens. More formally, I’m a multimedia
+      “do-it-all” with high-level experience in building frontends, web/print design, photography and video.
+    </p>
   </section>
 </template>
 <style lang="scss" scoped>
