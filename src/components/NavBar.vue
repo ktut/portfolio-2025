@@ -143,7 +143,7 @@ nav {
 
   .logo {
     cursor: pointer;
-    transform: scaleX(0.0) scaleY(0.5);
+    transform: scaleX(0.0) scaleY(0.75);
   }
 
   .logo,
@@ -193,7 +193,7 @@ nav {
     }
 
     .logo {
-      transform: scaleX(0.5) scaleY(0.5);
+      transform: scaleX(0.75) scaleY(0.75);
 
       &.logoIsDimmed {
         mix-blend-mode: lighten;
