@@ -146,5 +146,21 @@ export default {
       box-shadow: unset;
     }
   }
+
+  .video-bg {
+    &:not(:first-of-type) {
+      margin-top: 50px;
+    }
+
+    video {
+      width: 1024px;
+      max-width: 100%;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+      border-radius: 16px;
+    }
+  }
 }
 </style>
