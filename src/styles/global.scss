@@ -118,20 +118,6 @@ img {
 }
 
 // Components
-figure {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 1040px;
-  padding: 16px;
-
-  figcaption {
-    text-align: left;
-    color: $textColor !important;
-    text-decoration: none !important;
-  }
-}
 
 .back-link {
   text-align: left;
@@ -142,32 +128,56 @@ figure {
 }
 
 // Home page
-.home {
+main {
   .project-link {
     position: relative;
     text-decoration: none;
     color: inherit;
     &.cover .video-composite {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
+      video {
+        width: 100%;
+        height: auto;
+        &.not-mobile {
+          display: none;
+        }
+      }
+      @media (min-width: 540px) {
+        grid-template-columns: 1fr 1fr;
+        video.not-mobile {
+          display: block;
+        }
+      }
       @media (min-width: 840px) {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
       }
     }
   }
 
   figure {
-    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    padding: 16px;
 
-    img {
+    cursor: pointer;
+    img,
+    .video-composite {
       display: block;
       width: 100%;
       border-radius: 16px;
       border: 2px solid transparent;
       transition: border 0.3s ease;
+      overflow: hidden;
     }
 
     figcaption {
+      text-align: left;
+      color: $textColor !important;
+      text-decoration: none !important;
       display: block;
       @media (min-width: 840px) {
         display: flex;
@@ -211,7 +221,8 @@ figure {
       }
     }
     &:hover {
-      img {
+      img,
+      .video-composite {
         border: 2px solid $redPunch;
       }
       .cta {
