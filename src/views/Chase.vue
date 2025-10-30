@@ -49,53 +49,26 @@ export default {
   <main class="chase">
     <section class="hero">
       <figure class="hero-image">
-        <img
-          v-view-transition-name="'img'"
-          alt="Chase Performance Dashboard"
-          src="../assets/Chase-portfolio-mock.jpg"
-        >
+        <img v-view-transition-name="'img'" alt="Chase Performance Dashboard" src="../assets/Chase-portfolio-mock.jpg">
       </figure>
     </section>
 
     <section class="content-wrapper">
       <header class="project-header">
         <h1 class="project-title">
-          <img
-            src="@/assets/chase-logo.png"
-            alt="Chase Logo"
-            class="chase-logo"
-          >
-          JPMorgan Chase Performance Dashboard
+          <img src="@/assets/chase-logo.png" alt="Chase Logo" class="chase-logo">JPMorgan Chase Performance Dashboard
         </h1>
         <p class="project-subtitle">
           A card-linked offers web platform
         </p>
 
         <div class="tech-stack">
-          <div
-            v-for="tech in technologies"
-            :key="tech.name"
-            class="tech-pill"
-          >
-            <svg
-              v-if="tech.type !== 'image'"
-              xmlns="http://www.w3.org/2000/svg"
-              :viewBox="tech.viewBox"
-              class="tech-icon"
-            >
-              <path
-                v-for="(path, index) in tech.paths"
-                :key="index"
-                :d="path.d"
-                :fill="path.fill"
-              />
+          <div v-for="tech in technologies" :key="tech.name" class="tech-pill">
+            <svg v-if="tech.type !== 'image'" xmlns="http://www.w3.org/2000/svg" :viewBox="tech.viewBox"
+              class="tech-icon">
+              <path v-for="(path, index) in tech.paths" :key="index" :d="path.d" :fill="path.fill" />
             </svg>
-            <img
-              v-else
-              :src="tech.src"
-              :alt="tech.name"
-              class="tech-icon"
-            >
+            <img v-else :src="tech.src" :alt="tech.name" class="tech-icon">
             <span>{{ tech.name }}</span>
           </div>
         </div>
@@ -136,11 +109,7 @@ export default {
           Platform Impact
         </h2>
         <div class="metrics-grid">
-          <div
-            v-for="metric in metrics"
-            :key="metric.label"
-            class="metric-card"
-          >
+          <div v-for="metric in metrics" :key="metric.label" class="metric-card">
             <div class="metric-value">
               {{ metric.value }}
             </div>
@@ -161,13 +130,7 @@ export default {
         </p>
         <div class="detail-grid">
           <div class="detail-item">
-            <video
-              autoplay
-              loop
-              muted
-              playsinline
-              src="@/assets/PD-detail-campaigns.mov"
-            />
+            <video autoplay loop muted playsinline src="@/assets/PD-detail-campaigns.mov" />
             <h3>Campaign Filtering</h3>
             <p>
               Sophisticated filtering system with intuitive controls and smooth transitions for managing complex
@@ -175,13 +138,7 @@ export default {
             </p>
           </div>
           <div class="detail-item">
-            <video
-              autoplay
-              loop
-              muted
-              playsinline
-              src="@/assets/PD-detail-dates.mov"
-            />
+            <video autoplay loop muted playsinline src="@/assets/PD-detail-dates.mov" />
             <h3>Custom Date Picker</h3>
             <p>
               Built with TypeScript and D3.js, featuring segment selection and precise date range controls for detailed
@@ -189,24 +146,12 @@ export default {
             </p>
           </div>
           <div class="detail-item">
-            <video
-              autoplay
-              loop
-              muted
-              playsinline
-              src="@/assets/PD-detail-search.mov"
-            />
+            <video autoplay loop muted playsinline src="@/assets/PD-detail-search.mov" />
             <h3>Real-time Search</h3>
             <p>Instant search feedback with live copy updates as you type, providing immediate visual confirmation.</p>
           </div>
           <div class="detail-item full-width">
-            <video
-              autoplay
-              loop
-              muted
-              playsinline
-              src="@/assets/PD-detail-download.mov"
-            />
+            <video autoplay loop muted playsinline src="@/assets/PD-detail-download.mov" />
             <h3>Report Downloads</h3>
             <p>
               Streamlined report generation with format options and progress indicators for exporting campaign data.

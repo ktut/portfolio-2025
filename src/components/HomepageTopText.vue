@@ -5,7 +5,7 @@ export default {
 </script>
 <template>
   <section class="homepage-top-text">
-    <h1>Hi, I'm Ramzi. </h1>
+    <h1>Hi, Iʼm Ramzi.</h1>
     <p>I build websites that thousands of people poke and prod with their tiny screens. More formally, I’m a multimedia
       “do-it-all” with high-level experience in front-end software engineering, web/print design, photography, video,
       making memes, and some newer experience being a dad.

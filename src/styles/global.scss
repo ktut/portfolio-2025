@@ -235,9 +235,11 @@ main {
 }
 
 .content-wrapper {
+  width: 100%;
   max-width: 1600px;
   margin: 0 auto;
   padding: 4rem 2rem;
+  overflow: hidden;
 
   h2,
   h3,
@@ -262,11 +264,14 @@ main {
     line-height: 1.1;
     margin-bottom: 0.5rem;
     color: #1a1a1a;
+    text-wrap: balanced;
 
     .chase-logo {
       width: 40px;
       height: 40px;
       flex-shrink: 0;
+      display: inline-block;
+      margin-right: 10px;
     }
   }
 
@@ -503,10 +508,6 @@ main {
 
     @media (min-width: 769px) {
       font-size: 3.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
     }
   }
 
