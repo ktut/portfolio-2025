@@ -86,22 +86,7 @@ export default {
       </div>
 
       <div class="video-bg">
-        <video src="../assets/vid-1.mov" autoplay loop muted playsinline></video>
-      </div>
-      <div class="video-bg">
-        <video src="../assets/vid-2.mov" autoplay loop muted playsinline></video>
-      </div>
-      <div class="video-bg">
-        <video src="../assets/vid-3.mov" autoplay loop muted playsinline></video>
-      </div>
-      <div class="video-bg">
-        <video src="../assets/vid-4.mov" autoplay loop muted playsinline></video>
-      </div>
-      <div class="video-bg">
-        <video src="../assets/vid-5.mov" autoplay loop muted playsinline></video>
-      </div>
-      <div class="video-bg">
-        <video src="../assets/vid-6.mov" autoplay loop muted playsinline></video>
+        <video src="../assets/vid-11.mov" autoplay loop muted playsinline></video>
       </div>
       <div class="video-bg">
         <video src="../assets/vid-7.mov" autoplay loop muted playsinline></video>
@@ -110,13 +95,25 @@ export default {
         <video src="../assets/vid-8.mov" autoplay loop muted playsinline></video>
       </div>
       <div class="video-bg">
+        <video src="../assets/vid-3.mov" autoplay loop muted playsinline></video>
+      </div>
+      <div class="video-bg">
+        <video src="../assets/vid-5.mov" autoplay loop muted playsinline></video>
+      </div>
+      <div class="video-bg">
+        <video src="../assets/vid-1.mov" autoplay loop muted playsinline></video>
+      </div>
+      <div class="video-bg">
+        <video src="../assets/vid-6.mov" autoplay loop muted playsinline></video>
+      </div>
+      <div class="video-bg">
         <video src="../assets/vid-9.mov" autoplay loop muted playsinline></video>
       </div>
       <div class="video-bg">
-        <video src="../assets/vid-10.mov" autoplay loop muted playsinline></video>
+        <video src="../assets/vid-4.mov" autoplay loop muted playsinline></video>
       </div>
       <div class="video-bg">
-        <video src="../assets/vid-11.mov" autoplay loop muted playsinline></video>
+        <video src="../assets/vid-10.mov" autoplay loop muted playsinline></video>
       </div>
       <div class="video-bg">
         <video src="../assets/vid-12.mov" autoplay loop muted playsinline></video>
@@ -126,6 +123,9 @@ export default {
       </div>
       <div class="video-bg">
         <video src="../assets/vid-14.mov" autoplay loop muted playsinline></video>
+      </div>
+      <div class="video-bg">
+        <video src="../assets/vid-2.mov" autoplay loop muted playsinline></video>
       </div>
       <div class="video-bg">
         <video src="../assets/vid-15.mov" autoplay loop muted playsinline></video>
@@ -153,13 +153,21 @@ export default {
     }
 
     video {
-      width: 1024px;
       max-width: 100%;
       margin-left: auto !important;
       margin-right: auto !important;
       -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
       box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
-      border-radius: 16px;
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+
+      @media (min-width: 540px) {
+        width: 1024px;
+        height: auto;
+        object-fit: unset;
+        border-radius: 16px;
+      }
     }
   }
 }
