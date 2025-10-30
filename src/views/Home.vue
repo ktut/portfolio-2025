@@ -33,12 +33,24 @@ export default {
     <RouterLink to="/chicagomagazine" class="project-link cover">
       <figure>
         <div class="video-composite">
-          <video src="../assets/vid-10.mov" autoplay loop muted playsinline></video>
-          <video src="../assets/vid-14.mov" autoplay loop muted playsinline></video>
-          <video class="not-mobile" src="../assets/vid-3.mov" autoplay loop muted playsinline></video>
-          <video class="not-mobile" src="../assets/vid-4.mov" autoplay loop muted playsinline></video>
-          <video class="not-mobile" src="../assets/vid-6.mov" autoplay loop muted playsinline></video>
-          <video class="not-mobile" src="../assets/vid-8.mov" autoplay loop muted playsinline></video>
+          <div class="video-bg">
+            <video src="../assets/vid-10.mov" autoplay loop muted playsinline></video>
+          </div>
+          <div class="video-bg">
+            <video src="../assets/vid-14.mov" autoplay loop muted playsinline></video>
+          </div>
+          <div class="video-bg not-mobile">
+            <video src="../assets/vid-4.mov" autoplay loop muted playsinline></video>
+          </div>
+          <div class="video-bg not-mobile">
+            <video src="../assets/vid-3.mov" autoplay loop muted playsinline></video>
+          </div>
+          <div class="video-bg not-mobile">
+            <video src="../assets/vid-6.mov" autoplay loop muted playsinline></video>
+          </div>
+          <div class="video-bg not-mobile">
+            <video src="../assets/vid-8.mov" autoplay loop muted playsinline></video>
+          </div>
         </div>
         <figcaption>
           <h3 class="title">Chicago Magazine editorial web design</h3>
