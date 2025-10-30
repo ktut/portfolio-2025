@@ -1,10 +1,12 @@
 <script>
 import NavBar from './components/NavBar.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
-    NavBar
+    NavBar,
+    Footer
   },
   data() {
     return {
@@ -23,4 +25,5 @@ export default {
 <template>
   <NavBar :class="{ loaded: loaded }" />
   <router-view />
+  <Footer />
 </template>
