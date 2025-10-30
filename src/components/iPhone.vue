@@ -1,12 +1,47 @@
 <script>
+import { ref, onMounted, onBeforeUnmount } from 'vue'
+
 export default {
   name: 'iPhone',
+  setup() {
+    const iphoneVideo = ref(null)
+    const isRotated = ref(false)
+
+    const handleScroll = () => {
+      if (!iphoneVideo.value) return
+
+      const rect = iphoneVideo.value.getBoundingClientRect()
+      const isInViewport = rect.top < window.innerHeight && rect.bottom >= 0
+
+      if (window.scrollY === 0) {
+        // User scrolled back to the top
+        isRotated.value = false
+      } else if (isInViewport) {
+        // Element is in viewport
+        isRotated.value = true
+      }
+    }
+
+    onMounted(() => {
+      window.addEventListener('scroll', handleScroll)
+      handleScroll() // Check initial state
+    })
+
+    onBeforeUnmount(() => {
+      window.removeEventListener('scroll', handleScroll)
+    })
+
+    return {
+      iphoneVideo,
+      isRotated
+    }
+  }
 }
 </script>
 
 <template>
   <div class="iphone-container">
-    <div class="iphone-video">
+    <div ref="iphoneVideo" class="iphone-video" :class="{ rotated: isRotated }">
       <video width="100%" autoplay loop muted playsinline src="@/assets/PD-mobile-walkthrough.mov"></video>
     </div>
   </div>
@@ -23,13 +58,20 @@ export default {
   perspective-origin: center center;
 
   .iphone-video {
-    -webkit-transform: rotateY(-25deg) rotateZ(10deg);
-    transform: rotateY(-25deg) rotateZ(10deg);
+    -webkit-transform: rotateY(0deg) rotateZ(0deg);
+    transform: rotateY(0deg) rotateZ(0deg);
+
+    &.rotated {
+      -webkit-transform: rotateY(-25deg) rotateZ(10deg);
+      transform: rotateY(-25deg) rotateZ(10deg);
+    }
 
     &:hover {
       -webkit-transform: rotateY(0deg) rotateZ(0deg);
       transform: rotateY(0deg) rotateZ(0deg);
     }
+
+
   }
 }
 
