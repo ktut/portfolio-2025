@@ -24,6 +24,7 @@ html {
 
 #app {
   background: $backgroundColor;
+  min-height: 100vh;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -90,15 +91,14 @@ figure {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 440px;
-  padding: 15px;
+  max-width: 540px;
+  padding: 16px;
 
   figcaption {
     text-align: left;
     color: $textColor !important;
-    span {
-      text-decoration: none !important;
-    }
+    text-decoration: none !important;
+    text-decoration-style: none !important;
   }
 }
 
