@@ -23,8 +23,8 @@ export default {
   perspective-origin: center center;
 
   &:hover .iphone-video {
-    -webkit-transform: rotateY(-35deg);
-    transform: rotateY(-35deg);
+    -webkit-transform: rotateY(-25deg) rotateZ(10deg);
+    transform: rotateY(-25deg) rotateZ(10deg);
   }
 }
 
@@ -65,8 +65,8 @@ export default {
     background-image: linear-gradient(to bottom, hsl(0, 0%, 50%), hsl(0, 0%, 75%));
     -webkit-border-radius: 45px;
     border-radius: 45px;
-    -webkit-transform: translateZ(-5px);
-    transform: translateZ(-5px);
+    -webkit-transform: translateZ(-10px);
+    transform: translateZ(-10px);
     pointer-events: none;
     z-index: 0;
   }
