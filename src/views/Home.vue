@@ -20,6 +20,7 @@ export default {
 
 <template>
   <main :class="{ loaded: loaded }">
+
     <RouterLink to="/chase" class="project-link">
       <figure>
         <img v-view-transition-name="'img'" src="../assets/Chase-portfolio-mock.jpg">
@@ -59,7 +60,5 @@ export default {
         </figcaption>
       </figure>
     </RouterLink>
-
-    <LogoSlider />
   </main>
 </template>

@@ -1,6 +1,10 @@
 <script>
+import LogoSlider from './LogoSlider.vue'
 export default {
   name: 'Footer',
+  components: {
+    LogoSlider
+  },
   data() {
     return {
       currentYear: new Date().getFullYear()
@@ -11,6 +15,7 @@ export default {
 
 <template>
   <footer>
+    <LogoSlider />
     <div class="footer-content">
       <div class="footer-left">
         <p>&copy; {{ currentYear }} Ramzi Dreessen</p>
@@ -43,10 +48,26 @@ export default {
 
 <style lang="scss" scoped>
 footer {
-  background: linear-gradient(to bottom, transparent 0%, #f8f9fa 100%);
-  border-top: 1px solid #e0e0e0;
-  padding: 3rem 2rem 2rem;
-  margin-top: 4rem;
+  position: relative;
+  background: linear-gradient(to bottom, #e8eaed 0%, #d4d7db 100%);
+  padding: 4rem 2rem 2rem;
+  margin-top: 6rem;
+
+  // Artistic blend at the top
+  &::before {
+    content: '';
+    position: absolute;
+    top: -3rem;
+    left: 0;
+    right: 0;
+    height: 3rem;
+    background: linear-gradient(to bottom,
+        rgba(232, 234, 237, 0) 0%,
+        rgba(232, 234, 237, 0.3) 40%,
+        rgba(232, 234, 237, 0.7) 80%,
+        rgba(232, 234, 237, 1) 100%);
+    pointer-events: none;
+  }
 
   .footer-content {
     max-width: 1200px;
@@ -67,8 +88,10 @@ footer {
   .footer-left {
     p {
       margin: 0;
-      color: #666;
+      color: #5a5e63;
       font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
     }
   }
 
@@ -82,6 +105,7 @@ footer {
       text-decoration: none;
       font-weight: 500;
       font-size: 0.9rem;
+      letter-spacing: 0.01em;
       -webkit-transition: color 0.2s ease;
       transition: color 0.2s ease;
 
@@ -91,19 +115,30 @@ footer {
     }
 
     .separator {
-      color: #ccc;
+      color: #999;
       font-size: 0.9rem;
+      font-weight: 300;
     }
   }
 
   .sub-footer-content {
     max-width: 1200px;
     margin: 0 auto;
-    color: #666;
-    font-size: 0.9rem;
+    color: #5a5e63;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
     text-align: left;
-    margin-top: 2rem;
-    padding-bottom: 100px;
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-top: 1px solid rgba(90, 94, 99, 0.2);
+
+    @media (max-width: 768px) {
+      text-align: center;
+      font-size: 0.7rem;
+    }
   }
 }
 </style>
