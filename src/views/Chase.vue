@@ -245,19 +245,11 @@ export default {
   text-align: center;
 
   .project-title {
-    font-size: 3.5rem;
     font-weight: 700;
     letter-spacing: -0.02em;
     line-height: 1.1;
     margin-bottom: 0.5rem;
     color: #1a1a1a;
-
-    @media (min-width: 768px) {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-    }
 
     .chase-logo {
       width: 40px;
@@ -267,7 +259,6 @@ export default {
   }
 
   .project-subtitle {
-    font-size: 1.5rem;
     font-weight: 400;
     color: #666;
     margin-bottom: 2rem;
@@ -308,7 +299,6 @@ export default {
 }
 
 .section-title {
-  font-size: 2rem;
   font-weight: 700;
   letter-spacing: -0.01em;
   margin-bottom: 1.5rem;
@@ -338,13 +328,10 @@ export default {
 
   .metrics-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1.5rem;
     margin-top: 2rem;
   }
 
   .metric-card {
-    padding: 2rem 1.5rem;
     border-bottom: 2px solid #e8e8e8;
     -webkit-transition: border-color 0.3s ease;
     transition: border-color 0.3s ease;
@@ -354,7 +341,6 @@ export default {
     }
 
     .metric-value {
-      font-size: 2.25rem;
       font-weight: 600;
       color: #1a1a1a;
       margin-bottom: 0.75rem;
@@ -363,7 +349,6 @@ export default {
     }
 
     .metric-label {
-      font-size: 0.9rem;
       font-weight: 500;
       color: #666;
       letter-spacing: 0.02em;
@@ -477,58 +462,92 @@ export default {
   }
 
   .mobile-showcase {
-    float: right;
-    margin-left: 3rem;
-    margin-bottom: 1.5rem;
-    max-width: 350px;
+    float: none;
+    margin-left: 0;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+
+    @media (min-width: 769px) {
+      float: right;
+      margin-left: 5rem;
+      margin-bottom: 1.5rem;
+      max-width: 350px;
+      display: block;
+      margin-top: 0;
+      padding-left: 80px;
+      left: -150px;
+      position: relative;
+    }
   }
 }
 
-@media (max-width: 768px) {
-  .mobile-section {
-    .mobile-showcase {
-      float: none;
-      margin-left: 0;
-      max-width: 100%;
+.project-header {
+  .project-title {
+    font-size: 2.5rem;
+
+    @media (min-width: 769px) {
+      font-size: 3.5rem;
       display: flex;
+      align-items: center;
       justify-content: center;
-      margin-top: 2rem;
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .project-header {
-    .project-title {
-      font-size: 2.5rem;
-    }
-
-    .project-subtitle {
-      font-size: 1.2rem;
-    }
-  }
-
-  .metrics-section {
-    .metrics-grid {
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
       gap: 1rem;
     }
+  }
 
-    .metric-card {
-      padding: 1.5rem 1rem;
+  .project-subtitle {
+    font-size: 1.2rem;
 
-      .metric-value {
-        font-size: 1.75rem;
-      }
+    @media (min-width: 769px) {
+      font-size: 1.5rem;
+    }
+  }
+}
 
-      .metric-label {
-        font-size: 0.8rem;
-      }
+.metrics-section {
+  .metrics-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+
+    @media (min-width: 769px) {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+      max-width: 800px;
+      margin-left: auto;
     }
   }
 
-  .section-title {
-    font-size: 1.75rem;
+  .metric-card {
+    padding: 1.5rem 1rem;
+
+    @media (min-width: 769px) {
+      padding: 2rem 1.5rem;
+    }
+
+    .metric-value {
+      font-size: 1.75rem;
+
+      @media (min-width: 769px) {
+        font-size: 2.25rem;
+      }
+    }
+
+    .metric-label {
+      font-size: 0.8rem;
+
+      @media (min-width: 769px) {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+.section-title {
+  font-size: 1.75rem;
+
+  @media (min-width: 769px) {
+    font-size: 2rem;
   }
 }
 </style>
