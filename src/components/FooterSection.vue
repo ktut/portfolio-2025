@@ -50,7 +50,6 @@ export default {
 footer {
   position: relative;
   padding: 0 2rem 2rem;
-  margin-top: 6rem;
 
   .footer-content {
     max-width: 1200px;

@@ -26,7 +26,7 @@ export default {
 </script>
 
 <template>
-  <div class="chicago-mag">
+  <main class="chicago-mag">
 
 
     <section class="hero">
@@ -116,7 +116,7 @@ export default {
         <video src="../assets/vid-15.mov" autoplay loop muted playsinline></video>
       </div>
     </section>
-  </div>
+  </main>
 </template>
 
 <style lang="scss" scoped>
