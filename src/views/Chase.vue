@@ -180,5 +180,40 @@ export default {
 .chase {
   min-height: 100vh;
   background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+
+
+  .mobile-section {
+    margin-top: -2rem;
+    margin-bottom: 4rem;
+
+    p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #4a4a4a;
+      margin-bottom: 1.5rem;
+    }
+
+    .mobile-showcase {
+      float: none;
+      margin-left: 0;
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+
+      @media (min-width: 769px) {
+        float: right;
+        margin-left: 5rem;
+        margin-bottom: 1.5rem;
+        max-width: 350px;
+        display: block;
+        margin-top: 0;
+        padding-left: 80px;
+        left: -150px;
+        position: relative;
+      }
+    }
+  }
+
 }
 </style>

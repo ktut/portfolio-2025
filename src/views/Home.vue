@@ -79,7 +79,7 @@ export default {
         </div>
         <figcaption>
           <h2 class="title">
-            Chicago Magazine editorial web design
+            <em>Chicago</em> Magazine editorial web design
           </h2>
           <button class="cta">
             View Projects <span class="unicode">&#x2197;</span>

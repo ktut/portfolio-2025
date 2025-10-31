@@ -29,21 +29,14 @@ export default {
   <main class="chicago-mag">
     <section class="hero">
       <figure class="hero-image">
-        <img
-          alt="Chicago magazine print editions"
-          src="../assets/chimag-mag-spread.png"
-        >
+        <img alt="Chicago magazine print editions" src="../assets/chimag-mag-spread.png">
       </figure>
     </section>
 
     <section class="content-wrapper">
       <header class="project-header">
         <h1 class="project-title">
-          <img
-            src="@/assets/logo-chimag.png"
-            alt="Chimag Logo"
-            class="chase-logo"
-          >
+          <img src="@/assets/logo-chimag.png" alt="Chimag Logo" class="chase-logo">
           <em>Chicago</em> magazine editorial web design
         </h1>
         <p class="project-subtitle">
@@ -51,30 +44,12 @@ export default {
         </p>
 
         <div class="tech-stack">
-          <div
-            v-for="tech in technologies"
-            :key="tech.name"
-            class="tech-pill"
-          >
-            <svg
-              v-if="tech.type !== 'image'"
-              xmlns="http://www.w3.org/2000/svg"
-              :viewBox="tech.viewBox"
-              class="tech-icon"
-            >
-              <path
-                v-for="(path, index) in tech.paths"
-                :key="index"
-                :d="path.d"
-                :fill="path.fill"
-              />
+          <div v-for="tech in technologies" :key="tech.name" class="tech-pill">
+            <svg v-if="tech.type !== 'image'" xmlns="http://www.w3.org/2000/svg" :viewBox="tech.viewBox"
+              class="tech-icon">
+              <path v-for="(path, index) in tech.paths" :key="index" :d="path.d" :fill="path.fill" />
             </svg>
-            <img
-              v-else
-              :src="tech.src"
-              :alt="tech.name"
-              class="tech-icon"
-            >
+            <img v-else :src="tech.src" :alt="tech.name" class="tech-icon">
             <span>{{ tech.name }}</span>
           </div>
         </div>
@@ -85,163 +60,64 @@ export default {
           Overview
         </h2>
         <p class="lead">
-          At <a
-            href="http://www.chicagomag.com"
-            target="_blank"
-            rel="noreferrer noopener"
-          ><em>Chicago</em> magazine</a>, I was in charge of web design and administration
+          At <a href="http://www.chicagomag.com" target="_blank" rel="noreferrer noopener"><em>Chicago</em>
+            magazine</a>, I was in charge of web design and administration
           (taking over from the
-          very talented <a
-            href="https://www.seemann.com/luke/"
-            target="_blank"
-            rel="noreferrer noopener"
-          >Luke
+          very talented <a href="https://www.seemann.com/luke/" target="_blank" rel="noreferrer noopener">Luke
             Seemann</a>), and <a
             href="https://citymag.org/crma_events/national-city-and-regional-magazine-2018-award-winners/"
-            target="_blank"
-            rel="noreferrer noopener"
-          >won a national award for online excellence</a> with my team from
+            target="_blank" rel="noreferrer noopener">won a national award for online excellence</a> with my team from
           the City and Regional Magazine Association. During this time, I also attended Northwestern University’s
           full-stack
           coding bootcamp on nights/weekends.
         </p>
-        <p>Here's some of the work I did there:</p>
+        <p class="lead">Here's some of the work I did there:</p>
       </div>
 
       <div class="video-bg">
-        <video
-          src="../assets/vid-11.mov"
-          autoplay
-          loop
-          muted
-          playsinline
-        />
+        <video src="../assets/vid-11.mov" autoplay loop muted playsinline />
       </div>
       <div class="video-bg">
-        <video
-          src="../assets/vid-7.mov"
-          autoplay
-          loop
-          muted
-          playsinline
-        />
+        <video src="../assets/vid-7.mov" autoplay loop muted playsinline />
       </div>
       <div class="video-bg">
-        <video
-          src="../assets/vid-8.mov"
-          autoplay
-          loop
-          muted
-          playsinline
-        />
+        <video src="../assets/vid-8.mov" autoplay loop muted playsinline />
       </div>
       <div class="video-bg">
-        <video
-          src="../assets/vid-3.mov"
-          autoplay
-          loop
-          muted
-          playsinline
-        />
+        <video src="../assets/vid-3.mov" autoplay loop muted playsinline />
       </div>
       <div class="video-bg">
-        <video
-          src="../assets/vid-5.mov"
-          autoplay
-          loop
-          muted
-          playsinline
-        />
+        <video src="../assets/vid-5.mov" autoplay loop muted playsinline />
       </div>
       <div class="video-bg">
-        <video
-          src="../assets/vid-1.mov"
-          autoplay
-          loop
-          muted
-          playsinline
-        />
+        <video src="../assets/vid-1.mov" autoplay loop muted playsinline />
       </div>
       <div class="video-bg">
-        <video
-          src="../assets/vid-6.mov"
-          autoplay
-          loop
-          muted
-          playsinline
-        />
+        <video src="../assets/vid-6.mov" autoplay loop muted playsinline />
       </div>
       <div class="video-bg">
-        <video
-          src="../assets/vid-9.mov"
-          autoplay
-          loop
-          muted
-          playsinline
-        />
+        <video src="../assets/vid-9.mov" autoplay loop muted playsinline />
       </div>
       <div class="video-bg">
-        <video
-          src="../assets/vid-4.mov"
-          autoplay
-          loop
-          muted
-          playsinline
-        />
+        <video src="../assets/vid-4.mov" autoplay loop muted playsinline />
       </div>
       <div class="video-bg">
-        <video
-          src="../assets/vid-10.mov"
-          autoplay
-          loop
-          muted
-          playsinline
-        />
+        <video src="../assets/vid-10.mov" autoplay loop muted playsinline />
       </div>
       <div class="video-bg">
-        <video
-          src="../assets/vid-12.mov"
-          autoplay
-          loop
-          muted
-          playsinline
-        />
+        <video src="../assets/vid-12.mov" autoplay loop muted playsinline />
       </div>
       <div class="video-bg">
-        <video
-          src="../assets/vid-13.mov"
-          autoplay
-          loop
-          muted
-          playsinline
-        />
+        <video src="../assets/vid-13.mov" autoplay loop muted playsinline />
       </div>
       <div class="video-bg">
-        <video
-          src="../assets/vid-14.mov"
-          autoplay
-          loop
-          muted
-          playsinline
-        />
+        <video src="../assets/vid-14.mov" autoplay loop muted playsinline />
       </div>
       <div class="video-bg">
-        <video
-          src="../assets/vid-2.mov"
-          autoplay
-          loop
-          muted
-          playsinline
-        />
+        <video src="../assets/vid-2.mov" autoplay loop muted playsinline />
       </div>
       <div class="video-bg">
-        <video
-          src="../assets/vid-15.mov"
-          autoplay
-          loop
-          muted
-          playsinline
-        />
+        <video src="../assets/vid-15.mov" autoplay loop muted playsinline />
       </div>
     </section>
   </main>
