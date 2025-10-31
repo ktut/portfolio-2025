@@ -59,7 +59,7 @@ export default {
           <img src="@/assets/chase-logo.png" alt="Chase Logo" class="chase-logo">JPMorgan Chase Performance Dashboard
         </h1>
         <p class="project-subtitle">
-          I led frontend development on Chase Media Solutions’ card-linked offers campaign monitoring platform.
+          Building the client application for a card-linked offers campaign monitoring and reporting platform.
         </p>
 
         <div class="tech-stack">
@@ -78,14 +78,22 @@ export default {
         <h2 class="section-title">
           Overview
         </h2>
-        <p class="lead">
-          An always-on performance dashboard for Chase Media Solutions' card-linked offers program, enabling brands to
-          drive conversion, acquire new customers, and inspire incremental sales through real-time data insights.
+        <p>
+          The purpose of the app, built initially for Figg and then redesigned for <a
+            href="https://www.chase.com/mediasolutions/solutions" target="_blank" rel="noopener noreferrer"
+            aria-label="CMS">Chase Media Solutions</a> upon our acquisition, was to allow customers to take full
+          advange of the
+          card-linked offers program, enabling brands both big and small to
+          drive conversion, acquire new customers, and inspire incremental sales through data insights.
         </p>
         <p>
-          The platform leverages first-party transaction data to deliver targeted offers to Chase cardholders across
-          digital channels. Customers discover offers based on their purchase history, activate them via the Chase app,
-          and receive cash back when making purchases at participating merchants.
+          Overall, the platform leveraged transaction data to deliver targeted offers to Chase cardholders across
+          digital channels. Customers discovered offers based on their purchase history, activated them via the Chase
+          app,
+          and received cash back when making purchases at participating merchants.</p>
+        <p>Clients benefited from accurate,
+          on-demand performance tracking with the app. This always-on portal allowed brands to easily download reports
+          and keep tabs on KPIs like budget utilization, ROAS, impressions and sales.
         </p>
       </div>
 
@@ -94,13 +102,8 @@ export default {
           <iPhone />
         </div>
         <p>
-          The mobile interface provides advertisers with on-the-go access to campaign performance, enabling quick
-          decision-making and real-time optimization.
-        </p>
-        <p>
-          Built with responsive design principles, the dashboard adapts seamlessly across devices. Advertisers can
-          monitor campaign metrics, adjust budgets, and analyze performance trends directly from their mobile devices,
-          ensuring they never miss critical insights or opportunities for optimization.
+          The mobile interface provided clients with on-the-go access to performances of multiple campaigns. Built with
+          responsive design principles, the dashboard adapts seamlessly across devices.
         </p>
       </div>
 
@@ -119,8 +122,23 @@ export default {
           </div>
         </div>
       </div>
-
       <div class="detail-section">
+        <h2 class="section-title">
+          Engineering Details
+        </h2>
+        <p class="section-intro">
+          As the sole frontend engineer on the project, I was responsible for building the client application from the
+          ground up. I worked closely with the product and designteam to define the features and functionality of the
+          app, and
+          then I built the app using Vue.js and TypeScript, which I learned on the job.
+        </p>
+        <p class="section-intro">The application forgoes complex state, and instead uses component-based caching and
+          simpler architecture to
+          ensure legibility and maintainability. E2E tests written in Selenium integrated with the CI/CD pipeline
+          focused on business-critical user journeys,
+          while strict schema control with Typescript eliminated the need for many of the unit tests.</p>
+      </div>
+      <div class=" detail-section">
         <h2 class="section-title">
           Design Details
         </h2>
@@ -139,7 +157,7 @@ export default {
           </div>
           <div class="detail-item">
             <video autoplay loop muted playsinline src="@/assets/PD-detail-dates.mov" />
-            <h3>Custom Date Picker</h3>
+            <h3>Custom Date Picker and Charts</h3>
             <p>
               Built with TypeScript and D3.js, featuring segment selection and precise date range controls for detailed
               analytics.
@@ -148,7 +166,8 @@ export default {
           <div class="detail-item">
             <video autoplay loop muted playsinline src="@/assets/PD-detail-search.mov" />
             <h3>Real-time Search</h3>
-            <p>Instant search feedback with live copy updates as you type, providing immediate visual confirmation.</p>
+            <p>Instant search feedback with live search metadata displayed as the user typed, providing immediate visual
+              confirmation.</p>
           </div>
           <div class="detail-item full-width">
             <video autoplay loop muted playsinline src="@/assets/PD-detail-download.mov" />
