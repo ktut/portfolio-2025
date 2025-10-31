@@ -41,38 +41,47 @@ main {
 h1,
 h2,
 h3 {
-  font-family: nexa, sans-serif;
-  font-weight: 600;
+  font-family: 'meursault-variable', serif;
+  font-variation-settings: 'wdth' 80, 'wght' 400;
   font-style: normal;
-  font-weight: 700;
   letter-spacing: 0.3px;
+  color: $headingColor;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   line-height: 100%;
 }
 
 h2 {
+  font-variation-settings: 'wdth' 100, 'wght' 700;
+  font-size: 2rem;
+  line-height: 130%;
+  margin: 20px 0;
+}
+
+h3 {
+  font-variation-settings: 'wdth' 100, 'wght' 700;
   font-size: 1.5rem;
   line-height: 130%;
   margin: 20px 0;
-  color: $headingColor;
 }
 
 p {
+  font-family: 'meursault-variable', serif;
+  font-variation-settings: 'wdth' 150, 'wght' 400;
+
   font-size: 1rem;
-  font-weight: 300;
   margin-bottom: 25px;
   line-height: 155%;
 
   em {
-    font-style: italic;
+    font-variation-settings: 'wdth' 150, 'wght' 400;
   }
 }
 
-b {
-  font-weight: 700;
+button {
+  font-family: sans-serif !important;
 }
 
 ul {
@@ -135,7 +144,6 @@ img {
     gap: 0.5rem;
     color: $redPunch;
     text-decoration: none;
-    font-weight: 500;
     font-size: 0.95rem;
     -webkit-transition: color 0.2s ease;
     transition: color 0.2s ease;
@@ -259,7 +267,6 @@ main {
   text-align: center;
 
   .project-title {
-    font-weight: 700;
     letter-spacing: -0.02em;
     line-height: 1.1;
     margin-bottom: 0.5rem;
@@ -276,10 +283,10 @@ main {
   }
 
   .project-subtitle {
-    font-weight: 400;
     color: #666;
     margin-bottom: 2rem;
     text-align: center;
+    text-wrap: balance;
   }
 }
 
@@ -299,7 +306,6 @@ main {
     -webkit-border-radius: 50px;
     border-radius: 50px;
     border: 1px solid #e0e0e0;
-    font-weight: 600;
     font-size: 0.9rem;
     color: #2c3e50;
     -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -317,7 +323,6 @@ main {
 }
 
 .section-title {
-  font-weight: 700;
   letter-spacing: -0.01em;
   margin-bottom: 1.5rem;
   color: #1a1a1a;
@@ -328,7 +333,6 @@ main {
 
   .lead {
     font-size: 1.25rem;
-    font-weight: 400;
     line-height: 1.7;
     color: #2c3e50;
     margin-bottom: 1.5rem;
@@ -359,7 +363,6 @@ main {
     }
 
     .metric-value {
-      font-weight: 600;
       color: #1a1a1a;
       margin-bottom: 0.75rem;
       letter-spacing: -0.02em;
@@ -367,7 +370,6 @@ main {
     }
 
     .metric-label {
-      font-weight: 500;
       color: #666;
       letter-spacing: 0.02em;
       line-height: 1.4;
@@ -416,7 +418,6 @@ main {
 
     h3 {
       font-size: 1.25rem;
-      font-weight: 600;
       color: #1a1a1a;
       margin-bottom: 0.5rem;
     }

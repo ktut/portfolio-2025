@@ -84,7 +84,6 @@ footer {
       margin: 0;
       color: #5a5e63;
       font-size: 0.9rem;
-      font-weight: 500;
       letter-spacing: 0.01em;
     }
   }
@@ -97,7 +96,6 @@ footer {
     a {
       color: $textColor;
       text-decoration: none;
-      font-weight: 500;
       font-size: 0.9rem;
       letter-spacing: 0.01em;
       -webkit-transition: color 0.2s ease;
@@ -111,7 +109,6 @@ footer {
     .separator {
       color: #999;
       font-size: 0.9rem;
-      font-weight: 300;
     }
   }
 
@@ -120,7 +117,6 @@ footer {
     margin: 0 auto;
     color: #5a5e63;
     font-size: 0.75rem;
-    font-weight: 400;
     line-height: 1.6;
     letter-spacing: 0.01em;
     text-align: left;

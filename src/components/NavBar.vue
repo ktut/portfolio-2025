@@ -157,7 +157,6 @@ nav {
   }
 
   a {
-    font-weight: bold;
     color: $textColor;
     text-decoration: none;
 

@@ -1,5 +1,5 @@
 <script>
-import HomepageTopText from '../components/HomepageTopText.vue' 
+import HomepageTopText from '../components/HomepageTopText.vue'
 export default {
   name: 'HomeView',
   components: {
@@ -20,15 +20,9 @@ export default {
 <template>
   <main :class="{ loaded: loaded }">
     <HomepageTopText />
-    <RouterLink
-      to="/chase"
-      class="project-link"
-    >
+    <RouterLink to="/chase" class="project-link">
       <figure>
-        <img
-          v-view-transition-name="'img'"
-          src="../assets/Chase-portfolio-mock.jpg"
-        >
+        <img v-view-transition-name="'img'" src="../assets/Chase-portfolio-mock.jpg">
         <figcaption>
           <h3 class="title">
             JPMorgan Chase Performance Dashboard
@@ -39,65 +33,26 @@ export default {
         </figcaption>
       </figure>
     </RouterLink>
-    <RouterLink
-      to="/chicagomagazine"
-      class="project-link cover"
-    >
+    <RouterLink to="/chicagomagazine" class="project-link cover">
       <figure>
         <div class="video-composite">
           <div class="video-bg">
-            <video
-              src="../assets/vid-10.mov"
-              autoplay
-              loop
-              muted
-              playsinline
-            />
+            <video src="../assets/vid-10.mov" autoplay loop muted playsinline />
           </div>
           <div class="video-bg">
-            <video
-              src="../assets/vid-14.mov"
-              autoplay
-              loop
-              muted
-              playsinline
-            />
+            <video src="../assets/vid-14.mov" autoplay loop muted playsinline />
           </div>
           <div class="video-bg not-mobile">
-            <video
-              src="../assets/vid-4.mov"
-              autoplay
-              loop
-              muted
-              playsinline
-            />
+            <video src="../assets/vid-4.mov" autoplay loop muted playsinline />
           </div>
           <div class="video-bg not-mobile">
-            <video
-              src="../assets/vid-3.mov"
-              autoplay
-              loop
-              muted
-              playsinline
-            />
+            <video src="../assets/vid-3.mov" autoplay loop muted playsinline />
           </div>
           <div class="video-bg not-mobile">
-            <video
-              src="../assets/vid-6.mov"
-              autoplay
-              loop
-              muted
-              playsinline
-            />
+            <video src="../assets/vid-6.mov" autoplay loop muted playsinline />
           </div>
           <div class="video-bg not-mobile">
-            <video
-              src="../assets/vid-8.mov"
-              autoplay
-              loop
-              muted
-              playsinline
-            />
+            <video src="../assets/vid-8.mov" autoplay loop muted playsinline />
           </div>
         </div>
         <figcaption>
@@ -140,7 +95,6 @@ figure {
     display: block;
     margin-top: 20px;
     font-size: 1.5rem;
-    font-weight: 700;
 
     @media (min-width: 840px) {
       display: flex;
@@ -161,8 +115,12 @@ figure {
     -webkit-border-radius: 8px;
     border-radius: 8px;
     padding: 3px 6px;
-    font-size: 1rem;
-    font-weight: 600;
+
+    .example {
+      font-family: "meursault-variable", serif;
+      font-variation-settings: 'wdth' 200, 'wght' 300;
+    }
+
     cursor: pointer;
     margin-top: 12px;
     display: inline-block;
