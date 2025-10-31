@@ -27,6 +27,7 @@ export default {
 
   h1 {
     margin-bottom: 1rem;
+    font-variation-settings: "wght" 50, "ital" 400;
 
     @media screen and (min-width: 720px) {
       font-size: 4rem;
@@ -34,7 +35,7 @@ export default {
 
     span {
       animation-name: font-expand-anim;
-      animation-duration: 5s;
+      animation-duration: 2s;
       animation-iteration-count: once;
       animation-timing-function: ease-out;
       animation-fill-mode: forwards;
@@ -43,7 +44,7 @@ export default {
 
   @keyframes font-expand-anim {
     from {
-      font-variation-settings: "wght" 80, "ital" 400;
+      font-variation-settings: "wght" 100, "ital" 400;
     }
 
     to {

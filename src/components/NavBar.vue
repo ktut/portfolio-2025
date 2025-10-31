@@ -29,7 +29,7 @@ export default {
   <nav>
     <div :class="{ 'back-link': true, 'home-page': isHomePage }">
       <RouterLink to="/">
-        <span class="arrow">←</span> Back
+        <span class="arrow">←</span> Home
       </RouterLink>
     </div>
     <div class="logo" @click="goHome">
@@ -192,7 +192,7 @@ nav {
   .letter,
   .letter>div,
   .letter>div>div {
-    border: 0px solid $textColor;
+    border: 0px solid $logoColor;
     border-radius: 0px;
     opacity: 0;
   }
@@ -258,24 +258,24 @@ nav {
 
     .r {
       >div {
-        border-left: 10px solid #2c3e50;
+        border-left: 10px solid $logoColor;
         border-top-right-radius: 10em;
       }
 
       .top {
-        border-right: 10px solid #2c3e50;
+        border-right: 10px solid $logoColor;
         border-bottom-right-radius: 10em;
       }
 
       .bottom {
-        border-right: 10px solid #2c3e50;
+        border-right: 10px solid $logoColor;
       }
     }
 
     .k {
       >div {
-        border-left: 10px solid #2c3e50;
-        border-right: 10px solid #2c3e50;
+        border-left: 10px solid $logoColor;
+        border-right: 10px solid $logoColor;
       }
 
       .top {
@@ -289,8 +289,8 @@ nav {
 
     .d {
       >div {
-        border-left: 10px solid #2c3e50;
-        border-right: 10px solid #2c3e50;
+        border-left: 10px solid $logoColor;
+        border-right: 10px solid $logoColor;
       }
 
       .top {

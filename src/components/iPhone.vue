@@ -81,8 +81,8 @@ export default {
   height: 783px;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  -webkit-transition: transform 0.6s ease-out;
-  transition: transform 0.6s ease-out;
+  -webkit-transition: transform 5s ease-in-out;
+  transition: transform 5s ease-in-out;
 
   video {
     position: absolute;

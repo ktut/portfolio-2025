@@ -59,7 +59,7 @@ export default {
           <img src="@/assets/chase-logo.png" alt="Chase Logo" class="chase-logo">JPMorgan Chase Performance Dashboard
         </h1>
         <p class="project-subtitle">
-          A card-linked offers web platform
+          I led frontend development on Chase Media Solutions’ card-linked offers campaign monitoring platform.
         </p>
 
         <div class="tech-stack">
