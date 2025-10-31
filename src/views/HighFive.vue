@@ -103,15 +103,7 @@ export default {
 
         <div class="detail-grid">
           <div class="detail-item full-width">
-            <img src="https://github.com/ktut/constructor/raw/808531ed8691056d7698cba2437ce90773ed65ed/tout-whole-screen.png" alt="Constructor full interface">
-            <h3>Complete Builder Interface</h3>
-            <p>
-              The full Constructor interface showing the visual builder, controls, and preview capabilities all in one screen.
-            </p>
-          </div>
-
-          <div class="detail-item">
-            <img src="https://github.com/ktut/constructor/raw/808531ed8691056d7698cba2437ce90773ed65ed/tout-builder.png" alt="Builder tool interface">
+            <img src="../assets/tout-builder.png" alt="Builder tool interface">
             <h3>Visual Layer Builder</h3>
             <p>
               The builder tool allows placement of links, text, images, video, gradients, and Lottie animations within a custom CSS Grid structure. Layers are visualized in 3D space using CSS transforms.
@@ -119,7 +111,7 @@ export default {
           </div>
 
           <div class="detail-item">
-            <img src="https://github.com/ktut/constructor/raw/808531ed8691056d7698cba2437ce90773ed65ed/tout-output.png" alt="HTML output display">
+            <img src="../assets/tout-output.png" alt="HTML output display">
             <h3>HTML Output Preview</h3>
             <p>
               View the generated HTML structure with atomic CSS classes following a Tailwind-inspired system, maintaining low CSS specificity despite DOM complexity.
@@ -127,15 +119,15 @@ export default {
           </div>
 
           <div class="detail-item">
-            <img src="https://github.com/ktut/constructor/raw/808531ed8691056d7698cba2437ce90773ed65ed/tout-desktop-grid.png" alt="CSS Grid layout diagram">
+            <img src="../assets/tout-desktop-grid.png" alt="CSS Grid layout diagram">
             <h3>CSS Grid Layout System</h3>
             <p>
               The underlying CSS Grid structure that powers responsive positioning. Every breakpoint key with a pixel width (such as '736') allows different content at different viewport sizes.
             </p>
           </div>
 
-          <div class="detail-item full-width">
-            <img src="https://github.com/ktut/constructor/raw/808531ed8691056d7698cba2437ce90773ed65ed/tout-desktop.png" alt="Final rendered banner">
+          <div class="detail-item">
+            <img src="../assets/tout-desktop.png" alt="Final rendered banner">
             <h3>Final Banner Rendering</h3>
             <p>
               The final output shows a polished advertising banner with multiple layers, animations, and responsive behavior ready for production deployment to S3.
