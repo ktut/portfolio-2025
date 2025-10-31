@@ -104,7 +104,7 @@ nav {
   top: 0;
   padding: 16px;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-  z-index: 1;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;

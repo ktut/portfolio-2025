@@ -1,19 +1,38 @@
 <script>
+import IPhone from '@/components/iPhone.vue';
 import HomepageTopText from '../components/HomepageTopText.vue'
 export default {
   name: 'HomeView',
   components: {
-    HomepageTopText
+    HomepageTopText,
+    IPhone
   },
   data() {
     return {
       // is app loaded
       loaded: false,
+      windowWidth: window.innerWidth,
+      minWidth: 840
     }
   },
   mounted() {
     this.loaded = true;
+    window.addEventListener('resize', this.updateWidth);
+    this.updateWidth();
   },
+  computed: {
+    shouldMountComponent() {
+      return this.windowWidth > this.minWidth;
+    }
+  },
+  unmounted() {
+    window.removeEventListener('resize', this.updateWidth);
+  },
+  methods: {
+    updateWidth() {
+      this.windowWidth = window.innerWidth;
+    }
+  }
 }
 </script>
 
@@ -23,6 +42,7 @@ export default {
     <RouterLink to="/chase" class="project-link cover">
       <figure>
         <div class="img-bg">
+          <IPhone v-if="shouldMountComponent" class="iphone-in-image" />
           <img v-view-transition-name="'img'" src="../assets/Chase-portfolio-mock.jpg"></img>
         </div>
         <figcaption>

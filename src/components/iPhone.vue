@@ -58,19 +58,22 @@ export default {
   perspective-origin: center center;
 
   .iphone-video {
-    -webkit-transform: rotateY(0deg) rotateZ(0deg);
-    transform: rotateY(0deg) rotateZ(0deg);
+    // -webkit-transform: rotateY(0deg) rotateZ(0deg);
+    // transform: rotateY(0deg) rotateZ(0deg);
 
-    &.rotated {
-      @media (min-width: 480px) {
-        -webkit-transform: rotateY(-25deg) rotateZ(10deg);
-        transform: rotateY(-25deg) rotateZ(10deg);
-      }
-    }
+    // &.rotated {
+    //   @media (min-width: 480px) {
+    //     -webkit-transform: rotateY(-25deg) rotateZ(10deg);
+    //     transform: rotateY(-25deg) rotateZ(10deg);
+    //   }
+    // }
+
+    -webkit-transform: rotateY(-25deg) rotateZ(10deg);
+    transform: rotateY(-25deg) rotateZ(10deg);
 
     &:hover {
-      -webkit-transform: rotateY(0deg) rotateZ(0deg);
-      transform: rotateY(0deg) rotateZ(0deg);
+      -webkit-transform: rotateY(0deg) rotateZ(-5deg);
+      transform: rotateY(0deg) rotateZ(-5deg);
     }
   }
 }
@@ -82,7 +85,7 @@ export default {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   -webkit-transition: transform 5s ease-in-out;
-  transition: transform 5s ease-in-out;
+  transition: transform 2s ease-in-out;
 
   video {
     position: absolute;
