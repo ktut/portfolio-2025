@@ -3,7 +3,7 @@ export default {
   name: 'Tout',
   data() {
     return {
-      animate: false,
+      animate: true,
       intervalId: null,
     };
   },
@@ -49,7 +49,7 @@ export default {
   .layer-3,
   .layer-4,
   .layer-5 {
-    transition: transform 1s ease-out, filter 1s ease-out;
+    transition: transform 2s ease, filter 2s ease;
     filter: drop-shadow(3px 3px 25px rgba(0, 0, 0, 0));
   }
 

@@ -70,7 +70,7 @@ export default {
       <header class="project-header">
         <h1 class="project-title">
           <img src="@/assets/logo-h5g.png" alt="High 5 Games Logo" class="chase-logo">
-          High 5 Games casino web design
+          High 5 Games web casino display system
         </h1>
         <p class="project-subtitle">
           Building a custom carousel banner builder system
@@ -93,12 +93,12 @@ export default {
           Overview
         </h2>
         <p class="lead">
-          As an engineer at (<a href="https://high5casino.com/" target="_blank" rel="noreferrer noopener">High 5
-            Casino</a>), product and art teams was to implement
-          marketing/advertisement/game-link banners (rotating in a carousel) that would accommodate animation and be
+          As an engineer at <a href="https://high5casino.com/" target="_blank" rel="noreferrer noopener">High 5
+            Casino</a>, product and art teams needed a way to create banners (rotating
+          in a carousel) for marketing, advertisements, and game links, that would accommodate animation and could be
           localized for different
-          countries, with multiple potential layers, which would move at different speeds while scrolling (i.e.,
-          parallax scrolling). There were no existing dependencies that I could find, at the time, that could handle all
+          countries. There could be multiple potential layers, moving at different speeds while scrolling (i.e.,
+          parallax scrolling). There were no existing solutions that I could find at the time, that could handle all
           of these requirements. I decided to embark on the long journey of "rolling my own" solution.
         </p>
         <p>
@@ -189,12 +189,21 @@ export default {
   background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
 
   .tout-container {
-    width: 800px;
-    max-width: 100%;
+    width: 500px;
+    max-width: unset;
+    height: 300px;
+    transform: translateX(-30%);
+
+    @media (min-width: 500px) {
+      width: 800px;
+      max-width: 100%;
+      height: unset;
+      transform: translateX(0);
+    }
   }
 
   .hero {
-    max-width: 800px;
+    max-width: 100%;
 
     figure {
       box-shadow: unset;
