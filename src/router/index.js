@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import ChaseView from '../views/Chase.vue'
 import ChicagoMagView from '../views/ChicagoMag.vue'
+import HighFiveView from '../views/HighFive.vue'
 import { startViewTransition } from 'vue-view-transitions'
 
 const routes = [
@@ -25,6 +26,11 @@ const routes = [
     path: '/chicagomagazine',
     name: 'chicagomagazine',
     component: ChicagoMagView
+  },
+  {
+    path: '/high5games',
+    name: 'high5games',
+    component: HighFiveView
   }
 ]
 

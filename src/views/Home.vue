@@ -87,6 +87,21 @@ export default {
         </figcaption>
       </figure>
     </RouterLink>
+    <RouterLink to="/high5games" class="project-link cover">
+      <figure>
+        <div class="img-bg">
+          <img src="../assets/logo-h5g.png" alt="High 5 Games" />
+        </div>
+        <figcaption>
+          <h2 class="title">
+            High 5 Games casino web design
+          </h2>
+          <button class="cta">
+            View Project <span class="unicode">&#x2197;</span>
+          </button>
+        </figcaption>
+      </figure>
+    </RouterLink>
   </main>
 </template>
 
