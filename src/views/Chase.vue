@@ -194,14 +194,17 @@ export default {
     }
 
     .mobile-showcase {
+      position: relative;
       float: none;
       margin-left: 0;
       max-width: 100%;
       display: flex;
       justify-content: center;
       margin-top: 2rem;
+      scale: 0.8;
 
       @media (min-width: 769px) {
+        scale: unset;
         float: right;
         margin-left: 5rem;
         margin-bottom: 1.5rem;
@@ -210,7 +213,6 @@ export default {
         margin-top: 0;
         padding-left: 80px;
         left: -150px;
-        position: relative;
       }
     }
   }
