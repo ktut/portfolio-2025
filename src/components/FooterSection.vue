@@ -1,9 +1,31 @@
 <script>
 import LogoSlider from './LogoSlider.vue'
+import { useRouter } from 'vue-router'
+import { computed } from 'vue'
+
 export default {
   name: 'FooterSection',
   components: {
     LogoSlider
+  },
+  setup() {
+    const router = useRouter()
+
+    const projectLinks = computed(() => {
+      return router.getRoutes()
+        .filter(route => {
+          const name = route.name?.toLowerCase()
+          return name && name !== 'home' && name !== 'about' && route.meta?.displayName
+        })
+        .map(route => ({
+          path: route.path,
+          name: route.meta.displayName
+        }))
+    })
+
+    return {
+      projectLinks
+    }
   },
   data() {
     return {
@@ -16,6 +38,19 @@ export default {
 <template>
   <footer>
     <hr />
+    <div class="project-links">
+      <h3>My Work</h3>
+      <nav>
+        <router-link
+          v-for="link in projectLinks"
+          :key="link.path"
+          :to="link.path"
+          class="project-link"
+        >
+          {{ link.name }}
+        </router-link>
+      </nav>
+    </div>
     <p class="companies-worked-with">Companies I've had the pleasure of working with:</p>
     <LogoSlider />
     <div class="footer-content">
@@ -52,6 +87,52 @@ export default {
 footer {
   position: relative;
   padding: 0 0rem 2rem;
+
+  .project-links {
+    padding: 2rem 2rem 1rem;
+    text-align: center;
+
+    h3 {
+      color: $headingColor;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      .project-link {
+        color: $textColor;
+        text-decoration: none;
+        font-size: 1rem;
+        letter-spacing: 0.01em;
+        padding: 0.5rem 1rem;
+        border: 1px solid rgba(90, 94, 99, 0.3);
+        border-radius: 4px;
+        transition: all 0.2s ease;
+
+        &:hover {
+          color: $redPunch;
+          border-color: $redPunch;
+          background-color: rgba(237, 28, 36, 0.05);
+        }
+      }
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 0.75rem;
+
+        .project-link {
+          width: 100%;
+          max-width: 300px;
+        }
+      }
+    }
+  }
 
   .companies-worked-with {
     padding: 2rem;

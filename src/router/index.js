@@ -10,27 +10,32 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: Home
+    component: Home,
+    meta: { displayName: 'Home' }
   },
   {
     path: '/about',
     name: 'about',
-    component: About
+    component: About,
+    meta: { displayName: 'About' }
   },
   {
     path: '/chase',
     name: 'chase',
-    component: ChaseView
+    component: ChaseView,
+    meta: { displayName: 'JPMorganChase' }
   },
   {
     path: '/chicagomagazine',
     name: 'chicagomagazine',
-    component: ChicagoMagView
+    component: ChicagoMagView,
+    meta: { displayName: 'Chicago Magazine' }
   },
   {
     path: '/high5games',
     name: 'high5games',
-    component: HighFiveView
+    component: HighFiveView,
+    meta: { displayName: 'High 5 Games' }
   }
 ]
 
