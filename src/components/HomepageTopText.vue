@@ -75,6 +75,58 @@ export default {
     @media screen and (min-width: 720px) {
       text-align: center;
     }
+
+    .hightlight {
+      display: inline-block;
+
+      &.high {
+        position: relative;
+        font-variation-settings: 'wght' 600;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background: currentColor;
+          opacity: 0.4;
+          transform-origin: left;
+          animation: underline-draw 2s ease-in-out infinite;
+        }
+      }
+
+      &.low {
+        animation: gentle-down 2s ease-in-out infinite;
+      }
+    }
+  }
+
+  @keyframes underline-draw {
+    0% {
+      transform: scaleX(0);
+    }
+
+    50% {
+      transform: scaleX(1);
+    }
+
+    100% {
+      transform: scaleX(0);
+    }
+  }
+
+  @keyframes gentle-down {
+    0%, 100% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+
+    50% {
+      transform: translateY(2px) scale(0.98);
+      opacity: 0.85;
+    }
   }
 }
 </style>
