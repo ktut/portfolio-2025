@@ -72,8 +72,8 @@ export default {
     transform: rotateY(-25deg) rotateZ(10deg);
 
     &:hover {
-      -webkit-transform: rotateY(0deg) rotateZ(-5deg);
-      transform: rotateY(0deg) rotateZ(-5deg);
+      -webkit-transform: rotateY(0deg) rotateZ(0deg);
+      transform: rotateY(0deg) rotateZ(0deg);
     }
   }
 }
@@ -84,8 +84,8 @@ export default {
   height: 783px;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  -webkit-transition: transform 5s ease-in-out;
-  transition: transform 2s ease-in-out;
+  -webkit-transition: transform 1s ease-out;
+  transition: transform 1s ease-out;
 
   video {
     position: absolute;

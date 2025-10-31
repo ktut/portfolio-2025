@@ -152,6 +152,8 @@ figure {
 
     @media (min-width: 840px) {
       margin-top: 0;
+      position: relative;
+      top: -8px;
     }
 
     .unicode {
