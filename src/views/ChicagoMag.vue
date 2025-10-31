@@ -56,10 +56,7 @@ export default {
       </header>
 
       <div class="project-overview">
-        <h2 class="section-title">
-          Overview
-        </h2>
-        <p class="lead">
+        <p>
           At <a href="http://www.chicagomag.com" target="_blank" rel="noreferrer noopener"><em>Chicago</em>
             magazine</a>, I was in charge of web design and administration
           (taking over from the
@@ -71,7 +68,7 @@ export default {
           full-stack
           coding bootcamp on nights/weekends.
         </p>
-        <p class="lead">Here's some of the work I did there:</p>
+        <p>Here's some of the work I did there:</p>
       </div>
 
       <div class="video-bg">
