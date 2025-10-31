@@ -41,9 +41,9 @@ export default {
     <HomepageTopText />
     <RouterLink to="/chase" class="project-link cover">
       <figure>
-        <div class="img-bg">
+        <div class="img-bg" v-view-transition-name="'img'"
+          :style="{ backgroundImage: 'url(' + require('@/assets/Chase-portfolio-mock.jpg') + ')' }">
           <IPhone v-if="shouldMountComponent" class="iphone-in-image" />
-          <img v-view-transition-name="'img'" src="../assets/Chase-portfolio-mock.jpg"></img>
         </div>
         <figcaption>
           <h2 class="title">
@@ -114,14 +114,18 @@ figure {
   padding: 16px;
   cursor: pointer;
 
-  img,
+
+  .video-composite {
+    overflow: hidden;
+  }
+
+  .img-bg,
   .video-composite {
     display: block;
     width: 100%;
     border-radius: 16px;
-    border: 2px solid transparent;
+    border: 2px solid #eee;
     transition: border 0.3s ease;
-    overflow: hidden;
   }
 
   figcaption {
@@ -129,7 +133,6 @@ figure {
     color: $textColor !important;
     text-decoration: none !important;
     display: block;
-    margin-top: 20px;
     font-size: 1.5rem;
 
     @media (min-width: 840px) {
@@ -182,7 +185,7 @@ figure {
 
   &:hover {
 
-    img,
+    .img-bg,
     .video-composite {
       border: 2px solid $redPunch;
     }

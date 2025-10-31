@@ -18,6 +18,8 @@ export default {
 </template>
 <style lang="scss" scoped>
 .homepage-top-text {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 32px 16px 0;
 
   @media (min-width: 720px) {
