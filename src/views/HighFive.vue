@@ -62,7 +62,7 @@ export default {
   <main class="high-five">
     <section class="hero">
       <div class="tout-container">
-        <Tout />
+        <Tout :animate="toutAnimate" />
       </div>
     </section>
 
@@ -187,6 +187,11 @@ export default {
 .high-five {
   min-height: 100vh;
   background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+
+  .tout-container {
+    width: 800px;
+    max-width: 100%;
+  }
 
   .hero {
     max-width: 800px;

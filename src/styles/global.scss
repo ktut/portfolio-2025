@@ -28,6 +28,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: $textColor;
+  overflow-x: hidden;
 }
 
 main {
@@ -186,6 +187,9 @@ main {
     max-width: 1200px;
     &:not(:first-of-type) {
       margin-top: 20px;
+      @media (min-width: 720px) {
+        margin-top: 60px;
+      }
     }
     &.cover {
       width: 100%;

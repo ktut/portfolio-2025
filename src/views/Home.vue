@@ -1,11 +1,13 @@
 <script>
 import IPhone from '@/components/iPhone.vue';
 import HomepageTopText from '../components/HomepageTopText.vue'
+import Tout from '@/components/Tout.vue'
 export default {
   name: 'HomeView',
   components: {
     HomepageTopText,
-    IPhone
+    IPhone,
+    Tout
   },
   data() {
     return {
@@ -89,8 +91,8 @@ export default {
     </RouterLink>
     <RouterLink to="/high5games" class="project-link cover">
       <figure>
-        <div class="img-bg">
-          <img src="../assets/logo-h5g.png" alt="High 5 Games" />
+        <div class="tout-container" ref="toutContainer" @mouseenter="handleToutHover">
+          <Tout :animate="toutAnimate" />
         </div>
         <figcaption>
           <h2 class="title">
@@ -119,6 +121,7 @@ figure {
     overflow: hidden;
   }
 
+  .tout-container,
   .img-bg,
   .video-composite {
     display: block;
@@ -126,6 +129,12 @@ figure {
     border-radius: 16px;
     border: 2px solid #eee;
     transition: border 0.3s ease;
+  }
+
+  .tout-container {
+    border-radius: 16px;
+    max-width: 100%;
+    width: 960px;
   }
 
   figcaption {
@@ -185,6 +194,7 @@ figure {
 
   &:hover {
 
+    .tout-container,
     .img-bg,
     .video-composite {
       border: 2px solid $redPunch;
