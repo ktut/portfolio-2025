@@ -32,6 +32,11 @@ export default {
           ]
         },
         {
+          name: 'Lottie',
+          type: 'image',
+          src: require('@/assets/lottie.png')
+        },
+        {
           name: 'Firebase',
           type: 'svg',
           viewBox: '0 0 24 24',
@@ -83,13 +88,26 @@ export default {
           Overview
         </h2>
         <p class="lead">
-          I used to work for an online casino company (<a href="https://high5casino.com/" target="_blank" rel="noreferrer noopener">High 5 Casino</a>), and one of the requests from the client team was to implement advertising banners (rotating in a carousel) that would accommodate animation and be localized for different countries, with multiple potential layers, which would move at different speeds while scrolling (i.e., parallax scrolling). There were no existing dependencies that I could find, at the time, that could handle all of these requirements. I decided to embark on the long journey of "rolling my own" solution.
+          I used to work for an online casino company (<a href="https://high5casino.com/" target="_blank"
+            rel="noreferrer noopener">High 5 Casino</a>), and one of the requests from the client team was to implement
+          advertising banners (rotating in a carousel) that would accommodate animation and be localized for different
+          countries, with multiple potential layers, which would move at different speeds while scrolling (i.e.,
+          parallax scrolling). There were no existing dependencies that I could find, at the time, that could handle all
+          of these requirements. I decided to embark on the long journey of "rolling my own" solution.
         </p>
         <p>
-          First I built a schema for the JSON data, which would describe all of the objects present (such as type, animation assets from AE/Bodymovin/Lottie, or SVG-masked JPGs/PNGs for image assets). Each object would have its location in the layer grid (implemented using CSS Grid), which could change based on breakpoints (mobile, desktop, etc). By leveraging a CSS-first approach, since we already had tight control of the client application where the advertising banner (or "Tout", as we called it) was placed, we could use CSS parallax instead of a custom JS approach.
+          First I built a schema for the JSON data, which would describe all of the objects present (such as type,
+          animation assets from AE/Bodymovin/Lottie, or SVG-masked JPGs/PNGs for image assets). Each object would have
+          its location in the layer grid (implemented using CSS Grid), which could change based on breakpoints (mobile,
+          desktop, etc). By leveraging a CSS-first approach, since we already had tight control of the client
+          application where the advertising banner (or "Tout", as we called it) was placed, we could use CSS parallax
+          instead of a custom JS approach.
         </p>
         <p>
-          We taught the art team how to upload their assets to a CMS, so they could be referenced easily. Lastly, so that anyone (not just developers) could see it all put together, I built a custom React app that showed these layers split apart using CSS transforms, so that different layers could be assembled separately, and then the final "Tout" could be saved to S3 and referenced by the client application.
+          We taught the art team how to upload their assets to a CMS, so they could be referenced easily. Lastly, so
+          that anyone (not just developers) could see it all put together, I built a custom React app that showed these
+          layers split apart using CSS transforms, so that different layers could be assembled separately, and then the
+          final "Tout" could be saved to S3 and referenced by the client application.
         </p>
       </div>
 
@@ -98,7 +116,9 @@ export default {
           The Constructor Tool
         </h2>
         <p class="section-intro">
-          Constructor is a React-based builder interface that combines CSS Grid with diverse content types to create responsive advertising banners. The tool outputs JSON configuration that defines how content appears across different viewport widths.
+          Constructor is a React-based builder interface that combines CSS Grid with diverse content types to create
+          responsive advertising banners. The tool outputs JSON configuration that defines how content appears across
+          different viewport widths.
         </p>
 
         <div class="detail-grid">
@@ -106,7 +126,8 @@ export default {
             <img src="../assets/tout-builder.png" alt="Builder tool interface">
             <h3>Visual Layer Builder</h3>
             <p>
-              The builder tool allows placement of links, text, images, video, gradients, and Lottie animations within a custom CSS Grid structure. Layers are visualized in 3D space using CSS transforms.
+              The builder tool allows placement of links, text, images, video, gradients, and Lottie animations within a
+              custom CSS Grid structure. Layers are visualized in 3D space using CSS transforms.
             </p>
           </div>
 
@@ -114,7 +135,8 @@ export default {
             <img src="../assets/tout-output.png" alt="HTML output display">
             <h3>HTML Output Preview</h3>
             <p>
-              View the generated HTML structure with atomic CSS classes following a Tailwind-inspired system, maintaining low CSS specificity despite DOM complexity.
+              View the generated HTML structure with atomic CSS classes following a Tailwind-inspired system,
+              maintaining low CSS specificity despite DOM complexity.
             </p>
           </div>
 
@@ -122,7 +144,8 @@ export default {
             <img src="../assets/tout-desktop-grid.png" alt="CSS Grid layout diagram">
             <h3>CSS Grid Layout System</h3>
             <p>
-              The underlying CSS Grid structure that powers responsive positioning. Every breakpoint key with a pixel width (such as '736') allows different content at different viewport sizes.
+              The underlying CSS Grid structure that powers responsive positioning. Every breakpoint key with a pixel
+              width (such as '736') allows different content at different viewport sizes.
             </p>
           </div>
 
@@ -130,7 +153,8 @@ export default {
             <img src="../assets/tout-desktop.png" alt="Final rendered banner">
             <h3>Final Banner Rendering</h3>
             <p>
-              The final output shows a polished advertising banner with multiple layers, animations, and responsive behavior ready for production deployment to S3.
+              The final output shows a polished advertising banner with multiple layers, animations, and responsive
+              behavior ready for production deployment to S3.
             </p>
           </div>
         </div>
@@ -171,6 +195,27 @@ export default {
       box-shadow: unset;
       padding: 60px;
       background: #fff;
+    }
+  }
+
+  .detail-item {
+    img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      margin-bottom: 1rem;
+      display: block;
+      background-color: #f5f5f5;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &.full-width {
+      img {
+        max-width: 800px;
+      }
     }
   }
 }
