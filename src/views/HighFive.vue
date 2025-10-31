@@ -1,6 +1,11 @@
 <script>
+import Tout from '@/components/Tout.vue'
+
 export default {
   name: 'HighFiveView',
+  components: {
+    Tout
+  },
   data() {
     return {
       technologies: [
@@ -56,9 +61,9 @@ export default {
 <template>
   <main class="high-five">
     <section class="hero">
-      <figure class="hero-image">
-        <img alt="High 5 Games" src="../assets/logo-h5g.png">
-      </figure>
+      <div class="tout-container">
+        <Tout />
+      </div>
     </section>
 
     <section class="content-wrapper">
