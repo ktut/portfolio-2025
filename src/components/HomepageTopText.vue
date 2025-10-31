@@ -10,11 +10,10 @@ export default {
     <p>I build websites that people like to poke and prod at with their tiny screens.</p>
     <p>More formally, I’m a
       multimedia
-      “do-it-all” with <span class="hightlight high">high-level</span> experience in <b>front-end software
-        engineering</b>, <b>web/print design</b>,
-      <b>photography</b> and <b>video</b>, and <span class="hightlight low">low-level</span> experience in
-      <b>making memes</b> and <b>being a dad</b>.
-    </p>
+      “do-it-all” with <span class="hightlight high">high-level</span> experience in front-end software
+      engineering, web/print design, photography and video, and <span class="hightlight low">low-level</span>
+      experience in
+      making memes and being a dad. </p>
   </section>
 </template>
 <style lang="scss" scoped>

@@ -15,35 +15,25 @@ export default {
 
 <template>
   <footer>
+    <hr />
+    <p class="companies-worked-with">Companies I've had the pleasure of working with:</p>
     <LogoSlider />
     <div class="footer-content">
       <div class="footer-left">
         <p>&copy; {{ currentYear }} Ramzi Dreessen</p>
       </div>
       <div class="footer-links">
-        <a
-          href="https://www.linkedin.com/in/ramzidreessen/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-        >
+        <a href="https://www.linkedin.com/in/ramzidreessen/" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn">
           LinkedIn
         </a>
         <span class="separator">|</span>
-        <a
-          href="https://github.com/ktut"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub"
-        >
+        <a href="https://github.com/ktut" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
           GitHub
         </a>
         <span class="separator">|</span>
-        <a
-          href="/Resume-Ramzi-Dreessen-2025.pdf"
-          download="Resume-Ramzi-Dreessen-2025.pdf"
-          aria-label="Download Resume"
-        >
+        <a href="/Resume-Ramzi-Dreessen-2025.pdf" download="Resume-Ramzi-Dreessen-2025.pdf"
+          aria-label="Download Resume">
           Resume
         </a>
       </div>
@@ -61,7 +51,13 @@ export default {
 <style lang="scss" scoped>
 footer {
   position: relative;
-  padding: 0 2rem 2rem;
+  padding: 0 0rem 2rem;
+
+  .companies-worked-with {
+    padding: 2rem;
+    text-align: center;
+    color: $headingColor;
+  }
 
   .footer-content {
     max-width: 1200px;
@@ -80,6 +76,8 @@ footer {
   }
 
   .footer-left {
+    padding-left: 2rem;
+
     p {
       margin: 0;
       color: #5a5e63;
@@ -91,6 +89,7 @@ footer {
   .footer-links {
     display: flex;
     align-items: center;
+    padding-right: 2rem;
     gap: 1rem;
 
     a {
@@ -121,8 +120,7 @@ footer {
     letter-spacing: 0.01em;
     text-align: left;
     margin-top: 2.5rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding: 2rem;
     border-top: 1px solid rgba(90, 94, 99, 0.2);
 
     @media (max-width: 768px) {

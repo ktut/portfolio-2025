@@ -140,6 +140,7 @@ figure {
 
     .title {
       margin-right: 16px;
+      text-wrap: balance;
     }
   }
 
@@ -150,7 +151,7 @@ figure {
     border: 2px solid $redPunch;
     -webkit-border-radius: 8px;
     border-radius: 8px;
-    padding: 3px 6px;
+    padding: 0 6px 3px;
 
     .example {
       font-family: "meursault-variable", serif;
