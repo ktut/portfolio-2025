@@ -18,7 +18,6 @@ export default {
 <style lang="scss" scoped>
 .homepage-top-text {
   text-align: center;
-  margin-bottom: 4rem;
   padding: 16px 16px 0;
   text-wrap: balance;
 
@@ -28,6 +27,10 @@ export default {
 
   h1 {
     margin-bottom: 1rem;
+
+    @media screen and (min-width: 720px) {
+      font-size: 4rem;
+    }
 
     span {
       animation-name: font-expand-anim;
@@ -56,6 +59,12 @@ export default {
     font-size: 1.2rem;
     margin-top: 1rem;
     color: $headingColor;
+
+    text-align: left;
+
+    @media screen and (min-width: 720px) {
+      text-align: center;
+    }
   }
 }
 </style>

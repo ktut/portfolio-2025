@@ -41,19 +41,8 @@ export default {
 
 <template>
   <div class="iphone-container">
-    <div
-      ref="iphoneVideo"
-      class="iphone-video"
-      :class="{ rotated: isRotated }"
-    >
-      <video
-        width="100%"
-        autoplay
-        loop
-        muted
-        playsinline
-        src="@/assets/PD-mobile-walkthrough.mov"
-      />
+    <div ref="iphoneVideo" class="iphone-video" :class="{ rotated: isRotated }">
+      <video width="100%" autoplay loop muted playsinline src="@/assets/PD-mobile-walkthrough.mov" />
     </div>
   </div>
 </template>
@@ -73,8 +62,10 @@ export default {
     transform: rotateY(0deg) rotateZ(0deg);
 
     &.rotated {
-      -webkit-transform: rotateY(-25deg) rotateZ(10deg);
-      transform: rotateY(-25deg) rotateZ(10deg);
+      @media (min-width: 480px) {
+        -webkit-transform: rotateY(-25deg) rotateZ(10deg);
+        transform: rotateY(-25deg) rotateZ(10deg);
+      }
     }
 
     &:hover {
