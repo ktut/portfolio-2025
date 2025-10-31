@@ -68,7 +68,7 @@ export default {
           High 5 Games casino web design
         </h1>
         <p class="project-subtitle">
-          Building a custom advertising carousel system with parallax scrolling
+          Building a custom carousel banner builder system
         </p>
 
         <div class="tech-stack">
@@ -88,46 +88,43 @@ export default {
           Overview
         </h2>
         <p class="lead">
-          I used to work for an online casino company (<a href="https://high5casino.com/" target="_blank"
-            rel="noreferrer noopener">High 5 Casino</a>), and one of the requests from the client team was to implement
-          advertising banners (rotating in a carousel) that would accommodate animation and be localized for different
+          As an engineer at (<a href="https://high5casino.com/" target="_blank" rel="noreferrer noopener">High 5
+            Casino</a>), product and art teams was to implement
+          marketing/advertisement/game-link banners (rotating in a carousel) that would accommodate animation and be
+          localized for different
           countries, with multiple potential layers, which would move at different speeds while scrolling (i.e.,
           parallax scrolling). There were no existing dependencies that I could find, at the time, that could handle all
           of these requirements. I decided to embark on the long journey of "rolling my own" solution.
         </p>
         <p>
-          First I built a schema for the JSON data, which would describe all of the objects present (such as type,
+          First I designed a JSON schema to describe all of the objects present (including info for type,
           animation assets from AE/Bodymovin/Lottie, or SVG-masked JPGs/PNGs for image assets). Each object would have
-          its location in the layer grid (implemented using CSS Grid), which could change based on breakpoints (mobile,
+          its location in the CSS Grid layer grid, which could change based on breakpoints (mobile,
           desktop, etc). By leveraging a CSS-first approach, since we already had tight control of the client
           application where the advertising banner (or "Tout", as we called it) was placed, we could use CSS parallax
-          instead of a custom JS approach.
+          instead of a custom JS approach. This was critical as there was already a lot of JS in the application for the
+          games themselves.
         </p>
         <p>
-          We taught the art team how to upload their assets to a CMS, so they could be referenced easily. Lastly, so
-          that anyone (not just developers) could see it all put together, I built a custom React app that showed these
+          We taught the art team how to upload their assets to a CMS, so they could be referenced easily. In order for
+          anyone (not just developers) to be able to assemble these "Touts" (as we called them), I built a custom React
+          app that showed these
           layers split apart using CSS transforms, so that different layers could be assembled separately, and then the
-          final "Tout" could be saved to S3 and referenced by the client application.
+          final "Tout" could be saved to AWS S3 and referenced by the client application.
         </p>
       </div>
 
       <div class="detail-section">
-        <h2 class="section-title">
-          The Constructor Tool
-        </h2>
-        <p class="section-intro">
-          Constructor is a React-based builder interface that combines CSS Grid with diverse content types to create
-          responsive advertising banners. The tool outputs JSON configuration that defines how content appears across
-          different viewport widths.
-        </p>
 
         <div class="detail-grid">
           <div class="detail-item full-width">
             <img src="../assets/tout-builder.png" alt="Builder tool interface">
             <h3>Visual Layer Builder</h3>
             <p>
-              The builder tool allows placement of links, text, images, video, gradients, and Lottie animations within a
-              custom CSS Grid structure. Layers are visualized in 3D space using CSS transforms.
+              The React-based builder tool allowed for placement of links, text, images, video, gradients, and Lottie
+              animations within a
+              custom CSS Grid structure. For debugging purposes, layers could be "split apart" visualized in 3D space
+              using CSS transforms.
             </p>
           </div>
 
@@ -135,14 +132,14 @@ export default {
             <img src="../assets/tout-output.png" alt="HTML output display">
             <h3>HTML Output Preview</h3>
             <p>
-              View the generated HTML structure with atomic CSS classes following a Tailwind-inspired system,
+              Here's a sample HTML output. We used atomic CSS classes following a Tailwind-inspired system,
               maintaining low CSS specificity despite DOM complexity.
             </p>
           </div>
 
           <div class="detail-item">
             <img src="../assets/tout-desktop-grid.png" alt="CSS Grid layout diagram">
-            <h3>CSS Grid Layout System</h3>
+            <h3>Rendered Output</h3>
             <p>
               The underlying CSS Grid structure that powers responsive positioning. Every breakpoint key with a pixel
               width (such as '736') allows different content at different viewport sizes.
@@ -151,7 +148,7 @@ export default {
 
           <div class="detail-item">
             <img src="../assets/tout-desktop.png" alt="Final rendered banner">
-            <h3>Final Banner Rendering</h3>
+            <h3>Final Banner</h3>
             <p>
               The final output shows a polished advertising banner with multiple layers, animations, and responsive
               behavior ready for production deployment to S3.
@@ -171,12 +168,10 @@ export default {
           <li>Responsive design with breakpoint-specific content (e.g., different content at '736px', '1024px')</li>
           <li>Atomic CSS classes following a Tailwind-inspired system for maintainable styling</li>
           <li>Area-based object positioning for precise alignment control across the grid</li>
-          <li>Multi-layer parallax scrolling with configurable speeds per layer</li>
-          <li>SVG-masked image assets for complex visual effects</li>
-          <li>Localization support for international markets</li>
+          <li>Multi-layer parallax scrolling with configurable speeds per layer, using only CSS</li>
+          <li>Localization support for international markets via tag replacement in Craft CMS</li>
           <li>Visual layer assembly tool with 3D CSS transforms for non-technical users</li>
           <li>Direct S3 export for production deployment</li>
-          <li>Low CSS specificity despite DOM complexity</li>
         </ul>
       </div>
     </section>

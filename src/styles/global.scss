@@ -329,7 +329,9 @@ main {
     line-height: 1.1;
     margin-bottom: 0.5rem;
     color: #1a1a1a;
-    text-wrap: balanced;
+    @media (min-width: 840px) {
+      text-wrap: balanced;
+    }
 
     .chase-logo {
       width: 40px;
@@ -530,7 +532,6 @@ main {
       line-height: 1.8;
       color: #4a4a4a;
       padding: 1rem 0;
-      padding-left: 2rem;
       position: relative;
 
       & + li {
