@@ -179,6 +179,22 @@ main {
     &.cover {
       width: 100%;
       max-width: 1600px;
+      .img-bg {
+        width: 100%;
+        height: 400px;
+        @media (min-width: 640px) {
+          height: auto;
+        }
+        img {
+          width: 100%;
+          object-fit: cover;
+          object-position: 20% 20%;
+          height: 100%;
+          @media (min-width: 640px) {
+            height: auto;
+          }
+        }
+      }
       .video-composite {
         display: grid;
         grid-template-columns: 1fr;

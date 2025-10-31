@@ -20,13 +20,15 @@ export default {
 <template>
   <main :class="{ loaded: loaded }">
     <HomepageTopText />
-    <RouterLink to="/chase" class="project-link">
+    <RouterLink to="/chase" class="project-link cover">
       <figure>
-        <img v-view-transition-name="'img'" src="../assets/Chase-portfolio-mock.jpg">
+        <div class="img-bg">
+          <img v-view-transition-name="'img'" src="../assets/Chase-portfolio-mock.jpg"></img>
+        </div>
         <figcaption>
-          <h3 class="title">
+          <h2 class="title">
             JPMorgan Chase Performance Dashboard
-          </h3>
+          </h2>
           <button class="cta">
             View Project <span class="unicode">&#x2197;</span>
           </button>
@@ -56,9 +58,9 @@ export default {
           </div>
         </div>
         <figcaption>
-          <h3 class="title">
+          <h2 class="title">
             Chicago Magazine editorial web design
-          </h3>
+          </h2>
           <button class="cta">
             View Projects <span class="unicode">&#x2197;</span>
           </button>
@@ -75,7 +77,6 @@ figure {
   align-items: center;
   justify-content: center;
   padding: 16px;
-
   cursor: pointer;
 
   img,
