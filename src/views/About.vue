@@ -8,13 +8,9 @@ export default {
   <main class="about">
     <section class="content-wrapper">
       <header class="project-header">
-        <img
-          src="../assets/me-burgundy-square.jpg"
-          alt="Ramzi Dreessen"
-          class="float"
-        >
+        <img src="../assets/me-burgundy-square.jpg" alt="Ramzi Dreessen" class="float">
         <h1 class="project-title">
-          A little about me.
+          A little about me first.
         </h1>
       </header>
       <p>
@@ -40,11 +36,8 @@ export default {
         projects
         - to me, that’s just laziness. If you want someone to build you a cookie-cutter website filled with
         buzzwords
-        and stock images (like one of these <a
-          href="http://tiffzhang.com/startup"
-          target="_blank"
-          rel="noreferrer noopener"
-        >fake startup websites</a>), I’m probably not your guy. I value a strong art team
+        and stock images (like one of these <a href="http://tiffzhang.com/startup" target="_blank"
+          rel="noreferrer noopener">fake startup websites</a>), I’m probably not your guy. I value a strong art team
         and strong content, and working with others.
       </p>
       <p>
@@ -61,9 +54,14 @@ export default {
   min-height: 100vh;
   background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
 
+  .project-header {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   h1 {
     text-align: left;
-    font-size: 2rem;
   }
 
   img {
