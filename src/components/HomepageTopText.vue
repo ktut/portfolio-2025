@@ -5,39 +5,43 @@ export default {
 </script>
 <template>
   <section class="homepage-top-text">
-    <h1>Hi, Iʼm <span>Ramzi.</span> </h1>
+    <h1>Hi, Iʼm <span class="first-name-expand">Ramzi.</span> </h1>
 
-    <p>I build websites that people like to poke and prod at with their tiny screens. More formally, I’m a
+    <p>I build websites that people like to poke and prod at with their tiny screens.</p>
+    <p>More formally, I’m a
       multimedia
-      “do-it-all” with high-level experience in <b>front-end software engineering</b>, <b>web/print design</b>,
-      <b>photography</b>, <b>video</b>,
-      <b>making memes</b>, and more.
+      “do-it-all” with <span class="hightlight high">high-level</span> experience in <b>front-end software
+        engineering</b>, <b>web/print design</b>,
+      <b>photography</b> and <b>video</b>, and <span class="hightlight low">low-level</span> experience in
+      <b>making memes</b> and <b>being a dad</b>.
     </p>
   </section>
 </template>
 <style lang="scss" scoped>
 .homepage-top-text {
-  text-align: center;
-  padding: 16px 16px 0;
-  text-wrap: balance;
+  padding: 32px 16px 0;
 
-  @media screen and (min-width: 720px) {
+  @media (min-width: 720px) {
+    text-align: center;
+    text-wrap: balance;
     padding: 32px;
   }
 
   h1 {
-    margin-bottom: 1rem;
+    text-align: left;
+    margin-bottom: 2rem;
     font-variation-settings: "wght" 50, "ital" 400;
+    font-size: 3.3rem;
 
-    @media screen and (min-width: 720px) {
-      font-size: 4rem;
+    @media (min-width: 720px) {
+      text-align: center;
     }
 
-    span {
+    .first-name-expand {
       animation-name: font-expand-anim;
-      animation-duration: 2s;
+      animation-duration: 1s;
       animation-iteration-count: once;
-      animation-timing-function: ease-out;
+      animation-timing-function: ease-in-out;
       animation-fill-mode: forwards;
     }
   }
@@ -48,7 +52,7 @@ export default {
     }
 
     to {
-      font-variation-settings: "wght" 800, "ital" 900;
+      font-variation-settings: "wght" 700, "ital" 900;
     }
   }
 
@@ -57,11 +61,15 @@ export default {
   }
 
   p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-top: 1rem;
     color: $headingColor;
-
+    font-variation-settings: 'wdth' 120, 'wght' 500;
     text-align: left;
+
+    b {
+      font-variation-settings: "wght" 800, "ital" 900;
+    }
 
     @media screen and (min-width: 720px) {
       text-align: center;
