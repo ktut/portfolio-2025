@@ -27,7 +27,6 @@ export default {
   name: 'SunTimesView',
   data() {
     return {
-      heroImage: img1,
       technologies: [
         {
           name: 'Adobe Creative Suite',
@@ -75,7 +74,9 @@ export default {
   <main class="sun-times">
     <section class="hero">
       <figure class="hero-image">
-        <img alt="Chicago Sun-Times print design work" :src="heroImage">
+        <div class="suntimes-bg"
+          :style="{ backgroundImage: 'url(' + require('@/assets/print-design/IMG_0008.jpg') + ')' }">
+        </div>
       </figure>
     </section>
 
@@ -86,7 +87,8 @@ export default {
           Chicago <em>Sun-Times</em> print design
         </h1>
         <p class="project-subtitle">
-          Did the whole <span class="cmyk-text"><span class="c">C</span><span class="m">M</span><span class="y">Y</span><span class="k">K</span></span> thing, too.
+          Did the whole <span class="cmyk-text"><span class="c">C</span><span class="m">M</span><span
+              class="y">Y</span><span class="k">K</span></span> thing, too.
         </p>
 
         <div class="tech-stack">
@@ -130,9 +132,28 @@ export default {
 
   .hero {
     max-width: 800px;
+    width: 100%;
 
     figure {
       box-shadow: unset;
+
+      .suntimes-bg {
+        width: 800px;
+        max-width: 100%;
+        height: 0;
+        padding-bottom: 64%;
+
+        background-position: 54% 49%;
+        background-repeat: no-repeat;
+        border-radius: 16px;
+        background-size: 1000px;
+
+        @media (min-width: 840px) {
+
+          background-size: 1350px;
+          padding-bottom: 500px;
+        }
+      }
     }
   }
 
@@ -175,12 +196,16 @@ export default {
   }
 
   @keyframes popLetter {
-    0%, 100% {
+
+    0%,
+    100% {
       transform: scale(1);
     }
+
     10% {
       transform: scale(1.2);
     }
+
     20% {
       transform: scale(1);
     }

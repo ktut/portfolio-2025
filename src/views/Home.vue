@@ -199,14 +199,10 @@ figure {
       padding-bottom: 500px;
     }
 
-    background-size: cover;
-    background-position: center top;
+    background-size: 1350px;
+    background-position: 54% 49%;
     background-repeat: no-repeat;
     border-radius: 16px;
-
-    @media (min-width: 840px) {
-      background-size: cover;
-    }
   }
 
   figcaption {
