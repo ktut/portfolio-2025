@@ -37,7 +37,7 @@ export default {
       <header class="project-header">
         <h1 class="project-title">
           <img src="@/assets/logo-chimag.png" alt="Chimag Logo" class="chase-logo">
-          <em>Chicago</em> magazine editorial web design
+          <em>Chicago</em> editorial web design
         </h1>
         <p class="project-subtitle">
           Handling web-guy duties at a Chicago media staple

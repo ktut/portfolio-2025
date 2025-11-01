@@ -37,7 +37,7 @@ export default {
       <header class="project-header">
         <h1 class="project-title">
           <img src="@/assets/logo-chimag.png" alt="Chicago Magazine Logo" class="chase-logo">
-          <em>Chicago</em> magazine subscription page redesign
+          <em>Chicago</em> subscription page redesign
         </h1>
         <p class="project-subtitle">
           Redesigning the subscription experience to drive conversions
@@ -97,6 +97,11 @@ export default {
           handle security checks, and create a more direct experience between the load of the page and the click of the
           "Purchase" button.
         </p>
+      </div>
+      <div class="project-overview">
+        <h2 class="section-title">
+          The Results
+        </h2>
         <p>
           In the six months following the implementation of the new design, <b>conversions per visitor went up 20%.</b>
         </p>
