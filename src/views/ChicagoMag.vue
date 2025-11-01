@@ -145,13 +145,10 @@ export default {
       -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
       box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
       width: 100%;
-      height: 350px;
-      object-fit: cover;
+      height: auto;
 
       @media (min-width: 540px) {
         width: 1024px;
-        height: auto;
-        object-fit: unset;
         border-radius: 16px;
       }
     }
