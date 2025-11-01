@@ -6,6 +6,26 @@ export default {
       type: Array,
       required: true
     }
+  },
+  data() {
+    return {
+      activeIndex: 0
+    }
+  },
+  mounted() {
+    this.startAnimation()
+  },
+  beforeUnmount() {
+    if (this.timer) {
+      clearInterval(this.timer)
+    }
+  },
+  methods: {
+    startAnimation() {
+      this.timer = setInterval(() => {
+        this.activeIndex = (this.activeIndex + 1) % this.images.length
+      }, 3500)
+    }
   }
 }
 </script>
@@ -13,7 +33,12 @@ export default {
 <template>
   <div class="photo-composite">
     <div class="sliver-container">
-      <img v-for="(image, index) in images" :key="index" :src="image" alt="Portrait" class="portrait-sliver">
+      <img
+        v-for="(image, index) in images"
+        :key="index"
+        :src="image"
+        alt="Portrait"
+        :class="['portrait-sliver', { active: index === activeIndex }, `image-${index}`]">
     </div>
   </div>
 </template>
@@ -39,39 +64,52 @@ export default {
     justify-content: center;
     align-items: center;
     gap: 0;
-    animation: sliverPan 20s ease-in-out infinite;
   }
 
   .portrait-sliver {
     height: 100%;
-    width: 100px;
+    width: 60px;
     object-fit: cover;
     object-position: center 25%;
     flex-shrink: 0;
-    filter: grayscale(20%);
+    filter: grayscale(40%);
     position: relative;
     clip-path: polygon(3% 0%, 100% 0%, 97% 100%, 0% 100%);
     margin-right: 2px;
+    opacity: 0.6;
+    transition: all 0.8s ease-in-out;
 
     @media (min-width: 840px) {
-      width: 180px;
+      width: 100px;
       margin-right: 3px;
     }
 
     &:last-child {
       margin-right: 0;
     }
-  }
-}
 
-@keyframes sliverPan {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
+    &.active {
+      width: 250px;
+      filter: grayscale(0%);
+      opacity: 1;
+      z-index: 10;
+      transform: scale(1.05);
+      object-position: center 35%;
 
-  50% {
-    transform: translateX(-5%);
+      @media (min-width: 840px) {
+        width: 400px;
+        object-position: center 40%;
+      }
+    }
+
+    // First image (ruffalo) - crop to show face better
+    &.image-0.active {
+      object-position: center 20%;
+
+      @media (min-width: 840px) {
+        object-position: center 25%;
+      }
+    }
   }
 }
 </style>

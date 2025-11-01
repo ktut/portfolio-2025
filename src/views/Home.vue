@@ -26,7 +26,7 @@ export default {
       loaded: false,
       windowWidth: window.innerWidth,
       minWidth: 840,
-      photoHeroImages: [heroImg1, heroImg2, heroImg3, heroImg4, heroImg5, heroImg6, heroImg1, heroImg2, heroImg3]
+      photoHeroImages: [heroImg1, heroImg2, heroImg3, heroImg4, heroImg5, heroImg6]
     }
   },
   mounted() {

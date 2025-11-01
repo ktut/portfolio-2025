@@ -33,7 +33,7 @@ export default {
   },
   data() {
     return {
-      heroImages: [heroImg1, heroImg2, heroImg3, heroImg4, heroImg5, heroImg6, heroImg1, heroImg2, heroImg3],
+      heroImages: [heroImg1, heroImg2, heroImg3, heroImg4, heroImg5, heroImg6],
       technologies: [
         {
           name: 'Adobe Creative Suite',
