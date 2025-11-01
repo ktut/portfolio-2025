@@ -81,10 +81,25 @@ export default {
         </div>
         <figcaption>
           <h2 class="title">
-            <em>Chicago</em> Magazine editorial web design
+            <em>Chicago</em> magazine editorial web design
           </h2>
           <button class="cta">
             View Projects <span class="unicode">&#x2197;</span>
+          </button>
+        </figcaption>
+      </figure>
+    </RouterLink>
+    <RouterLink to="/chicagomagazine-subscription" class="project-link cover">
+      <figure>
+        <div class="chimag-subscription-bg"
+          :style="{ backgroundImage: 'url(' + require('@/assets/chimag-purchase-new.jpg') + ')' }">
+        </div>
+        <figcaption>
+          <h2 class="title">
+            <em>Chicago</em> magazine subscription page redesign
+          </h2>
+          <button class="cta">
+            View Project <span class="unicode">&#x2197;</span>
           </button>
         </figcaption>
       </figure>
@@ -123,7 +138,8 @@ figure {
 
   .tout-container,
   .img-bg,
-  .video-composite {
+  .video-composite,
+  .chimag-subscription-bg {
     display: block;
     width: 100%;
     border-radius: 16px;
@@ -135,6 +151,26 @@ figure {
     border-radius: 16px;
     max-width: 100%;
     width: 960px;
+  }
+
+  .chimag-subscription-bg {
+    width: 800px;
+    max-width: 100%;
+    height: 0;
+    padding-bottom: 64%;
+
+    @media (min-width: 840px) {
+      padding-bottom: 500px;
+    }
+
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+
+    @media (min-width: 840px) {
+      background-size: cover;
+    }
   }
 
   figcaption {
@@ -196,7 +232,8 @@ figure {
 
     .tout-container,
     .img-bg,
-    .video-composite {
+    .video-composite,
+    .chimag-subscription-bg {
       border: 2px solid $redPunch;
     }
 
