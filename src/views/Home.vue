@@ -92,7 +92,7 @@ export default {
     <RouterLink to="/chicagomagazine-subscription" class="project-link cover">
       <figure>
         <div class="chimag-subscription-bg"
-          :style="{ backgroundImage: 'url(' + require('@/assets/chimag-purchase-new.jpg') + ')' }">
+          :style="{ backgroundImage: 'url(' + require('@/assets/ipad-chimag-mock.jpg') + ')' }">
         </div>
         <figcaption>
           <h2 class="title">
