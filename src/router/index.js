@@ -5,6 +5,7 @@ import ChaseView from '../views/Chase.vue'
 import ChicagoMagView from '../views/ChicagoMag.vue'
 import ChicagoMagSubscriptionView from '../views/ChicagoMagSubscription.vue'
 import HighFiveView from '../views/HighFive.vue'
+import SunTimesView from '../views/SunTimes.vue'
 import { startViewTransition } from 'vue-view-transitions'
 
 const routes = [
@@ -43,6 +44,12 @@ const routes = [
     name: 'high5games',
     component: HighFiveView,
     meta: { displayName: 'High 5 Games' }
+  },
+  {
+    path: '/suntimes',
+    name: 'suntimes',
+    component: SunTimesView,
+    meta: { displayName: 'Chicago Sun-Times Print Design' }
   }
 ]
 

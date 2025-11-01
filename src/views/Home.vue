@@ -119,6 +119,21 @@ export default {
         </figcaption>
       </figure>
     </RouterLink>
+    <RouterLink to="/suntimes" class="project-link cover">
+      <figure>
+        <div class="suntimes-bg"
+          :style="{ backgroundImage: 'url(' + require('@/assets/print-design/IMG_0008.jpg') + ')' }">
+        </div>
+        <figcaption>
+          <h2 class="title">
+            Chicago Sun-Times print design
+          </h2>
+          <button class="cta">
+            View Project <span class="unicode">&#x2197;</span>
+          </button>
+        </figcaption>
+      </figure>
+    </RouterLink>
   </main>
 </template>
 
@@ -139,7 +154,8 @@ figure {
   .tout-container,
   .img-bg,
   .video-composite,
-  .chimag-subscription-bg {
+  .chimag-subscription-bg,
+  .suntimes-bg {
     display: block;
     width: 100%;
     border-radius: 16px;
@@ -154,6 +170,26 @@ figure {
   }
 
   .chimag-subscription-bg {
+    width: 800px;
+    max-width: 100%;
+    height: 0;
+    padding-bottom: 64%;
+
+    @media (min-width: 840px) {
+      padding-bottom: 500px;
+    }
+
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+
+    @media (min-width: 840px) {
+      background-size: cover;
+    }
+  }
+
+  .suntimes-bg {
     width: 800px;
     max-width: 100%;
     height: 0;
@@ -233,7 +269,8 @@ figure {
     .tout-container,
     .img-bg,
     .video-composite,
-    .chimag-subscription-bg {
+    .chimag-subscription-bg,
+    .suntimes-bg {
       border: 2px solid $redPunch;
     }
 
