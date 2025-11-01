@@ -82,19 +82,7 @@ export default {
       &.high {
         position: relative;
         font-variation-settings: 'wght' 600;
-
-        &::after {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: 2px;
-          background: currentColor;
-          opacity: 0.4;
-          transform-origin: left;
-          animation: underline-draw 2s ease-in-out infinite;
-        }
+        animation: gentle-up 2s ease-in-out infinite;
       }
 
       &.low {
@@ -125,6 +113,18 @@ export default {
 
     50% {
       transform: translateY(2px) scale(0.98);
+      opacity: 0.85;
+    }
+  }
+
+  @keyframes gentle-up {
+    0%, 100% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+
+    50% {
+      transform: translateY(-2px) scale(0.98);
       opacity: 0.85;
     }
   }
