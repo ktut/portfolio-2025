@@ -70,10 +70,10 @@ export default {
       <header class="project-header">
         <h1 class="project-title">
           <img src="@/assets/logo-h5g.png" alt="High 5 Games Logo" class="chase-logo">
-          High 5 Games web casino display system
+          High 5 Games “Tout” builder system
         </h1>
         <p class="project-subtitle">
-          Building a custom carousel banner builder system
+          Building a custom carousel banner-building system and app
         </p>
 
         <div class="tech-stack">

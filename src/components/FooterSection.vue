@@ -39,19 +39,14 @@ export default {
   <footer>
     <hr />
     <div class="project-links">
-      <h3>My Work</h3>
+      <h3>Work I’ve Done:</h3>
       <nav>
-        <router-link
-          v-for="link in projectLinks"
-          :key="link.path"
-          :to="link.path"
-          class="project-link"
-        >
+        <router-link v-for="link in projectLinks" :key="link.path" :to="link.path" class="project-link">
           {{ link.name }}
         </router-link>
       </nav>
     </div>
-    <p class="companies-worked-with">Companies I've had the pleasure of working with:</p>
+    <h3>Who I’ve worked with:</h3>
     <LogoSlider />
     <div class="footer-content">
       <div class="footer-left">
@@ -88,15 +83,15 @@ footer {
   position: relative;
   padding: 0 0rem 2rem;
 
+  h3 {
+    color: $headingColor;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
   .project-links {
     padding: 2rem 2rem 1rem;
     text-align: center;
-
-    h3 {
-      color: $headingColor;
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
-    }
 
     nav {
       display: flex;
@@ -134,12 +129,6 @@ footer {
     }
   }
 
-  .companies-worked-with {
-    padding: 2rem;
-    text-align: center;
-    color: $headingColor;
-  }
-
   .footer-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -159,6 +148,10 @@ footer {
   .footer-left {
     padding-left: 2rem;
 
+    @media (max-width: 768px) {
+      padding-left: 0rem;
+    }
+
     p {
       margin: 0;
       color: #5a5e63;
@@ -171,6 +164,11 @@ footer {
     display: flex;
     align-items: center;
     padding-right: 2rem;
+
+    @media (max-width: 768px) {
+      padding-right: 0rem;
+    }
+
     gap: 1rem;
 
     a {
