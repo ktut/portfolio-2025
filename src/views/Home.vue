@@ -2,19 +2,31 @@
 import IPhone from '@/components/iPhone.vue';
 import HomepageTopText from '../components/HomepageTopText.vue'
 import Tout from '@/components/Tout.vue'
+import PortraitSlivers from '@/components/PortraitSlivers.vue'
+
+// Hero composite images for Portrait Photography
+import heroImg1 from '@/assets/photo/4.jpg'
+import heroImg2 from '@/assets/photo/1100-westwick.jpg'
+import heroImg3 from '@/assets/photo/00-aless.jpg'
+import heroImg4 from '@/assets/photo/IMG-365.jpg'
+import heroImg5 from '@/assets/photo/lefty-3.jpg'
+import heroImg6 from '@/assets/photo/WhoWatchR-SLH-122114.01-2.jpg'
+
 export default {
   name: 'HomeView',
   components: {
     HomepageTopText,
     IPhone,
-    Tout
+    Tout,
+    PortraitSlivers
   },
   data() {
     return {
       // is app loaded
       loaded: false,
       windowWidth: window.innerWidth,
-      minWidth: 840
+      minWidth: 840,
+      photoHeroImages: [heroImg1, heroImg2, heroImg3, heroImg4, heroImg5, heroImg6, heroImg1, heroImg2, heroImg3]
     }
   },
   mounted() {
@@ -134,6 +146,21 @@ export default {
         </figcaption>
       </figure>
     </RouterLink>
+    <RouterLink to="/photo" class="project-link cover">
+      <figure>
+        <div class="photo-composite-wrapper">
+          <PortraitSlivers :images="photoHeroImages" />
+        </div>
+        <figcaption>
+          <h2 class="title">
+            Portrait Photography
+          </h2>
+          <button class="cta">
+            View Project <span class="unicode">&#x2197;</span>
+          </button>
+        </figcaption>
+      </figure>
+    </RouterLink>
   </main>
 </template>
 
@@ -155,7 +182,8 @@ figure {
   .img-bg,
   .video-composite,
   .chimag-subscription-bg,
-  .suntimes-bg {
+  .suntimes-bg,
+  .photo-composite-wrapper {
     display: block;
     width: 100%;
     border-radius: 16px;
@@ -203,6 +231,19 @@ figure {
     background-position: 54% 49%;
     background-repeat: no-repeat;
     border-radius: 16px;
+  }
+
+  .photo-composite-wrapper {
+    width: 800px;
+    max-width: 100%;
+    height: 0;
+    padding-bottom: 64%;
+    position: relative;
+    overflow: hidden;
+
+    @media (min-width: 840px) {
+      padding-bottom: 500px;
+    }
   }
 
   figcaption {
@@ -266,7 +307,8 @@ figure {
     .img-bg,
     .video-composite,
     .chimag-subscription-bg,
-    .suntimes-bg {
+    .suntimes-bg,
+    .photo-composite-wrapper {
       border: 2px solid $redPunch;
     }
 

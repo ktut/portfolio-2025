@@ -6,6 +6,7 @@ import ChicagoMagView from '../views/ChicagoMag.vue'
 import ChicagoMagSubscriptionView from '../views/ChicagoMagSubscription.vue'
 import HighFiveView from '../views/HighFive.vue'
 import SunTimesView from '../views/SunTimes.vue'
+import PhotoView from '../views/Photo.vue'
 import { startViewTransition } from 'vue-view-transitions'
 
 const routes = [
@@ -50,6 +51,12 @@ const routes = [
     name: 'suntimes',
     component: SunTimesView,
     meta: { displayName: 'Chicago Sun-Times Print Design' }
+  },
+  {
+    path: '/photo',
+    name: 'photo',
+    component: PhotoView,
+    meta: { displayName: 'Portrait Photography' }
   }
 ]
 

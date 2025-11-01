@@ -36,24 +36,24 @@ export default {
       ],
       images: [
         { src: img1, width: 1500, height: 1100, alt: 'Chicago Sun-Times Print Design' },
-        { src: img2, width: 1500, height: 1100, alt: 'Chicago Sun-Times Print Design' },
-        { src: img3, width: 1500, height: 1100, alt: 'Chicago Sun-Times Print Design' },
-        { src: img4, width: 1500, height: 1100, alt: 'Chicago Sun-Times Print Design' },
-        { src: img5, width: 1500, height: 1100, alt: 'Chicago Sun-Times Print Design' },
-        { src: img6, width: 1500, height: 1100, alt: 'Chicago Sun-Times Print Design' },
-        { src: img7, width: 1500, height: 1100, alt: 'Chicago Sun-Times Print Design' },
-        { src: img8, width: 1500, height: 1100, alt: 'Chicago Sun-Times Print Design' },
-        { src: img9, width: 1500, height: 1100, alt: 'Chicago Sun-Times Print Design' },
-        { src: img10, width: 1500, height: 1100, alt: 'Chicago Sun-Times Print Design' },
-        { src: img11, width: 1500, height: 1100, alt: 'Chicago Sun-Times Print Design' },
-        { src: img12, width: 1500, height: 1100, alt: 'Chicago Sun-Times Print Design' },
+        { src: img2, width: 1500, height: 900, alt: 'Chicago Sun-Times Print Design' },
+        { src: img3, width: 1500, height: 900, alt: 'Chicago Sun-Times Print Design' },
+        { src: img4, width: 1500, height: 900, alt: 'Chicago Sun-Times Print Design' },
+        { src: img5, width: 1500, height: 900, alt: 'Chicago Sun-Times Print Design' },
+        { src: img6, width: 1500, height: 900, alt: 'Chicago Sun-Times Print Design' },
+        { src: img7, width: 1500, height: 900, alt: 'Chicago Sun-Times Print Design' },
+        { src: img8, width: 1500, height: 900, alt: 'Chicago Sun-Times Print Design' },
+        { src: img9, width: 1500, height: 900, alt: 'Chicago Sun-Times Print Design' },
+        { src: img10, width: 1500, height: 900, alt: 'Chicago Sun-Times Print Design' },
+        { src: img11, width: 1500, height: 901, alt: 'Chicago Sun-Times Print Design' },
+        { src: img12, width: 1500, height: 1000, alt: 'Chicago Sun-Times Print Design' },
         { src: img13, width: 1500, height: 1100, alt: 'Chicago Sun-Times Print Design' },
-        { src: img14, width: 1500, height: 1100, alt: 'Chicago Sun-Times Print Design' },
-        { src: img15, width: 1500, height: 1100, alt: 'Chicago Sun-Times Print Design' },
-        { src: img16, width: 1500, height: 1100, alt: 'Chicago Sun-Times Print Design' },
-        { src: img17, width: 1500, height: 1100, alt: 'Chicago Sun-Times Print Design' },
-        { src: img18, width: 1500, height: 1100, alt: 'Chicago Sun-Times Print Design' },
-        { src: img19, width: 1500, height: 1100, alt: 'Chicago Sun-Times Print Design' }
+        { src: img14, width: 1500, height: 900, alt: 'Chicago Sun-Times Print Design' },
+        { src: img15, width: 1500, height: 900, alt: 'Chicago Sun-Times Print Design' },
+        { src: img16, width: 1500, height: 900, alt: 'Chicago Sun-Times Print Design' },
+        { src: img17, width: 1500, height: 900, alt: 'Chicago Sun-Times Print Design' },
+        { src: img18, width: 1500, height: 900, alt: 'Chicago Sun-Times Print Design' },
+        { src: img19, width: 1500, height: 1000, alt: 'Chicago Sun-Times Print Design' }
       ]
     }
   },
@@ -224,13 +224,12 @@ export default {
   }
 
   .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
+    column-count: 1;
+    column-gap: 20px;
     margin-top: 40px;
 
     @media (min-width: 768px) {
-      grid-template-columns: repeat(3, 1fr);
+      column-count: 3;
     }
 
     .gallery-item {
@@ -241,6 +240,8 @@ export default {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       display: block;
       text-decoration: none;
+      margin-bottom: 20px;
+      break-inside: avoid;
 
       &:hover {
         transform: translateY(-4px);
@@ -249,10 +250,8 @@ export default {
 
       img {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
+        height: auto;
         display: block;
-        aspect-ratio: 4/3;
       }
     }
   }
