@@ -39,7 +39,7 @@ export default {
   <footer>
     <hr />
     <div class="project-links">
-      <h3>Work I’ve Done:</h3>
+      <h3>Work I’ve done:</h3>
       <nav>
         <router-link v-for="link in projectLinks" :key="link.path" :to="link.path" class="project-link">
           {{ link.name }}

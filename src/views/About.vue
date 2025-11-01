@@ -14,7 +14,7 @@ export default {
         </h1>
       </header>
       <p>
-        Hi! I’m <b>Ramzi Dreessen</b>, a web developer with <b><span>7</span> years of experience,</b> along with
+        Hi! I’m <b>Ramzi Dreessen</b>, a web developer with <b><span>8</span> years of experience,</b> along with
         <b>6
           years of print and web design experience</b>, living in Chicago.
       </p>
@@ -46,6 +46,11 @@ export default {
         non-technical person, in a concise manner, I find myself wondering why it was necessary to include in the
         first place.
       </p>
+      <p> You can reach me by email at <a
+          href="mailto:ramzidreessen@gmail.com?Subject=Saw%20your%20site%20at%20rkdvis.com"
+          target="_top">ramzidreessen@gmail.com</a>. Please put relevant information in the subject line. If we've
+        already worked together, please feel free to add me as a contact on <a
+          href="https://www.linkedin.com/in/ramzidreessen/" target="_blank" rel="noreferrer noopener">LinkedIn</a>. </p>
     </section>
   </main>
 </template>

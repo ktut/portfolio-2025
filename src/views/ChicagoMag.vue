@@ -40,7 +40,7 @@ export default {
           <em>Chicago</em> magazine editorial web design
         </h1>
         <p class="project-subtitle">
-          Leading editorial web design and administration at a Chicago media staple
+          Handling web-guy duties at a Chicago media staple
         </p>
 
         <div class="tech-stack">
