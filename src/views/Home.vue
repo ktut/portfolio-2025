@@ -81,7 +81,7 @@ export default {
         </div>
         <figcaption>
           <h2 class="title">
-            <em>Chicago</em> magazine editorial web design
+            <em>Chicago</em> editorial web design
           </h2>
           <button class="cta">
             View Projects <span class="unicode">&#x2197;</span>
@@ -96,7 +96,7 @@ export default {
         </div>
         <figcaption>
           <h2 class="title">
-            <em>Chicago</em> magazine subscription page redesign
+            <em>Chicago</em> subscription page redesign
           </h2>
           <button class="cta">
             View Project <span class="unicode">&#x2197;</span>
