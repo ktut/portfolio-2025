@@ -131,6 +131,18 @@ export default {
     max-width: 900px;
     width: 100%;
 
+    @media (min-width: 840px) {
+      max-width: 1000px;
+    }
+
+    .hero-image {
+      padding-bottom: 100%;
+
+      @media (min-width: 840px) {
+        padding-bottom: 60%;
+      }
+    }
+
     figure {
       box-shadow: unset;
       width: 100%;
