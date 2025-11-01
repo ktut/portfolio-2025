@@ -19,7 +19,7 @@ import img14 from '@/assets/photo/smyth.jpg'
 import img15 from '@/assets/photo/will-1100.jpg'
 
 // Hero composite images
-import heroImg1 from '@/assets/photo/4.jpg'
+import heroImg1 from '@/assets/photo/ruffalo-1.jpg'
 import heroImg2 from '@/assets/photo/1100-westwick.jpg'
 import heroImg3 from '@/assets/photo/00-aless.jpg'
 import heroImg4 from '@/assets/photo/IMG-365.jpg'

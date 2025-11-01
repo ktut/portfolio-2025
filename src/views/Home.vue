@@ -5,7 +5,7 @@ import Tout from '@/components/Tout.vue'
 import PortraitSlivers from '@/components/PortraitSlivers.vue'
 
 // Hero composite images for Portrait Photography
-import heroImg1 from '@/assets/photo/4.jpg'
+import heroImg1 from '@/assets/photo/ruffalo-1.jpg'
 import heroImg2 from '@/assets/photo/1100-westwick.jpg'
 import heroImg3 from '@/assets/photo/00-aless.jpg'
 import heroImg4 from '@/assets/photo/IMG-365.jpg'

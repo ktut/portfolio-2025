@@ -27,7 +27,7 @@ export default {
   height: 100%;
   border-radius: 16px;
   overflow: hidden;
-  background: #000;
+  background: #fff;
 
   .sliver-container {
     position: absolute;
@@ -50,49 +50,16 @@ export default {
     flex-shrink: 0;
     filter: grayscale(20%);
     position: relative;
-    margin-left: -8px;
+    clip-path: polygon(3% 0%, 100% 0%, 97% 100%, 0% 100%);
+    margin-right: 2px;
 
     @media (min-width: 840px) {
       width: 180px;
-      margin-left: -12px;
+      margin-right: 3px;
     }
 
-    &:first-child {
-      margin-left: 0;
-    }
-
-    &::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 20px;
-      background: linear-gradient(to right, #000 0%, transparent 100%);
-      z-index: 5;
-      transform: skewX(-10deg);
-      transform-origin: top left;
-
-      @media (min-width: 840px) {
-        width: 28px;
-      }
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      width: 20px;
-      background: linear-gradient(to left, #000 0%, transparent 100%);
-      z-index: 5;
-      transform: skewX(-10deg);
-      transform-origin: top right;
-
-      @media (min-width: 840px) {
-        width: 28px;
-      }
+    &:last-child {
+      margin-right: 0;
     }
   }
 }
