@@ -77,7 +77,10 @@ h3 {
   margin: 20px 0;
 }
 
-p {
+p,
+ol,
+ul,
+li {
   font-family: 'meursault-variable', serif;
   font-variation-settings: 'wdth' 150, 'wght' 400;
   b {

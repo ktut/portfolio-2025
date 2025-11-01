@@ -82,11 +82,11 @@ export default {
     <section class="content-wrapper">
       <header class="project-header">
         <h1 class="project-title">
-          <img src="@/assets/logo-cst.png" alt="Chicago Sun-Times Logo" class="cst-logo">
-          Chicago Sun-Times print design
+          <img src="@/assets/logo-cst.png" class="chase-logo" alt="Chicago Sun-Times Logo">
+          Chicago <em>Sun-Times</em> print design
         </h1>
         <p class="project-subtitle">
-          Print design work at a Chicago media institution
+          Did the whole <span class="cmyk-text"><span class="c">C</span><span class="m">M</span><span class="y">Y</span><span class="k">K</span></span> thing, too.
         </p>
 
         <div class="tech-stack">
@@ -102,30 +102,20 @@ export default {
       </header>
 
       <div class="project-overview">
-        <p>
-          Two of the biggest projects I worked on at the Sun-Times were:
-        </p>
-        <ol>
-          <li>
-            Designing a 103-page glossy embossed hardcover book for the Chicago Sun-Times Foundation in Fall/Winter 2015, including hundreds of photos that I shot over four years of covering the biggest philanthropic events in the city.
-          </li>
-          <li>
-            As a part of a three-person team, designed a 24-page glossy lifestyle magazine (SPLASH) from 2012-2016. Circulation: 225,000.
-          </li>
-        </ol>
+        <p class="lead">
+          At the <em>Sun-Times</em>, my primary work involved working on a 24-page glossy lifestyle magazine (SPLASH)
+          from 2012-2016, with a circulation of 225,000 copies. I worked with a team of three other designers to create
+          the magazine.</p>
+        <p class="lead">My other major project was designing a 103-page glossy embossed hardcover book for the Chicago
+          Sun-Times
+          Foundation in Fall/Winter
+          2015, including hundreds of photos that I shot over four years of covering the biggest philanthropic events
+          in the city.</p>
       </div>
 
       <div id="gallery" class="gallery-grid">
-        <a
-          v-for="(image, index) in images"
-          :key="index"
-          :href="image.src"
-          :data-pswp-width="image.width"
-          :data-pswp-height="image.height"
-          class="gallery-item"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a v-for="(image, index) in images" :key="index" :href="image.src" :data-pswp-width="image.width"
+          :data-pswp-height="image.height" class="gallery-item" target="_blank" rel="noreferrer">
           <img :src="image.src" :alt="image.alt">
         </a>
       </div>
@@ -151,6 +141,49 @@ export default {
     height: auto;
     margin-bottom: 1rem;
     display: block;
+  }
+
+  .cmyk-text {
+    display: inline-block;
+    font-weight: 700;
+
+    span {
+      display: inline-block;
+      animation: popLetter 3s ease-in-out infinite;
+    }
+
+    .c {
+      color: #00E5E5;
+      animation-delay: 0s;
+    }
+
+    .m {
+      color: #FF00FF;
+      animation-delay: 0.2s;
+    }
+
+    .y {
+      color: #FFFF00;
+      filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+      animation-delay: 0.4s;
+    }
+
+    .k {
+      color: #000000;
+      animation-delay: 0.6s;
+    }
+  }
+
+  @keyframes popLetter {
+    0%, 100% {
+      transform: scale(1);
+    }
+    10% {
+      transform: scale(1.2);
+    }
+    20% {
+      transform: scale(1);
+    }
   }
 
   .project-overview {
