@@ -110,6 +110,15 @@ export default {
         object-position: center 25%;
       }
     }
+
+    // Third image (00-aless) - crop to show face, not chest
+    &.image-2.active {
+      object-position: center 15%;
+
+      @media (min-width: 840px) {
+        object-position: center 18%;
+      }
+    }
   }
 }
 </style>
