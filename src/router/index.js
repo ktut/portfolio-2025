@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import ChaseView from '../views/Chase.vue'
 import ChicagoMagView from '../views/ChicagoMag.vue'
+import ChicagoMagSubscriptionView from '../views/ChicagoMagSubscription.vue'
 import HighFiveView from '../views/HighFive.vue'
 import { startViewTransition } from 'vue-view-transitions'
 
@@ -29,7 +30,13 @@ const routes = [
     path: '/chicagomagazine',
     name: 'chicagomagazine',
     component: ChicagoMagView,
-    meta: { displayName: 'Chicago Magazine' }
+    meta: { displayName: 'Chicago Magazine Web Design' }
+  },
+  {
+    path: '/chicagomagazine-subscription',
+    name: 'chicagomagazine-subscription',
+    component: ChicagoMagSubscriptionView,
+    meta: { displayName: 'Chicago Magazine Subscription Page' }
   },
   {
     path: '/high5games',

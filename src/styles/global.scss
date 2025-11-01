@@ -80,6 +80,9 @@ h3 {
 p {
   font-family: 'meursault-variable', serif;
   font-variation-settings: 'wdth' 150, 'wght' 400;
+  b {
+    font-variation-settings: 'wdth' 100, 'wght' 700;
+  }
 
   font-size: 1rem;
   margin-bottom: 25px;
