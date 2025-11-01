@@ -29,7 +29,7 @@ export default {
   <main class="chicago-mag-subscription">
     <section class="hero">
       <figure class="hero-image">
-        <img alt="Chicago magazine subscription page redesign" src="../assets/chimag-mag-spread.png">
+        <img alt="Chicago magazine subscription page redesign" src="../assets/ipad-chimag-mock.jpg">
       </figure>
     </section>
 
