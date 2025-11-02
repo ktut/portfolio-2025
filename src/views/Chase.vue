@@ -124,19 +124,20 @@ export default {
       </div>
       <div class="detail-section">
         <h2 class="section-title">
-          Engineering Details
+          Engineering
         </h2>
         <p class="section-intro">
-          As the sole frontend engineer on the project, I was responsible for building the client application from the
-          ground up. I worked closely with the product and designteam to define the features and functionality of the
-          app, and
-          then I built the app using Vue.js and TypeScript, which I learned on the job.
+          As the sole frontend engineer on the project, I wanted to build something refined-looking and powerful, but
+          also wanted it to be easy to maintain. Working closely with product and design, I built the app using
+          TypeScript (which I learned on the job) and Vue.js (which I had used before at Fitch Ratings).
         </p>
-        <p class="section-intro">The application forgoes complex state, and instead uses component-based caching and
-          simpler architecture to
+        <p class="section-intro">In order to keep things simple, the application forgoes complex state, and instead uses
+          component-based caching (Vue KeepAlive and similar technology, along with route-based JS chunking) to
           ensure legibility and maintainability. E2E tests written in Selenium integrated with the CI/CD pipeline
           focused on business-critical user journeys,
-          while strict schema control with Typescript eliminated the need for many of the unit tests.</p>
+          while strict schema control with Typescript eliminated the need for many of the unit tests. To simplify error
+          handling and field validation, I worked with the product and design teams to promote the use of generic error
+          responses over specific ones.</p>
       </div>
       <div class=" detail-section">
         <h2 class="section-title">
@@ -146,6 +147,8 @@ export default {
           Every interaction was carefully crafted to provide a seamless user experience. From advanced filtering to
           real-time search feedback, these details showcase the polish and precision built into the platform.
         </p>
+        <p class="section-intro">It was my goal to support the design team in addition to building what was asked for -
+          I frequently contributed design and functionality ideas, many of which made it into the final product.</p>
         <div class="detail-grid">
           <div class="detail-item">
             <video autoplay loop muted playsinline src="@/assets/PD-detail-campaigns.mov" />
