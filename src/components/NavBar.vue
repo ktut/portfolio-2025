@@ -212,25 +212,25 @@ nav {
 
   .logo,
   .logo .letter {
-    transition: transform 1.5s ease 0s, border-radius 4s ease 5s,
+    transition: transform 1.5s ease 0s, border-radius 4s ease 3s,
       opacity 1s ease 0s !important;
   }
 
   .logo .r .top,
   .logo .r .bottom {
-    transition: transform 2s ease 0s, border-radius 2.3s ease 5.5s,
+    transition: transform 2s ease 0s, border-radius 2.3s ease 3.5s,
       opacity 1s ease 0s !important;
   }
 
   .logo .k .top,
   .logo .k .bottom {
-    transition: transform 2s ease 0s, border-radius 2.6s ease 5.6s,
+    transition: transform 2s ease 0s, border-radius 2.6s ease 3.6s,
       opacity 1s ease 0s !important;
   }
 
   .logo .d .top,
   .logo .d .bottom {
-    transition: transform 2s ease 0s, border-radius 2.8s ease 5.7s,
+    transition: transform 2s ease 0s, border-radius 2.8s ease 3.7s,
       opacity 1s ease 0s !important;
   }
 
