@@ -150,20 +150,20 @@ export default {
         <p class="section-intro">It was my goal to support the design team in addition to building what was asked for -
           I frequently contributed design and functionality ideas, many of which made it into the final product.</p>
         <div class="detail-grid">
+          <div class="detail-item full-width">
+            <video autoplay loop muted playsinline src="@/assets/PD-detail-dates.mov" />
+            <h3>Custom Date Picker and Charts</h3>
+            <p>
+              Built with TypeScript and D3.js, featuring segment selection and precise date range controls for detailed
+              analytics.
+            </p>
+          </div>
           <div class="detail-item">
             <video autoplay loop muted playsinline src="@/assets/PD-detail-campaigns.mov" />
             <h3>Campaign Filtering</h3>
             <p>
               Sophisticated filtering system with intuitive controls and smooth transitions for managing complex
               campaign hierarchies.
-            </p>
-          </div>
-          <div class="detail-item">
-            <video autoplay loop muted playsinline src="@/assets/PD-detail-dates.mov" />
-            <h3>Custom Date Picker and Charts</h3>
-            <p>
-              Built with TypeScript and D3.js, featuring segment selection and precise date range controls for detailed
-              analytics.
             </p>
           </div>
           <div class="detail-item">
@@ -187,11 +187,9 @@ export default {
           Key Features
         </h2>
         <ul class="features-list">
-          <li>Real-time performance tracking with budget utilization, ROAS, and sales data</li>
-          <li>Advanced audience targeting based on transaction history (new, lapsed, and loyal customers)</li>
-          <li>Campaign management system with automated reporting capabilities</li>
+          <li>Near real-time performance tracking with budget utilization, ROAS, and sales data</li>
+          <li>Advanced audience reporting based on transaction history (new, lapsed, and loyal customers)</li>
           <li>Comprehensive analytics dashboard with data visualization</li>
-          <li>Multi-tenant architecture supporting thousands of concurrent campaigns</li>
         </ul>
       </div>
     </section>

@@ -462,7 +462,10 @@ main {
     margin-top: 2rem;
 
     @media (min-width: 840px) {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
@@ -539,6 +542,8 @@ main {
       color: #4a4a4a;
       padding: 1rem 0;
       position: relative;
+      list-style-type: circle;
+      list-style-position: inside;
 
       & + li {
         border-top: 1px solid #e8e8e8;
