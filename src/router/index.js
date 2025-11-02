@@ -26,13 +26,13 @@ const routes = [
     path: '/chase',
     name: 'chase',
     component: ChaseView,
-    meta: { displayName: 'JPMorganChase' }
+    meta: { displayName: 'JPMC Performance Dashboard' }
   },
   {
     path: '/chicagomagazine',
     name: 'chicagomagazine',
     component: ChicagoMagView,
-    meta: { displayName: 'ChiMag Web Design' }
+    meta: { displayName: 'ChiMag Editorial Web Design' }
   },
   {
     path: '/chicagomagazine-subscription',
@@ -44,13 +44,13 @@ const routes = [
     path: '/high5games',
     name: 'high5games',
     component: HighFiveView,
-    meta: { displayName: 'High 5 Games Builder System' }
+    meta: { displayName: 'H5G Builder System' }
   },
   {
     path: '/suntimes',
     name: 'suntimes',
     component: SunTimesView,
-    meta: { displayName: 'Chicago Sun-Times Print Design' }
+    meta: { displayName: 'CST Print Design' }
   },
   {
     path: '/photo',
