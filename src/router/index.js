@@ -32,19 +32,19 @@ const routes = [
     path: '/chicagomagazine',
     name: 'chicagomagazine',
     component: ChicagoMagView,
-    meta: { displayName: 'Chicago Magazine Web Design' }
+    meta: { displayName: 'ChiMag Web Design' }
   },
   {
     path: '/chicagomagazine-subscription',
     name: 'chicagomagazine-subscription',
     component: ChicagoMagSubscriptionView,
-    meta: { displayName: 'Chicago Magazine Subscription Page' }
+    meta: { displayName: 'ChiMag Subscription Page' }
   },
   {
     path: '/high5games',
     name: 'high5games',
     component: HighFiveView,
-    meta: { displayName: 'High 5 Games' }
+    meta: { displayName: 'High 5 Games Builder System' }
   },
   {
     path: '/suntimes',
