@@ -82,10 +82,10 @@ export default {
     <section class="content-wrapper">
       <header class="project-header">
         <h1 class="project-title">
-          Portrait Photography
+          Photography
         </h1>
         <p class="project-subtitle">
-          Capturing moments and people through the lens.
+          Portraits shot for Chicago <em>Sun-Times</em> SPLASH magazine and other clients.
         </p>
 
         <div class="tech-stack">
@@ -104,11 +104,7 @@ export default {
         <p class="lead">
           I still occasionally take photos, although most of these were from my days working for Chicago
           <em>Sun-Times</em> SPLASH magazine. During my time there, I had the opportunity to photograph a wide range of
-          subjects, from community events to celebrity portraits, honing my skills in portrait and event photography.
-        </p>
-        <p class="lead">
-          These images represent a collection of portrait work that captures the essence and character of diverse
-          subjects, showcasing my approach to lighting, composition, and storytelling through photography.
+          subjects, from community events to celebrity portraits.
         </p>
       </div>
 
