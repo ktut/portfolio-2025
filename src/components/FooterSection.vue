@@ -29,14 +29,22 @@ export default {
   },
   data() {
     return {
-      currentYear: new Date().getFullYear()
+      currentYear: new Date().getFullYear(),
+      isLoaded: false
     }
+  },
+  mounted() {
+    // Delay footer animation until after all project links
+    // Last project link starts at 400 + (5 * 150) = 1150ms
+    setTimeout(() => {
+      this.isLoaded = true;
+    }, 1600);
   }
 }
 </script>
 
 <template>
-  <footer>
+  <footer :class="{ 'fade-in': isLoaded }">
     <hr />
     <div class="project-links">
       <h3>Work I’ve done:</h3>
@@ -82,6 +90,14 @@ export default {
 footer {
   position: relative;
   padding: 0 0rem 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  &.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
   h3 {
     color: $textColor;

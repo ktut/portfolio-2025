@@ -26,13 +26,16 @@ export default {
       loaded: false,
       windowWidth: window.innerWidth,
       minWidth: 840,
-      photoHeroImages: [heroImg1, heroImg2, heroImg3, heroImg4, heroImg5, heroImg6]
+      photoHeroImages: [heroImg1, heroImg2, heroImg3, heroImg4, heroImg5, heroImg6],
+      projectLinksLoaded: [],
+      toutAnimate: false
     }
   },
   mounted() {
     this.loaded = true;
     window.addEventListener('resize', this.updateWidth);
     this.updateWidth();
+    this.animateProjectLinks();
   },
   computed: {
     shouldMountComponent() {
@@ -45,6 +48,17 @@ export default {
   methods: {
     updateWidth() {
       this.windowWidth = window.innerWidth;
+    },
+    animateProjectLinks() {
+      const projectLinks = document.querySelectorAll('.project-link');
+      projectLinks.forEach((link, index) => {
+        setTimeout(() => {
+          this.projectLinksLoaded.push(index);
+        }, 400 + (index * 150)); // Start at 400ms, stagger by 150ms
+      });
+    },
+    handleToutHover() {
+      this.toutAnimate = true;
     }
   }
 }
@@ -53,7 +67,7 @@ export default {
 <template>
   <main :class="{ loaded: loaded }">
     <HomepageTopText />
-    <RouterLink to="/chase" class="project-link cover">
+    <RouterLink to="/chase" class="project-link cover" :class="{ 'animate-in': projectLinksLoaded.includes(0) }">
       <figure>
         <div class="img-bg" v-view-transition-name="'img'"
           :style="{ backgroundImage: 'url(' + require('@/assets/Chase-portfolio-mock.jpg') + ')' }">
@@ -83,7 +97,7 @@ export default {
         </ul>
       </figure>
     </RouterLink>
-    <RouterLink to="/high5games" class="project-link cover">
+    <RouterLink to="/high5games" class="project-link cover" :class="{ 'animate-in': projectLinksLoaded.includes(1) }">
       <figure>
         <div class="tout-container" ref="toutContainer" @mouseenter="handleToutHover">
           <Tout :animate="toutAnimate" />
@@ -112,7 +126,7 @@ export default {
         </ul>
       </figure>
     </RouterLink>
-    <RouterLink to="/chicagomagazine" class="project-link cover">
+    <RouterLink to="/chicagomagazine" class="project-link cover" :class="{ 'animate-in': projectLinksLoaded.includes(2) }">
       <figure>
         <div class="video-composite">
           <div class="video-bg">
@@ -158,7 +172,7 @@ export default {
         </ul>
       </figure>
     </RouterLink>
-    <RouterLink to="/chicagomagazine-subscription" class="project-link cover">
+    <RouterLink to="/chicagomagazine-subscription" class="project-link cover" :class="{ 'animate-in': projectLinksLoaded.includes(3) }">
       <figure>
         <div class="chimag-subscription-bg"
           :style="{ backgroundImage: 'url(' + require('@/assets/ipad-chimag-mock.jpg') + ')' }">
@@ -187,7 +201,7 @@ export default {
         </ul>
       </figure>
     </RouterLink>
-    <RouterLink to="/suntimes" class="project-link cover">
+    <RouterLink to="/suntimes" class="project-link cover" :class="{ 'animate-in': projectLinksLoaded.includes(4) }">
       <figure>
         <div class="suntimes-bg"
           :style="{ backgroundImage: 'url(' + require('@/assets/print-design/IMG_0008.jpg') + ')' }">
@@ -216,7 +230,7 @@ export default {
         </ul>
       </figure>
     </RouterLink>
-    <RouterLink to="/photo" class="project-link cover">
+    <RouterLink to="/photo" class="project-link cover" :class="{ 'animate-in': projectLinksLoaded.includes(5) }">
       <figure>
         <div class="photo-composite-wrapper">
           <PortraitSlivers :images="photoHeroImages" />
@@ -438,6 +452,17 @@ figure {
         margin-bottom: 0;
       }
     }
+  }
+}
+
+.project-link {
+  opacity: 0;
+  transform: perspective(1000px) rotateX(-8deg) translateY(30px);
+  transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  &.animate-in {
+    opacity: 1;
+    transform: perspective(1000px) rotateX(0deg) translateY(0);
   }
 }
 </style>

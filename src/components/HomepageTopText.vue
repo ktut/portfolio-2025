@@ -1,10 +1,21 @@
 <script>
 export default {
   name: 'HomepageTopText',
+  data() {
+    return {
+      isLoaded: false
+    }
+  },
+  mounted() {
+    // Delay to appear after NavBar starts loading (NavBar loads at 100ms in App.vue)
+    setTimeout(() => {
+      this.isLoaded = true;
+    }, 200);
+  }
 }
 </script>
 <template>
-  <section class="homepage-top-text">
+  <section class="homepage-top-text" :class="{ 'slide-in': isLoaded }">
     <h1>Hi, Iʼm <span class="first-name-expand">Ramzi.</span> </h1>
 
     <p>I build websites that people like to poke and prod at with their tiny screens.</p>
@@ -21,6 +32,14 @@ export default {
   max-width: 1200px;
   margin: 0 auto;
   padding: 32px 16px 0;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  &.slide-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
   @media (min-width: 720px) {
     text-align: center;
