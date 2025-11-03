@@ -59,7 +59,7 @@ export default {
           <img src="@/assets/chase-logo.png" alt="Chase Logo" class="chase-logo">JPMorgan Chase Performance Dashboard
         </h1>
         <p class="project-subtitle">
-          Building the client application for a card-linked offers campaign monitoring and reporting platform.
+          Building the client application for a card-linked offers campaign monitoring and reporting platform
         </p>
 
         <div class="tech-stack">
