@@ -25,19 +25,20 @@ export default {
       <p>
         As a creator, I keep things simple. Good art, proper use of negative space, relevant typography, and
         staying
-        in-tune with the “why” of the project. I’m aware that design without direction is just an aesthetics
-        contest.
+        in-tune with the “why” of the project.
         With web design, I specialize in performative solutions that are fully responsive and utilize progressive
         enhancement.
       </p>
       <p>
-        I understand component-based design, but I don’t believe in keeping design elements “sacred” across
-        projects
-        - to me, that’s just laziness. If you want someone to build you a cookie-cutter website filled with
+        My personal philsophy is centered around prioritizing the user at all stages of the project - planning, design,
+        development and testing. I value processes that allow for quick iteration to meet their ongoing needs.</p>
+      <p>I’m aware
+        that design without
+        direction is just an aesthetics
+        contest. If you want someone to build you a cookie-cutter website filled with
         buzzwords
         and stock images (like one of these <a href="http://tiffzhang.com/startup" target="_blank"
-          rel="noreferrer noopener">fake startup websites</a>), I’m probably not your guy. I value a strong art team
-        and strong content, and working with others.
+          rel="noreferrer noopener">fake startup websites</a>), I’m probably not your guy.
       </p>
       <p>
         I’m not afraid of complexity, but I also have a guideline: If I can't fully explain how something works to
