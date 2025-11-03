@@ -59,7 +59,7 @@ export default {
           <img src="@/assets/chase-logo.png" alt="Chase Logo" class="chase-logo">JPMorgan Chase Performance Dashboard
         </h1>
         <p class="project-subtitle">
-          Building the client application for a card-linked offers campaign monitoring and reporting platform
+          Building a web application for monitoring and downloading reports for card-linked offer campaigns
         </p>
 
         <div class="tech-stack">
@@ -82,9 +82,9 @@ export default {
           The purpose of the app, built initially for Figg and then redesigned for <a
             href="https://www.chase.com/mediasolutions/solutions" target="_blank" rel="noopener noreferrer"
             aria-label="CMS">Chase Media Solutions</a> upon our acquisition, was to allow customers to take full
-          advange of the
+          advantage of the
           card-linked offers program, enabling brands both big and small to
-          drive conversion, acquire new customers, and inspire incremental sales through data insights.
+          drive conversions, acquire new customers, and inspire incremental sales through data insights.
         </p>
         <p>
           Overall, the platform leveraged transaction data to deliver targeted offers to Chase cardholders across
