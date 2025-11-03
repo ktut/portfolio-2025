@@ -93,6 +93,7 @@ footer {
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  background-color: #fcfcfc;
 
   &.fade-in {
     opacity: 1;

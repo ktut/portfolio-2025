@@ -57,7 +57,6 @@ export default {
 <style lang="scss" scoped>
 .about {
   min-height: 100vh;
-  background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
 
   .project-header {
     max-width: 800px;

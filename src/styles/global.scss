@@ -20,7 +20,7 @@ html {
 }
 
 #app {
-  background: $backgroundColor;
+  background-image: url('@/assets/papyrus.png');
   min-height: 100vh;
   font-family: 'meursault-variable', serif;
   font-variation-settings: 'wdth' 120, 'wght' 500;

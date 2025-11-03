@@ -186,7 +186,6 @@ export default {
 <style lang="scss" scoped>
 .high-five {
   min-height: 100vh;
-  background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
 
   .tout-container {
     width: 500px;

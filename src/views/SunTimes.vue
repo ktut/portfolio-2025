@@ -74,7 +74,7 @@ export default {
   <main class="sun-times">
     <section class="hero">
       <figure class="hero-image">
-        <div class="suntimes-bg"
+        <div class="suntimes-bg" v-view-transition-name="'cst-image'"
           :style="{ backgroundImage: 'url(' + require('@/assets/print-design/IMG_0008.jpg') + ')' }">
         </div>
       </figure>
@@ -128,7 +128,6 @@ export default {
 <style lang="scss" scoped>
 .sun-times {
   min-height: 100vh;
-  background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
 
   .hero {
     max-width: 800px;

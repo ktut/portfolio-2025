@@ -113,7 +113,6 @@ export default {
 <style lang="scss" scoped>
 .chicago-mag-subscription {
   min-height: 100vh;
-  background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
 
   .hero {
     max-width: 800px;

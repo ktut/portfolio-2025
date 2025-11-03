@@ -201,7 +201,6 @@ export default {
 <style lang="scss" scoped>
 .chase {
   min-height: 100vh;
-  background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
 
 
   .mobile-section {

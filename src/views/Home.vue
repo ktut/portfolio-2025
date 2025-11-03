@@ -126,7 +126,8 @@ export default {
         </ul>
       </figure>
     </RouterLink>
-    <RouterLink to="/chicagomagazine" class="project-link cover" :class="{ 'animate-in': projectLinksLoaded.includes(2) }">
+    <RouterLink to="/chicagomagazine" class="project-link cover"
+      :class="{ 'animate-in': projectLinksLoaded.includes(2) }">
       <figure>
         <div class="video-composite">
           <div class="video-bg">
@@ -172,7 +173,8 @@ export default {
         </ul>
       </figure>
     </RouterLink>
-    <RouterLink to="/chicagomagazine-subscription" class="project-link cover" :class="{ 'animate-in': projectLinksLoaded.includes(3) }">
+    <RouterLink to="/chicagomagazine-subscription" class="project-link cover"
+      :class="{ 'animate-in': projectLinksLoaded.includes(3) }">
       <figure>
         <div class="chimag-subscription-bg"
           :style="{ backgroundImage: 'url(' + require('@/assets/ipad-chimag-mock.jpg') + ')' }">
@@ -203,7 +205,7 @@ export default {
     </RouterLink>
     <RouterLink to="/suntimes" class="project-link cover" :class="{ 'animate-in': projectLinksLoaded.includes(4) }">
       <figure>
-        <div class="suntimes-bg"
+        <div class="suntimes-bg" v-view-transition-name="'cst-image'"
           :style="{ backgroundImage: 'url(' + require('@/assets/print-design/IMG_0008.jpg') + ')' }">
         </div>
         <figcaption>
