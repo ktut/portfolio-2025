@@ -92,6 +92,7 @@ footer {
   .project-links {
     padding: 2rem 2rem 1rem;
     text-align: center;
+    font-variation-settings: 'wdth' 150, 'wght' 500;
 
     nav {
       display: flex;

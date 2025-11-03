@@ -23,6 +23,7 @@ html {
   background: $backgroundColor;
   min-height: 100vh;
   font-family: 'meursault-variable', serif;
+  font-variation-settings: 'wdth' 120, 'wght' 500;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -362,6 +363,7 @@ main {
   margin-top: 2rem;
 
   .tech-pill {
+    font-variation-settings: 'wdth' 190, 'wght' 500;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
