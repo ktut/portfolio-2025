@@ -141,7 +141,7 @@ export default {
       </div>
       <div class=" detail-section">
         <h2 class="section-title">
-          Design Details
+          Details
         </h2>
         <p class="section-intro">
           Every interaction was carefully crafted to provide a seamless user experience. From advanced filtering to
