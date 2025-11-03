@@ -22,8 +22,7 @@ html {
 #app {
   background: $backgroundColor;
   min-height: 100vh;
-  // font-family: Avenir, Helvetica, Arial, sans-serif;
-  font-family: 'helvetica-neue-world', sans-serif;
+  font-family: 'meursault-variable', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -81,7 +80,6 @@ p,
 ol,
 ul,
 li {
-  font-family: 'meursault-variable', serif;
   font-variation-settings: 'wdth' 150, 'wght' 400;
   b {
     font-variation-settings: 'wdth' 100, 'wght' 700;
