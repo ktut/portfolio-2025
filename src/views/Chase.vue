@@ -78,13 +78,16 @@ export default {
         <h2 class="section-title">
           Overview
         </h2>
-        <p>
+        <p class="lead">
           The purpose of the app, built initially for Figg and then redesigned for <a
             href="https://www.chase.com/mediasolutions/solutions" target="_blank" rel="noopener noreferrer"
             aria-label="CMS">Chase Media Solutions</a> upon our acquisition, was to allow customers to take full
           advantage of the
           card-linked offers program, enabling brands both big and small to
-          drive conversions, acquire new customers, and inspire incremental sales through data insights.
+          drive conversions, acquire new customers, and inspire incremental sales through data insights. </p>
+        <p class="lead">My role was to
+          build the client application for the platform in a manner that was 1. easily maintainable (as I was the only
+          frontend engineer on the project) 2. performant and 3. easy to test.
         </p>
         <p>
           Overall, the platform leveraged transaction data to deliver targeted offers to Chase cardholders across
