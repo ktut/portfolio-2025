@@ -100,7 +100,7 @@ export default {
     <RouterLink to="/high5games" class="project-link cover" :class="{ 'animate-in': projectLinksLoaded.includes(1) }">
       <figure>
         <div class="tout-container" ref="toutContainer" @mouseenter="handleToutHover">
-          <Tout :animate="toutAnimate" />
+          <Tout :animate="toutAnimate" v-view-transition-name="'tout-animation'" />
         </div>
         <figcaption>
           <h2 class="title">
@@ -176,7 +176,7 @@ export default {
     <RouterLink to="/chicagomagazine-subscription" class="project-link cover"
       :class="{ 'animate-in': projectLinksLoaded.includes(3) }">
       <figure>
-        <div class="chimag-subscription-bg"
+        <div class="chimag-subscription-bg" v-view-transition-name="'chimag-subscription-redesign'"
           :style="{ backgroundImage: 'url(' + require('@/assets/ipad-chimag-mock.jpg') + ')' }">
         </div>
         <figcaption>
@@ -235,7 +235,7 @@ export default {
     <RouterLink to="/photo" class="project-link cover" :class="{ 'animate-in': projectLinksLoaded.includes(5) }">
       <figure>
         <div class="photo-composite-wrapper">
-          <PortraitSlivers :images="photoHeroImages" />
+          <PortraitSlivers :images="photoHeroImages" v-view-transition-name="'portraits'" />
         </div>
         <figcaption>
           <h2 class="title">

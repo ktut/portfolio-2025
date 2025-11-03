@@ -29,7 +29,8 @@ export default {
   <main class="chicago-mag-subscription">
     <section class="hero">
       <figure class="hero-image">
-        <img alt="Chicago magazine subscription page redesign" src="../assets/ipad-chimag-mock.jpg">
+        <img alt="Chicago magazine subscription page redesign" src="../assets/ipad-chimag-mock.jpg"
+          v-view-transition-name="'chimag-subscription-redesign'">
       </figure>
     </section>
 

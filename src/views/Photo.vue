@@ -75,7 +75,7 @@ export default {
   <main class="photo">
     <section class="hero">
       <figure class="hero-image">
-        <PortraitSlivers :images="heroImages" />
+        <PortraitSlivers :images="heroImages" v-view-transition-name="'portraits'" />
       </figure>
     </section>
 

@@ -62,7 +62,7 @@ export default {
   <main class="high-five">
     <section class="hero">
       <div class="tout-container">
-        <Tout :animate="toutAnimate" />
+        <Tout :animate="toutAnimate" v-view-transition-name="'tout-animation'" />
       </div>
     </section>
 
