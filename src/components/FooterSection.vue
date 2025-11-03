@@ -197,7 +197,7 @@ footer {
     color: #5a5e63;
     font-size: 0.75rem;
     line-height: 1.6;
-    letter-spacing: 0.01em;
+    font-variation-settings: 'wdth' 180, 'wght' 150;
     text-align: left;
     margin-top: 2.5rem;
     padding: 2rem;
