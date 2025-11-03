@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="">
   <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-26343135-2"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || []
-      function gtag() {
-        dataLayer.push(arguments)
-      }
-      gtag('js', new Date())
-
-      gtag('config', 'UA-26343135-2')
-    </script>
+    <!-- Preconnect to external domains for faster resource loading -->
+    <link rel="preconnect" href="https://use.typekit.net" crossorigin />
+    <link rel="dns-prefetch" href="https://use.typekit.net" />
+    <link rel="preconnect" href="https://p.typekit.net" crossorigin />
+    <link rel="dns-prefetch" href="https://p.typekit.net" />
+    <link
+      rel="preconnect"
+      href="https://www.googletagmanager.com"
+      crossorigin
+    />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link
+      rel="preconnect"
+      href="https://www.google-analytics.com"
+      crossorigin
+    />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
 
     <title>Ramzi Dreessen — RKDVIS.COM</title>
 
@@ -123,11 +126,11 @@
     </noscript>
     <div class="older-browser" style="display: none">
       <p>
-        Looks like you’re using an older browser or you've disabled Javascript.
+        Looks like you're using an older browser or you've disabled Javascript.
         So much for all the flashy stuff I was going to show you.
       </p>
       <p>
-        Anyways, I'm Ramzi. I’m a web designer and developer, photographer,
+        Anyways, I'm Ramzi. I'm a web designer and developer, photographer,
         videographer, and more.
       </p>
       <p>
@@ -136,5 +139,25 @@
         you'd like to connect.
       </p>
     </div>
+
+    <!-- Load Google Analytics after page content -->
+    <script>
+      // Defer Google Analytics loading until after page is interactive
+      window.addEventListener('load', function () {
+        // Load gtag script
+        var script = document.createElement('script')
+        script.async = true
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=UA-26343135-2'
+        document.head.appendChild(script)
+
+        // Initialize gtag
+        window.dataLayer = window.dataLayer || []
+        function gtag() {
+          dataLayer.push(arguments)
+        }
+        gtag('js', new Date())
+        gtag('config', 'UA-26343135-2')
+      })
+    </script>
   </body>
 </html>
