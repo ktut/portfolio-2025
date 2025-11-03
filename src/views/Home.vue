@@ -67,6 +67,49 @@ export default {
             View Project <span class="unicode">&#x2197;</span>
           </button>
         </figcaption>
+        <ul class="project-metadata">
+          <li>
+            <span><b>Role</b></span>
+            <span>Lead Frontend Software Engineer</span>
+          </li>
+          <li>
+            <span><b>Tech</b></span>
+            <span>Vue.js, Typescript, Pinia</span>
+          </li>
+          <li>
+            <span><b>Dates</b></span>
+            <span>2022-2025</span>
+          </li>
+        </ul>
+      </figure>
+    </RouterLink>
+    <RouterLink to="/high5games" class="project-link cover">
+      <figure>
+        <div class="tout-container" ref="toutContainer" @mouseenter="handleToutHover">
+          <Tout :animate="toutAnimate" />
+        </div>
+        <figcaption>
+          <h2 class="title">
+            High 5 Games casino web design
+          </h2>
+          <button class="cta">
+            View Project <span class="unicode">&#x2197;</span>
+          </button>
+        </figcaption>
+        <ul class="project-metadata">
+          <li>
+            <span><b>Role</b></span>
+            <span>Frontend Developer</span>
+          </li>
+          <li>
+            <span><b>Tech</b></span>
+            <span>React, CSS, Tailwind, Lottie, Firebase</span>
+          </li>
+          <li>
+            <span><b>Dates</b></span>
+            <span>2019-2022</span>
+          </li>
+        </ul>
       </figure>
     </RouterLink>
     <RouterLink to="/chicagomagazine" class="project-link cover">
@@ -99,6 +142,20 @@ export default {
             View Projects <span class="unicode">&#x2197;</span>
           </button>
         </figcaption>
+        <ul class="project-metadata">
+          <li>
+            <span><b>Role</b></span>
+            <span>Lead Frontend Developer</span>
+          </li>
+          <li>
+            <span><b>Tech</b></span>
+            <span>CSS, Adobe Creative Suite, jQuery</span>
+          </li>
+          <li>
+            <span><b>Dates</b></span>
+            <span>2017-2019</span>
+          </li>
+        </ul>
       </figure>
     </RouterLink>
     <RouterLink to="/chicagomagazine-subscription" class="project-link cover">
@@ -114,21 +171,20 @@ export default {
             View Project <span class="unicode">&#x2197;</span>
           </button>
         </figcaption>
-      </figure>
-    </RouterLink>
-    <RouterLink to="/high5games" class="project-link cover">
-      <figure>
-        <div class="tout-container" ref="toutContainer" @mouseenter="handleToutHover">
-          <Tout :animate="toutAnimate" />
-        </div>
-        <figcaption>
-          <h2 class="title">
-            High 5 Games casino web design
-          </h2>
-          <button class="cta">
-            View Project <span class="unicode">&#x2197;</span>
-          </button>
-        </figcaption>
+        <ul class="project-metadata">
+          <li>
+            <span><b>Role</b></span>
+            <span>Lead Frontend Developer</span>
+          </li>
+          <li>
+            <span><b>Tech</b></span>
+            <span>CSS, Adobe Creative Suite, jQuery</span>
+          </li>
+          <li>
+            <span><b>Dates</b></span>
+            <span>2017-2019</span>
+          </li>
+        </ul>
       </figure>
     </RouterLink>
     <RouterLink to="/suntimes" class="project-link cover">
@@ -144,6 +200,20 @@ export default {
             View Project <span class="unicode">&#x2197;</span>
           </button>
         </figcaption>
+        <ul class="project-metadata">
+          <li>
+            <span><b>Role</b></span>
+            <span>Multimedia Producer/Designer</span>
+          </li>
+          <li>
+            <span><b>Tech</b></span>
+            <span>Adobe Creative Suite</span>
+          </li>
+          <li>
+            <span><b>Dates</b></span>
+            <span>2012-2016</span>
+          </li>
+        </ul>
       </figure>
     </RouterLink>
     <RouterLink to="/photo" class="project-link cover">
@@ -252,8 +322,10 @@ figure {
     text-decoration: none !important;
     display: block;
     font-size: 1.5rem;
+    width: 100%;
 
     @media (min-width: 840px) {
+      width: unset;
       display: flex;
       align-items: baseline;
       justify-content: space-between;
@@ -262,6 +334,11 @@ figure {
     .title {
       margin-right: 16px;
       text-wrap: balance;
+      margin-bottom: 0;
+
+      @media (min-width: 840px) {
+        margin-bottom: 1rem;
+      }
     }
   }
 
@@ -320,6 +397,45 @@ figure {
         color: white;
         -webkit-transform: translate(2px, -2px);
         transform: translate(2px, -2px);
+      }
+    }
+  }
+
+  .project-metadata {
+    width: 100%;
+    max-width: 400px;
+    padding: 16px 4px 0;
+    margin-left: 0;
+
+    @media (min-width: 640px) {
+      display: flex;
+      justify-content: center;
+      max-width: unset;
+      margin: 0 auto;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+
+      @media (min-width: 640px) {
+        display: block;
+        padding-left: 16px;
+        padding-right: 16px;
+
+        span {
+          display: block;
+          white-space: nowrap;
+        }
+      }
+
+      span :not(:first-child) {
+        text-align: right;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
       }
     }
   }
