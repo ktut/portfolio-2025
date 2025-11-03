@@ -33,11 +33,7 @@ export default {
 <template>
   <div class="photo-composite">
     <div class="sliver-container">
-      <img
-        v-for="(image, index) in images"
-        :key="index"
-        :src="image"
-        alt="Portrait"
+      <img v-for="(image, index) in images" :key="index" :src="image" alt="Portrait"
         :class="['portrait-sliver', { active: index === activeIndex }, `image-${index}`]">
     </div>
   </div>
@@ -92,7 +88,7 @@ export default {
       width: 250px;
       filter: grayscale(0%);
       opacity: 1;
-      z-index: 10;
+      z-index: 3;
       transform: scale(1.05);
       object-position: center 35%;
 
