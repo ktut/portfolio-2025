@@ -152,9 +152,9 @@ main {
     color: inherit;
     max-width: 1200px;
     &:not(:first-of-type) {
-      margin-top: 20px;
+      margin-top: 40px;
       @media (min-width: 720px) {
-        margin-top: 60px;
+        margin-top: 80px;
       }
     }
     &.cover {

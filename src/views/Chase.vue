@@ -79,12 +79,14 @@ export default {
           Overview
         </h2>
         <p class="lead">
-          Originally built for Figg and later redesigned for <a
-            href="https://www.chase.com/mediasolutions/solutions" target="_blank" rel="noopener noreferrer"
-            aria-label="CMS">Chase Media Solutions</a> following our acquisition, the platform enabled customers to maximize their card-linked offers program. Brands of all sizes could drive conversions, acquire new customers, and inspire incremental sales through data insights.
+          Originally built for Figg and later redesigned for <a href="https://www.chase.com/mediasolutions/solutions"
+            target="_blank" rel="noopener noreferrer" aria-label="CMS">Chase Media Solutions</a> following our
+          acquisition, the platform enabled customers to maximize their card-linked offers program. Brands of all sizes
+          could drive conversions, acquire new customers, and inspire incremental sales through data insights.
         </p>
         <p class="lead">
-          As the sole frontend engineer, my role was to build a client application that was easily maintainable, performant, and easy to test.
+          As the sole frontend engineer, my role was to build a client application that was easily maintainable,
+          performant, and easy to test.
         </p>
         <p>
           Overall, the platform leveraged transaction data to deliver targeted offers to Chase cardholders across
@@ -127,7 +129,7 @@ export default {
           Engineering
         </h2>
         <p class="section-intro">
-          As the sole frontend engineer on the project, I wanted to build something refined-looking and powerful, but
+          I wanted to build something refined-looking and powerful, but
           also wanted it to be easy to maintain. Working closely with product and design, I built the app using
           TypeScript (which I learned on the job) and Vue.js (which I had used before at Fitch Ratings).
         </p>
