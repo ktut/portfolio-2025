@@ -10,7 +10,7 @@ export default {
   mounted() {
     this.intervalId = setInterval(() => {
       this.animate = !this.animate;
-    }, 2000);
+    }, 4000);
   },
   beforeUnmount() {
     if (this.intervalId) {
@@ -42,6 +42,7 @@ export default {
   perspective-origin: center center;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  transition: transform 1s ease-out;
   -webkit-transition: transform 1s ease-out;
 
   .layer-1,
