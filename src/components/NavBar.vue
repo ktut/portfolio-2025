@@ -113,6 +113,48 @@ nav {
     padding: 24px;
   }
 
+  .back-link {
+    text-align: left;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    @media (min-width: 720px) {
+      min-width: 227px;
+    }
+
+    &.home-page {
+      pointer-events: none;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: $redPunch;
+      text-decoration: none;
+      font-size: 0.95rem;
+      -webkit-transition: color 0.2s ease;
+      transition: color 0.2s ease;
+
+      .arrow {
+        font-size: 1.2rem;
+        -webkit-transition: transform 0.2s ease;
+        transition: transform 0.2s ease;
+      }
+
+      &:hover {
+        color: $redPunch;
+
+        .arrow {
+          -webkit-transform: translateX(-4px);
+          transform: translateX(-4px);
+        }
+      }
+    }
+  }
+
   .hamburger-button {
     display: none;
     flex-direction: column;
@@ -241,6 +283,10 @@ nav {
 
   &.loaded {
     opacity: 1;
+
+    .back-link:not(.home-page) {
+      opacity: 1;
+    }
 
     .letter,
     .letter>div,
