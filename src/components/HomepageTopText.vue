@@ -64,7 +64,7 @@ export default {
   p {
     font-size: 1.1rem;
     margin-top: 1rem;
-    color: $headingColor;
+    color: $textColor;
     font-variation-settings: 'wdth' 120, 'wght' 500;
     text-align: left;
 
@@ -106,7 +106,9 @@ export default {
   }
 
   @keyframes gentle-down {
-    0%, 100% {
+
+    0%,
+    100% {
       transform: translateY(0) scale(1);
       opacity: 1;
     }
@@ -118,7 +120,9 @@ export default {
   }
 
   @keyframes gentle-up {
-    0%, 100% {
+
+    0%,
+    100% {
       transform: translateY(0) scale(1);
       opacity: 1;
     }

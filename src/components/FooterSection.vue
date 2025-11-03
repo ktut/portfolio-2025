@@ -84,7 +84,7 @@ footer {
   padding: 0 0rem 2rem;
 
   h3 {
-    color: $headingColor;
+    color: $textColor;
     margin-bottom: 1rem;
     font-size: 1.5rem;
   }

@@ -16,12 +16,11 @@ export default {
       <p>
         Hi! I’m <b>Ramzi Dreessen</b>, a web developer with <b><span>8</span> years of experience,</b> along with
         <b>6
-          years of print and web design experience</b>, living in Chicago.
+          years of print and web design experience</b>. I’m based in Chicago, but I’ve worked with teams across the US
+        and internationally.
       </p>
       <p>
-        I’ve never aligned myself to a particular job title. I enjoy planning, creating, reviewing, tearing apart
-        my
-        own work, rebuilding, finally shipping... any and all parts of the creative process.
+
       </p>
       <p>
         As a creator, I keep things simple. Good art, proper use of negative space, relevant typography, and
