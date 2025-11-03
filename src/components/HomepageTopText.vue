@@ -82,11 +82,11 @@ export default {
       &.high {
         position: relative;
         font-variation-settings: 'wght' 600;
-        animation: gentle-up 2s ease-in-out infinite;
+        animation: gentle-up 3s ease-in-out infinite;
       }
 
       &.low {
-        animation: gentle-down 2s ease-in-out infinite;
+        animation: gentle-down 3s ease-in-out infinite;
       }
     }
   }
