@@ -40,7 +40,7 @@ const routes = [
     component: ChaseView,
     meta: {
       displayName: 'JPMC Performance Dashboard',
-      ogImage: 'https://www.rkdvis.com/assets/Chase-portfolio-mock.jpg',
+      ogImage: 'https://www.rkdvis.com/assets/pd-social.jpg',
       ogTitle: 'JPMorgan Chase Performance Dashboard — Ramzi Dreessen',
       ogDescription:
         'Building the client application for a card-linked offers campaign monitoring and reporting platform'
@@ -75,7 +75,7 @@ const routes = [
     component: HighFiveView,
     meta: {
       displayName: 'H5G Builder System',
-      ogImage: 'https://www.rkdvis.com/assets/tout-builder.png',
+      ogImage: 'https://www.rkdvis.com/assets/h5g-social.jpg',
       ogTitle: 'High 5 Games Tout Builder System — Ramzi Dreessen',
       ogDescription: 'Building a custom carousel banner-building system and app'
     }
@@ -97,7 +97,7 @@ const routes = [
     component: PhotoView,
     meta: {
       displayName: 'Portrait Photography',
-      ogImage: 'https://www.rkdvis.com/assets/photo/ruffalo-1.jpg',
+      ogImage: 'https://www.rkdvis.com/assets/photo/ruffalo-social.jpg',
       ogTitle: 'Portrait Photography — Ramzi Dreessen',
       ogDescription:
         'Portraits shot for Chicago Sun-Times SPLASH magazine and other clients'
