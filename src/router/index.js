@@ -14,49 +14,94 @@ const routes = [
     path: '/',
     name: 'home',
     component: Home,
-    meta: { displayName: 'Home' }
+    meta: {
+      displayName: 'Home',
+      ogImage: 'https://www.rkdvis.com/assets/me-burgundy-square.jpg',
+      ogTitle: 'Ramzi Dreessen — RKDVIS.COM',
+      ogDescription:
+        "I'm a web developer, designer, photographer and videographer based in Chicago."
+    }
   },
   {
     path: '/about',
     name: 'about',
     component: About,
-    meta: { displayName: 'About' }
+    meta: {
+      displayName: 'About',
+      ogImage: 'https://www.rkdvis.com/assets/me-burgundy-square.jpg',
+      ogTitle: 'About — Ramzi Dreessen',
+      ogDescription:
+        'Web developer, designer, photographer and videographer based in Chicago.'
+    }
   },
   {
     path: '/chase',
     name: 'chase',
     component: ChaseView,
-    meta: { displayName: 'JPMC Performance Dashboard' }
+    meta: {
+      displayName: 'JPMC Performance Dashboard',
+      ogImage: 'https://www.rkdvis.com/assets/Chase-portfolio-mock.jpg',
+      ogTitle: 'JPMorgan Chase Performance Dashboard — Ramzi Dreessen',
+      ogDescription:
+        'Building the client application for a card-linked offers campaign monitoring and reporting platform'
+    }
   },
   {
     path: '/chicagomagazine',
     name: 'chicagomagazine',
     component: ChicagoMagView,
-    meta: { displayName: 'ChiMag Editorial Web Design' }
+    meta: {
+      displayName: 'ChiMag Editorial Web Design',
+      ogImage: 'https://www.rkdvis.com/assets/chimag-mag-spread.jpg',
+      ogTitle: 'Chicago Magazine Editorial Web Design — Ramzi Dreessen',
+      ogDescription: 'Handling web-guy duties at a Chicago media staple'
+    }
   },
   {
     path: '/chicagomagazine-subscription',
     name: 'chicagomagazine-subscription',
     component: ChicagoMagSubscriptionView,
-    meta: { displayName: 'ChiMag Subscription Page' }
+    meta: {
+      displayName: 'ChiMag Subscription Page',
+      ogImage: 'https://www.rkdvis.com/assets/ipad-chimag-mock.jpg',
+      ogTitle: 'Chicago Magazine Subscription Page Redesign — Ramzi Dreessen',
+      ogDescription:
+        'Redesigning the subscription experience to drive conversions'
+    }
   },
   {
     path: '/high5games',
     name: 'high5games',
     component: HighFiveView,
-    meta: { displayName: 'H5G Builder System' }
+    meta: {
+      displayName: 'H5G Builder System',
+      ogImage: 'https://www.rkdvis.com/assets/tout-builder.png',
+      ogTitle: 'High 5 Games Tout Builder System — Ramzi Dreessen',
+      ogDescription: 'Building a custom carousel banner-building system and app'
+    }
   },
   {
     path: '/suntimes',
     name: 'suntimes',
     component: SunTimesView,
-    meta: { displayName: 'CST Print Design' }
+    meta: {
+      displayName: 'CST Print Design',
+      ogImage: 'https://www.rkdvis.com/assets/print-design/IMG_0008.jpg',
+      ogTitle: 'Chicago Sun-Times Print Design — Ramzi Dreessen',
+      ogDescription: 'Print design work for Chicago Sun-Times SPLASH magazine'
+    }
   },
   {
     path: '/photo',
     name: 'photo',
     component: PhotoView,
-    meta: { displayName: 'Portrait Photography' }
+    meta: {
+      displayName: 'Portrait Photography',
+      ogImage: 'https://www.rkdvis.com/assets/photo/ruffalo-1.jpg',
+      ogTitle: 'Portrait Photography — Ramzi Dreessen',
+      ogDescription:
+        'Portraits shot for Chicago Sun-Times SPLASH magazine and other clients'
+    }
   }
 ]
 
@@ -65,13 +110,82 @@ const router = createRouter({
   routes
 })
 
+// Helper function to update meta tags
+function updateMetaTags(route) {
+  const meta = route.meta || {}
+
+  // Update OG Image
+  if (meta.ogImage) {
+    let ogImageTag = document.querySelector('meta[property="og:image"]')
+    if (ogImageTag) {
+      ogImageTag.setAttribute('content', meta.ogImage)
+    }
+  }
+
+  // Update OG Title
+  if (meta.ogTitle) {
+    let ogTitleTag = document.querySelector('meta[property="og:title"]')
+    if (!ogTitleTag) {
+      ogTitleTag = document.createElement('meta')
+      ogTitleTag.setAttribute('property', 'og:title')
+      document.head.appendChild(ogTitleTag)
+    }
+    ogTitleTag.setAttribute('content', meta.ogTitle)
+
+    // Also update document title
+    document.title = meta.ogTitle
+  }
+
+  // Update OG Description
+  if (meta.ogDescription) {
+    let ogDescTag = document.querySelector('meta[property="og:description"]')
+    if (ogDescTag) {
+      ogDescTag.setAttribute('content', meta.ogDescription)
+    }
+
+    // Also update regular description
+    let descTag = document.querySelector('meta[name="description"]')
+    if (descTag) {
+      descTag.setAttribute('content', meta.ogDescription)
+    }
+  }
+
+  // Update Twitter Card meta tags
+  if (meta.ogImage) {
+    let twitterImageTag = document.querySelector('meta[name="twitter:image"]')
+    if (!twitterImageTag) {
+      twitterImageTag = document.createElement('meta')
+      twitterImageTag.setAttribute('name', 'twitter:image')
+      document.head.appendChild(twitterImageTag)
+    }
+    twitterImageTag.setAttribute('content', meta.ogImage)
+  }
+
+  if (meta.ogTitle) {
+    let twitterTitleTag = document.querySelector('meta[name="twitter:title"]')
+    if (twitterTitleTag) {
+      twitterTitleTag.setAttribute('content', meta.ogTitle)
+    }
+  }
+
+  if (meta.ogDescription) {
+    let twitterDescTag = document.querySelector(
+      'meta[name="twitter:description"]'
+    )
+    if (twitterDescTag) {
+      twitterDescTag.setAttribute('content', meta.ogDescription)
+    }
+  }
+}
+
 router.beforeResolve(async () => {
   const viewTransition = startViewTransition()
   await viewTransition.captured
 })
 
-router.afterEach(() => {
+router.afterEach((to) => {
   window.scrollTo(0, 0)
+  updateMetaTags(to)
 })
 
 export default router
