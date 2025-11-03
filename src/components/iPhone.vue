@@ -47,6 +47,16 @@ export default {
   </div>
 </template>
 
+<style lang="scss">
+.project-link:hover,
+.mobile-showcase:hover {
+  .iphone-video {
+    -webkit-transform: rotateY(0deg) rotateZ(0deg) !important;
+    transform: rotateY(0deg) rotateZ(0deg) !important;
+  }
+}
+</style>
+
 <style lang="scss" scoped>
 .iphone-container {
   width: 375px;
@@ -70,11 +80,6 @@ export default {
 
     -webkit-transform: rotateY(-25deg) rotateZ(10deg);
     transform: rotateY(-25deg) rotateZ(10deg);
-
-    &:hover {
-      -webkit-transform: rotateY(0deg) rotateZ(0deg);
-      transform: rotateY(0deg) rotateZ(0deg);
-    }
   }
 }
 

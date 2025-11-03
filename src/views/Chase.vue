@@ -189,7 +189,9 @@ export default {
         <ul class="features-list">
           <li>Near real-time performance tracking with budget utilization, ROAS, and sales data</li>
           <li>Advanced audience reporting based on transaction history (new, lapsed, and loyal customers)</li>
-          <li>Comprehensive analytics dashboard with data visualization</li>
+          <li>Advanced admin panel for managing users and permissions</li>
+          <li>Custom date picker and charts for detailed analytics visualization</li>
+          <li>Campaign filtering and sorting</li>
         </ul>
       </div>
     </section>
