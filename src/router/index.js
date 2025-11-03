@@ -16,7 +16,7 @@ const routes = [
     component: Home,
     meta: {
       displayName: 'Home',
-      ogImage: 'https://www.rkdvis.com/assets/me-burgundy-social.jpg',
+      ogImage: 'https://rkdvis.com/assets/me-burgundy-social.jpg',
       ogTitle: 'Ramzi Dreessen — RKDVIS.COM',
       ogDescription:
         "I'm a web developer, designer, photographer and videographer based in Chicago."
@@ -28,7 +28,7 @@ const routes = [
     component: About,
     meta: {
       displayName: 'About',
-      ogImage: 'https://www.rkdvis.com/assets/me-burgundy-social.jpg',
+      ogImage: 'https://rkdvis.com/assets/me-burgundy-social.jpg',
       ogTitle: 'About — Ramzi Dreessen',
       ogDescription:
         'Web developer, designer, photographer and videographer based in Chicago.'
@@ -40,7 +40,7 @@ const routes = [
     component: ChaseView,
     meta: {
       displayName: 'JPMC Performance Dashboard',
-      ogImage: 'https://www.rkdvis.com/assets/pd-social.jpg',
+      ogImage: 'https://rkdvis.com/assets/pd-social.jpg',
       ogTitle: 'JPMorgan Chase Performance Dashboard — Ramzi Dreessen',
       ogDescription:
         'Building the client application for a card-linked offers campaign monitoring and reporting platform'
@@ -52,7 +52,7 @@ const routes = [
     component: ChicagoMagView,
     meta: {
       displayName: 'ChiMag Editorial Web Design',
-      ogImage: 'https://www.rkdvis.com/assets/chimag-mag-spread.jpg',
+      ogImage: 'https://rkdvis.com/assets/chimag-mag-spread.jpg',
       ogTitle: 'Chicago Magazine Editorial Web Design — Ramzi Dreessen',
       ogDescription: 'Handling web-guy duties at a Chicago media staple'
     }
@@ -63,7 +63,7 @@ const routes = [
     component: ChicagoMagSubscriptionView,
     meta: {
       displayName: 'ChiMag Subscription Page',
-      ogImage: 'https://www.rkdvis.com/assets/ipad-chimag-mock.jpg',
+      ogImage: 'https://rkdvis.com/assets/ipad-chimag-mock.jpg',
       ogTitle: 'Chicago Magazine Subscription Page Redesign — Ramzi Dreessen',
       ogDescription:
         'Redesigning the subscription experience to drive conversions'
@@ -75,7 +75,7 @@ const routes = [
     component: HighFiveView,
     meta: {
       displayName: 'H5G Builder System',
-      ogImage: 'https://www.rkdvis.com/assets/h5g-social.jpg',
+      ogImage: 'https://rkdvis.com/assets/h5g-social.jpg',
       ogTitle: 'High 5 Games Tout Builder System — Ramzi Dreessen',
       ogDescription: 'Building a custom carousel banner-building system and app'
     }
@@ -86,7 +86,7 @@ const routes = [
     component: SunTimesView,
     meta: {
       displayName: 'CST Print Design',
-      ogImage: 'https://www.rkdvis.com/assets/print-design/IMG_0008.jpg',
+      ogImage: 'https://rkdvis.com/assets/print-design/IMG_0008.jpg',
       ogTitle: 'Chicago Sun-Times Print Design — Ramzi Dreessen',
       ogDescription: 'Print design work for Chicago Sun-Times SPLASH magazine'
     }
@@ -97,7 +97,7 @@ const routes = [
     component: PhotoView,
     meta: {
       displayName: 'Portrait Photography',
-      ogImage: 'https://www.rkdvis.com/assets/photo/ruffalo-social.jpg',
+      ogImage: 'https://rkdvis.com/assets/photo/ruffalo-social.jpg',
       ogTitle: 'Portrait Photography — Ramzi Dreessen',
       ogDescription:
         'Portraits shot for Chicago Sun-Times SPLASH magazine and other clients'
