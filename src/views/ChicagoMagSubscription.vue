@@ -123,6 +123,12 @@ export default {
     }
   }
 
+  .old-subscription-page-container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .old-subscription-page-container,
   .new-subscription-page-container {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
