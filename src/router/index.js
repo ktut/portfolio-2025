@@ -16,7 +16,7 @@ const routes = [
     component: Home,
     meta: {
       displayName: 'Home',
-      ogImage: 'https://www.rkdvis.com/assets/me-burgundy-square.jpg',
+      ogImage: 'https://www.rkdvis.com/assets/me-burgundy-social.jpg',
       ogTitle: 'Ramzi Dreessen — RKDVIS.COM',
       ogDescription:
         "I'm a web developer, designer, photographer and videographer based in Chicago."
@@ -28,7 +28,7 @@ const routes = [
     component: About,
     meta: {
       displayName: 'About',
-      ogImage: 'https://www.rkdvis.com/assets/me-burgundy-square.jpg',
+      ogImage: 'https://www.rkdvis.com/assets/me-burgundy-social.jpg',
       ogTitle: 'About — Ramzi Dreessen',
       ogDescription:
         'Web developer, designer, photographer and videographer based in Chicago.'
