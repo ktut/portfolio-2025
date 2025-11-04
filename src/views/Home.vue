@@ -104,7 +104,7 @@ export default {
         </div>
         <figcaption>
           <h2 class="title">
-            High 5 Games casino web design
+            High 5 Games Casino
           </h2>
           <button class="cta">
             View Project <span class="unicode">&#x2197;</span>
@@ -181,7 +181,7 @@ export default {
         </div>
         <figcaption>
           <h2 class="title">
-            <em>Chicago</em> subscription page redesign
+            <em>Chicago</em> subscription page overhaul
           </h2>
           <button class="cta">
             View Project <span class="unicode">&#x2197;</span>
@@ -210,7 +210,7 @@ export default {
         </div>
         <figcaption>
           <h2 class="title">
-            Chicago Sun-Times print design
+            Chicago <em>Sun-Times</em> print design
           </h2>
           <button class="cta">
             View Project <span class="unicode">&#x2197;</span>
@@ -239,7 +239,7 @@ export default {
         </div>
         <figcaption>
           <h2 class="title">
-            Portrait Photography
+            Portrait photography
           </h2>
           <button class="cta">
             View Project <span class="unicode">&#x2197;</span>
@@ -333,7 +333,6 @@ figure {
   }
 
   figcaption {
-    text-align: left;
     color: $textColor !important;
     text-decoration: none !important;
     display: block;
