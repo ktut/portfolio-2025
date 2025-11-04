@@ -1,39 +1,95 @@
 <script>
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { ref, onMounted, onBeforeUnmount, computed } from 'vue'
 
 export default {
   name: 'IPhone',
   setup() {
     const iphoneVideo = ref(null)
-    const isRotated = ref(false)
+    const rotationY = ref(-25) // Default rotation (-50 to 50 range)
+    const isDragging = ref(false)
+    const startX = ref(0)
+    const startRotation = ref(0)
 
-    const handleScroll = () => {
-      if (!iphoneVideo.value) return
+    // Compute rotateZ based on rotateY (inverse relationship)
+    // When Y is -50, Z is 10; when Y is 50, Z is -10
+    const rotationZ = computed(() => {
+      return (rotationY.value / -50) * 10
+    })
 
-      const rect = iphoneVideo.value.getBoundingClientRect()
-      const isInViewport = rect.top < window.innerHeight && rect.bottom >= 0
+    const transformStyle = computed(() => {
+      return `rotateY(${rotationY.value}deg) rotateZ(${rotationZ.value}deg)`
+    })
 
-      if (window.scrollY === 0) {
-        // User scrolled back to the top
-        isRotated.value = false
-      } else if (isInViewport) {
-        // Element is in viewport
-        isRotated.value = true
-      }
+    const handleStart = (clientX) => {
+      isDragging.value = true
+      startX.value = clientX
+      startRotation.value = rotationY.value
+    }
+
+    const handleMove = (clientX) => {
+      if (!isDragging.value) return
+
+      const deltaX = clientX - startX.value
+      // Map drag distance to rotation (adjust sensitivity as needed)
+      const rotationDelta = deltaX * 0.2
+      let newRotation = startRotation.value + rotationDelta
+
+      // Clamp rotation between -50 and 50
+      newRotation = Math.max(-50, Math.min(50, newRotation))
+      rotationY.value = newRotation
+    }
+
+    const handleEnd = () => {
+      isDragging.value = false
+    }
+
+    // Mouse events
+    const handleMouseDown = (e) => {
+      handleStart(e.clientX)
+    }
+
+    const handleMouseMove = (e) => {
+      handleMove(e.clientX)
+    }
+
+    const handleMouseUp = () => {
+      handleEnd()
+    }
+
+    // Touch events
+    const handleTouchStart = (e) => {
+      handleStart(e.touches[0].clientX)
+    }
+
+    const handleTouchMove = (e) => {
+      handleMove(e.touches[0].clientX)
+    }
+
+    const handleTouchEnd = () => {
+      handleEnd()
     }
 
     onMounted(() => {
-      window.addEventListener('scroll', handleScroll)
-      handleScroll() // Check initial state
+      // Add global mouse/touch event listeners
+      window.addEventListener('mousemove', handleMouseMove)
+      window.addEventListener('mouseup', handleMouseUp)
+      window.addEventListener('touchmove', handleTouchMove, { passive: false })
+      window.addEventListener('touchend', handleTouchEnd)
     })
 
     onBeforeUnmount(() => {
-      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('mousemove', handleMouseMove)
+      window.removeEventListener('mouseup', handleMouseUp)
+      window.removeEventListener('touchmove', handleTouchMove)
+      window.removeEventListener('touchend', handleTouchEnd)
     })
 
     return {
       iphoneVideo,
-      isRotated
+      transformStyle,
+      isDragging,
+      handleMouseDown,
+      handleTouchStart
     }
   }
 }
@@ -41,21 +97,18 @@ export default {
 
 <template>
   <div class="iphone-container">
-    <div ref="iphoneVideo" class="iphone-video" :class="{ rotated: isRotated }">
+    <div
+      ref="iphoneVideo"
+      class="iphone-video"
+      :class="{ dragging: isDragging }"
+      :style="{ transform: transformStyle }"
+      @mousedown="handleMouseDown"
+      @touchstart="handleTouchStart"
+    >
       <video width="100%" autoplay loop muted playsinline src="@/assets/PD-mobile-walkthrough.mov" />
     </div>
   </div>
 </template>
-
-<style lang="scss">
-.project-link:hover,
-.mobile-showcase:hover {
-  .iphone-video {
-    -webkit-transform: rotateY(0deg) rotateZ(0deg) !important;
-    transform: rotateY(0deg) rotateZ(0deg) !important;
-  }
-}
-</style>
 
 <style lang="scss" scoped>
 .iphone-container {
@@ -66,21 +119,6 @@ export default {
   perspective: 1500px;
   -webkit-perspective-origin: center center;
   perspective-origin: center center;
-
-  .iphone-video {
-    // -webkit-transform: rotateY(0deg) rotateZ(0deg);
-    // transform: rotateY(0deg) rotateZ(0deg);
-
-    // &.rotated {
-    //   @media (min-width: 480px) {
-    //     -webkit-transform: rotateY(-25deg) rotateZ(10deg);
-    //     transform: rotateY(-25deg) rotateZ(10deg);
-    //   }
-    // }
-
-    -webkit-transform: rotateY(-25deg) rotateZ(10deg);
-    transform: rotateY(-25deg) rotateZ(10deg);
-  }
 }
 
 .iphone-video {
@@ -89,8 +127,13 @@ export default {
   height: 783px;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  -webkit-transition: transform 1s ease-out;
-  transition: transform 1s ease-out;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+
+  &.dragging {
+    cursor: grabbing;
+  }
 
   video {
     position: absolute;
@@ -106,6 +149,7 @@ export default {
     -webkit-transform: translateZ(5px);
     transform: translateZ(5px);
     z-index: 3;
+    pointer-events: none;
   }
 
   &:before {
