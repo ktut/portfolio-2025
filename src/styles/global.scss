@@ -287,6 +287,11 @@ main {
   p {
     text-align: left;
   }
+
+  .acknowledgments-list li {
+    font-family: 'meursault-variable', serif;
+    font-variation-settings: 'wdth' 120, 'wght' 700;
+  }
 }
 
 .project-header {

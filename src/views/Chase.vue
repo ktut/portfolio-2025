@@ -209,6 +209,22 @@ export default {
           <li>Campaign filtering and sorting</li>
         </ul>
       </div>
+      <div class="detail-section">
+        <h2 class="section-title">
+          Acknowledgments
+        </h2>
+        <p>A special thanks goes out to all of my colleagues at JPMC/Figg who helped make this possible and supported me
+          along the way:</p>
+        <ul class="acknowledgments-list">
+          <li>Nathan Schlecte (Team Lead)</li>
+          <li>Marlena Manulis (Product Manager)</li>
+          <li>Will Smith (Designer)</li>
+          <li>Tim Stratton (Backend Engineer)</li>
+          <li>Michael Meloche (Backend Engineer)</li>
+          <li>Demitria Jefferson (Backend Engineer)</li>
+          <li>Tim Balaban (QA)</li>
+        </ul>
+      </div>
     </section>
   </main>
 </template>
