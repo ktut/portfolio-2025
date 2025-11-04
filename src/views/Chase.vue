@@ -181,6 +181,14 @@ export default {
               Streamlined report generation with format options and progress indicators for exporting campaign data.
             </p>
           </div>
+          <div class="detail-item full-width">
+            <video autoplay loop muted playsinline src="@/assets/PD-detail-admin.mov" />
+            <h3>Admin Panel</h3>
+            <p>
+              A dedicated admin panel for managing users and permissions, with presets for various roles and thousands
+              of available brands to add access to.
+            </p>
+          </div>
         </div>
       </div>
 
