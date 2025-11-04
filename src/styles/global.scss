@@ -366,9 +366,16 @@ main {
   margin-bottom: 4rem;
 
   .lead {
-    font-size: 1.3rem;
+    font-family: 'meursault-variable', serif;
+    font-variation-settings: 'wdth' 180, 'wght' 400;
+    font-size: 1.2rem;
     line-height: 1.7;
     margin-bottom: 1.5rem;
+    &.bottom-border {
+      border-bottom: 1px solid #e1e1e1;
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+    }
   }
 }
 

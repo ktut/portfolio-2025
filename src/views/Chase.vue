@@ -84,7 +84,7 @@ export default {
           acquisition, the platform enabled customers to maximize their card-linked offers program. Brands of all sizes
           could drive conversions, acquire new customers, and inspire incremental sales through data insights.
         </p>
-        <p class="lead">
+        <p class="lead bottom-border">
           As the sole frontend engineer, my role was to build a client application that was easily maintainable,
           performant, and easy to test.
         </p>
