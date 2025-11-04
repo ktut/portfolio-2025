@@ -160,7 +160,7 @@ export default {
         <ul class="project-metadata">
           <li>
             <span><b>Role</b></span>
-            <span>Lead Frontend Developer</span>
+            <span>Lead Frontend Developer and Site Administrator</span>
           </li>
           <li>
             <span><b>Tech</b></span>
@@ -190,7 +190,7 @@ export default {
         <ul class="project-metadata">
           <li>
             <span><b>Role</b></span>
-            <span>Lead Frontend Developer</span>
+            <span>Lead Frontend Developer and Site Administrator</span>
           </li>
           <li>
             <span><b>Tech</b></span>
@@ -418,11 +418,10 @@ figure {
 
   .project-metadata {
     width: 100%;
-    max-width: 400px;
     padding: 16px 4px 0;
     margin-left: 0;
 
-    @media (min-width: 640px) {
+    @media (min-width: 760px) {
       display: flex;
       justify-content: center;
       max-width: unset;
@@ -434,7 +433,7 @@ figure {
       justify-content: space-between;
       margin-bottom: 8px;
 
-      @media (min-width: 640px) {
+      @media (min-width: 760px) {
         display: block;
         padding-left: 16px;
         padding-right: 16px;
