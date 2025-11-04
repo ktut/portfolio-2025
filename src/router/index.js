@@ -40,7 +40,7 @@ const routes = [
     component: ChaseView,
     meta: {
       displayName: 'JPMC Performance Dashboard',
-      ogImage: 'https://rkdvis.com/assets/pd-social.jpg',
+      ogImage: 'https://rkdvis.com/assets/PD-night-mock.jpg',
       ogTitle: 'JPMorgan Chase Performance Dashboard — Ramzi Dreessen',
       ogDescription:
         'Building the client application for a card-linked offers campaign monitoring and reporting platform'
