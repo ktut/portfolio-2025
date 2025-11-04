@@ -24,7 +24,7 @@ export default {
       “do-it-all” with <span class="hightlight high">high-level</span> experience in <b>front-end software
         engineering</b>, <b>web/print design</b>, <b>photography</b> and <b>video</b>, and <span
         class="hightlight low">low-level</span>
-      experience in <b>making memes</b> and being a <b>dad</b>. </p>
+      experience in <b>making memes</b> and <b>being a dad</b>. </p>
   </section>
 </template>
 <style lang="scss" scoped>
