@@ -40,9 +40,9 @@ export default {
           <img src="@/assets/logo-chimag.png" alt="Chicago Magazine Logo" class="chase-logo">
           <em>Chicago</em> subscription page redesign
         </h1>
-        <p class="project-subtitle">
+        <h2 class="project-subtitle">
           Redesigning the subscription experience to drive conversions
-        </p>
+        </h2>
 
         <div class="tech-stack">
           <div v-for="tech in technologies" :key="tech.name" class="tech-pill">
@@ -60,7 +60,7 @@ export default {
         <h2 class="section-title">
           The Challenge
         </h2>
-        <p>
+        <p class="lead">
           At <a href="http://www.chicagomag.com" target="_blank" rel="noreferrer noopener"><em>Chicago</em>
             magazine</a>, I was tasked with overhauling our subscription page. The old page had few conversions per
           user, and it was clear as to why:

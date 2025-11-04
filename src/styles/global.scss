@@ -81,14 +81,16 @@ p,
 ol,
 ul,
 li {
-  font-variation-settings: 'wdth' 150, 'wght' 400;
+  font-family: 'comma-sans', sans-serif;
+  font-weight: 400;
   b {
-    font-variation-settings: 'wdth' 100, 'wght' 700;
+    font-weight: 700;
   }
 
   font-size: 1rem;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   line-height: 180%;
+  letter-spacing: 0.02em;
 }
 
 em {
@@ -162,8 +164,8 @@ main {
       max-width: 1600px;
       .img-bg {
         width: 100%;
-        height: 400px;
-        background-size: 670px;
+        height: 350px;
+        background-size: 960px;
         background-position: 0% 100%;
         border-radius: 16px;
         @media (min-width: 640px) {
@@ -278,7 +280,7 @@ main {
   h2,
   h3,
   p {
-    max-width: 800px;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -311,10 +313,13 @@ main {
   }
 
   .project-subtitle {
+    font-size: 1.5rem;
     color: #666;
     margin-bottom: 2rem;
     text-align: center;
     text-wrap: balance;
+    font-weight: 400;
+    font-variation-settings: 'wdth' 150, 'wght' 400;
   }
 }
 
@@ -326,7 +331,7 @@ main {
   margin-top: 2rem;
 
   .tech-pill {
-    font-variation-settings: 'wdth' 190, 'wght' 500;
+    font-family: 'comma-sans', sans-serif;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -364,13 +369,6 @@ main {
     font-size: 1.3rem;
     line-height: 1.7;
     margin-bottom: 1.5rem;
-  }
-
-  p {
-    font-size: 1.05rem;
-    font-variation-settings: 'wdth' 180, 'wght' 400;
-    line-height: 1.8;
-    color: #4a4a4a;
   }
 }
 
@@ -416,7 +414,7 @@ main {
     line-height: 1.8;
     color: #4a4a4a;
     margin-bottom: 3rem;
-    max-width: 800px;
+    max-width: 700px;
   }
 
   .detail-grid {
@@ -427,6 +425,7 @@ main {
 
     @media (min-width: 840px) {
       grid-template-columns: repeat(2, 1fr);
+      align-items: center;
       max-width: 1000px;
       margin-left: auto;
       margin-right: auto;
@@ -477,11 +476,11 @@ main {
       }
 
       p {
-        max-width: 800px;
+        max-width: 700px;
       }
 
       h3 {
-        max-width: 800px;
+        max-width: 700px;
       }
     }
   }
@@ -511,16 +510,6 @@ main {
   }
 }
 
-.project-header {
-  .project-subtitle {
-    font-size: 1.2rem;
-
-    @media (min-width: 769px) {
-      font-size: 1.5rem;
-    }
-  }
-}
-
 .metrics-section {
   .metrics-grid {
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -529,7 +518,7 @@ main {
     @media (min-width: 769px) {
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 1.5rem;
-      max-width: 800px;
+      max-width: 700px;
       margin-left: auto;
     }
   }

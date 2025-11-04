@@ -36,7 +36,7 @@ export default {
         { label: 'Campaigns', value: '8,620' },
         { label: 'Deals', value: '12,952' },
         { label: 'Redemptions', value: '37.2M' },
-        { label: 'Revenue Processed', value: '$3.6B' },
+        // { label: 'Revenue Processed', value: '$3.6B' },
         { label: 'Budget Delivered', value: '$211.2M' },
         { label: 'Reports Generated', value: '9,664' }
       ]
@@ -58,9 +58,9 @@ export default {
         <h1 class="project-title">
           <img src="@/assets/chase-logo.png" alt="Chase Logo" class="chase-logo">JPMorgan Chase Performance Dashboard
         </h1>
-        <p class="project-subtitle">
+        <h2 class="project-subtitle">
           Building a web application for monitoring and downloading reports for card-linked offer campaigns
-        </p>
+        </h2>
 
         <div class="tech-stack">
           <div v-for="tech in technologies" :key="tech.name" class="tech-pill">
@@ -149,7 +149,7 @@ export default {
           Every interaction was carefully crafted to provide a seamless user experience. From advanced filtering to
           real-time search feedback, these details showcase the polish and precision built into the platform.
         </p>
-        <p class="section-intro">It was my goal to support the design team in addition to building what was asked for -
+        <p class="section-intro">It was my goal to support the design team in addition to building what was asked for —
           I frequently contributed design and functionality ideas, many of which made it into the final product.</p>
         <div class="detail-grid">
           <div class="detail-item full-width">

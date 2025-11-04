@@ -72,9 +72,9 @@ export default {
           <img src="@/assets/logo-h5g.png" alt="High 5 Games Logo" class="chase-logo">
           High 5 Games “Tout” builder system
         </h1>
-        <p class="project-subtitle">
+        <h2 class="project-subtitle">
           Building a custom carousel banner-building system and app
-        </p>
+        </h2>
 
         <div class="tech-stack">
           <div v-for="tech in technologies" :key="tech.name" class="tech-pill">

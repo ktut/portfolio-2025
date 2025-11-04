@@ -39,9 +39,9 @@ export default {
           <img src="@/assets/logo-chimag.png" alt="Chimag Logo" class="chase-logo">
           <em>Chicago</em> editorial web design
         </h1>
-        <p class="project-subtitle">
+        <h2 class="project-subtitle">
           Handling web-guy duties at a Chicago media staple
-        </p>
+        </h2>
 
         <div class="tech-stack">
           <div v-for="tech in technologies" :key="tech.name" class="tech-pill">
@@ -56,7 +56,7 @@ export default {
       </header>
 
       <div class="project-overview">
-        <p>
+        <p class="lead">
           At <a href="http://www.chicagomag.com" target="_blank" rel="noreferrer noopener"><em>Chicago</em>
             magazine</a>, I was in charge of web design and administration
           (taking over from the
@@ -68,7 +68,7 @@ export default {
           full-stack
           coding bootcamp on nights/weekends.
         </p>
-        <p>Here's some of the work I did there:</p>
+        <p class="lead">Here's some of the work I did there:</p>
       </div>
 
       <div class="video-bg">

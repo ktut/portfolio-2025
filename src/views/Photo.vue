@@ -84,9 +84,9 @@ export default {
         <h1 class="project-title">
           Photography
         </h1>
-        <p class="project-subtitle">
+        <h2 class="project-subtitle">
           Portraits shot for Chicago <em>Sun-Times</em> SPLASH magazine and other clients.
-        </p>
+        </h2>
 
         <div class="tech-stack">
           <div v-for="tech in technologies" :key="tech.name" class="tech-pill">

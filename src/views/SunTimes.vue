@@ -86,10 +86,10 @@ export default {
           <img src="@/assets/logo-cst.png" class="chase-logo" alt="Chicago Sun-Times Logo">
           Chicago <em>Sun-Times</em> print design
         </h1>
-        <p class="project-subtitle">
+        <h2 class="project-subtitle">
           Did the whole <span class="cmyk-text"><span class="c">C</span><span class="m">M</span><span
               class="y">Y</span><span class="k">K</span></span> thing, too.
-        </p>
+        </h2>
 
         <div class="tech-stack">
           <div v-for="tech in technologies" :key="tech.name" class="tech-pill">

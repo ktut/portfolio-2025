@@ -81,7 +81,7 @@ export default {
   }
 
   p {
-    font-size: 1.1rem;
+    font-size: 1.08rem;
     margin-top: 1rem;
     color: $textColor;
     font-variation-settings: 'wdth' 120, 'wght' 500;
