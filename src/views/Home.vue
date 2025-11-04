@@ -70,7 +70,7 @@ export default {
     <RouterLink to="/chase" class="project-link cover" :class="{ 'animate-in': projectLinksLoaded.includes(0) }">
       <figure>
         <div class="img-bg" v-view-transition-name="'img'"
-          :style="{ backgroundImage: 'url(' + require('@/assets/Chase-portfolio-mock.jpg') + ')' }">
+          :style="{ backgroundImage: 'url(' + require('@/assets/PD-night-mock.jpg') + ')' }">
           <IPhone v-if="shouldMountComponent" class="iphone-in-image" />
         </div>
         <figcaption>

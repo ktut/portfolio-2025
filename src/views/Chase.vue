@@ -49,7 +49,7 @@ export default {
   <main class="chase">
     <section class="hero">
       <figure class="hero-image">
-        <img v-view-transition-name="'img'" alt="Chase Performance Dashboard" src="../assets/Chase-portfolio-mock.jpg">
+        <img v-view-transition-name="'img'" alt="Chase Performance Dashboard" src="../assets/PD-night-mock.jpg">
       </figure>
     </section>
 
