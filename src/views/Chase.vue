@@ -129,13 +129,17 @@ export default {
           Engineering
         </h2>
         <p class="section-intro">
-          I wanted to build something refined-looking and powerful, but
-          also wanted it to be easy to maintain. Working closely with product and design, I built the app using
+          I wanted the app to be refined-looking and powerful, but
+          also easy to maintain. Working closely with product and design, I built the app using
           TypeScript (which I learned on the job) and Vue.js (which I had used before at Fitch Ratings).
         </p>
-        <p class="section-intro">In order to keep things simple, the application forgoes complex state, and instead uses
-          component-based caching (Vue KeepAlive and similar technology, along with route-based JS chunking) to
-          ensure legibility and maintainability. E2E tests written in Selenium integrated with the CI/CD pipeline
+        <p class="section-intro">The application forgoes complex state, and instead uses
+          component-based caching (Vue KeepAlive and similar technology, along with route-based Javascript chunking) to
+          ensure solid performance. In my experience, overcomplication with
+          frontend engineering is absolutely rampant, and usually leads to having to solve complicated issues down the
+          road, like cache invalidation and state duplication. I wanted to ensure that any potential issues would be
+          easiliy traceable and fixable. </p>
+        <p>E2E tests written in Selenium integrated with the CI/CD pipeline
           focused on business-critical user journeys,
           while strict schema control with Typescript eliminated the need for many of the unit tests. To simplify error
           handling and field validation, I worked with the product and design teams to promote the use of generic error
