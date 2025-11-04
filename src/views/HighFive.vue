@@ -179,6 +179,18 @@ export default {
           <li>Direct S3 export for production deployment</li>
         </ul>
       </div>
+      <div class="detail-section">
+        <h2 class="section-title">
+          Team Members
+        </h2>
+        <ul class="acknowledgments-list">
+          <li>Chris Braithwaite (Team Lead)</li>
+          <li>Janine Cotter (Product Manager)</li>
+          <li>Douglas Cavanaugh (Frontend Engineer)</li>
+          <li>Svetoslav Spasov (Frontend Engineer)</li>
+          <li>Renan Lopes (Frontend Engineer)</li>
+        </ul>
+      </div>
     </section>
   </main>
 </template>

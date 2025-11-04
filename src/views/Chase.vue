@@ -213,14 +213,16 @@ export default {
         <h2 class="section-title">
           Acknowledgments
         </h2>
-        <p>A special thanks goes out to all of my colleagues at JPMC/Figg who helped make this possible and supported me
+        <p>A special thanks goes out to all of my colleagues at Figg/JPMC who helped make this possible and supported me
           along the way:</p>
         <ul class="acknowledgments-list">
           <li>Nathan Schlecte (Team Lead)</li>
           <li>Marlena Manulis (Product Manager)</li>
-          <li>Will Smith (Designer)</li>
+          <li><a href="https://www.denverwebdesignservices.com/" target="_blank" rel="noopener noreferrer"
+              aria-label="Will Smith's LinkedIn profile">Will Smith</a> (Designer)</li>
           <li>Tim Stratton (Backend Engineer)</li>
           <li>Michael Meloche (Backend Engineer)</li>
+          <li>Jon Westbrook (Backend Engineer)</li>
           <li>Demitria Jefferson (Backend Engineer)</li>
           <li>Tim Balaban (QA)</li>
         </ul>
