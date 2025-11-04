@@ -128,17 +128,18 @@ export default {
         <h2 class="section-title">
           Engineering
         </h2>
-        <p class="section-intro">
+        <p>
           I wanted the app to be refined-looking and powerful, but
           also easy to maintain. Working closely with product and design, I built the app using
           TypeScript (which I learned on the job) and Vue.js (which I had used before at Fitch Ratings).
         </p>
-        <p class="section-intro">The application forgoes complex state, and instead uses
+        <p>The application forgoes complex state, and instead uses
           component-based caching (Vue KeepAlive and similar technology, along with route-based Javascript chunking) to
-          ensure solid performance. In my experience, overcomplication with
+          ensure solid performance. I wanted to ensure that any potential issues would be
+          easiliy traceable and fixable.</p>
+        <p>In my experience, overcomplication with
           frontend engineering is absolutely rampant, and usually leads to having to solve complicated issues down the
-          road, like cache invalidation and state duplication. I wanted to ensure that any potential issues would be
-          easiliy traceable and fixable. </p>
+          road, like cache invalidation and state duplication. </p>
         <p>E2E tests written in Selenium integrated with the CI/CD pipeline
           focused on business-critical user journeys,
           while strict schema control with Typescript eliminated the need for many of the unit tests. To simplify error
@@ -149,11 +150,11 @@ export default {
         <h2 class="section-title">
           Details
         </h2>
-        <p class="section-intro">
+        <p>
           Every interaction was carefully crafted to provide a seamless user experience. From advanced filtering to
           real-time search feedback, these details showcase the polish and precision built into the platform.
         </p>
-        <p class="section-intro">It was my goal to support the design team in addition to building what was asked for —
+        <p>It was my goal to support the design team in addition to building what was asked for —
           I frequently contributed design and functionality ideas, many of which made it into the final product.</p>
         <div class="detail-grid">
           <div class="detail-item full-width">
