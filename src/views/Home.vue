@@ -28,7 +28,6 @@ export default {
       minWidth: 840,
       photoHeroImages: [heroImg1, heroImg2, heroImg3, heroImg4, heroImg5, heroImg6],
       projectLinksLoaded: [],
-      toutAnimate: false
     }
   },
   mounted() {
@@ -57,9 +56,6 @@ export default {
         }, 400 + (index * 150)); // Start at 400ms, stagger by 150ms
       });
     },
-    handleToutHover() {
-      this.toutAnimate = true;
-    }
   }
 }
 </script>
@@ -99,8 +95,8 @@ export default {
     </RouterLink>
     <RouterLink to="/high5games" class="project-link cover" :class="{ 'animate-in': projectLinksLoaded.includes(1) }">
       <figure>
-        <div class="tout-container" ref="toutContainer" @mouseenter="handleToutHover">
-          <Tout :animate="toutAnimate" v-view-transition-name="'tout-animation'" />
+        <div class="tout-container" ref="toutContainer">
+          <Tout v-view-transition-name="'tout-animation'" />
         </div>
         <figcaption>
           <h2 class="title">
