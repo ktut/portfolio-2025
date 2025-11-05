@@ -440,8 +440,12 @@ figure {
         }
       }
 
-      span :not(:first-child) {
+      span {
         text-align: right;
+
+        @media (min-width: 760px) {
+          text-align: center;
+        }
       }
 
       &:last-child {
