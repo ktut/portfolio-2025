@@ -216,7 +216,7 @@ export default {
         <p>A special thanks goes out to all of my colleagues at Figg/JPMC who helped make this possible and supported me
           along the way:</p>
         <ul class="acknowledgments-list">
-          <li>Nathan Schlecte (Team Lead)</li>
+          <li>Nathan Schlechte (Team Lead)</li>
           <li>Marlena Manulis (Product Manager)</li>
           <li><a href="https://www.denverwebdesignservices.com/" target="_blank" rel="noopener noreferrer"
               aria-label="Will Smith's LinkedIn profile">Will Smith</a> (Designer)</li>
