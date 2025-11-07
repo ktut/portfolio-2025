@@ -136,10 +136,10 @@ export default {
         <p>The application forgoes complex state, and instead uses
           component-based caching (Vue KeepAlive and similar technology, along with route-based Javascript chunking) to
           ensure solid performance. I wanted to ensure that any potential issues would be
-          easiliy traceable and fixable.</p>
+          easily traceable and fixable.</p>
         <p>In my experience, overcomplication with
-          frontend engineering is absolutely rampant, and usually leads to having to solve complicated issues down the
-          road, like cache invalidation and state duplication. </p>
+          frontend engineering is absolutely rampant, and usually leads to state duplication and cache invalidation
+          issues down the road. </p>
         <p>E2E tests written in Selenium integrated with the CI/CD pipeline
           focused on business-critical user journeys,
           while strict schema control with Typescript eliminated the need for many of the unit tests. To simplify error
