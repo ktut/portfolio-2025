@@ -1,16 +1,10 @@
 <script>
-import { useRouter } from 'vue-router'
-import { computed } from 'vue'
-
 export default {
   name: 'PostArticleNav',
-  setup() {
-    const router = useRouter()
-    const currentRoute = router.currentRoute
-
+  computed: {
     // Get all project routes (exclude Home and About)
-    const projectRoutes = computed(() => {
-      return router.getRoutes()
+    projectRoutes() {
+      return this.$router.getRoutes()
         .filter(route =>
           route.name !== 'home' &&
           route.name !== 'about' &&
@@ -20,34 +14,29 @@ export default {
           // Sort by path to maintain consistent order
           return a.path.localeCompare(b.path)
         })
-    })
+    },
 
     // Find current index
-    const currentIndex = computed(() => {
-      return projectRoutes.value.findIndex(
-        route => route.name === currentRoute.value.name
+    currentIndex() {
+      return this.projectRoutes.findIndex(
+        route => route.name === this.$route.name
       )
-    })
+    },
 
     // Get previous route
-    const previousRoute = computed(() => {
-      if (currentIndex.value > 0) {
-        return projectRoutes.value[currentIndex.value - 1]
+    previousRoute() {
+      if (this.currentIndex > 0) {
+        return this.projectRoutes[this.currentIndex - 1]
       }
       return null
-    })
+    },
 
     // Get next route
-    const nextRoute = computed(() => {
-      if (currentIndex.value >= 0 && currentIndex.value < projectRoutes.value.length - 1) {
-        return projectRoutes.value[currentIndex.value + 1]
+    nextRoute() {
+      if (this.currentIndex >= 0 && this.currentIndex < this.projectRoutes.length - 1) {
+        return this.projectRoutes[this.currentIndex + 1]
       }
       return null
-    })
-
-    return {
-      previousRoute,
-      nextRoute
     }
   }
 }
