@@ -228,21 +228,11 @@ export default {
         </ul>
       </figure>
     </RouterLink>
-    <RouterLink to="/photo" class="project-link cover" :class="{ 'animate-in': projectLinksLoaded.includes(5) }">
-      <figure>
-        <div class="photo-composite-wrapper">
-          <PortraitSlivers :images="photoHeroImages" v-view-transition-name="'portraits'" />
-        </div>
-        <figcaption>
-          <h2 class="title">
-            Portrait photography
-          </h2>
-          <button class="cta">
-            View Project <span class="unicode">&#x2197;</span>
-          </button>
-        </figcaption>
-      </figure>
-    </RouterLink>
+    <p :class="{ 'animate-in': projectLinksLoaded.includes(5) }" class="extra-projects project-link"><span>📸</span>
+      Earlier in my career, I was a <b>photographer</b> as well, shooting portraits and events. You can see <RouterLink
+        to="/photo">some of my favorite
+        shots from over the years here</RouterLink>.
+    </p>
   </main>
 </template>
 
@@ -463,6 +453,15 @@ figure {
   &.animate-in {
     opacity: 1;
     transform: perspective(1000px) rotateX(0deg) translateY(0);
+  }
+
+  &.extra-projects {
+    max-width: 640px;
+    padding: 48px 12px;
+
+    @media (min-width: 760px) {
+      text-align: center;
+    }
   }
 }
 </style>

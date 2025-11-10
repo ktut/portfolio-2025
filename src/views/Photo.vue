@@ -85,7 +85,7 @@ export default {
           Photography
         </h1>
         <h2 class="project-subtitle">
-          Portraits shot for Chicago <em>Sun-Times</em> SPLASH magazine and other clients.
+          Portraits shot for Chicago <em>Sun-Times</em> SPLASH magazine, <em>Chicago</em> magazine, and more.
         </h2>
 
         <div class="tech-stack">
