@@ -132,7 +132,6 @@ nav {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      color: $redPunch;
       text-decoration: none;
       font-size: 0.95rem;
       -webkit-transition: color 0.2s ease;
