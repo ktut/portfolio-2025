@@ -1,6 +1,11 @@
 <script>
+import PostArticleNav from '@/components/PostArticleNav.vue'
+
 export default {
   name: 'ChicagoMagView',
+  components: {
+    PostArticleNav
+  },
   data() {
     return {
       technologies: [
@@ -119,7 +124,7 @@ export default {
         </div>
       </div>
 
-
+      <PostArticleNav />
     </section>
   </main>
 </template>

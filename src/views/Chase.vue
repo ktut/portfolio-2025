@@ -1,10 +1,12 @@
 <script>
 import iPhone from '@/components/iPhone.vue'
+import PostArticleNav from '@/components/PostArticleNav.vue'
 
 export default {
   name: 'ChaseView',
   components: {
-    iPhone
+    iPhone,
+    PostArticleNav
   },
   data() {
     return {
@@ -227,6 +229,8 @@ export default {
           <li>Tim Balaban (QA)</li>
         </ul>
       </div>
+
+      <PostArticleNav />
     </section>
   </main>
 </template>

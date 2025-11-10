@@ -2,6 +2,7 @@
 import PhotoSwipeLightbox from 'photoswipe/lightbox'
 import 'photoswipe/style.css'
 import PortraitSlivers from '@/components/PortraitSlivers.vue'
+import PostArticleNav from '@/components/PostArticleNav.vue'
 
 // Import all images from photo directory
 import img1 from '@/assets/photo/00-aless.jpg'
@@ -29,7 +30,8 @@ import heroImg6 from '@/assets/photo/WhoWatchR-SLH-122114.01-2.jpg'
 export default {
   name: 'PhotoView',
   components: {
-    PortraitSlivers
+    PortraitSlivers,
+    PostArticleNav
   },
   data() {
     return {
@@ -114,6 +116,8 @@ export default {
           <img :src="image.src" :alt="image.alt">
         </a>
       </div>
+
+      <PostArticleNav />
     </section>
   </main>
 </template>

@@ -1,6 +1,11 @@
 <script>
+import PostArticleNav from '@/components/PostArticleNav.vue'
+
 export default {
   name: 'ChicagoMagSubscriptionView',
+  components: {
+    PostArticleNav
+  },
   data() {
     return {
       technologies: [
@@ -107,6 +112,8 @@ export default {
           In the six months following the implementation of the new design, <b>conversions per visitor went up 20%.</b>
         </p>
       </div>
+
+      <PostArticleNav />
     </section>
   </main>
 </template>

@@ -1,10 +1,12 @@
 <script>
 import Tout from '@/components/Tout.vue'
+import PostArticleNav from '@/components/PostArticleNav.vue'
 
 export default {
   name: 'HighFiveView',
   components: {
-    Tout
+    Tout,
+    PostArticleNav
   },
   data() {
     return {
@@ -191,6 +193,8 @@ export default {
           <li>Renan Lopes (Frontend Engineer)</li>
         </ul>
       </div>
+
+      <PostArticleNav />
     </section>
   </main>
 </template>

@@ -1,6 +1,7 @@
 <script>
 import PhotoSwipeLightbox from 'photoswipe/lightbox'
 import 'photoswipe/style.css'
+import PostArticleNav from '@/components/PostArticleNav.vue'
 
 // Import all images
 import img1 from '@/assets/print-design/IMG_0008.jpg'
@@ -25,6 +26,9 @@ import img19 from '@/assets/print-design/IMG_0077.jpg'
 
 export default {
   name: 'SunTimesView',
+  components: {
+    PostArticleNav
+  },
   data() {
     return {
       technologies: [
@@ -121,6 +125,8 @@ export default {
           <img :src="image.src" :alt="image.alt">
         </a>
       </div>
+
+      <PostArticleNav />
     </section>
   </main>
 </template>
