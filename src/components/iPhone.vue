@@ -130,9 +130,17 @@ export default {
   cursor: grab;
   user-select: none;
   -webkit-user-select: none;
+  transition: transform 0.3s ease;
 
   &.dragging {
     cursor: grabbing;
+  }
+
+  // Hover effect on desktop only
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transform: rotateY(25deg) rotateZ(-5deg) !important;
+    }
   }
 
   video {
