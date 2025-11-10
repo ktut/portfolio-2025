@@ -136,9 +136,9 @@ export default {
     cursor: grabbing;
   }
 
-  // Hover effect on desktop only
+  // Hover effect on desktop only (disabled while dragging)
   @media (hover: hover) and (pointer: fine) {
-    &:hover {
+    &:hover:not(.dragging) {
       transform: rotateY(25deg) rotateZ(-5deg) !important;
     }
   }
