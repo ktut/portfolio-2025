@@ -135,11 +135,7 @@ export default {
     }
 
     .hero-image {
-      padding-bottom: 100%;
-
-      @media (min-width: 840px) {
-        padding-bottom: 60%;
-      }
+      padding-bottom: 60%;
     }
 
     figure {
