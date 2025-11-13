@@ -75,7 +75,7 @@ export default {
           High 5 Games “Tout” builder system
         </h1>
         <h2 class="project-subtitle">
-          Building a custom carousel banner-building system and app
+          Building a custom carousel banner-building system and associated app to help product and art teams
         </h2>
 
         <div class="tech-stack">
@@ -97,18 +97,22 @@ export default {
         <p class="lead bottom-border">
           As an engineer at <a href="https://high5casino.com/" target="_blank" rel="noreferrer noopener">High 5
             Casino</a>, product and art teams needed a way to create banners (rotating
-          in a carousel) for marketing, advertisements, and game links, that would accommodate animation and could be
+          in a carousel) for marketing, advertisements, and games, that could accommodate animation and could be
           localized for different
           countries. There could be multiple potential layers, moving at different speeds while scrolling (i.e.,
-          parallax scrolling). There were no existing solutions that I could find at the time, that could handle all
-          of these requirements. I decided to embark on the long journey of "rolling my own" solution.
+          parallax scrolling). There were no existing solutions which could handle all
+          of these requirements, so I decided to embark on the journey of “rolling my own” solution.
         </p>
         <p>
           First I designed a JSON schema to describe all of the objects present (including info for type,
-          animation assets from AE/Bodymovin/Lottie, or SVG-masked JPGs/PNGs for image assets). Each object would have
+          animation assets from <a href="https://lottiefiles.com/plugins/after-effects" target="_blank"
+            rel="noreferrer noopener">After Effects/Bodymovin/Lottie</a>, or SVG-masked JPGs/PNGs for image assets).
+          Each object would have
           its location in the CSS Grid layer grid, which could change based on breakpoints (mobile,
           desktop, etc). By leveraging a CSS-first approach, since we already had tight control of the client
-          application where the advertising banner (or "Tout", as we called it) was placed, we could use CSS parallax
+          application where the advertising banner (or “Tout”, as we called it) was placed, we could use <a
+            href="https://keithclark.co.uk/articles/pure-css-parallax-websites/" target="_blank"
+            rel="noreferrer noopener">CSS parallax</a>
           instead of a custom JS approach. This was critical as there was already a lot of JS in the application for the
           games themselves.
         </p>
@@ -117,7 +121,7 @@ export default {
           anyone (not just developers) to be able to assemble these "Touts" (as we called them), I built a custom React
           app that showed these
           layers split apart using CSS transforms, so that different layers could be assembled separately, and then the
-          final "Tout" could be saved to AWS S3 and referenced by the client application.
+          final “Tout” could be saved to AWS S3 and referenced by the client application.
         </p>
       </div>
 
@@ -130,7 +134,7 @@ export default {
             <p>
               The React-based builder tool allowed for placement of links, text, images, video, gradients, and Lottie
               animations within a
-              custom CSS Grid structure. For debugging purposes, layers could be "split apart" visualized in 3D space
+              custom CSS Grid structure. For debugging purposes, layers could be “split apart”, visualized in 3D space
               using CSS transforms.
             </p>
           </div>
@@ -153,7 +157,7 @@ export default {
             </p>
           </div>
 
-          <div class="detail-item">
+          <div class="detail-item full-width">
             <img src="../assets/tout-desktop.png" alt="Final rendered banner">
             <h3>Final Banner</h3>
             <p>
