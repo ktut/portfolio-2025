@@ -106,7 +106,7 @@ export default {
         </div>
         <p>
           The mobile interface provided clients with on-the-go access to performances of multiple campaigns. Built with
-          responsive design principles, the dashboard adapts seamlessly across devices.
+          responsive design principles, it adapted seamlessly across devices.
         </p>
       </div>
 
@@ -131,17 +131,17 @@ export default {
         </h2>
         <p>
           I wanted the app to be refined-looking and powerful, but
-          also easy to maintain. Working closely with product and design, I built the app using
-          TypeScript (which I learned on the job) and Vue.js (which I had used before at Fitch Ratings).
+          also easy to maintain. Working closely with product and design, I built the app using Vue.js (which I had used
+          before at Fitch Ratings) and TypeScript (which I learned on the job).
         </p>
-        <p>The application forgoes complex state, and instead uses
-          component-based caching (Vue KeepAlive and similar technology, along with route-based Javascript chunking) to
-          ensure solid performance. I wanted to ensure that any potential issues would be
-          easily traceable and fixable.</p>
         <p>In my experience, overcomplication with
-          frontend engineering is absolutely rampant, and usually leads to state duplication and cache invalidation
-          issues down the road. </p>
-        <p>E2E tests written in Selenium integrated with the CI/CD pipeline
+          frontend engineering is absolutely rampant, and usually leads to issues down the road (like state duplication
+          and cache invalidation). Therefore, I made the decision to forgo complex client-side state, and instead used
+          component-based caching and route-based Javascript chunking to
+          ensure solid performance. Coupled with prefetching during normal application navigation, the user got a smooth
+          and speedy experience, while future engineers debugging any potential issues could be assured that things
+          wouldn't be so hard to fix.</p>
+        <p>Selenium E2E tests integrated with the CI/CD pipeline
           focused on business-critical user journeys,
           while strict schema control with Typescript eliminated the need for many of the unit tests. To simplify error
           handling and field validation, I worked with the product and design teams to promote the use of generic error
