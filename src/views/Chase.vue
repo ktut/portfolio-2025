@@ -61,7 +61,7 @@ export default {
           <img src="@/assets/chase-logo.png" alt="Chase Logo" class="chase-logo">JPMorgan Chase Performance Dashboard
         </h1>
         <h2 class="project-subtitle">
-          Building a web application for monitoring and downloading reports for card-linked offer campaigns
+          I built a client application for monitoring campaigns and downloading reports for card-linked offers.
         </h2>
 
         <div class="tech-stack">
@@ -80,24 +80,23 @@ export default {
         <h2 class="section-title">
           Overview
         </h2>
-        <p class="lead">
-          Originally built for Figg and later redesigned for <a href="https://www.chase.com/mediasolutions/solutions"
-            target="_blank" rel="noopener noreferrer" aria-label="CMS">Chase Media Solutions</a> following our
-          acquisition, the platform enabled customers to maximize their card-linked offers program. Brands of all sizes
-          could drive conversions, acquire new customers, and inspire incremental sales through data insights.
-        </p>
         <p class="lead bottom-border">
-          As the sole frontend engineer, my role was to build a client application that was easily maintainable,
-          performant, and easy to test.
+          As the sole frontend engineer, my role was to build a client application that was performant, easy to test,
+          and easy to maintain. I took the project to the next level by implementing advanced filtering,
+          visualizations, and even an admin panel so our internal team could manage users without SQL queries.
         </p>
         <p>
-          Overall, the platform leveraged transaction data to deliver targeted offers to Chase cardholders across
+          The platform (originally from Figg, Inc, then rebranded to <a
+            href="https://www.chase.com/mediasolutions/solutions" target="_blank" rel="noopener noreferrer"
+            aria-label="CMS">Chase Media Solutions</a> following our
+          acquisition) leveraged transaction data to deliver targeted offers to cardholders
+          across
           digital channels. Customers discovered offers based on their purchase history, activated them via the Chase
           app,
           and received cash back when making purchases at participating merchants.</p>
-        <p>Clients benefited from accurate,
-          on-demand performance tracking with the app. This always-on portal allowed brands to easily download reports
-          and keep tabs on KPIs like budget utilization, ROAS, impressions and sales.
+        <p>The dashboard we built allowed brands to easily download reports
+          and keep tabs on campaign KPIs like budget utilization, ROAS, impressions and sales. Brands of all sizes
+          could drive conversions, acquire new customers, and inspire incremental sales through data insights.
         </p>
       </div>
 
@@ -163,37 +162,35 @@ export default {
             <video autoplay loop muted playsinline src="@/assets/PD-detail-dates.mov" />
             <h3>Custom Date Picker and Charts</h3>
             <p>
-              Built with TypeScript and D3.js, featuring segment selection and precise date range controls for detailed
-              analytics.
+              Built with PrimeVue and D3.js, featuring segment selection and precise date range controls for detailed
+              analytics
             </p>
           </div>
           <div class="detail-item">
             <video autoplay loop muted playsinline src="@/assets/PD-detail-campaigns.mov" />
             <h3>Campaign Filtering</h3>
             <p>
-              Sophisticated filtering system with intuitive controls and smooth transitions for managing complex
-              campaign hierarchies.
+              A sophisticated filtering system with intuitive controls
             </p>
           </div>
           <div class="detail-item">
             <video autoplay loop muted playsinline src="@/assets/PD-detail-search.mov" />
             <h3>Real-time Search</h3>
-            <p>Instant search feedback with live search metadata displayed as the user typed, providing immediate visual
-              confirmation.</p>
+            <p>Instant search feedback with live search metadata</p>
           </div>
           <div class="detail-item full-width">
             <video autoplay loop muted playsinline src="@/assets/PD-detail-download.mov" />
             <h3>Report Downloads</h3>
             <p>
-              Streamlined report generation with format options and progress indicators for exporting campaign data.
+              Streamlined report generation with format options and progress indicators for exporting campaign data
             </p>
           </div>
           <div class="detail-item full-width">
             <video autoplay loop muted playsinline src="@/assets/PD-detail-admin.mov" />
             <h3>Admin Panel</h3>
             <p>
-              A dedicated admin panel for managing users and permissions, with presets for various roles and thousands
-              of available brands to add access to.
+              An user-management panel for managing roles, permissions, and brand access
+
             </p>
           </div>
         </div>
