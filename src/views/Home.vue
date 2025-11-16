@@ -3,6 +3,7 @@ import IPhone from '@/components/iPhone.vue';
 import HomepageTopText from '../components/HomepageTopText.vue'
 import Tout from '@/components/Tout.vue'
 import PortraitSlivers from '@/components/PortraitSlivers.vue'
+import TravelAnim from '@/components/TravelAnim.vue'
 
 // Hero composite images for Portrait Photography
 import heroImg1 from '@/assets/photo/ruffalo-1.jpg'
@@ -18,7 +19,8 @@ export default {
     HomepageTopText,
     IPhone,
     Tout,
-    PortraitSlivers
+    PortraitSlivers,
+    TravelAnim
   },
   data() {
     return {
@@ -95,8 +97,8 @@ export default {
     </RouterLink>
     <RouterLink to="/chase-travel" class="project-link cover" :class="{ 'animate-in': projectLinksLoaded.includes(1) }">
       <figure>
-        <div class="img-bg" v-view-transition-name="'img-travel'"
-          :style="{ backgroundImage: 'url(' + require('@/assets/PD-night-mock.jpg') + ')' }">
+        <div class="travel-anim-container">
+          <TravelAnim />
         </div>
         <figcaption>
           <h2 class="title">
@@ -275,6 +277,12 @@ figure {
     overflow: hidden;
   }
 
+  .travel-anim-container {
+    max-width: 1200px;
+    overflow: hidden;
+  }
+
+  .travel-anim-container,
   .tout-container,
   .img-bg,
   .video-composite,
@@ -406,6 +414,7 @@ figure {
 
   &:hover {
 
+    .travel-anim-container,
     .tout-container,
     .img-bg,
     .video-composite,
