@@ -37,7 +37,63 @@ export default {
           type: 'image',
           src: require('@/assets/pinia.png')
         }
-      ]
+      ],
+      sections: [],
+      activeSection: '',
+    }
+  },
+  mounted() {
+    this.collectSections()
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  unmounted() {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
+  methods: {
+    collectSections() {
+      const headings = document.querySelectorAll('.content-wrapper h2.section-title')
+      this.sections = Array.from(headings).map(heading => ({
+        id: heading.id,
+        title: heading.textContent.trim()
+      }))
+      if (this.sections.length > 0) {
+        this.activeSection = this.sections[0].id
+      }
+    },
+    scrollToSection(sectionId) {
+      const element = document.getElementById(sectionId)
+      if (element) {
+        const offset = 150
+        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
+        const offsetPosition = elementPosition - offset
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        })
+      }
+    },
+    handleScroll() {
+      const scrollPosition = window.scrollY + 150
+
+      // Update sticky state
+      const contentWrapper = document.querySelector('.content-wrapper')
+      if (contentWrapper) {
+        const wrapperTop = contentWrapper.offsetTop
+      }
+
+      // Find active section
+      const headings = document.querySelectorAll('.content-wrapper h2.section-title')
+      let currentSection = this.sections[0]?.id || ''
+
+      headings.forEach(heading => {
+        const headingTop = heading.offsetTop
+        if (scrollPosition >= headingTop) {
+          currentSection = heading.id
+        }
+      })
+
+      this.activeSection = currentSection
     }
   }
 }
@@ -73,23 +129,176 @@ export default {
         </div>
       </header>
 
+      <!-- Sticky Navigation -->
+      <div class="sticky-nav">
+        <select v-model="activeSection" @change="scrollToSection(activeSection)" class="section-dropdown">
+          <option value="" disabled>Jump to section...</option>
+          <option v-for="section in sections" :key="section.id" :value="section.id">
+            {{ section.title }}
+          </option>
+        </select>
+      </div>
+
       <div class="project-overview">
-        <h2 class="section-title">
-          Product Importance and Context
+        <h2 class="section-title" id="product-importance-and-context">
+          Product importance and context
         </h2>
-        <p class="lead ">
-          So, why care about Chase Travel?
-        </p>
         <p class="lead">
-          JPMorgan Chase has said that travel sales volume was about $8 billion in 2022 and estimated it will be $10
-          billion this year. They have also said during investor days that Chase is a “Top 5 consumer leisure travel
-          provider” and that 1 in 4 leisure travel dollars are spent on Chase cards.</p>
-        <p class="lead bottom-border">
-          Chase has said publicly that they have seen an average 24% growth in transactions through Chase Travel year
-          over year, and approximately 40% YOY growth in number of consumers purchasing travel on Chase. Chase has also
-          spent hundreds of millions of dollars (estimated) on securing lounge locations across the US, all Chase Travel
-          branded.
+          According to JPMorgan Chase's public statements:
         </p>
+        <ul>
+          <li>Chase Travel sales volume was about $8 billion in 2022 was estimated at $10
+            billion in 2023.</li>
+          <li>At investor days, they have said that they are a "Top 5 consumer leisure travel
+            provider" and that 1 in 4 leisure travel dollars are spent on Chase cards.</li>
+          <li>They have seen an average 24% growth in transactions through Chase Travel year
+            over year, and approximately 40% YOY growth in number of consumers purchasing travel on Chase.</li>
+          <li>Chase has also spent hundreds of millions of dollars (estimated) on securing lounge locations across the
+            US, all Chase Travel branded.</li>
+        </ul>
+        <p class="lead bottom-border">
+          So, it's fair to say that Chase Travel is a significant part of Chase's business, and a significant part of
+          the consumer travel market.
+        </p>
+      </div>
+
+      <div class="detail-section">
+        <h2 class="section-title" id="user-research">
+          User research
+        </h2>
+        <p>
+          I have a lot of friends who use Chase Travel, both for personal and business. Here's some of their feedback.
+        </p>
+        <blockquote>
+          "My main criticism is that it's glacially slow. UX-wise, I think it's way too bulky and clunky. The transition
+          between each step is awkward. The prices aren't intuitive. The layout with the search options all the way at
+          the top isn't great. It would be really nice if the flight date search had one of those little calendars that
+          compare other day's flight costs around your search"
+        </blockquote>
+        <blockquote>
+          "If I have to make a change to a reservation, it's always goofy to figure out who to talk to. If I buy a
+          flight on Chase Travel on Qantas, but another airline operates it, for example… then it's a huge pain to
+          change. Likewise, if I purchase thru Chase Travel, then upgrade at the airline's website, it's a total mess."
+        </blockquote>
+        <blockquote>
+          "I would love the ability to one-click upgrade cabin class after I purchase the ticket."
+        </blockquote>
+        <blockquote>
+          "The website is painfully slow."
+        </blockquote>
+      </div>
+
+      <div class="detail-section">
+        <h2 class="section-title" id="major-issues">
+          Major issues
+        </h2>
+        <p>
+          Putting this feedback together with my own, I put together a categorized list of issues to resolve:
+        </p>
+        <h3>UI/UX:</h3>
+        <ul>
+          <li>Why on earth is there no dedicated travel app? Why do users need to log in to do anything on Chase Travel
+            (including basic flight search)? Chase is probably losing tons of non-Chase traffic by doing this.</li>
+          <li>Very poor overall design (filters, maps) that isn't mobile-friendly. User has to scroll way too much due
+            to 1. poor use of white space and 2. poor use of horizontal and vertical layouts for components and
+            filtering. Information should load while the user is able to modify filters.</li>
+          <li>Technically "uses" React (via internal "Octagon" meta-framework) but doesn't use any of the benefits of
+            React (loading some components while keeping others visible, etc), which would greatly enhance the user
+            experience</li>
+          <li>No proper use of loading indicators to improve perceived performance. Many missed opportunities for
+            pre-fetching</li>
+          <li>Image quality is terrible, images are not even loaded async or "lazy"</li>
+          <li>Points Boost feature is over-emphasized- sometimes emphasized three or four times per page. The user
+            doesn't need to be beaten over the head about "value" - they can determine value for themselves by looking
+            at the points and $ spend.</li>
+        </ul>
+        <h3>Tech:</h3>
+        <ul>
+          <li>General architecture and technology choices are incorrect on client at the very least, and perhaps even on
+            server as well. On the client side, there is absolutely no need to have the client render everything, most
+            of it should be server-side generated (content hydrated server side, then JS app functionality rendered on
+            client), to improve performance. On the service side, repeated user requests should be cached at a minimum,
+            and some requests for general groups of users should be cached and ready to serve, such as flights between
+            Chicago and New York for a user in Chicago or New York. Caching decisions should be made by 1. Deep analysis
+            of past searches and 2. Continual adjustments by ops teams on a weekly basis, perhaps LLM-assisted, to
+            updating caching based on recent and upcoming events. In my understanding, Chase moved from Expedia to
+            cxLoyalty for APIs, so they should be able to do better on the in-house side here.</li>
+        </ul>
+        <h3>Product:</h3>
+        <ul>
+          <li>Prices are uncompetitive and frequently flat-out incorrect. This is well documented (<a
+              href="https://www.seat31b.com/2019/05/chases-terrible-horrible-no-good-very-bad-travel-portal/"
+              target="_blank"
+              rel="noopener noreferrer">https://www.seat31b.com/2019/05/chases-terrible-horrible-no-good-very-bad-travel-portal/</a>)
+          </li>
+          <li>Chase customer support is not reachable via chat, users have to call and wait instead. This is critical
+            because inherently, when booking through third party, users are going to have to reach support.</li>
+        </ul>
+      </div>
+
+      <div class="detail-section">
+        <h2 class="section-title" id="an-issue-of-focus">
+          An issue of focus
+        </h2>
+        <p>
+          So, how did this happen? The core issues seems to be that of form over function:
+        </p>
+        <ul>
+          <li>The core objective with the product direction seems to be to impress executives and make the product
+            visually similar to slick marketing campaigns. A recent "redesign" fixed some white space issues, added new
+            fonts, and slightly improved the general layout, but users don't care about fonts or stock image choice at
+            all - they care about legibility, familiarity, and responsiveness of the interface. Fundamentally, using the
+            app still feels same as it has been for ten years.</li>
+          <li>The focus instead should have been to make a UI that was so simple and easy to use that it became
+            ubiquitous. The user should feel so at home with the flow that it would be additional cognitive load to
+            leave and use a different app instead. In other words, instead of forcing the user to log into Chase and use
+            points, users should continue to use Chase travel because other options aren't worth the switch, and in
+            addition, points and points boost features are only available on the Chase app.</li>
+        </ul>
+      </div>
+
+      <div class="detail-section">
+        <h2 class="section-title" id="solutions">
+          Solutions
+        </h2>
+        <ul>
+          <li><strong>Support</strong> - this is probably the most critical fix. Poor customer service and hard-to-find
+            availability for flights are frequently cited as the leading causes of travel stress (<a
+              href="https://www.bankrate.com/credit-cards/news/survey-summer-vacation/" target="_blank"
+              rel="noopener noreferrer">https://www.bankrate.com/credit-cards/news/survey-summer-vacation/</a>).</li>
+          <li>One quick fix to this would be an iMessage integration. About 79% of Americans aged 18-34 use iPhones, and
+            the target demographic for Chase Reserve customers is the Millennial and Gen Z age groups (ages 25-44) with
+            high incomes ($150,000+). The UI should include options to generate tickets/start conversations with minimal
+            input from the user - especially for cardmembers paying $895/yr for Reserve cards, they should NOT be
+            waiting on hold because Chase engineers couldn't figure out how to include this metadata in the request.
+          </li>
+          <li>Flights UI is actually a simple fix - should be a straight port of Kayak.</li>
+          <li>Hotels should be a mix of Hotels.com and Airbnb. Information density should be Hotels.com, and map/listing
+            views should be Airbnb.</li>
+          <li>The app should mention Chase points and offers prominently, but not inhibit the user when doing so.
+            Absolutely no popups or banners of any kind should ever be displayed. Instead, use different, standout
+            treatments for individual listings or price offerings.</li>
+        </ul>
+      </div>
+
+      <div class="detail-section">
+        <h2 class="section-title" id="rebuilding-the-web-app">
+          Rebuilding the web app
+        </h2>
+        <p>
+          This app is still in progress, but you can view it here: <a href="https://chasetravel.netlify.app/"
+            target="_blank" rel="noopener noreferrer">https://chasetravel.netlify.app/</a>
+        </p>
+        <ol>
+          <li>Start with a stock Vue3/SASS/Vite app. Implement proper routing.</li>
+          <li>Let's get some strong lead art going. I'll use a photo I took on a trip to Lake Atitlan in Guatemala a few
+            years ago. In Photoshop, we can break it apart into layers and apply a CSS-only parallax effect.</li>
+          <li>Let's build schemas for flights and hotels in Typescript. Once we have the schemas in place, we can use
+            Claude to generate some mock data for these schemas.</li>
+          <li>Let's add E2E testing in Claude as well, and ensure this is run after every Claude operation (along with a
+            fresh build) so we can automatically fix issues as they arise, and negate the need for constant manual
+            testing.</li>
+        </ol>
       </div>
 
       <PostArticleNav />
@@ -98,7 +307,112 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.content-wrapper {
+  overflow: unset;
+}
+
+.project-header {
+  margin-bottom: 2rem;
+}
+
 .chase-travel {
   min-height: 100vh;
+
+  .sticky-nav {
+    position: sticky;
+    top: 55px;
+    z-index: 100;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    background: transparent;
+
+    .section-dropdown {
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      background: white;
+      cursor: pointer;
+      font-family: 'comma-sans', sans-serif;
+
+      &:hover {
+        border-color: #333;
+      }
+
+      &:focus {
+        outline: none;
+        border-color: #ed1c24;
+      }
+    }
+  }
+
+  blockquote {
+    max-width: 700px;
+    margin: 1.5rem auto;
+    padding: 1.5rem 2rem;
+    border-left: 4px solid #ed1c24;
+    background: #fafafa;
+    font-style: normal;
+    color: #333;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    font-family: 'comma-sans', sans-serif;
+    position: relative;
+    text-align: left;
+
+    &::before {
+      content: '"';
+      font-size: 3rem;
+      color: #ed1c24;
+      position: absolute;
+      left: 0.5rem;
+      top: 0.25rem;
+      font-family: Georgia, serif;
+      opacity: 0.3;
+    }
+
+    &:first-of-type {
+      margin-top: 1rem;
+    }
+  }
+
+  h3 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+
+  ul,
+  ol {
+    max-width: 700px;
+    margin: 1.5rem auto;
+    padding-left: 2rem;
+    text-align: left;
+    list-style-position: outside;
+    list-style-type: disc;
+
+    li {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      text-align: left;
+    }
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+
+  p {
+    text-align: left;
+  }
 }
 </style>
