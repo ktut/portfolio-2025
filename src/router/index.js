@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import ChaseView from '../views/Chase.vue'
+import ChaseTravelView from '../views/ChaseTravel.vue'
 import ChicagoMagView from '../views/ChicagoMag.vue'
 import ChicagoMagSubscriptionView from '../views/ChicagoMagSubscription.vue'
 import HighFiveView from '../views/HighFive.vue'
@@ -44,6 +45,18 @@ const routes = [
       ogTitle: 'JPMorgan Chase Performance Dashboard — Ramzi Dreessen',
       ogDescription:
         'Building the client application for a card-linked offers campaign monitoring and reporting platform'
+    }
+  },
+  {
+    path: '/chase-travel',
+    name: 'chasetravel',
+    component: ChaseTravelView,
+    meta: {
+      displayName: 'Chase Travel Case Study',
+      ogImage: 'https://rkdvis.com/assets/PD-night-mock.jpg',
+      ogTitle: 'Chase Travel Case Study — Ramzi Dreessen',
+      ogDescription:
+        'Fixing a clunky travel booking app via applying industry standards, user research and some common sense'
     }
   },
   {
