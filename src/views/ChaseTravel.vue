@@ -139,25 +139,31 @@ export default {
         </select>
       </div>
 
+      <div class="disclaimer">
+        <p>
+          <strong>Disclaimer:</strong> Per JPMC confidentiality policies, no internal information was used in any way on this project. Everything you see was solely based on observation of the public-facing product.
+        </p>
+      </div>
+
       <div class="project-overview">
         <h2 class="section-title" id="product-importance-and-context">
           Product importance and context
         </h2>
         <p class="lead">
-          According to JPMorgan Chase's public statements:
+          According to JPMorgan Chase&rsquo;s public statements:
         </p>
         <ul>
           <li>Chase Travel sales volume was about $8 billion in 2022 was estimated at $10
             billion in 2023.</li>
-          <li>At investor days, they have said that they are a "Top 5 consumer leisure travel
-            provider" and that 1 in 4 leisure travel dollars are spent on Chase cards.</li>
+          <li>At investor days, they have said that they are a &ldquo;Top 5 consumer leisure travel
+            provider&rdquo; and that 1 in 4 leisure travel dollars are spent on Chase cards.</li>
           <li>They have seen an average 24% growth in transactions through Chase Travel year
             over year, and approximately 40% YOY growth in number of consumers purchasing travel on Chase.</li>
           <li>Chase has also spent hundreds of millions of dollars (estimated) on securing lounge locations across the
             US, all Chase Travel branded.</li>
         </ul>
         <p class="lead bottom-border">
-          So, it's fair to say that Chase Travel is a significant part of Chase's business, and a significant part of
+          So, it&rsquo;s fair to say that Chase Travel is a significant part of Chase&rsquo;s business, and a significant part of
           the consumer travel market.
         </p>
       </div>
@@ -167,24 +173,24 @@ export default {
           User research
         </h2>
         <p>
-          I have a lot of friends who use Chase Travel, both for personal and business. Here's some of their feedback.
+          I have a lot of friends who use Chase Travel, both for personal and business. Here&rsquo;s some of their feedback.
         </p>
         <blockquote>
-          "My main criticism is that it's glacially slow. UX-wise, I think it's way too bulky and clunky. The transition
-          between each step is awkward. The prices aren't intuitive. The layout with the search options all the way at
-          the top isn't great. It would be really nice if the flight date search had one of those little calendars that
-          compare other day's flight costs around your search"
+          &ldquo;My main criticism is that it&rsquo;s glacially slow. UX-wise, I think it&rsquo;s way too bulky and clunky. The transition
+          between each step is awkward. The prices aren&rsquo;t intuitive. The layout with the search options all the way at
+          the top isn&rsquo;t great. It would be really nice if the flight date search had one of those little calendars that
+          compare other day&rsquo;s flight costs around your search&rdquo;
         </blockquote>
         <blockquote>
-          "If I have to make a change to a reservation, it's always goofy to figure out who to talk to. If I buy a
-          flight on Chase Travel on Qantas, but another airline operates it, for example… then it's a huge pain to
-          change. Likewise, if I purchase thru Chase Travel, then upgrade at the airline's website, it's a total mess."
+          &ldquo;If I have to make a change to a reservation, it&rsquo;s always goofy to figure out who to talk to. If I buy a
+          flight on Chase Travel on Qantas, but another airline operates it, for example&hellip; then it&rsquo;s a huge pain to
+          change. Likewise, if I purchase thru Chase Travel, then upgrade at the airline&rsquo;s website, it&rsquo;s a total mess.&rdquo;
         </blockquote>
         <blockquote>
-          "I would love the ability to one-click upgrade cabin class after I purchase the ticket."
+          &ldquo;I would love the ability to one-click upgrade cabin class after I purchase the ticket.&rdquo;
         </blockquote>
         <blockquote>
-          "The website is painfully slow."
+          &ldquo;The website is painfully slow.&rdquo;
         </blockquote>
       </div>
 
@@ -199,17 +205,17 @@ export default {
         <ul>
           <li>Why on earth is there no dedicated travel app? Why do users need to log in to do anything on Chase Travel
             (including basic flight search)? Chase is probably losing tons of non-Chase traffic by doing this.</li>
-          <li>Very poor overall design (filters, maps) that isn't mobile-friendly. User has to scroll way too much due
+          <li>Very poor overall design (filters, maps) that isn&rsquo;t mobile-friendly. User has to scroll way too much due
             to 1. poor use of white space and 2. poor use of horizontal and vertical layouts for components and
             filtering. Information should load while the user is able to modify filters.</li>
-          <li>Technically "uses" React (via internal "Octagon" meta-framework) but doesn't use any of the benefits of
+          <li>Technically &ldquo;uses&rdquo; React (via internal &ldquo;Octagon&rdquo; meta-framework) but doesn&rsquo;t use any of the benefits of
             React (loading some components while keeping others visible, etc), which would greatly enhance the user
             experience</li>
           <li>No proper use of loading indicators to improve perceived performance. Many missed opportunities for
             pre-fetching</li>
-          <li>Image quality is terrible, images are not even loaded async or "lazy"</li>
+          <li>Image quality is terrible, images are not even loaded async or &ldquo;lazy&rdquo;</li>
           <li>Points Boost feature is over-emphasized- sometimes emphasized three or four times per page. The user
-            doesn't need to be beaten over the head about "value" - they can determine value for themselves by looking
+            doesn&rsquo;t need to be beaten over the head about &ldquo;value&rdquo; - they can determine value for themselves by looking
             at the points and $ spend.</li>
         </ul>
         <h3>Tech:</h3>
@@ -245,14 +251,14 @@ export default {
         </p>
         <ul>
           <li>The core objective with the product direction seems to be to impress executives and make the product
-            visually similar to slick marketing campaigns. A recent "redesign" fixed some white space issues, added new
-            fonts, and slightly improved the general layout, but users don't care about fonts or stock image choice at
+            visually similar to slick marketing campaigns. A recent &ldquo;redesign&rdquo; fixed some white space issues, added new
+            fonts, and slightly improved the general layout, but users don&rsquo;t care about fonts or stock image choice at
             all - they care about legibility, familiarity, and responsiveness of the interface. Fundamentally, using the
             app still feels same as it has been for ten years.</li>
           <li>The focus instead should have been to make a UI that was so simple and easy to use that it became
             ubiquitous. The user should feel so at home with the flow that it would be additional cognitive load to
             leave and use a different app instead. In other words, instead of forcing the user to log into Chase and use
-            points, users should continue to use Chase travel because other options aren't worth the switch, and in
+            points, users should continue to use Chase travel because other options aren&rsquo;t worth the switch, and in
             addition, points and points boost features are only available on the Chase app.</li>
         </ul>
       </div>
@@ -270,7 +276,7 @@ export default {
             the target demographic for Chase Reserve customers is the Millennial and Gen Z age groups (ages 25-44) with
             high incomes ($150,000+). The UI should include options to generate tickets/start conversations with minimal
             input from the user - especially for cardmembers paying $895/yr for Reserve cards, they should NOT be
-            waiting on hold because Chase engineers couldn't figure out how to include this metadata in the request.
+            waiting on hold because Chase engineers couldn&rsquo;t figure out how to include this metadata in the request.
           </li>
           <li>Flights UI is actually a simple fix - should be a straight port of Kayak.</li>
           <li>Hotels should be a mix of Hotels.com and Airbnb. Information density should be Hotels.com, and map/listing
@@ -291,11 +297,11 @@ export default {
         </p>
         <ol>
           <li>Start with a stock Vue3/SASS/Vite app. Implement proper routing.</li>
-          <li>Let's get some strong lead art going. I'll use a photo I took on a trip to Lake Atitlan in Guatemala a few
+          <li>Let&rsquo;s get some strong lead art going. I&rsquo;ll use a photo I took on a trip to Lake Atitlan in Guatemala a few
             years ago. In Photoshop, we can break it apart into layers and apply a CSS-only parallax effect.</li>
-          <li>Let's build schemas for flights and hotels in Typescript. Once we have the schemas in place, we can use
+          <li>Let&rsquo;s build schemas for flights and hotels in Typescript. Once we have the schemas in place, we can use
             Claude to generate some mock data for these schemas.</li>
-          <li>Let's add E2E testing in Claude as well, and ensure this is run after every Claude operation (along with a
+          <li>Let&rsquo;s add E2E testing in Claude as well, and ensure this is run after every Claude operation (along with a
             fresh build) so we can automatically fix issues as they arise, and negate the need for constant manual
             testing.</li>
         </ol>
@@ -413,6 +419,27 @@ export default {
 
   p {
     text-align: left;
+  }
+
+  .disclaimer {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #fff9e6;
+    border-left: 4px solid #f5a623;
+    border-radius: 4px;
+
+    p {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #666;
+    }
+
+    strong {
+      color: #333;
+      font-weight: 700;
+    }
   }
 }
 </style>
