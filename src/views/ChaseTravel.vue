@@ -1,12 +1,14 @@
 <script>
 import iPhone from '@/components/iPhone.vue'
 import PostArticleNav from '@/components/PostArticleNav.vue'
+import TravelAnim from '@/components/TravelAnim.vue'
 
 export default {
   name: 'ChaseTravelView',
   components: {
     iPhone,
-    PostArticleNav
+    PostArticleNav,
+    TravelAnim
   },
   data() {
     return {
@@ -103,7 +105,7 @@ export default {
   <main class="chase-travel">
     <section class="hero">
       <figure class="hero-image">
-        <img v-view-transition-name="'img'" alt="Chase Travel" src="../assets/PD-night-mock.jpg">
+        <TravelAnim />
       </figure>
     </section>
 
@@ -340,6 +342,10 @@ export default {
 <style lang="scss" scoped>
 .content-wrapper {
   overflow: unset;
+}
+
+.hero {
+  width: 100%;
 }
 
 .project-header {

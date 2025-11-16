@@ -13,7 +13,7 @@ export default {
 </script>
 
 <template>
-  <div class="image-top-group">
+  <div class="image-top-group" v-view-transition-name="'travel-anim'">
     <div class="parallax__layer parallax__layer--back">
       <img src="@/assets/g0.png" srcset="@/assets/g0-lo.png 480w, @/assets/g0.png 1920w"
         sizes="(max-width: 768px) 480px, 1920px" alt="Background layer" />
