@@ -12,6 +12,11 @@ export default {
     return {
       technologies: [
         {
+          name: 'Claude Code',
+          type: 'image',
+          src: require('@/assets/logos/claude.png')
+        },
+        {
           name: 'Vue.js',
           viewBox: '0 0 261.76 226.69',
           paths: [
