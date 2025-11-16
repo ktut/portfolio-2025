@@ -210,7 +210,7 @@ export default {
         <p>
           Putting this feedback together with my own, I put together a categorized list of issues to resolve:
         </p>
-        <h3>UI/UX:</h3>
+        <h3>UI/UX</h3>
         <ul>
           <li>Why on earth is there no dedicated travel app? Why do users need to log in to do anything on Chase Travel
             (including basic flight search)? Chase is probably losing tons of non-Chase traffic by doing this.</li>
@@ -225,24 +225,25 @@ export default {
           <li>No proper use of loading indicators to improve perceived performance. Many missed opportunities for
             pre-fetching</li>
           <li>Image quality is terrible, images are not even loaded async or &ldquo;lazy&rdquo;</li>
-          <li>Points Boost feature is over-emphasized- sometimes emphasized three or four times per page. The user
+          <li>Points Boost feature is over-emphasized- sometimes three or four times per page (!). The user
             doesn&rsquo;t need to be beaten over the head about &ldquo;value&rdquo; - they can determine value for
             themselves by looking
             at the points and $ spend.</li>
         </ul>
-        <h3>Tech:</h3>
+        <h3>Tech</h3>
         <ul>
-          <li>General architecture and technology choices are incorrect on client at the very least, and perhaps even on
-            server as well. On the client side, there is absolutely no need to have the client render everything, most
+          <li>On the client side, there is absolutely no need to have the client render everything, most
             of it should be server-side generated (content hydrated server side, then JS app functionality rendered on
-            client), to improve performance. On the service side, repeated user requests should be cached at a minimum,
+            client), to improve performance.
+          </li>
+          <li>As for the services, repeated user requests should be cached at a minimum,
             and some requests for general groups of users should be cached and ready to serve, such as flights between
-            Chicago and New York for a user in Chicago or New York. Caching decisions should be made by 1. Deep analysis
-            of past searches and 2. Continual adjustments by ops teams on a weekly basis, perhaps LLM-assisted, to
-            updating caching based on recent and upcoming events. In my understanding, Chase moved from Expedia to
-            cxLoyalty for APIs, so they should be able to do better on the in-house side here.</li>
+            Chicago and New York for users in those areas. Caching decisions should be made by 1. Deep analysis
+            of past searches and 2. Continual adjustments by ops teams on a weekly basis, perhaps LLM/ML-assisted, to
+            update caching based on recent and upcoming events. In my understanding, Chase moved from Expedia to
+            cxLoyalty for APIs, so they should definitely be able to do better on the in-house side here.</li>
         </ul>
-        <h3>Product:</h3>
+        <h3>Product</h3>
         <ul>
           <li>Prices are uncompetitive and frequently flat-out incorrect. This is well documented (<a
               href="https://www.seat31b.com/2019/05/chases-terrible-horrible-no-good-very-bad-travel-portal/"
@@ -308,9 +309,14 @@ export default {
           Rebuilding the web app
         </h2>
         <p>
-          This app is still in progress, but you can view it here: <a href="https://chasetravel.netlify.app/"
-            target="_blank" rel="noopener noreferrer">https://chasetravel.netlify.app/</a>
+          I decided to rebuild the web app from scratch, using Vue.js, Typescript, and Pinia. Given the complexity and
+          scale of using real data, I instead mocked the data using Claude Code, but it's not a stretch to implement
+          this with real data if needed (many of these APIs are already available publicly).
         </p>
+        <p>
+          This app is still in progress, but you can view it here: <a href="https://chasetravel.netlify.app/"
+            target="_blank" rel="noopener noreferrer">https://chasetravel.netlify.app/</a>. Here's the process I
+          followed:</p>
         <ol>
           <li>Start with a stock Vue3/SASS/Vite app. Implement proper routing.</li>
           <li>Let&rsquo;s get some strong lead art going. I&rsquo;ll use a photo I took on a trip to Lake Atitlan in
@@ -338,6 +344,10 @@ export default {
 
 .project-header {
   margin-bottom: 2rem;
+}
+
+.project-title {
+  text-wrap: balance;
 }
 
 .chase-travel {

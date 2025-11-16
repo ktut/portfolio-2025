@@ -100,7 +100,7 @@ export default {
         </div>
         <figcaption>
           <h2 class="title">
-            Case Study: Chase Travel
+            Case Study: Redesigning Chase Travel
           </h2>
           <button class="cta">
             View Project <span class="unicode">&#x2197;</span>
