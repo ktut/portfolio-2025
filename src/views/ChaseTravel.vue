@@ -57,7 +57,8 @@ export default {
           <img src="@/assets/chase-logo.png" alt="Chase Logo" class="chase-logo">Case Study: Chase Travel
         </h1>
         <h2 class="project-subtitle">
-          Fixing a clunky travel booking app via 1. industry standards, 2. user research and 3. some common sense.
+          How to fix a clunky travel booking app? I asked some friends for feedback, then set to work to fix it, using
+          cutting-edge AI tooling, industry standards, and some common sense.
         </h2>
 
         <div class="tech-stack">
@@ -71,6 +72,25 @@ export default {
           </div>
         </div>
       </header>
+
+      <div class="project-overview">
+        <h2 class="section-title">
+          Product Importance and Context
+        </h2>
+        <p class="lead ">
+          So, why care about Chase Travel?
+        </p>
+        <p class="lead">
+          JPMorgan Chase has said that travel sales volume was about $8 billion in 2022 and estimated it will be $10
+          billion this year. They have also said during investor days that Chase is a “Top 5 consumer leisure travel
+          provider” and that 1 in 4 leisure travel dollars are spent on Chase cards.</p>
+        <p class="lead bottom-border">
+          Chase has said publicly that they have seen an average 24% growth in transactions through Chase Travel year
+          over year, and approximately 40% YOY growth in number of consumers purchasing travel on Chase. Chase has also
+          spent hundreds of millions of dollars (estimated) on securing lounge locations across the US, all Chase Travel
+          branded.
+        </p>
+      </div>
 
       <PostArticleNav />
     </section>
