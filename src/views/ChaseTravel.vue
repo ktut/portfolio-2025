@@ -113,7 +113,7 @@ export default {
           <img src="@/assets/chase-logo.png" alt="Chase Logo" class="chase-logo">Case Study: Chase Travel
         </h1>
         <h2 class="project-subtitle">
-          How to fix a clunky travel booking app? I asked some friends for feedback, then set to work to fix it, using
+          How to fix a clunky travel booking app? I got some user feedback, then got to work, applying
           cutting-edge AI tooling, industry standards, and some common sense.
         </h2>
 
@@ -141,7 +141,8 @@ export default {
 
       <div class="disclaimer">
         <p>
-          <strong>Disclaimer:</strong> Per JPMC confidentiality policies, no internal information was used in any way on this project. Everything you see was solely based on observation of the public-facing product.
+          <strong>Disclaimer:</strong> Per JPMC confidentiality policies, no internal information was used in any way on
+          this project. Everything was based solely on observations of the public-facing product.
         </p>
       </div>
 
@@ -163,7 +164,8 @@ export default {
             US, all Chase Travel branded.</li>
         </ul>
         <p class="lead bottom-border">
-          So, it&rsquo;s fair to say that Chase Travel is a significant part of Chase&rsquo;s business, and a significant part of
+          So, it&rsquo;s fair to say that Chase Travel is a significant part of Chase&rsquo;s business, and a
+          significant part of
           the consumer travel market.
         </p>
       </div>
@@ -173,18 +175,25 @@ export default {
           User research
         </h2>
         <p>
-          I have a lot of friends who use Chase Travel, both for personal and business. Here&rsquo;s some of their feedback.
+          I have a lot of friends who use Chase Travel, both for personal and business. Here&rsquo;s some of their
+          feedback.
         </p>
         <blockquote>
-          &ldquo;My main criticism is that it&rsquo;s glacially slow. UX-wise, I think it&rsquo;s way too bulky and clunky. The transition
-          between each step is awkward. The prices aren&rsquo;t intuitive. The layout with the search options all the way at
-          the top isn&rsquo;t great. It would be really nice if the flight date search had one of those little calendars that
+          &ldquo;My main criticism is that it&rsquo;s glacially slow. UX-wise, I think it&rsquo;s way too bulky and
+          clunky. The transition
+          between each step is awkward. The prices aren&rsquo;t intuitive. The layout with the search options all the
+          way at
+          the top isn&rsquo;t great. It would be really nice if the flight date search had one of those little calendars
+          that
           compare other day&rsquo;s flight costs around your search&rdquo;
         </blockquote>
         <blockquote>
-          &ldquo;If I have to make a change to a reservation, it&rsquo;s always goofy to figure out who to talk to. If I buy a
-          flight on Chase Travel on Qantas, but another airline operates it, for example&hellip; then it&rsquo;s a huge pain to
-          change. Likewise, if I purchase thru Chase Travel, then upgrade at the airline&rsquo;s website, it&rsquo;s a total mess.&rdquo;
+          &ldquo;If I have to make a change to a reservation, it&rsquo;s always goofy to figure out who to talk to. If I
+          buy a
+          flight on Chase Travel on Qantas, but another airline operates it, for example&hellip; then it&rsquo;s a huge
+          pain to
+          change. Likewise, if I purchase thru Chase Travel, then upgrade at the airline&rsquo;s website, it&rsquo;s a
+          total mess.&rdquo;
         </blockquote>
         <blockquote>
           &ldquo;I would love the ability to one-click upgrade cabin class after I purchase the ticket.&rdquo;
@@ -205,17 +214,20 @@ export default {
         <ul>
           <li>Why on earth is there no dedicated travel app? Why do users need to log in to do anything on Chase Travel
             (including basic flight search)? Chase is probably losing tons of non-Chase traffic by doing this.</li>
-          <li>Very poor overall design (filters, maps) that isn&rsquo;t mobile-friendly. User has to scroll way too much due
+          <li>Very poor overall design (filters, maps) that isn&rsquo;t mobile-friendly. User has to scroll way too much
+            due
             to 1. poor use of white space and 2. poor use of horizontal and vertical layouts for components and
             filtering. Information should load while the user is able to modify filters.</li>
-          <li>Technically &ldquo;uses&rdquo; React (via internal &ldquo;Octagon&rdquo; meta-framework) but doesn&rsquo;t use any of the benefits of
+          <li>Technically &ldquo;uses&rdquo; React (via internal &ldquo;Octagon&rdquo; meta-framework) but doesn&rsquo;t
+            use any of the benefits of
             React (loading some components while keeping others visible, etc), which would greatly enhance the user
             experience</li>
           <li>No proper use of loading indicators to improve perceived performance. Many missed opportunities for
             pre-fetching</li>
           <li>Image quality is terrible, images are not even loaded async or &ldquo;lazy&rdquo;</li>
           <li>Points Boost feature is over-emphasized- sometimes emphasized three or four times per page. The user
-            doesn&rsquo;t need to be beaten over the head about &ldquo;value&rdquo; - they can determine value for themselves by looking
+            doesn&rsquo;t need to be beaten over the head about &ldquo;value&rdquo; - they can determine value for
+            themselves by looking
             at the points and $ spend.</li>
         </ul>
         <h3>Tech:</h3>
@@ -251,14 +263,17 @@ export default {
         </p>
         <ul>
           <li>The core objective with the product direction seems to be to impress executives and make the product
-            visually similar to slick marketing campaigns. A recent &ldquo;redesign&rdquo; fixed some white space issues, added new
-            fonts, and slightly improved the general layout, but users don&rsquo;t care about fonts or stock image choice at
+            visually similar to slick marketing campaigns. A recent &ldquo;redesign&rdquo; fixed some white space
+            issues, added new
+            fonts, and slightly improved the general layout, but users don&rsquo;t care about fonts or stock image
+            choice at
             all - they care about legibility, familiarity, and responsiveness of the interface. Fundamentally, using the
             app still feels same as it has been for ten years.</li>
           <li>The focus instead should have been to make a UI that was so simple and easy to use that it became
             ubiquitous. The user should feel so at home with the flow that it would be additional cognitive load to
             leave and use a different app instead. In other words, instead of forcing the user to log into Chase and use
-            points, users should continue to use Chase travel because other options aren&rsquo;t worth the switch, and in
+            points, users should continue to use Chase travel because other options aren&rsquo;t worth the switch, and
+            in
             addition, points and points boost features are only available on the Chase app.</li>
         </ul>
       </div>
@@ -276,7 +291,8 @@ export default {
             the target demographic for Chase Reserve customers is the Millennial and Gen Z age groups (ages 25-44) with
             high incomes ($150,000+). The UI should include options to generate tickets/start conversations with minimal
             input from the user - especially for cardmembers paying $895/yr for Reserve cards, they should NOT be
-            waiting on hold because Chase engineers couldn&rsquo;t figure out how to include this metadata in the request.
+            waiting on hold because Chase engineers couldn&rsquo;t figure out how to include this metadata in the
+            request.
           </li>
           <li>Flights UI is actually a simple fix - should be a straight port of Kayak.</li>
           <li>Hotels should be a mix of Hotels.com and Airbnb. Information density should be Hotels.com, and map/listing
@@ -297,11 +313,14 @@ export default {
         </p>
         <ol>
           <li>Start with a stock Vue3/SASS/Vite app. Implement proper routing.</li>
-          <li>Let&rsquo;s get some strong lead art going. I&rsquo;ll use a photo I took on a trip to Lake Atitlan in Guatemala a few
+          <li>Let&rsquo;s get some strong lead art going. I&rsquo;ll use a photo I took on a trip to Lake Atitlan in
+            Guatemala a few
             years ago. In Photoshop, we can break it apart into layers and apply a CSS-only parallax effect.</li>
-          <li>Let&rsquo;s build schemas for flights and hotels in Typescript. Once we have the schemas in place, we can use
+          <li>Let&rsquo;s build schemas for flights and hotels in Typescript. Once we have the schemas in place, we can
+            use
             Claude to generate some mock data for these schemas.</li>
-          <li>Let&rsquo;s add E2E testing in Claude as well, and ensure this is run after every Claude operation (along with a
+          <li>Let&rsquo;s add E2E testing in Claude as well, and ensure this is run after every Claude operation (along
+            with a
             fresh build) so we can automatically fix issues as they arise, and negate the need for constant manual
             testing.</li>
         </ol>
@@ -359,26 +378,14 @@ export default {
     max-width: 700px;
     margin: 1.5rem auto;
     padding: 1.5rem 2rem;
-    border-left: 4px solid #ed1c24;
-    background: #fafafa;
+    border-left: 4px solid #999;
+    background: #f5f5f5;
     font-style: normal;
-    color: #333;
+    color: #444;
     font-size: 1.05rem;
     line-height: 1.8;
     font-family: 'comma-sans', sans-serif;
-    position: relative;
     text-align: left;
-
-    &::before {
-      content: '"';
-      font-size: 3rem;
-      color: #ed1c24;
-      position: absolute;
-      left: 0.5rem;
-      top: 0.25rem;
-      font-family: Georgia, serif;
-      opacity: 0.3;
-    }
 
     &:first-of-type {
       margin-top: 1rem;
@@ -386,15 +393,9 @@ export default {
   }
 
   h3 {
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #333;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-    text-align: left;
   }
 
   ul,
@@ -417,9 +418,6 @@ export default {
     list-style-type: decimal;
   }
 
-  p {
-    text-align: left;
-  }
 
   .disclaimer {
     max-width: 700px;
