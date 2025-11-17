@@ -232,6 +232,23 @@ export default {
             themselves by looking
             at the points and $ spend.</li>
         </ul>
+        <div class="detail-grid">
+          <div class="detail-item">
+            <img src="@/assets/Chase-broken-coupled.png" alt="Chase Broken" />
+            <h3>Tight coupling of Chase login to global app functionality</h3>
+            <p>
+              When Chase login goes down, too bad for you!
+            </p>
+          </div>
+          <div class="detail-item">
+            <video autoplay loop muted playsinline src="@/assets/Chase-cant-move-map.mov" />
+            <h3>Map search issues</h3>
+            <p>
+              Basic map interaction is straight-up broken.
+            </p>
+          </div>
+        </div>
+
         <h3>Tech</h3>
         <ul>
           <li>On the client side, there is absolutely no need to have the client render everything, most
