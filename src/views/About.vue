@@ -10,7 +10,7 @@ export default {
       <header class="project-header">
         <img src="../assets/me-burgundy-square.jpg" alt="Ramzi Dreessen" class="float">
         <h1 class="project-title">
-          A little about me first.
+          A little about me.
         </h1>
       </header>
       <p>
@@ -64,8 +64,15 @@ export default {
     margin-right: auto;
   }
 
+  .project-title {
+    text-align: left;
+  }
+
   h1 {
     text-align: left;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   img {

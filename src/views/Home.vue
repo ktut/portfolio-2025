@@ -3,6 +3,7 @@ import IPhone from '@/components/iPhone.vue';
 import HomepageTopText from '../components/HomepageTopText.vue'
 import Tout from '@/components/Tout.vue'
 import PortraitSlivers from '@/components/PortraitSlivers.vue'
+import TravelAnim from '@/components/TravelAnim.vue'
 
 // Hero composite images for Portrait Photography
 import heroImg1 from '@/assets/photo/ruffalo-1.jpg'
@@ -18,7 +19,8 @@ export default {
     HomepageTopText,
     IPhone,
     Tout,
-    PortraitSlivers
+    PortraitSlivers,
+    TravelAnim
   },
   data() {
     return {
@@ -93,7 +95,32 @@ export default {
         </ul>
       </figure>
     </RouterLink>
-    <RouterLink to="/high5games" class="project-link cover" :class="{ 'animate-in': projectLinksLoaded.includes(1) }">
+    <RouterLink to="/chase-travel" class="project-link cover" :class="{ 'animate-in': projectLinksLoaded.includes(1) }">
+      <figure>
+        <div class="travel-anim-container">
+          <TravelAnim />
+        </div>
+        <figcaption>
+          <h2 class="title">
+            Case Study: Redesigning Chase Travel
+          </h2>
+          <button class="cta">
+            View Project <span class="unicode">&#x2197;</span>
+          </button>
+        </figcaption>
+        <ul class="project-metadata">
+          <li>
+            <span><b>Tech</b></span>
+            <span>Claude Code, Vue.js, Typescript, Pinia</span>
+          </li>
+          <li>
+            <span><b>Dates</b></span>
+            <span>2025</span>
+          </li>
+        </ul>
+      </figure>
+    </RouterLink>
+    <RouterLink to="/high5games" class="project-link cover" :class="{ 'animate-in': projectLinksLoaded.includes(2) }">
       <figure>
         <div class="tout-container" ref="toutContainer">
           <Tout v-view-transition-name="'tout-animation'" />
@@ -123,7 +150,7 @@ export default {
       </figure>
     </RouterLink>
     <RouterLink to="/chicagomagazine" class="project-link cover"
-      :class="{ 'animate-in': projectLinksLoaded.includes(2) }">
+      :class="{ 'animate-in': projectLinksLoaded.includes(3) }">
       <figure>
         <div class="video-composite">
           <div class="video-bg">
@@ -170,7 +197,7 @@ export default {
       </figure>
     </RouterLink>
     <RouterLink to="/chicagomagazine-subscription" class="project-link cover"
-      :class="{ 'animate-in': projectLinksLoaded.includes(3) }">
+      :class="{ 'animate-in': projectLinksLoaded.includes(4) }">
       <figure>
         <div class="chimag-subscription-bg" v-view-transition-name="'chimag-subscription-redesign'"
           :style="{ backgroundImage: 'url(' + require('@/assets/ipad-chimag-mock.jpg') + ')' }">
@@ -199,7 +226,7 @@ export default {
         </ul>
       </figure>
     </RouterLink>
-    <RouterLink to="/suntimes" class="project-link cover" :class="{ 'animate-in': projectLinksLoaded.includes(4) }">
+    <RouterLink to="/suntimes" class="project-link cover" :class="{ 'animate-in': projectLinksLoaded.includes(5) }">
       <figure>
         <div class="suntimes-bg" v-view-transition-name="'cst-image'"
           :style="{ backgroundImage: 'url(' + require('@/assets/print-design/IMG_0008.jpg') + ')' }">
@@ -228,7 +255,7 @@ export default {
         </ul>
       </figure>
     </RouterLink>
-    <p :class="{ 'animate-in': projectLinksLoaded.includes(5) }" class="extra-projects project-link"><span>📸</span>
+    <p :class="{ 'animate-in': projectLinksLoaded.includes(6) }" class="extra-projects project-link"><span>📸</span>
       Earlier in my career, I was a <b>photographer</b> as well, shooting portraits and events. You can see <RouterLink
         to="/photo">some of my favorite
         shots from over the years here</RouterLink>.
@@ -250,6 +277,12 @@ figure {
     overflow: hidden;
   }
 
+  .travel-anim-container {
+    max-width: 1200px;
+    overflow: hidden;
+  }
+
+  .travel-anim-container,
   .tout-container,
   .img-bg,
   .video-composite,
@@ -381,6 +414,7 @@ figure {
 
   &:hover {
 
+    .travel-anim-container,
     .tout-container,
     .img-bg,
     .video-composite,
