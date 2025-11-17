@@ -27,29 +27,55 @@ export default {
         sizes="(max-width: 768px) 480px, 1920px" alt="Foreground layer" />
     </div>
   </div>
+  <div class="caption">
+    Lake Atitlán, Guatemala | Photo by Ramzi Dreessen
+  </div>
 </template>
 
 <style lang="scss" scoped>
+@keyframes breathe-fore {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.18);
+  }
+}
+
+@keyframes breathe-base {
+
+  0%,
+  100% {
+    transform: scale(1) translateY(0);
+  }
+
+  50% {
+    transform: scale(1.08) translateY(0px);
+  }
+}
+
+@keyframes breathe-back {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.02);
+  }
+}
+
 .image-top-group {
   position: relative;
   transform-style: preserve-3d;
   margin: 0 auto;
   width: 100%;
-  height: 360px;
-
-  &:after {
-    content: "Lake Atitlán, Guatemala | Photo by Ramzi Dreessen";
-    position: absolute;
-    bottom: -30px;
-    left: 0;
-    width: 100%;
-    text-align: right;
-    font-size: 0.85rem;
-    padding: 0.5rem 0.2rem;
-    color: #5a5a5a;
-    box-sizing: border-box;
-    font-family: 'comma-sans', sans-serif;
-  }
+  height: 300px;
+  overflow: hidden;
 
   @media (min-width: 840px) {
     height: 500px;
@@ -78,18 +104,32 @@ export default {
   .parallax__layer--back {
     // transform: translateZ(-2px) scale(3);
     // z-index: 1;
+    transform-origin: top center;
+    animation: breathe-back 12s ease-in-out infinite;
   }
 
   /* Middle layer - slow scroll (g1.svg) */
   .parallax__layer--base {
     // transform: translateZ(-1px) scale(2);
     // z-index: 2;
+    animation: breathe-base 12s ease-in-out infinite;
   }
 
   /* Top layer - faster scroll (g2.svg) */
   .parallax__layer--fore {
     // transform: translateZ(-0.5px) scale(1.5);
     // z-index: 3;
+    animation: breathe-fore 12s ease-in-out infinite;
   }
+}
+
+.caption {
+  width: 100%;
+  text-align: right;
+  font-size: 0.85rem;
+  padding: 0.5rem;
+  color: #5a5a5a;
+  box-sizing: border-box;
+  font-family: 'comma-sans', sans-serif;
 }
 </style>

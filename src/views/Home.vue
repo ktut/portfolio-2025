@@ -296,6 +296,10 @@ figure {
     transition: border 0.3s ease;
   }
 
+  .travel-anim-container {
+    border: 2px solid transparent;
+  }
+
   .tout-container {
     border-radius: 16px;
     max-width: 100%;
