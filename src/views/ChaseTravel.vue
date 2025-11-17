@@ -200,9 +200,6 @@ export default {
         <blockquote>
           &ldquo;I would love the ability to one-click upgrade cabin class after I purchase the ticket.&rdquo;
         </blockquote>
-        <blockquote>
-          &ldquo;The website is painfully slow.&rdquo;
-        </blockquote>
       </div>
 
       <div class="detail-section">
@@ -234,17 +231,37 @@ export default {
         </ul>
         <div class="detail-grid">
           <div class="detail-item">
-            <img src="@/assets/Chase-broken-coupled.png" alt="Chase Broken" />
-            <h3>Tight coupling of Chase login to global app functionality</h3>
+            <img src="@/assets/Chase-travel-loading-global.png" alt="Chase Broken global loading spinner" />
             <p>
-              When Chase login goes down, too bad for you!
+              Why use a global loading spinner when you're using React...
+            </p>
+          </div>
+          <div class="detail-item">
+            <img src="@/assets/Chase-travel-loading-skeleton.png" alt="Chase Broken skeleton loader" />
+            <p>
+              ...Or use a skeleton loader that covers the entire page? This doesn't really help with either real or
+              perceived performance.
+            </p>
+          </div>
+          <div class="detail-item">
+            <img src="@/assets/Chase-broken-coupled.png" alt="Chase Broken" />
+            <p>
+              When Chase login goes down, too bad for you! Maybe tight coupling of Chase login to global app
+              functionality wasn't such a good idea.
             </p>
           </div>
           <div class="detail-item">
             <video autoplay loop muted playsinline src="@/assets/Chase-cant-move-map.mov" />
-            <h3>Map search issues</h3>
             <p>
-              Basic map interaction is straight-up broken.
+              Basic map interaction for hotel search results is straight-up broken.
+            </p>
+          </div>
+          <div class="detail-item">
+            <img src="@/assets/Chase-filter-as-modal.png" alt="Chase Broken" />
+            <p>
+              On desktop, you can't see the list view while adjusting filters - everything is forced through a modal.
+              This should
+              only be the approach on mobile.
             </p>
           </div>
         </div>
