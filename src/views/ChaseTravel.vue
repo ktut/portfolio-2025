@@ -420,6 +420,11 @@ export default {
             with a
             fresh build) so we can automatically fix issues as they arise, and negate the need for constant manual
             testing.</li>
+          <li>Building out the individual listing pages and hotel pages should be a breeze once we have the schemas and
+            UI components in place.</li>
+          <li>Let's add an Itinerary page for all booked flights and hotels.</li>
+          <li>Support is an important component of this application. Let's add that section to the bottom of Itineraries
+            and make it clear that the user can just iMessage the support team directly.</li>
         </ol>
       </div>
 
