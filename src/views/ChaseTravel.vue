@@ -411,9 +411,10 @@ export default {
           process.
         </p>
         <p>
-          For the tech stack, I decided to use Vue.js, SASS, Typescript, and Pinia. For a production application, I
-          would actually use Nuxt or vite-ssg for server-side rendering of key routes for quick load times (say, the
-          search page, which is the same for all users).
+          For the tech stack, I used my standard stack of Vue.js, SASS, Typescript, and Pinia, but for a real production
+          application, I
+          would use Nuxt or vite-ssg for server-side rendering of content on key routes for quicker load times. That
+          way, the only thing the user is actually waiting on is the loading of the actual search results.
         </p>
         <p>
           The project is still in progress, but you can view it here: <a href="https://chasetravel.netlify.app/"
@@ -428,7 +429,7 @@ export default {
             Guatemala a few
             years ago. In Photoshop, we can break it apart into layers, then use a <a
               href="https://keithclark.co.uk/articles/pure-css-parallax-websites/" target="_blank"
-              rel="noopener noreferrer">CSS-only parallax effect</a>.</li>
+              rel="noopener noreferrer">CSS-only parallax effect</a> on the search page.</li>
           <li><input type="checkbox" checked disabled> Let&rsquo;s build schemas for flights and hotels in Typescript.
             Once we have the schemas in place, we can
             use
