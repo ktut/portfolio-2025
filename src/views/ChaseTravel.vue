@@ -115,8 +115,8 @@ export default {
           <img src="@/assets/chase-logo.png" alt="Chase Logo" class="chase-logo">Case Study: Chase Travel
         </h1>
         <h2 class="project-subtitle">
-          How to fix a clunky travel booking app? I got some user feedback, then got to work, applying
-          cutting-edge AI tooling, industry standards, and some common sense.
+          How to fix a clunky travel booking app? Get some real user feedback, then industry
+          standards, cutting-edge AI tooling, and some common sense.
         </h2>
 
         <div class="tech-stack">
@@ -260,33 +260,43 @@ export default {
           </li>
           <li>As for the services, repeated user requests should be cached at a minimum,
             and some requests for general groups of users should be cached and ready to serve, such as flights between
-            Chicago and New York for users in those areas. Caching decisions should be made by 1. Deep analysis
+            Chicago and New York for users in those areas. </li>
+          <li>Caching decisions should be made by 1. Deep analysis
             of past searches and 2. Continual adjustments by ops teams on a weekly basis, perhaps LLM/ML-assisted, to
             update caching based on recent and upcoming events. In my understanding, Chase moved from Expedia to
             cxLoyalty for APIs, so they should definitely be able to do better on the in-house side here.</li>
         </ul>
         <div class="detail-grid">
           <div class="detail-item">
+            <img src="@/assets/chase-over-promo.png" alt="Chase Over Promotion" />
             <img src="@/assets/Chase-broken-coupled.png" alt="Chase Broken" />
             <p>
-              When Chase login goes down, too bad for you! Maybe tight coupling of Chase login to global app
+              Chase packs the page full of promotions, even thought the user is already a logged-in Chase customer!.
+              Also, when the Chase login service goes down, the application is unusable. Maybe the tight coupling of
+              Chase
+              login to
+              global app
               functionality wasn't such a good idea.
             </p>
           </div>
           <div class="detail-item">
+            <img src="@/assets/Kayak-inline-promo.png" alt="Kayak Inline Promotion" />
             <img src="@/assets/HotelsCom-signin-nudge.png" alt="Hotels.com signin nudge" />
             <p>
-              Notice how Hotels.com just uses a small nudge to the user to indicate the benefits of signing in.
+              Notice how Kayak.com and Hotels.com just use small UI "nudges" for promotions and signin benefits.
             </p>
           </div>
           <div class="detail-item">
+            <img src="@/assets/Chase-Travel-hotel-search.webp" alt="Chase Travel hotel search" />
             <video autoplay loop muted playsinline src="@/assets/Chase-cant-move-map.mov" />
             <p>
               Chase's map interaction for hotel search results is just straight-up broken - the map annoyingly snaps
-              back to the center after every drag.
+              back to the center after every drag. The interface has extremely poor use of white space and only lists
+              two properties at a time.
             </p>
           </div>
           <div class="detail-item">
+            <img src="@/assets/HotelsCom-list-view.png" alt="Hotels.com signin nudge" />
             <img src="@/assets/HotelsCom-map-view.png" alt="Hotels.com signin nudge" />
             <p>
               Competitors like Hotels.com have both a list view (default) and a map view, allowing the user to choose
@@ -297,8 +307,8 @@ export default {
           <div class="detail-item full-width">
             <img src="@/assets/Airbnb-list-view.png" alt="Airbnb list view" />
             <p>
-              Airbnb has a list view on the left and a map view on the right, which they're able to do because they're
-              not including too much overall information.
+              Airbnb keeps the per-property information density down so they can show more properties at a time along
+              with the map view.
             </p>
           </div>
 
@@ -390,14 +400,16 @@ export default {
           this with real data if needed (many of these APIs are already available publicly).
         </p>
         <p>
-          This app is still in progress, but you can view it here: <a href="https://chasetravel.netlify.app/"
+          The project is still in progress, but you can view it here: <a href="https://chasetravel.netlify.app/"
             target="_blank" rel="noopener noreferrer">https://chasetravel.netlify.app/</a>. Here's the process I
           followed:</p>
         <ol>
           <li>Start with a stock Vue3/SASS/Vite app. Implement proper routing.</li>
           <li>Let&rsquo;s get some strong lead art going. I&rsquo;ll use a photo I took on a trip to Lake Atitlan in
             Guatemala a few
-            years ago. In Photoshop, we can break it apart into layers and apply a CSS-only parallax effect.</li>
+            years ago. In Photoshop, we can break it apart into layers, then use a <a
+              href="https://keithclark.co.uk/articles/pure-css-parallax-websites/" target="_blank"
+              rel="noopener noreferrer">CSS-only parallax effect</a>.</li>
           <li>Let&rsquo;s build schemas for flights and hotels in Typescript. Once we have the schemas in place, we can
             use
             Claude to generate some mock data for these schemas.</li>
