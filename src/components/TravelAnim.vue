@@ -41,7 +41,7 @@ export default {
   }
 
   50% {
-    transform: scale(1.18);
+    transform: scale(1.12);
   }
 }
 
@@ -49,11 +49,11 @@ export default {
 
   0%,
   100% {
-    transform: scale(1) translateY(0);
+    transform: scale(1) translateX(0) translateY(0);
   }
 
   50% {
-    transform: scale(1.08) translateY(0px);
+    transform: scale(1.05) translateX(-10px) translateY(-7px);
   }
 }
 
@@ -74,14 +74,10 @@ export default {
   transform-style: preserve-3d;
   margin: 0 auto;
   width: 100%;
-  height: 300px;
+  height: 450px;
   overflow: hidden;
 
-  @media (min-width: 840px) {
-    height: 500px;
-  }
-
-  @media (min-width: 1200px) {
+  @media (min-width: 1000px) {
     height: 640px;
   }
 
