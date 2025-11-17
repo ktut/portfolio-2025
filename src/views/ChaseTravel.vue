@@ -403,8 +403,8 @@ export default {
         </p>
         <p>
           The project is still in progress, but you can view it here: <a href="https://chasetravel.netlify.app/"
-            target="_blank" rel="noopener noreferrer">https://chasetravel.netlify.app/</a>. Here's the process I
-          followed:</p>
+            target="_blank" rel="noopener noreferrer">https://chasetravel.netlify.app/</a>. Here's the process I'm
+          currently following:</p>
         <ol>
           <li>Start with a stock Vue3/SASS/Vite app. Implement proper routing.</li>
           <li>Let&rsquo;s get some strong lead art going that isn't a stock photo. I&rsquo;ll use a photo I took on a
@@ -416,6 +416,8 @@ export default {
           <li>Let&rsquo;s build schemas for flights and hotels in Typescript. Once we have the schemas in place, we can
             use
             Claude to generate some mock data for these schemas.</li>
+          <li>Let's get basic search in place, keeping all the search params in the URL for easy sharing and
+            bookmarking.</li>
           <li>Let&rsquo;s add E2E testing in Claude as well, and ensure this is run after every Claude operation (along
             with a
             fresh build) so we can automatically fix issues as they arise, and negate the need for constant manual
@@ -425,6 +427,8 @@ export default {
           <li>Let's add an Itinerary page for all booked flights and hotels.</li>
           <li>Support is an important component of this application. Let's add that section to the bottom of Itineraries
             and make it clear that the user can just iMessage the support team directly.</li>
+          <li>For the purposes of the demo, we can just mirror our application global state for user itineraries to
+            localStorage.</li>
         </ol>
       </div>
 
