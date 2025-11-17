@@ -161,12 +161,14 @@ export default {
           <li>At investor days, they have said that they are a &ldquo;Top 5 consumer leisure travel
             provider&rdquo; and that 1 in 4 leisure travel dollars are spent on Chase cards.</li>
           <li>They have seen an average 24% growth in transactions through Chase Travel year
-            over year, and approximately 40% YOY growth in number of consumers purchasing travel on Chase.</li>
+            over year since launch, and approximately 40% YOY growth in the total number of users purchasing travel on
+            Chase.</li>
           <li>Chase has also spent hundreds of millions of dollars (estimated) on securing lounge locations across the
             US, all Chase Travel branded.</li>
         </ul>
         <p class="lead bottom-border">
-          So, it&rsquo;s fair to say that Chase Travel is a significant part of Chase&rsquo;s business, and a
+          Therefore, it&rsquo;s fair to say that Chase Travel is a significant part of Chase&rsquo;s consumerbusiness,
+          and a
           significant part of
           the consumer travel market.
         </p>
@@ -177,7 +179,8 @@ export default {
           User research
         </h2>
         <p>
-          I have a lot of friends who use Chase Travel, both for personal and business. Here&rsquo;s some of their
+          I have a lot of friends who are 1. Chase Reserve cardholders and 2. Chase Travel users, both for personal and
+          business. Here&rsquo;s some of their
           feedback.
         </p>
         <blockquote>
@@ -194,7 +197,8 @@ export default {
           buy a
           flight on Chase Travel on Qantas, but another airline operates it, for example&hellip; then it&rsquo;s a huge
           pain to
-          change. Likewise, if I purchase thru Chase Travel, then upgrade at the airline&rsquo;s website, it&rsquo;s a
+          change. Likewise, if I purchase through Chase Travel, then upgrade at the airline&rsquo;s website, it&rsquo;s
+          a
           total mess.&rdquo;
         </blockquote>
         <blockquote>
@@ -239,36 +243,10 @@ export default {
           <div class="detail-item">
             <img src="@/assets/Chase-travel-loading-skeleton.png" alt="Chase Broken skeleton loader" />
             <p>
-              ...<em>and</em> use a skeleton loader that covers the entire page? This doesn't really help with either
+              ...<em>and</em> use a skeleton loader that covers the entire page? These approaches don't help with either
               real or
-              perceived performance.
-            </p>
-          </div>
-          <div class="detail-item">
-            <img src="@/assets/Chase-broken-coupled.png" alt="Chase Broken" />
-            <p>
-              When Chase login goes down, too bad for you! Maybe tight coupling of Chase login to global app
-              functionality wasn't such a good idea.
-            </p>
-          </div>
-          <div class="detail-item">
-            <video autoplay loop muted playsinline src="@/assets/Chase-cant-move-map.mov" />
-            <p>
-              Basic map interaction for hotel search results is straight-up broken.
-            </p>
-          </div>
-          <div class="detail-item">
-            <img src="@/assets/Chase-filter-as-modal.png" alt="Chase Broken" />
-            <p>
-              On desktop, you can't see the list view while adjusting filters - everything is forced through a modal.
-              This should
-              only be the approach on mobile.
-            </p>
-          </div>
-          <div class="detail-item">
-            <img src="@/assets/Chase-travel-inconsistent-ui.png" alt="Chase Cart for Travel" />
-            <p>
-              "Start shopping"? Perhaps this should be mentioning "itineraries" instead of "cart"s?
+              perceived performance. Instead, use a local loading indicator that covers the specific component, or
+              provide informational text to the user while waiting for the data to load.
             </p>
           </div>
 
@@ -287,9 +265,47 @@ export default {
             update caching based on recent and upcoming events. In my understanding, Chase moved from Expedia to
             cxLoyalty for APIs, so they should definitely be able to do better on the in-house side here.</li>
         </ul>
+        <div class="detail-grid">
+          <div class="detail-item">
+            <img src="@/assets/Chase-broken-coupled.png" alt="Chase Broken" />
+            <p>
+              When Chase login goes down, too bad for you! Maybe tight coupling of Chase login to global app
+              functionality wasn't such a good idea.
+            </p>
+          </div>
+          <div class="detail-item">
+            <img src="@/assets/HotelsCom-signin-nudge.png" alt="Hotels.com signin nudge" />
+            <p>
+              Notice how Hotels.com just uses a small nudge to the user to indicate the benefits of signing in.
+            </p>
+          </div>
+          <div class="detail-item">
+            <video autoplay loop muted playsinline src="@/assets/Chase-cant-move-map.mov" />
+            <p>
+              Chase's map interaction for hotel search results is just straight-up broken - the map annoyingly snaps
+              back to the center after every drag.
+            </p>
+          </div>
+          <div class="detail-item">
+            <img src="@/assets/HotelsCom-map-view.png" alt="Hotels.com signin nudge" />
+            <p>
+              Competitors like Hotels.com have both a list view (default) and a map view, allowing the user to choose
+              the best
+              view for their needs. Moving the map adjusts the search radius. Simple.
+            </p>
+          </div>
+          <div class="detail-item full-width">
+            <img src="@/assets/Airbnb-list-view.png" alt="Airbnb list view" />
+            <p>
+              Airbnb has a list view on the left and a map view on the right, which they're able to do because they're
+              not including too much overall information.
+            </p>
+          </div>
+
+        </div>
         <h3>Product</h3>
         <ul>
-          <li>Prices are uncompetitive and frequently flat-out incorrect. This is well documented (<a
+          <li>Prices are uncompetitive and frequently flat-out incorrect. This is well documented: (<a
               href="https://www.seat31b.com/2019/05/chases-terrible-horrible-no-good-very-bad-travel-portal/"
               target="_blank"
               rel="noopener noreferrer">https://www.seat31b.com/2019/05/chases-terrible-horrible-no-good-very-bad-travel-portal/</a>)
@@ -297,29 +313,45 @@ export default {
           <li>Chase customer support is not reachable via chat, users have to call and wait instead. This is critical
             because inherently, when booking through third party, users are going to have to reach support.</li>
         </ul>
+        <div class="detail-grid">
+          <div class="detail-item">
+            <img src="@/assets/Chase-filter-as-modal.png" alt="Chase Broken" />
+            <p>
+              On desktop, you can't see the list view while adjusting filters - you're forced to use a modal to make
+              adjustments and then hope that your results update accordingly.
+              This is a mobile-only approach that should not be replicated on desktop.
+            </p>
+          </div>
+          <div class="detail-item">
+            <img src="@/assets/Chase-travel-inconsistent-ui.png" alt="Chase Cart for Travel" />
+            <p>
+              "Start shopping"? Perhaps this should be mentioning "itineraries" instead of "cart"s?
+            </p>
+          </div>
+        </div>
       </div>
 
       <div class="detail-section">
-        <h2 class="section-title" id="an-issue-of-focus">
-          An issue of focus
+        <h2 class="section-title" id="how-did-this-happen">
+          How did this happen?
         </h2>
         <p>
-          So, how did this happen? The core issues seems to be that of form over function:
+          The age-old adage of form over function seems to be at play here:
         </p>
         <ul>
-          <li>The core objective with the product direction seems to be to impress executives and make the product
-            visually similar to slick marketing campaigns. A recent &ldquo;redesign&rdquo; fixed some white space
+          <li>Perhaps the real goal was to impress executives and just make the product look good enough for slick
+            marketing campaigns. Some evidence: A widely-trumpted recent &ldquo;redesign&rdquo; fixed some white space
             issues, added new
-            fonts, and slightly improved the general layout, but users don&rsquo;t care about fonts or stock image
+            fonts, and slightly improved the general layout, despite the fact that users don&rsquo;t care about fonts or
+            stock image
             choice at
             all - they care about legibility, familiarity, and responsiveness of the interface. Fundamentally, using the
-            app still feels same as it has been for ten years.</li>
-          <li>The focus instead should have been to make a UI that was so simple and easy to use that it became
-            ubiquitous. The user should feel so at home with the flow that it would be additional cognitive load to
-            leave and use a different app instead. In other words, instead of forcing the user to log into Chase and use
-            points, users should continue to use Chase travel because other options aren&rsquo;t worth the switch, and
-            in
-            addition, points and points boost features are only available on the Chase app.</li>
+            app still feels mostly the same.</li>
+          <li>The focus instead should have been to make a UI that was simple and easy enoughto use that it felt
+            ubiquitous. The user should have felt so at home with the flow that it would require additional cognitive
+            load to use a different app instead. In other words, instead of forcing the user to log into Chase and use
+            points, users should want to use Chase Travel <em>by default</em> because other options aren&rsquo;t worth
+            the switch, and in addition, points and Points Boost features are only available through Chase.</li>
         </ul>
       </div>
 
@@ -414,7 +446,7 @@ export default {
       max-width: 700px;
       margin: 0 auto;
       padding: 0.75rem 1rem;
-      font-size: 1rem;
+      font-size: 1.2rem;
       border: 2px solid #e0e0e0;
       border-radius: 8px;
       background: white;
