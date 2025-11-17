@@ -420,7 +420,12 @@ export default {
 
 .hero {
   width: 100%;
+
+  .hero-image {
+    overflow: unset;
+  }
 }
+
 
 .project-header {
   margin-bottom: 2rem;

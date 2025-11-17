@@ -35,8 +35,21 @@ export default {
   transform-style: preserve-3d;
   margin: 0 auto;
   width: 100%;
-  overflow: hidden;
   height: 400px;
+
+  &:after {
+    content: "Lake Atitlán, Guatemala | Photo by Ramzi Dreessen";
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    text-align: right;
+    font-size: 0.85rem;
+    padding: 0.5rem 0.2rem;
+    color: #5a5a5a;
+    box-sizing: border-box;
+    font-family: 'comma-sans', sans-serif;
+  }
 
   @media (min-width: 840px) {
     height: 500px;
