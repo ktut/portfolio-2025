@@ -381,9 +381,11 @@ export default {
             waiting on hold because Chase engineers couldn&rsquo;t figure out how to include this metadata in the
             request.
           </li>
-          <li>Flights UI is actually a simple fix - should be a straight port of Kayak.</li>
-          <li>Hotels should be a mix of Hotels.com and Airbnb. Information density should be Hotels.com, and map/listing
-            views should be Airbnb.</li>
+          <li>Flights UI is actually a simple fix - this should be a straight port of Kayak's UI.</li>
+          <li>Hotels should be a mix of Hotels.com and Airbnb's UIs. Information density should be akin to Hotels.com,
+            and
+            map/listing
+            views should be akin to Airbnb.</li>
           <li>The app should mention Chase points and offers prominently, but not inhibit the user when doing so.
             Absolutely no popups or banners of any kind should ever be displayed. Instead, use different, standout
             treatments for individual listings or price offerings.</li>
@@ -405,7 +407,8 @@ export default {
           followed:</p>
         <ol>
           <li>Start with a stock Vue3/SASS/Vite app. Implement proper routing.</li>
-          <li>Let&rsquo;s get some strong lead art going. I&rsquo;ll use a photo I took on a trip to Lake Atitlan in
+          <li>Let&rsquo;s get some strong lead art going that isn't a stock photo. I&rsquo;ll use a photo I took on a
+            trip to Lake Atitlan in
             Guatemala a few
             years ago. In Photoshop, we can break it apart into layers, then use a <a
               href="https://keithclark.co.uk/articles/pure-css-parallax-websites/" target="_blank"
@@ -452,9 +455,8 @@ export default {
 
   .sticky-nav {
     position: sticky;
-    top: 55px;
+    top: 60px;
     z-index: 100;
-    padding: 1rem 2rem;
     margin-bottom: 2rem;
     background: transparent;
 
@@ -462,9 +464,9 @@ export default {
       width: 100%;
       max-width: 700px;
       margin: 0 auto;
-      padding: 0.75rem 1rem;
+      padding: 0.75rem 1.25rem 0.65rem 0.75rem;
       font-size: 1.2rem;
-      border: 2px solid #e0e0e0;
+      border: 2px solid #8e8e8e;
       border-radius: 8px;
       background: white;
       cursor: pointer;

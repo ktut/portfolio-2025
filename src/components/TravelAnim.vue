@@ -35,7 +35,7 @@ export default {
   transform-style: preserve-3d;
   margin: 0 auto;
   width: 100%;
-  height: 400px;
+  height: 360px;
 
   &:after {
     content: "Lake Atitlán, Guatemala | Photo by Ramzi Dreessen";
