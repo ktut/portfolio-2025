@@ -403,33 +403,41 @@ export default {
         </p>
         <p>
           The project is still in progress, but you can view it here: <a href="https://chasetravel.netlify.app/"
-            target="_blank" rel="noopener noreferrer">https://chasetravel.netlify.app/</a>. Here's the process I'm
-          currently following:</p>
-        <ol>
-          <li>Start with a stock Vue3/SASS/Vite app. Implement proper routing.</li>
-          <li>Let&rsquo;s get some strong lead art going that isn't a stock photo. I&rsquo;ll use a photo I took on a
+            target="_blank" rel="noopener noreferrer">https://chasetravel.netlify.app/</a>. </p>
+        <p>Here's my current progress:</p>
+        <ul class="checklist">
+          <li><input type="checkbox" checked disabled> Start with a stock Vue3/SASS/Vite app. Implement proper routing.
+          </li>
+          <li><input type="checkbox" checked disabled> Let&rsquo;s get some strong lead art going that isn't a stock
+            photo. I&rsquo;ll use a photo I took on a
             trip to Lake Atitlan in
             Guatemala a few
             years ago. In Photoshop, we can break it apart into layers, then use a <a
               href="https://keithclark.co.uk/articles/pure-css-parallax-websites/" target="_blank"
               rel="noopener noreferrer">CSS-only parallax effect</a>.</li>
-          <li>Let&rsquo;s build schemas for flights and hotels in Typescript. Once we have the schemas in place, we can
+          <li><input type="checkbox" checked disabled> Let&rsquo;s build schemas for flights and hotels in Typescript.
+            Once we have the schemas in place, we can
             use
             Claude to generate some mock data for these schemas.</li>
-          <li>Let's get basic search in place, keeping all the search params in the URL for easy sharing and
+          <li><input type="checkbox" checked disabled> Let's get basic search in place, keeping all the search params in
+            the URL for easy sharing and
             bookmarking.</li>
-          <li>Let&rsquo;s add E2E testing in Claude as well, and ensure this is run after every Claude operation (along
+          <li><input type="checkbox" checked disabled> Let&rsquo;s add E2E testing in Claude as well, and ensure this is
+            run after every Claude operation (along
             with a
             fresh build) so we can automatically fix issues as they arise, and negate the need for constant manual
             testing.</li>
-          <li>Building out the individual listing pages and hotel pages should be a breeze once we have the schemas and
+          <li><input type="checkbox" checked disabled> Building out the individual listing pages and hotel pages should
+            be a breeze once we have the schemas and
             UI components in place.</li>
-          <li>Let's add an Itinerary page for all booked flights and hotels.</li>
-          <li>Support is an important component of this application. Let's add that section to the bottom of Itineraries
+          <li><input type="checkbox" disabled> Let's add an Itinerary page for all booked flights and hotels.</li>
+          <li><input type="checkbox" disabled> Support is an important component of this application. Let's add that
+            section to the bottom of Itineraries
             and make it clear that the user can just iMessage the support team directly.</li>
-          <li>For the purposes of the demo, we can just mirror our application global state for user itineraries to
+          <li><input type="checkbox" disabled> For the purposes of the demo, we can just mirror our application global
+            state for user itineraries to
             localStorage.</li>
-        </ol>
+        </ul>
       </div>
 
       <PostArticleNav />
@@ -473,13 +481,21 @@ export default {
       width: 100%;
       max-width: 700px;
       margin: 0 auto;
-      padding: 0.75rem 1.25rem 0.65rem 0.75rem;
+      padding: 0.75rem 2.5rem 0.65rem 0.75rem;
       font-size: 1.2rem;
       border: 2px solid #8e8e8e;
       border-radius: 8px;
       background: white;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 0.75rem center;
+      background-size: 1.25rem;
       cursor: pointer;
       font-family: 'comma-sans', sans-serif;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      color: $textColor;
 
       &:hover {
         border-color: #333;
@@ -487,7 +503,7 @@ export default {
 
       &:focus {
         outline: none;
-        border-color: #ed1c24;
+        border-color: $redPunch;
       }
     }
   }
@@ -534,6 +550,30 @@ export default {
 
   ol {
     list-style-type: decimal;
+  }
+
+  .checklist {
+    list-style-type: none;
+    padding-left: 1.5rem;
+
+    li {
+      gap: 0.5rem;
+
+      input[type="checkbox"] {
+        margin-top: 0.3rem;
+        flex-shrink: 0;
+        width: 18px;
+        height: 18px;
+        cursor: default;
+        display: inline-block;
+        float: left;
+        margin-right: 7px;
+
+        &:checked {
+          accent-color: #22c55e;
+        }
+      }
+    }
   }
 
 
