@@ -217,7 +217,7 @@ export default {
             due
             to 1. poor use of white space and 2. poor use of horizontal and vertical layouts for components and
             filtering. Information should load while the user is able to modify filters.</li>
-          <li>Technically &ldquo;uses&rdquo; React (via internal &ldquo;Octagon&rdquo; meta-framework) but doesn&rsquo;t
+          <li>Technically &ldquo;uses&rdquo; React but doesn&rsquo;t
             use any of the benefits of
             React (loading some components while keeping others visible, etc), which would greatly enhance the user
             experience</li>
@@ -239,7 +239,8 @@ export default {
           <div class="detail-item">
             <img src="@/assets/Chase-travel-loading-skeleton.png" alt="Chase Broken skeleton loader" />
             <p>
-              ...Or use a skeleton loader that covers the entire page? This doesn't really help with either real or
+              ...<em>and</em> use a skeleton loader that covers the entire page? This doesn't really help with either
+              real or
               perceived performance.
             </p>
           </div>
@@ -264,6 +265,13 @@ export default {
               only be the approach on mobile.
             </p>
           </div>
+          <div class="detail-item">
+            <img src="@/assets/Chase-travel-inconsistent-ui.png" alt="Chase Cart for Travel" />
+            <p>
+              "Start shopping"? Perhaps this should be mentioning "itineraries" instead of "cart"s?
+            </p>
+          </div>
+
         </div>
 
         <h3>Tech</h3>
