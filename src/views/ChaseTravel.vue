@@ -396,10 +396,24 @@ export default {
         <h2 class="section-title" id="rebuilding-the-web-app">
           Rebuilding the web app
         </h2>
+        <p>Let's build a client-side-only proof-of-concept web application that addresses these issues.</p>
+        <p>Given the complexity and
+          scale of using real data, I decided to use mock data, but it wouldn't be a stretch to implement
+          this with real data if needed, as many of these APIs are already available publicly.</p>
+        <p>Using cutting-edge LLM-powered tools, we don't really have to start with Figma mockups - using Claude and
+          Cursor, we
+          can
+          just
+          craft UI components, generate mock data with Claude Code, and then build the app in the Cursor IDE with
+          assitance from
+          Claude for the more repetitive tasks. <a href="https://www.youtube.com/watch?v=bdh8k6DyKxE" target="_blank"
+            rel="noopener noreferrer">Here's a video</a> from Cursor's head of design where he describes a similar
+          process.
+        </p>
         <p>
-          I decided to rebuild the web app from scratch, using Vue.js, Typescript, and Pinia. Given the complexity and
-          scale of using real data, I instead mocked the data using Claude Code, but it's not a stretch to implement
-          this with real data if needed (many of these APIs are already available publicly).
+          For the tech stack, I decided to use Vue.js, SASS, Typescript, and Pinia. For a production application, I
+          would actually use Nuxt or vite-ssg for server-side rendering of key routes for quick load times (say, the
+          search page, which is the same for all users).
         </p>
         <p>
           The project is still in progress, but you can view it here: <a href="https://chasetravel.netlify.app/"
