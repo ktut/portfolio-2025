@@ -39,6 +39,10 @@ export default {
   height: 400px;
 
   @media (min-width: 840px) {
+    height: 500px;
+  }
+
+  @media (min-width: 1200px) {
     height: 640px;
   }
 
