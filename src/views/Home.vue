@@ -506,8 +506,9 @@ figure {
   }
 
   &.extra-projects {
-    max-width: 640px;
-    padding: 48px 12px;
+    max-width: 740px;
+    padding: 48px 1rem;
+    font-size: 1.2rem;
 
     @media (min-width: 760px) {
       text-align: center;
