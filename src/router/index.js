@@ -20,7 +20,7 @@ const routes = [
       ogImage: 'https://rkdvis.com/assets/me-burgundy-social.jpg',
       ogTitle: 'Ramzi Dreessen — RKDVIS.COM',
       ogDescription:
-        "I'm a web developer, designer, photographer and videographer based in Chicago."
+        'A web developer, designer, and photographer based in Chicago.'
     }
   },
   {
@@ -32,7 +32,7 @@ const routes = [
       ogImage: 'https://rkdvis.com/assets/me-burgundy-social.jpg',
       ogTitle: 'About — Ramzi Dreessen',
       ogDescription:
-        'Web developer, designer, photographer and videographer based in Chicago.'
+        'A web developer, designer, and photographer based in Chicago.'
     }
   },
   {
@@ -42,9 +42,10 @@ const routes = [
     meta: {
       displayName: 'JPMC Performance Dashboard',
       ogImage: 'https://rkdvis.com/assets/PD-night-mock.jpg',
-      ogTitle: 'JPMorgan Chase Performance Dashboard — Ramzi Dreessen',
+      ogTitle:
+        'Building the Chase Media Solutions Performance Dashboard — Ramzi Dreessen',
       ogDescription:
-        'Building the client application for a card-linked offers campaign monitoring and reporting platform'
+        'Front-end engineering on a web app for campaign monitoring and reporting for card-linked offers'
     }
   },
   {
@@ -53,10 +54,10 @@ const routes = [
     component: ChaseTravelView,
     meta: {
       displayName: 'Chase Travel Case Study',
-      ogImage: 'https://rkdvis.com/assets/PD-night-mock.jpg',
-      ogTitle: 'Chase Travel Case Study — Ramzi Dreessen',
+      ogImage: 'https://rkdvis.com/assets/gua-lo.jpg',
+      ogTitle: 'Fixing Chase Travel — Ramzi Dreessen',
       ogDescription:
-        'Fixing a clunky travel booking app via applying industry standards, user research and some common sense'
+        'Fixing the clunky travel booking app via applying industry standards, user research and some common sense'
     }
   },
   {
