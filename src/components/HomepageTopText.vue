@@ -22,7 +22,7 @@ export default {
     <p>More formally, I’m a
       multimedia
       “do-it-all” with <span class="hightlight high">high-level</span> experience in <b>front-end software
-        engineering</b>, <b>web/print design</b>, <b>photography</b> and <b>video</b>, and <span
+        engineering</b>, <b>web/print design</b> and <b>photography</b>, and <span
         class="hightlight low">low-level</span>
       experience in <b>making memes</b> and <b>being a dad</b>. </p>
   </section>
@@ -81,7 +81,7 @@ export default {
   }
 
   p {
-    font-size: 1.08rem;
+    font-size: 1.18rem;
     margin-top: 1rem;
     color: $textColor;
     font-variation-settings: 'wdth' 120, 'wght' 500;
