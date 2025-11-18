@@ -10,7 +10,7 @@ export default {
   mounted() {
     this.intervalId = setInterval(() => {
       this.animate = !this.animate;
-    }, 4000);
+    }, 3000);
   },
   beforeUnmount() {
     if (this.intervalId) {
