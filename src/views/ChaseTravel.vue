@@ -170,7 +170,7 @@ export default {
             US, all Chase Travel branded.</li>
         </ul>
         <p class="lead bottom-border">
-          Therefore, it&rsquo;s fair to say that Chase Travel is a significant part of Chase&rsquo;s consumerbusiness,
+          Therefore, it&rsquo;s fair to say that Chase Travel is a significant part of Chase&rsquo;s consumer business,
           and a
           significant part of
           the consumer travel market.

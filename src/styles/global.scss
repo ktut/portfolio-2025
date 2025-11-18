@@ -27,6 +27,8 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: $textColor;
+  overflow-x: hidden;
+  // necesary otherwise elements on homepage overflow
 }
 
 body {
@@ -276,7 +278,7 @@ main {
   width: 100%;
   max-width: 1380px;
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 2rem;
   overflow: hidden;
 
   h2,

@@ -71,7 +71,7 @@ export default {
   transform-style: preserve-3d;
   margin: 0 auto;
   width: 100%;
-  height: 450px;
+  height: 400px;
   overflow: hidden;
 
   @media (min-width: 1000px) {
