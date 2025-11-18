@@ -27,9 +27,6 @@ export default {
         sizes="(max-width: 768px) 480px, 1920px" alt="Foreground layer" />
     </div>
   </div>
-  <div class="caption">
-    Lake Atitlán, Guatemala | Photo by Ramzi Dreessen
-  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -117,15 +114,5 @@ export default {
     // z-index: 3;
     animation: breathe-fore 12s ease-in-out infinite;
   }
-}
-
-.caption {
-  width: 100%;
-  text-align: right;
-  font-size: 0.85rem;
-  padding: 0.5rem;
-  color: #5a5a5a;
-  box-sizing: border-box;
-  font-family: 'comma-sans', sans-serif;
 }
 </style>

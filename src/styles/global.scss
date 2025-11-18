@@ -558,3 +558,16 @@ main {
     font-size: 2rem;
   }
 }
+
+.caption {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: right;
+  font-size: 0.85rem;
+  padding: 0.5rem;
+  color: #5a5a5a;
+  box-sizing: border-box;
+  font-family: 'comma-sans', sans-serif;
+}

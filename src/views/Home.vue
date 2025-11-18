@@ -100,6 +100,9 @@ export default {
         <div class="travel-anim-container">
           <TravelAnim />
         </div>
+        <div class="caption">
+          Lake Atitlán, Guatemala | Photo by Ramzi Dreessen
+        </div>
         <figcaption>
           <h2 class="title">
             Case Study: Redesigning Chase Travel
@@ -109,6 +112,10 @@ export default {
           </button>
         </figcaption>
         <ul class="project-metadata">
+          <li>
+            <span><b>Role</b></span>
+            <span>Designer/Developer</span>
+          </li>
           <li>
             <span><b>Tech</b></span>
             <span>Claude Code, Vue.js, Typescript, Pinia</span>

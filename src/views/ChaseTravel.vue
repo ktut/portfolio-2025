@@ -106,6 +106,9 @@ export default {
     <section class="hero">
       <figure class="hero-image">
         <TravelAnim />
+        <div class="caption">
+          Lake Atitlán, Guatemala | Photo by Ramzi Dreessen
+        </div>
       </figure>
     </section>
 
