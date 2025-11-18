@@ -189,11 +189,10 @@ export default {
         <blockquote>
           &ldquo;My main criticism is that it&rsquo;s glacially slow. UX-wise, I think it&rsquo;s way too bulky and
           clunky. The transition
-          between each step is awkward. The prices aren&rsquo;t intuitive. The layout with the search options all the
-          way at
-          the top isn&rsquo;t great. It would be really nice if the flight date search had one of those little calendars
+          between each step is awkward. The prices aren&rsquo;t intuitive. It would be really nice if the flight date
+          search had one of those little calendars
           that
-          compare other day&rsquo;s flight costs around your search&rdquo;
+          compare other day&rsquo;s flight costs around your search.&rdquo;
         </blockquote>
         <blockquote>
           &ldquo;If I have to make a change to a reservation, it&rsquo;s always goofy to figure out who to talk to. If I
@@ -214,13 +213,15 @@ export default {
           Major issues
         </h2>
         <p>
-          Putting this feedback together with my own, I put together a categorized list of issues to resolve:
+          Combining this feedback with my own, I put together a categorized list of issues to resolve:
         </p>
         <h3>UI/UX</h3>
         <ul>
-          <li>Why on earth is there no dedicated travel app? Why do users need to log in to do anything on Chase Travel
-            (including basic flight search)? Chase is probably losing tons of non-Chase traffic by doing this.</li>
-          <li>Very poor overall design (filters, maps) that isn&rsquo;t mobile-friendly. User has to scroll way too much
+          <li>Why do users need to log in to do anything
+            (including basic flight search)? Chase is probably losing tons of non-Chase traffic by doing this. And why
+            on earth is there no dedicated travel app?</li>
+          <li>The overall overall design and components (filters, maps) are poorly done, and aren&rsquo;t
+            mobile-friendly. The user has to scroll way too much
             due
             to 1. poor use of white space and 2. poor use of horizontal and vertical layouts for components and
             filtering. Information should load while the user is able to modify filters.</li>
