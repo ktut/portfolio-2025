@@ -50,21 +50,21 @@ export default {
   }
 
   50% {
-    transform: scale(1.05) translateX(-10px) translateY(-7px);
+    transform: scale(1.04) translateX(-5px) translateY(-4px);
   }
 }
 
-@keyframes breathe-back {
+// @keyframes breathe-back {
 
-  0%,
-  100% {
-    transform: scale(1);
-  }
+//   0%,
+//   100% {
+//     transform: scale(1);
+//   }
 
-  50% {
-    transform: scale(1.02);
-  }
-}
+//   50% {
+//     transform: scale(1);
+//   }
+// }
 
 .image-top-group {
   position: relative;
@@ -94,12 +94,12 @@ export default {
     }
   }
 
-  .parallax__layer--back {
-    // transform: translateZ(-2px) scale(3);
-    // z-index: 1;
-    transform-origin: top center;
-    animation: breathe-back 12s ease-in-out infinite;
-  }
+  // .parallax__layer--back {
+  //   // transform: translateZ(-2px) scale(3);
+  //   // z-index: 1;
+  //   transform-origin: top center;
+  //   animation: breathe-back 12s ease-in-out infinite;
+  // }
 
   /* Middle layer - slow scroll (g1.svg) */
   .parallax__layer--base {
