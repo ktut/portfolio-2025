@@ -22,7 +22,7 @@ export default {
 
 <template>
   <div class="tout" :class="{ animate: animate }">
-    <img class="layer-1" src="@/assets/tout-5.png">
+    <img class="layer-1" src="@/assets/tout-5.jpg">
     <img class="layer-2" src="@/assets/tout-4.png">
     <img class="layer-3" src="@/assets/tout-3.png">
     <img class="layer-4" src="@/assets/tout-2.png">
