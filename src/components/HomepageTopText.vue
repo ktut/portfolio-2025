@@ -34,7 +34,7 @@ export default {
   padding: 32px 16px 0;
   opacity: 0;
   transform: translateY(-30px);
-  transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: opacity 0.8s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
 
   &.slide-in {
     opacity: 1;

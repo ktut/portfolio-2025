@@ -68,8 +68,8 @@ export default {
     <RouterLink to="/chase" class="project-link cover" :class="{ 'animate-in': projectLinksLoaded.includes(0) }">
       <figure>
         <div class="img-bg" v-view-transition-name="'img'"
-          :style="{ backgroundImage: 'url(' + require('@/assets/PD-night-mock.jpg') + ')' }">
-          <IPhone v-if="shouldMountComponent" class="iphone-in-image" />
+          :style="{ backgroundImage: projectLinksLoaded.includes(0) ? 'url(' + require('@/assets/PD-night-mock.jpg') + ')' : 'none' }">
+          <IPhone v-if="shouldMountComponent && projectLinksLoaded.includes(0)" class="iphone-in-image" />
         </div>
         <figcaption>
           <h2 class="title">
@@ -493,7 +493,7 @@ figure {
 .project-link {
   opacity: 0;
   transform: perspective(1000px) rotateX(-8deg) translateY(30px);
-  transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: opacity 0.8s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
 
   &.animate-in {
     opacity: 1;
