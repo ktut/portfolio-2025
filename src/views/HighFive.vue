@@ -207,6 +207,10 @@ export default {
 .high-five {
   min-height: 100vh;
 
+  .content-wrapper {
+    padding-top: 4rem;
+  }
+
   .tout-container {
     width: 500px;
     max-width: unset;
