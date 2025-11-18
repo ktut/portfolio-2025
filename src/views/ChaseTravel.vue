@@ -115,7 +115,7 @@ export default {
           <img src="@/assets/chase-logo.png" alt="Chase Logo" class="chase-logo">Case Study: Chase Travel
         </h1>
         <h2 class="project-subtitle">
-          How to fix a clunky travel booking app? Get some real user feedback, then industry
+          How to fix a clunky travel booking app? Get some real user feedback, then apply industry
           standards, cutting-edge AI tooling, and some common sense.
         </h2>
 
