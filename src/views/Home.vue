@@ -271,6 +271,11 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+main {
+  overflow-x: hidden;
+  // necesary otherwise elements on homepage overflow
+}
+
 figure {
   display: flex;
   flex-direction: column;
