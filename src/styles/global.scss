@@ -582,6 +582,7 @@ main {
   }
 }
 
+
 .rounded-highlight {
   position: relative;
   border-radius: 12px;
@@ -598,9 +599,9 @@ main {
 
     rect {
       fill: none;
-      stroke: #666;
+      stroke: #f5a623;
       stroke-width: 2;
-      stroke-dasharray: 10 5;
+      stroke-dasharray: 5 3;
       animation: dash-move 20s linear infinite;
     }
   }

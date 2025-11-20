@@ -409,9 +409,11 @@ export default {
             <rect x="1" y="1" width="calc(100% - 2px)" height="calc(100% - 2px)" rx="12" ry="12" />
           </svg>
           The project is still in progress, but you can view it here: <a href="https://chasetravel.netlify.app/"
-            target="_blank" rel="noopener noreferrer">https://chasetravel.netlify.app/</a> and see the code here: <a
-            href="https://github.com/ktut/chasetravel" target="_blank"
-            rel="noopener noreferrer">https://github.com/ktut/chasetravel</a>. </p>
+            target="_blank" rel="noopener noreferrer">https://chasetravel.netlify.app/</a> <br />...and see the code
+          here:
+          <a href="https://github.com/ktut/chasetravel" target="_blank"
+            rel="noopener noreferrer">https://github.com/ktut/chasetravel</a>.
+        </p>
         <p>Given the complexity and
           scale of using real data, I decided to use mock data, but it wouldn't be a stretch to implement
           this with real data if needed, as many of these APIs are already available publicly.</p>
