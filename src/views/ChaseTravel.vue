@@ -404,18 +404,31 @@ export default {
           Rebuilding the web app
         </h2>
         <p>Let's build a client-side-only proof-of-concept web application that addresses these issues.</p>
+        <p class="rounded-highlight">
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="calc(100% - 2px)" height="calc(100% - 2px)" rx="12" ry="12" />
+          </svg>
+          The project is still in progress, but you can view it here: <a href="https://chasetravel.netlify.app/"
+            target="_blank" rel="noopener noreferrer">https://chasetravel.netlify.app/</a> and see the code here: <a
+            href="https://github.com/ktut/chasetravel" target="_blank"
+            rel="noopener noreferrer">https://github.com/ktut/chasetravel</a>. </p>
         <p>Given the complexity and
           scale of using real data, I decided to use mock data, but it wouldn't be a stretch to implement
           this with real data if needed, as many of these APIs are already available publicly.</p>
-        <p>Using cutting-edge LLM-powered tools, we don't really have to start with Figma mockups - using Claude and
-          Cursor, we
-          can
-          just
-          craft UI components, generate mock data with Claude Code, and then build the app in the Cursor IDE with
+        <p>Using cutting-edge LLM-powered tools, we can skip the Figma mockups and start with Claude and
+          Cursor instead. <a href="https://www.youtube.com/watch?v=bdh8k6DyKxE" target="_blank"
+            rel="noopener noreferrer">Here's a video</a> from Cursor's head of design where he describes his workflow,
+          which is pretty similar.</p>
+        <p>We
+          can start by tightly define schemas for flights, hotels, user searches, and user bookings, using Typescript.
+          Once
+          we have the schemas in place, we can
+          generate mock data with Claude Code. For flights, we'll need the real airlines, but the individual flights can
+          be mocked. For hotels, we'll start with 20 hotels per city, and have Claude pull real geolocation data and
+          descriptions (we'll use stock images for now, we can add real images later, as that's a lot more effort to
+          pull individually). We can then build out app, view by view, in the Cursor IDE, with
           assitance from
-          Claude for the more repetitive tasks. <a href="https://www.youtube.com/watch?v=bdh8k6DyKxE" target="_blank"
-            rel="noopener noreferrer">Here's a video</a> from Cursor's head of design where he describes a similar
-          process.
+          Claude for the more repetitive tasks.
         </p>
         <p>
           For the tech stack, I used my standard stack of Vue.js, SASS, Typescript, and Pinia, but for a real production
@@ -423,9 +436,6 @@ export default {
           would use Nuxt or vite-ssg for server-side rendering of content on key routes for quicker load times. That
           way, the only thing the user is actually waiting on is the loading of the actual search results.
         </p>
-        <p>
-          The project is still in progress, but you can view it here: <a href="https://chasetravel.netlify.app/"
-            target="_blank" rel="noopener noreferrer">https://chasetravel.netlify.app/</a>. </p>
         <p>Here's my current progress:</p>
         <ul class="checklist">
           <li><input type="checkbox" checked disabled> Start with a stock Vue3/SASS/Vite app. Implement proper routing.
