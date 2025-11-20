@@ -258,8 +258,9 @@ export default {
 
         <h3>Tech</h3>
         <ul>
-          <li>On the client side, there is absolutely no need to have the client render everything, most
-            of it should be server-side generated (content hydrated server side, then JS app functionality rendered on
+          <li>There's no need to have the client render everything — most
+            of the markup should be server-side generated or rendered (only JS app
+            <em>functionality</em> rendered on
             client), to improve performance.
           </li>
           <li>As for the services, repeated user requests should be cached at a minimum,
@@ -324,8 +325,16 @@ export default {
               target="_blank"
               rel="noopener noreferrer">https://www.seat31b.com/2019/05/chases-terrible-horrible-no-good-very-bad-travel-portal/</a>)
           </li>
-          <li>Chase customer support is not reachable via chat, users have to call and wait instead. This is critical
-            because inherently, when booking through third party, users are going to have to reach support.</li>
+          <li>Customer support is not reachable via chat — users have to call and wait instead. This is critical
+            because inherently, when booking through third party through Chase, users are going to have to make any
+            changes through Chase support. Poor
+            customer service and hard-to-find
+            availability for flights are frequently cited as the leading causes of travel stress (<a
+              href="https://www.bankrate.com/credit-cards/news/survey-summer-vacation/" target="_blank"
+              rel="noopener noreferrer">https://www.bankrate.com/credit-cards/news/survey-summer-vacation/</a>). Chase
+            cardmembers paying $895/yr for Reserve cards should <em>especially</em> not be waiting on hold because Chase
+            engineers couldn’t
+            figure out how to include relevant metadata in support requests.</li>
         </ul>
         <div class="detail-grid">
           <div class="detail-item">
@@ -350,23 +359,22 @@ export default {
           How did this happen?
         </h2>
         <p>
-          The age-old adage of form over function seems to be at play here:
+          The age-old adage of form over function seems to be at play here.
         </p>
-        <ul>
-          <li>Perhaps the real goal was to impress executives and just make the product look good enough for slick
-            marketing campaigns. Some evidence: A widely-trumpted recent &ldquo;redesign&rdquo; fixed some white space
-            issues, added new
-            fonts, and slightly improved the general layout, despite the fact that users don&rsquo;t care about fonts or
-            stock image
-            choice at
-            all - they care about legibility, familiarity, and responsiveness of the interface. Fundamentally, using the
-            app still feels mostly the same.</li>
-          <li>The focus instead should have been to make a UI that was simple and easy enoughto use that it felt
-            ubiquitous. The user should have felt so at home with the flow that it would require additional cognitive
-            load to use a different app instead. In other words, instead of forcing the user to log into Chase and use
-            points, users should want to use Chase Travel <em>by default</em> because other options aren&rsquo;t worth
-            the switch, and in addition, points and Points Boost features are only available through Chase.</li>
-        </ul>
+        <p>Perhaps the real goal was to impress executives and just make the product look good enough for slick
+          marketing campaigns. Some evidence: A widely-trumpted recent &ldquo;redesign&rdquo; fixed some white space
+          issues, added new
+          fonts, and slightly improved the general layout, despite the fact that users don&rsquo;t care about fonts or
+          stock image
+          choice at
+          all - they care about legibility, familiarity, and responsiveness of the interface. Fundamentally, using the
+          app still feels mostly the same.</p>
+        <p>The focus instead should have been to make a UI that was simple and easy enoughto use that it felt
+          ubiquitous. The user should have felt so at home with the flow that it would require additional cognitive
+          load to use a different app instead. In other words, instead of forcing the user to log into Chase and use
+          points, users should want to use Chase Travel <em>by default</em> because other options aren&rsquo;t worth
+          the switch, and in addition, points and Points Boost features are only available through Chase.</p>
+
       </div>
 
       <div class="detail-section">
@@ -374,16 +382,11 @@ export default {
           Solutions
         </h2>
         <ul>
-          <li><strong>Support</strong> - this is probably the most critical fix. Poor customer service and hard-to-find
-            availability for flights are frequently cited as the leading causes of travel stress (<a
-              href="https://www.bankrate.com/credit-cards/news/survey-summer-vacation/" target="_blank"
-              rel="noopener noreferrer">https://www.bankrate.com/credit-cards/news/survey-summer-vacation/</a>).</li>
-          <li>One quick fix to this would be an iMessage integration. About 79% of Americans aged 18-34 use iPhones, and
+          <li>Fixing support should be a top priority. One quick fix to this would be an iMessage integration. About 79%
+            of Americans aged 18-34 use iPhones, and
             the target demographic for Chase Reserve customers is the Millennial and Gen Z age groups (ages 25-44) with
             high incomes ($150,000+). The UI should include options to generate tickets/start conversations with minimal
-            input from the user - especially for cardmembers paying $895/yr for Reserve cards, they should NOT be
-            waiting on hold because Chase engineers couldn&rsquo;t figure out how to include this metadata in the
-            request.
+            input from the user.
           </li>
           <li>Flights UI is actually a simple fix - this should be a straight port of Kayak's UI.</li>
           <li>Hotels should be a mix of Hotels.com and Airbnb's UIs. Information density should be akin to Hotels.com,
