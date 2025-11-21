@@ -464,13 +464,18 @@ export default {
           <li><input type="checkbox" checked disabled> Building out the individual listing pages and hotel pages should
             be a breeze once we have the schemas and
             UI components in place.</li>
-          <li><input type="checkbox" disabled> Let's add an Itinerary page for all booked flights and hotels.</li>
-          <li><input type="checkbox" disabled> Support is an important component of this application. Let's add that
-            section to the bottom of Itineraries
+          <li><input type="checkbox" checked disabled> Let's add an Itinerary page for all booked flights and hotels.
+          </li>
+          <li><input type="checkbox" checked disabled> Support is an important component of this application. Let's add
+            that
+            section to Itineraries
             and make it clear that the user can just iMessage the support team directly.</li>
-          <li><input type="checkbox" disabled> For the purposes of the demo, we can just mirror our application global
+          <li><input type="checkbox" checked disabled> For the purposes of the demo, we can just mirror our application
+            global
             state for user itineraries to
             localStorage.</li>
+          <li><input type="checkbox" disabled> Let's ensure references to Points and Points Boost are added to the
+            application.</li>
         </ul>
       </div>
 
