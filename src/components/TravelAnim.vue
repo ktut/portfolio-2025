@@ -3,28 +3,35 @@ export default {
   name: 'TravelAnim',
   data() {
     return {
-      // Animation data
+      imagesLoaded: false,
+      loadedImageCount: 0,
+      TOTAL_IMAGES: 3,
     }
   },
-  mounted() {
-    // Initialize animation
+  methods: {
+    handleImageLoad() {
+      this.loadedImageCount++
+      if (this.loadedImageCount >= this.TOTAL_IMAGES) {
+        this.imagesLoaded = true
+      }
+    }
   }
 }
 </script>
 
 <template>
-  <div class="image-top-group" v-view-transition-name="'travel-anim'">
-    <div class="parallax__layer parallax__layer--back">
+  <div class="image-top-group" :class="{ 'image-top-group--loading': !imagesLoaded }" v-view-transition-name="'travel-anim'">
+    <div class="parallax__layer parallax__layer--back" :class="{ 'parallax__layer--loading': !imagesLoaded, 'parallax__layer--loaded': imagesLoaded }">
       <img src="@/assets/g0.png" srcset="@/assets/g0-lo.jpg 480w, @/assets/g0.png 1920w"
-        sizes="(max-width: 768px) 480px, 1920px" alt="Background layer" />
+        sizes="(max-width: 768px) 480px, 1920px" alt="Background layer" @load="handleImageLoad" />
     </div>
-    <div class="parallax__layer parallax__layer--base">
+    <div class="parallax__layer parallax__layer--base" :class="{ 'parallax__layer--loading': !imagesLoaded, 'parallax__layer--loaded': imagesLoaded }">
       <img src="@/assets/g1.png" srcset="@/assets/g1-lo.png 480w, @/assets/g1.png 1920w"
-        sizes="(max-width: 768px) 480px, 1920px" alt="Middle layer" />
+        sizes="(max-width: 768px) 480px, 1920px" alt="Middle layer" @load="handleImageLoad" />
     </div>
-    <div class="parallax__layer parallax__layer--fore">
+    <div class="parallax__layer parallax__layer--fore" :class="{ 'parallax__layer--loading': !imagesLoaded, 'parallax__layer--loaded': imagesLoaded }">
       <img src="@/assets/g2.png" srcset="@/assets/g2-lo.png 480w, @/assets/g2.png 1920w"
-        sizes="(max-width: 768px) 480px, 1920px" alt="Foreground layer" />
+        sizes="(max-width: 768px) 480px, 1920px" alt="Foreground layer" @load="handleImageLoad" />
     </div>
   </div>
 </template>
@@ -78,12 +85,27 @@ export default {
     height: 640px;
   }
 
+  &.image-top-group--loading {
+    background-image: url(@/assets/gua-lo.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
   .parallax__layer {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    transition: opacity 0.6s ease-in-out;
+
+    &.parallax__layer--loading {
+      opacity: 0;
+    }
+
+    &.parallax__layer--loaded {
+      opacity: 1;
+    }
 
     img {
       display: block;
