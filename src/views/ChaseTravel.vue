@@ -241,7 +241,7 @@ export default {
         <h3>Product</h3>
         <ul>
           <li><strong>Why is there no dedicated app?</strong> Or at least a mobile-friendly version of the website?
-            Seems like a pretty basic omission for a travel booking web applciation.</li>
+            Seems like a pretty basic omission for a travel booking service.</li>
           <li><strong>Prices are uncompetitive and frequently flat-out incorrect.</strong> This is well documented: (<a
               href="https://www.seat31b.com/2019/05/chases-terrible-horrible-no-good-very-bad-travel-portal/"
               target="_blank"
