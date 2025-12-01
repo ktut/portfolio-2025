@@ -115,11 +115,12 @@ export default {
     <section class="content-wrapper">
       <header class="project-header">
         <h1 class="project-title">
-          <img src="@/assets/chase-logo.png" alt="Chase Logo" class="chase-logo">Chase Travel: A Case Study
+          <img src="@/assets/chase-logo.png" alt="Chase Logo" class="chase-logo">Chase Travel: A Case Study and
+          Reimagining
         </h1>
         <h2 class="project-subtitle">
           How to fix a clunky travel booking app? Get some real user feedback, then apply industry
-          standards, cutting-edge AI tooling, and some common sense.
+          standards, cutting-edge AI tooling and some common sense.
         </h2>
 
         <div class="tech-stack">
@@ -176,6 +177,126 @@ export default {
           and a
           significant part of
           the consumer travel market.
+        </p>
+      </div>
+
+      <div class="detail-section">
+        <h2 class="section-title" id="typical-user-flows">
+          Typical Hotel Booking User Flow
+        </h2>
+        <p>
+          Let's focus on a typical user journey for booking a hotel on Chase Travel, showing both
+          logged-in and logged-out user experience (the flights user journey is similar, except there's no detail page).
+        </p>
+
+        <div class="user-flow-diagram">
+          <div class="flow-legend">
+            <div class="legend-item">
+              <span class="legend-dot logged-out"></span>
+              <span>Logged Out User</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-dot logged-in"></span>
+              <span>Logged In User</span>
+            </div>
+          </div>
+
+          <div class="flow-row">
+            <div class="flow-card">
+              <div class="card-header">Search Results</div>
+              <div class="card-body">
+                <p>User browses hotels</p>
+                <ul>
+                  <li>Select dates & guests</li>
+                  <li>Filter by price, rating, amenities</li>
+                  <li>View on map</li>
+                  <li>Compare options</li>
+                </ul>
+                <div class="user-states">
+                  <span class="state logged-out">Limited info</span>
+                  <span class="state logged-in">Points displayed</span>
+                </div>
+              </div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-card">
+              <div class="card-header">Hotel Detail Page</div>
+              <div class="card-body">
+                <p>User selects a room</p>
+                <ul>
+                  <li>View photos & amenities</li>
+                  <li>Read reviews</li>
+                  <li>Choose room type</li>
+                </ul>
+                <div class="user-states">
+                  <span class="state logged-out">Prompted to sign in</span>
+                  <span class="state logged-in">Points Boost shown</span>
+                </div>
+              </div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-card">
+              <div class="card-header">Booking & Payment</div>
+              <div class="card-body">
+                <p>Complete reservation</p>
+                <ul>
+                  <li>Enter guest information</li>
+                  <li>Choose payment method</li>
+                  <li>Apply points (if logged in)</li>
+                  <li>Confirm booking</li>
+                </ul>
+                <div class="user-states">
+                  <span class="state logged-out">Must log in or create account</span>
+                  <span class="state logged-in">Quick checkout with saved info</span>
+                </div>
+              </div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-card">
+              <div class="card-header">My Bookings</div>
+              <div class="card-body">
+                <p>Manage your reservation</p>
+                <div class="bookings-grid">
+                  <div class="booking-action">
+                    <strong>View Details</strong>
+                    <ul>
+                      <li>Confirmation number</li>
+                      <li>Hotel info & directions</li>
+                      <li>Cancellation policy</li>
+                    </ul>
+                  </div>
+                  <div class="booking-action">
+                    <strong>Modify Dates</strong>
+                    <ul>
+                      <li>Change check-in/out</li>
+                      <li>Subject to availability</li>
+                      <li>May incur fees</li>
+                    </ul>
+                  </div>
+                  <div class="booking-action">
+                    <strong>Contact Support</strong>
+                    <ul>
+                      <li>Chat or call</li>
+                      <li>Special requests</li>
+                      <li>Cancellation help</li>
+                    </ul>
+                  </div>
+                  <div class="booking-action">
+                    <strong>During Stay</strong>
+                    <ul>
+                      <li>Digital confirmation</li>
+                      <li>Hotel contact info</li>
+                      <li>Emergency support</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p>
+          Now that we understand how the app is used, let's see what users are saying about it.
         </p>
       </div>
 
@@ -245,27 +366,26 @@ export default {
         <ul>
           <li><strong>Why is there no dedicated app?</strong> Or at least a mobile-friendly version of the website?
             Seems like a pretty basic omission for a travel booking service.</li>
-          <li><strong>Prices are uncompetitive and frequently flat-out incorrect.</strong> This is well documented: (<a
+          <li><strong>Prices are uncompetitive and frequently flat-out incorrect.</strong> This is <a
               href="https://www.seat31b.com/2019/05/chases-terrible-horrible-no-good-very-bad-travel-portal/"
-              target="_blank"
-              rel="noopener noreferrer">https://www.seat31b.com/2019/05/chases-terrible-horrible-no-good-very-bad-travel-portal/</a>)
+              target="_blank" rel="noopener noreferrer">well-documented</a>.
           </li>
           <li><strong>Customer support is not reachable via chat — users have to call and wait instead.</strong> This is
             critical
             because inherently, when booking through third party through Chase, users are going to have to make any
             changes through Chase support. Poor
             customer service and hard-to-find
-            availability for flights are frequently cited as the leading causes of travel stress (<a
-              href="https://www.bankrate.com/credit-cards/news/survey-summer-vacation/" target="_blank"
-              rel="noopener noreferrer">https://www.bankrate.com/credit-cards/news/survey-summer-vacation/</a>). Chase
+            availability for flights <a href="https://www.bankrate.com/credit-cards/news/survey-summer-vacation/"
+              target="_blank" rel="noopener noreferrer">are frequently cited</a> as the leading causes of travel stress.
+            Chase
             cardmembers paying $895/yr for Reserve cards should <em>especially</em> not be waiting on hold because Chase
             engineers couldn’t
             figure out how to include relevant metadata in support requests.</li>
         </ul>
       </div>
       <div class="detail-section">
-        <h2 class="section-title" id="visual-examples">
-          Visual examples
+        <h2 class="section-title" id="ui-issues">
+          UI examples vs. competitors
         </h2>
         <div class="detail-grid">
           <div class="detail-item">
@@ -644,6 +764,200 @@ export default {
     strong {
       color: #333;
       font-weight: 700;
+    }
+  }
+
+  .user-flow-diagram {
+    max-width: 100%;
+    margin: 1rem auto 0;
+    padding: 2rem;
+
+    .flow-row {
+      display: flex;
+      align-items: stretch;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .flow-card {
+      flex: 1;
+      background: white;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+
+      .card-header {
+        padding: 0.75rem 1rem;
+        background: #f5f5f5;
+        border-bottom: 1px solid #ddd;
+        font-weight: 600;
+        font-size: 0.95rem;
+        font-family: 'comma-sans', sans-serif;
+        color: #333;
+      }
+
+      .card-body {
+        padding: 1rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        p {
+          margin: 0 0 0.75rem 0;
+          font-weight: 600;
+          color: #333;
+          font-size: 0.9rem;
+        }
+
+        ul {
+          margin: 0 0 0.75rem 0;
+          padding-left: 1.25rem;
+          text-align: left;
+
+          li {
+            margin-bottom: 0.4rem;
+            line-height: 1.6;
+            font-size: 0.85rem;
+            color: #555;
+          }
+        }
+
+        .bookings-grid {
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+
+          .booking-action {
+            font-family: 'comma-sans', sans-serif !important;
+            padding: 0.75rem;
+            background: #fafafa;
+            border-radius: 3px;
+            border: 1px solid #ddd;
+
+            strong {
+              display: block;
+              margin-bottom: 0.5rem;
+              color: #333;
+              font-size: 0.9rem;
+            }
+
+            ul {
+              margin: 0;
+              padding-left: 1.25rem;
+
+              li {
+                margin-bottom: 0.3rem;
+                font-size: 0.8rem;
+                color: #666;
+              }
+            }
+          }
+        }
+      }
+
+      .user-states {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        margin-top: auto;
+        padding: 0.75rem 1rem;
+        border-top: 1px solid #eee;
+
+        .state {
+          padding: 0.4rem 0.6rem;
+          background: #fafafa;
+          border: 1px solid #ddd;
+          border-radius: 3px;
+          font-size: 0.8rem;
+          font-weight: 500;
+          font-family: 'comma-sans', sans-serif;
+
+          &.logged-out {
+            color: #333;
+            border-color: #333;
+            background: #f0f0f0;
+          }
+
+          &.logged-in {
+            color: #0066cc;
+            border-color: #0066cc;
+            background: #e8f2ff;
+          }
+        }
+      }
+    }
+
+    .flow-arrow {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      color: #999;
+      font-weight: 300;
+      flex-shrink: 0;
+    }
+
+    .flow-legend {
+      position: sticky;
+      top: 110px;
+      background: white;
+      padding: 1rem;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #ddd;
+
+      .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.85rem;
+        color: #666;
+        font-family: 'comma-sans', sans-serif;
+
+        .legend-dot {
+          width: 16px;
+          height: 16px;
+          border-radius: 2px;
+          border: 1px solid;
+
+          &.logged-out {
+            background: #f0f0f0;
+            border-color: #333;
+          }
+
+          &.logged-in {
+            background: #e8f2ff;
+            border-color: #0066cc;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 968px) {
+      padding: 1rem;
+
+      .flow-row {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .flow-arrow {
+        transform: rotate(90deg);
+        margin: 0.25rem 0;
+        align-self: center;
+        font-size: 1.2rem;
+        height: 1rem;
+      }
+
+      .flow-legend {
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: center;
+      }
     }
   }
 }
