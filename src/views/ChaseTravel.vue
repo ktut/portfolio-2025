@@ -236,7 +236,7 @@ export default {
             modifying filters until the page is
             finished loading. No proper use of loading indicators exist. Missed
             opportunities for
-            pre-fetching abound. Images are not loaded asynchronously or &ldquo;lazily&rdquo;.</li>
+            pre-fetching abound. Images are not loaded asynchronously (&ldquo;lazily&rdquo;) as they should be.</li>
         </ul>
         <h3>Product</h3>
         <ul>
@@ -342,7 +342,9 @@ export default {
           <div class="detail-item">
             <img src="@/assets/Chase-travel-inconsistent-ui.png" alt="Chase Cart for Travel" />
             <p>
-              "Start shopping"? Perhaps this should be mentioning "itineraries" instead of "cart"s?
+              Components seem to be reused from other Chase applications willy-nilly without considering the context of
+              the Travel
+              application in particular.
             </p>
           </div>
         </div>
