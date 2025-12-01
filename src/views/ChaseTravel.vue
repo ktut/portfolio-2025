@@ -47,9 +47,13 @@ export default {
   mounted() {
     this.collectSections()
     window.addEventListener('scroll', this.handleScroll)
+    this.setupScrollAnimation()
   },
   unmounted() {
     window.removeEventListener('scroll', this.handleScroll)
+    if (this.scrollObserver) {
+      this.scrollObserver.disconnect()
+    }
   },
   methods: {
     collectSections() {
@@ -96,6 +100,31 @@ export default {
       })
 
       this.activeSection = currentSection
+    },
+    setupScrollAnimation() {
+      // Only apply on mobile
+      if (window.innerWidth > 968) return
+
+      const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      }
+
+      this.scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible')
+          }
+        })
+      }, options)
+
+      // Observe flow cards and arrows
+      const flowCards = document.querySelectorAll('.flow-card')
+      const flowArrows = document.querySelectorAll('.flow-arrow')
+
+      flowCards.forEach(card => this.scrollObserver.observe(card))
+      flowArrows.forEach(arrow => this.scrollObserver.observe(arrow))
     }
   }
 }
@@ -945,12 +974,29 @@ export default {
         gap: 0.5rem;
       }
 
+      .flow-card {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+
+        &.visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
       .flow-arrow {
         transform: rotate(90deg);
         margin: 0.25rem 0;
         align-self: center;
         font-size: 1.2rem;
         height: 1rem;
+        opacity: 0;
+        transition: opacity 0.5s ease-out;
+
+        &.visible {
+          opacity: 1;
+        }
       }
 
       .flow-legend {
