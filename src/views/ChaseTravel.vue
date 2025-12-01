@@ -161,16 +161,18 @@ export default {
         <ul>
           <li>Chase Travel sales volume was about $8 billion in 2022 was estimated at $10
             billion in 2023.</li>
-          <li>At investor days, they have said that they are a &ldquo;Top 5 consumer leisure travel
+          <li>At a recent investor day, they have said that they are a &ldquo;Top 5 consumer leisure travel
             provider&rdquo; and that 1 in 4 leisure travel dollars are spent on Chase cards.</li>
           <li>They have seen an average 24% growth in transactions through Chase Travel year
             over year since launch, and approximately 40% YOY growth in the total number of users purchasing travel on
             Chase.</li>
-          <li>Chase has also spent hundreds of millions of dollars (estimated) on securing lounge locations across the
+          <li>Chase has spent hundreds of millions of dollars (estimated) on securing lounge locations across the
             US, all Chase Travel branded.</li>
         </ul>
         <p>
-          Therefore, it&rsquo;s fair to say that Chase Travel is a significant part of Chase&rsquo;s consumer business,
+          Therefore, it would be a logical conclusion to say that <strong>Chase Travel is a significant part of
+            Chase&rsquo;s consumer
+            business</strong>,
           and a
           significant part of
           the consumer travel market.
@@ -183,7 +185,7 @@ export default {
         </h2>
         <p>
           I have a lot of friends who are both Chase Reserve cardholders and Chase Travel users, both for personal and
-          business. Here&rsquo;s some of their
+          business. Here&rsquo;s some of their (consolidated)
           feedback.
         </p>
         <blockquote>
@@ -399,7 +401,8 @@ export default {
             map/listing
             views should be akin to Airbnb.</li>
           <li>The app should mention Chase points and offers prominently, but not inhibit the user by doing so.
-            <strong>Absolutely no popups or banners of any kind should ever be displayed</strong>. Instead, use inline,
+            <strong>Absolutely no popups or large banners of any kind should ever be displayed</strong>. Instead, use
+            inline,
             customized
             treatments for each promotion or offer.
           </li>
