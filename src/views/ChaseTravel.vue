@@ -445,15 +445,20 @@ export default {
         <p>Given the complexity and
           scale of using real data, I decided to use mock data, but it wouldn't be a stretch to implement
           this with real data if needed, as many of these APIs are already available publicly.</p>
-        <p>Using cutting-edge LLM-powered tools, we can skip the Figma mockups and start with Claude and
-          Cursor instead. <a href="https://www.youtube.com/watch?v=bdh8k6DyKxE" target="_blank"
-            rel="noopener noreferrer">Here's a video</a> from Cursor's head of design where he describes his workflow,
-          which is pretty similar.</p>
+        <p>Using cutting-edge LLM tools, we can skip the Figma mockups and use Claude and
+          Cursor instead to just generate a working web app with the core user flows, and then iterate on top of it. <a
+            href="https://www.youtube.com/watch?v=bdh8k6DyKxE" target="_blank" rel="noopener noreferrer">Here's a
+            video</a> from Cursor's head of design where he describes a similar workflow.</p>
         <p>We
-          can start by tightly define schemas for flights, hotels, user searches, and user bookings, using Typescript.
+          can start by <strong>tightly defining schemas</strong> in Typescript for <strong>flights, hotels, user
+            searches, and user
+            bookings</strong>.
           Once
           we have the schemas in place, we can
-          generate mock data with Claude Code. For flights, we'll need the real airlines, but the individual flights can
+          <strong>generate mock data</strong> with Claude Code.
+        </p>
+        <p>For flights, we'll need the real airlines, but the
+          individual flights can
           be mocked. For hotels, we'll start with 20 hotels per city, and have Claude pull real geolocation data and
           descriptions (we'll use stock images for now, we can add real images later, as that's a lot more effort to
           pull individually). We can then build out app, view by view, in the Cursor IDE, with
@@ -467,42 +472,42 @@ export default {
           way, the only thing the user is actually waiting on is the loading of the actual search results.
         </p>
         <p>Here's my current progress:</p>
-        <ul class="checklist">
-          <li><input type="checkbox" checked disabled> Start with a stock Vue3/SASS/Vite app. Implement proper routing.
+        <ul>
+          <li>Start with a stock Vue3/SASS/Vite app. Implement proper routing.
           </li>
-          <li><input type="checkbox" checked disabled> Let&rsquo;s get some strong lead art going that isn't a stock
+          <li>Let&rsquo;s get some strong lead art going that isn't a stock
             photo. I&rsquo;ll use a photo I took on a
             trip to Lake Atitlan in
             Guatemala a few
             years ago. In Photoshop, we can break it apart into layers, then use a <a
               href="https://keithclark.co.uk/articles/pure-css-parallax-websites/" target="_blank"
               rel="noopener noreferrer">CSS-only parallax effect</a> on the search page.</li>
-          <li><input type="checkbox" checked disabled> Let&rsquo;s build schemas for flights and hotels in Typescript.
+          <li>Let&rsquo;s build schemas for flights and hotels in Typescript.
             Once we have the schemas in place, we can
             use
             Claude to generate some mock data for these schemas.</li>
-          <li><input type="checkbox" checked disabled> Let's get basic search in place, keeping all the search params in
+          <li>Let's get basic search in place, keeping all the search params in
             the URL for easy sharing and
             bookmarking.</li>
-          <li><input type="checkbox" checked disabled> Let&rsquo;s add E2E testing in Claude as well, and ensure this is
+          <li>Let&rsquo;s add E2E testing in Claude as well, and ensure this is
             run after every Claude operation (along
             with a
             fresh build) so we can automatically fix issues as they arise, and negate the need for constant manual
             testing.</li>
-          <li><input type="checkbox" checked disabled> Building out the individual listing pages and hotel pages should
+          <li>Building out the individual listing pages and hotel pages should
             be a breeze once we have the schemas and
             UI components in place.</li>
-          <li><input type="checkbox" checked disabled> Let's add an Itinerary page for all booked flights and hotels.
+          <li>Let's add an Itinerary page for all booked flights and hotels.
           </li>
-          <li><input type="checkbox" checked disabled> Support is an important component of this application. Let's add
+          <li>Support is an important component of this application. Let's add
             that
             section to Itineraries
             and make it clear that the user can just iMessage the support team directly.</li>
-          <li><input type="checkbox" checked disabled> For the purposes of the demo, we can just mirror our application
+          <li>For the purposes of the demo, we can just mirror our application
             global
             state for user itineraries to
             localStorage.</li>
-          <li><input type="checkbox" disabled> Let's ensure references to Points and Points Boost are added to the
+          <li>Let's ensure references to Points and Points Boost are added to the
             application.</li>
         </ul>
       </div>
@@ -620,31 +625,6 @@ export default {
   ol {
     list-style-type: decimal;
   }
-
-  .checklist {
-    list-style-type: none;
-    padding-left: 1.5rem;
-
-    li {
-      gap: 0.5rem;
-
-      input[type="checkbox"] {
-        margin-top: 0.3rem;
-        flex-shrink: 0;
-        width: 18px;
-        height: 18px;
-        cursor: default;
-        display: inline-block;
-        float: left;
-        margin-right: 7px;
-
-        &:checked {
-          accent-color: #22c55e;
-        }
-      }
-    }
-  }
-
 
   .disclaimer {
     max-width: 700px;
