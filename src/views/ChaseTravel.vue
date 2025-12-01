@@ -105,6 +105,14 @@ export default {
       // Only apply on mobile
       if (window.innerWidth > 968) return
 
+      // Observe flow cards and arrows
+      const flowCards = document.querySelectorAll('.flow-card')
+      const flowArrows = document.querySelectorAll('.flow-arrow')
+      const allElements = [...flowCards, ...flowArrows]
+
+      let visibleCount = 0
+      const totalElements = allElements.length
+
       const options = {
         root: null,
         rootMargin: '0px',
@@ -113,18 +121,23 @@ export default {
 
       this.scrollObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting && !entry.target.classList.contains('visible')) {
             entry.target.classList.add('visible')
+            visibleCount++
+
+            // Stop observing this specific element
+            this.scrollObserver.unobserve(entry.target)
+
+            // If all elements have been animated, disconnect the observer
+            if (visibleCount >= totalElements) {
+              this.scrollObserver.disconnect()
+              this.scrollObserver = null
+            }
           }
         })
       }, options)
 
-      // Observe flow cards and arrows
-      const flowCards = document.querySelectorAll('.flow-card')
-      const flowArrows = document.querySelectorAll('.flow-arrow')
-
-      flowCards.forEach(card => this.scrollObserver.observe(card))
-      flowArrows.forEach(arrow => this.scrollObserver.observe(arrow))
+      allElements.forEach(element => this.scrollObserver.observe(element))
     }
   }
 }
@@ -825,6 +838,7 @@ export default {
         font-size: 0.95rem;
         font-family: 'comma-sans', sans-serif;
         color: #333;
+        text-align: left;
       }
 
       .card-body {
@@ -838,6 +852,7 @@ export default {
           font-weight: 600;
           color: #333;
           font-size: 0.9rem;
+          text-align: left;
         }
 
         ul {
@@ -850,6 +865,7 @@ export default {
             line-height: 1.6;
             font-size: 0.85rem;
             color: #555;
+            text-align: left;
           }
         }
 
@@ -870,16 +886,19 @@ export default {
               margin-bottom: 0.5rem;
               color: #333;
               font-size: 0.9rem;
+              text-align: left;
             }
 
             ul {
               margin: 0;
               padding-left: 1.25rem;
+              text-align: left;
 
               li {
                 margin-bottom: 0.3rem;
                 font-size: 0.8rem;
                 color: #666;
+                text-align: left;
               }
             }
           }
@@ -982,6 +1001,44 @@ export default {
         &.visible {
           opacity: 1;
           transform: translateY(0);
+        }
+
+        .card-header {
+          text-align: center;
+        }
+
+        .card-body {
+          p {
+            text-align: center;
+          }
+
+          ul {
+            text-align: center;
+            list-style-position: inside;
+            padding-left: 0;
+
+            li {
+              text-align: center;
+            }
+          }
+
+          .bookings-grid {
+            .booking-action {
+              strong {
+                text-align: center;
+              }
+
+              ul {
+                text-align: center;
+                list-style-position: inside;
+                padding-left: 0;
+
+                li {
+                  text-align: center;
+                }
+              }
+            }
+          }
         }
       }
 
