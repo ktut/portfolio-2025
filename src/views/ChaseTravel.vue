@@ -360,18 +360,22 @@ export default {
           The age-old adage of form over function seems to be at play here.
         </p>
         <p>Perhaps the real goal was to impress executives and just make the product look good enough for slick
-          marketing campaigns. Some evidence: A widely-trumpted recent &ldquo;redesign&rdquo; fixed some white space
-          issues, added new
-          fonts, and slightly improved the general layout, despite the fact that users don&rsquo;t care about fonts or
-          stock image
-          choice at
-          all - they care about legibility, familiarity, and responsiveness of the interface. Fundamentally, using the
-          app still feels mostly the same.</p>
-        <p>The focus instead should have been to make a simple, easy-to-use, and familiar UI. Instead of
+          marketing campaigns. Some evidence: A widely-trumpted recent &ldquo;redesign&rdquo; that added a new custom
+          font based on Queens, introduced new branding elements, and slightly improved the general app layout. </p>
+        <p>This misses the mark in a big way. When building functional web UIs, it's important to remember that
+          <strong>users don&rsquo;t care about fonts or
+            stock image
+            choice at
+            all - they care about legibility, familiarity, and responsiveness of the interface.</strong> Fundamentally,
+          using the
+          app still felt mostly the same after these changes.
+        </p>
+        <p>The focus instead should have been to make a simple, easy-to-use, and <em>familiar</em> UI. Instead of
           <em>forcing</em> the
-          user to log into Chase before even seeing the value proposition, users should <em>want</em> to use Chase
+          user to log into Chase before even seeing the value proposition for Points Boost, etc, users should
+          <em>want</em> to use Chase
           Points features like Points Boost because they happen to be available within the interface they are already
-          familiar with.
+          using.
         </p>
 
       </div>
