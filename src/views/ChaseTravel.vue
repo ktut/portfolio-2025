@@ -213,7 +213,8 @@ export default {
           Major issues
         </h2>
         <p>
-          Combining this feedback with my own, I put together a categorized list of issues to resolve:
+          Combining this feedback with my own (I've been a Chase Reserve cardholder and Chase Travel user since 2019), I
+          put together a categorized list of issues to resolve:
         </p>
         <h3>UI/UX</h3>
         <ul>
