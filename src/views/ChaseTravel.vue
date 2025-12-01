@@ -155,7 +155,7 @@ export default {
         <h2 class="section-title" id="product-importance-and-context">
           Product importance and context
         </h2>
-        <p class="lead">
+        <p>
           According to JPMorgan Chase&rsquo;s public statements:
         </p>
         <ul>
@@ -169,7 +169,7 @@ export default {
           <li>Chase has also spent hundreds of millions of dollars (estimated) on securing lounge locations across the
             US, all Chase Travel branded.</li>
         </ul>
-        <p class="lead bottom-border">
+        <p>
           Therefore, it&rsquo;s fair to say that Chase Travel is a significant part of Chase&rsquo;s consumer business,
           and a
           significant part of
@@ -182,7 +182,7 @@ export default {
           User research
         </h2>
         <p>
-          I have a lot of friends who are 1. Chase Reserve cardholders and 2. Chase Travel users, both for personal and
+          I have a lot of friends who are both Chase Reserve cardholders and Chase Travel users, both for personal and
           business. Here&rsquo;s some of their
           feedback.
         </p>
@@ -217,26 +217,53 @@ export default {
         </p>
         <h3>UI/UX</h3>
         <ul>
-          <li>Why do users need to log in to do anything
-            (including basic flight search)? Chase is probably losing tons of non-Chase traffic by doing this. And why
-            on earth is there no dedicated travel app?</li>
-          <li>The overall overall design and components (filters, maps) are poorly done, and aren&rsquo;t
-            mobile-friendly. The user has to scroll way too much
-            due
-            to 1. poor use of white space and 2. poor use of horizontal and vertical layouts for components and
-            filtering. Information should load while the user is able to modify filters.</li>
-          <li>Technically &ldquo;uses&rdquo; React but doesn&rsquo;t
-            use any of the benefits of
-            React (loading some components while keeping others visible, etc), which would greatly enhance the user
-            experience</li>
-          <li>No proper use of loading indicators to improve perceived performance. Many missed opportunities for
-            pre-fetching</li>
-          <li>Image quality is terrible, images are not even loaded async or &ldquo;lazy&rdquo;</li>
-          <li>Points Boost feature is over-emphasized- sometimes three or four times per page (!). The user
+          <li><strong>Users can't use the application without logging in. </strong>Many potential users will just use a
+            different travel booking site instead. If the login service goes down, Chase Travel is inaccessible, too.
+          </li>
+          <li><strong>Chase Points features are over-emphasized, to the detriment of the user experience.</strong> The
+            Points
+            Boost
+            feature is over-emphasized- sometimes three or four times per page (!). The user
             doesn&rsquo;t need to be beaten over the head about &ldquo;value&rdquo; - they can determine value for
             themselves by looking
             at the points and $ spend.</li>
+          <li><strong>Almost the entire UI needs work.</strong> The user has to scroll way too much
+            due
+            to poor use of white space and poor choices of horizontal vs. vertical layouts. Components (filters, maps)
+            aren&rsquo;t
+            mobile-friendly. </li>
+          <li><strong>Both real performance and perceived performance are poor.</strong> The user is blocked from
+            modifying filters until the page is
+            finished loading. No proper use of loading indicators exist. Missed
+            opportunities for
+            pre-fetching abound. Images are not loaded asynchronously or &ldquo;lazily&rdquo;.</li>
         </ul>
+        <h3>Product</h3>
+        <ul>
+          <li><strong>Why is there no dedicated app?</strong> Or at least a mobile-friendly version of the website?
+            Seems like a pretty basic omission for a travel booking web applciation.</li>
+          <li><strong>Prices are uncompetitive and frequently flat-out incorrect.</strong> This is well documented: (<a
+              href="https://www.seat31b.com/2019/05/chases-terrible-horrible-no-good-very-bad-travel-portal/"
+              target="_blank"
+              rel="noopener noreferrer">https://www.seat31b.com/2019/05/chases-terrible-horrible-no-good-very-bad-travel-portal/</a>)
+          </li>
+          <li><strong>Customer support is not reachable via chat — users have to call and wait instead.</strong> This is
+            critical
+            because inherently, when booking through third party through Chase, users are going to have to make any
+            changes through Chase support. Poor
+            customer service and hard-to-find
+            availability for flights are frequently cited as the leading causes of travel stress (<a
+              href="https://www.bankrate.com/credit-cards/news/survey-summer-vacation/" target="_blank"
+              rel="noopener noreferrer">https://www.bankrate.com/credit-cards/news/survey-summer-vacation/</a>). Chase
+            cardmembers paying $895/yr for Reserve cards should <em>especially</em> not be waiting on hold because Chase
+            engineers couldn’t
+            figure out how to include relevant metadata in support requests.</li>
+        </ul>
+      </div>
+      <div class="detail-section">
+        <h2 class="section-title" id="visual-examples">
+          Visual examples
+        </h2>
         <div class="detail-grid">
           <div class="detail-item">
             <img src="@/assets/Chase-travel-loading-global.png" alt="Chase Broken global loading spinner" />
@@ -256,21 +283,6 @@ export default {
 
         </div>
 
-        <h3>Tech</h3>
-        <ul>
-          <li>There's no need to have the client render everything — most
-            of the markup should be server-side generated or rendered (only JS app
-            <em>functionality</em> rendered on
-            client), to improve performance.
-          </li>
-          <li>As for the services, repeated user requests should be cached at a minimum,
-            and some requests for general groups of users should be cached and ready to serve, such as flights between
-            Chicago and New York for users in those areas. </li>
-          <li>Caching decisions should be made by 1. Deep analysis
-            of past searches and 2. Continual adjustments by ops teams on a weekly basis, perhaps LLM/ML-assisted, to
-            update caching based on recent and upcoming events. In my understanding, Chase moved from Expedia to
-            cxLoyalty for APIs, so they should definitely be able to do better on the in-house side here.</li>
-        </ul>
         <div class="detail-grid">
           <div class="detail-item">
             <img src="@/assets/chase-over-promo.png" alt="Chase Over Promotion" />
@@ -318,24 +330,6 @@ export default {
           </div>
 
         </div>
-        <h3>Product</h3>
-        <ul>
-          <li>Prices are uncompetitive and frequently flat-out incorrect. This is well documented: (<a
-              href="https://www.seat31b.com/2019/05/chases-terrible-horrible-no-good-very-bad-travel-portal/"
-              target="_blank"
-              rel="noopener noreferrer">https://www.seat31b.com/2019/05/chases-terrible-horrible-no-good-very-bad-travel-portal/</a>)
-          </li>
-          <li>Customer support is not reachable via chat — users have to call and wait instead. This is critical
-            because inherently, when booking through third party through Chase, users are going to have to make any
-            changes through Chase support. Poor
-            customer service and hard-to-find
-            availability for flights are frequently cited as the leading causes of travel stress (<a
-              href="https://www.bankrate.com/credit-cards/news/survey-summer-vacation/" target="_blank"
-              rel="noopener noreferrer">https://www.bankrate.com/credit-cards/news/survey-summer-vacation/</a>). Chase
-            cardmembers paying $895/yr for Reserve cards should <em>especially</em> not be waiting on hold because Chase
-            engineers couldn’t
-            figure out how to include relevant metadata in support requests.</li>
-        </ul>
         <div class="detail-grid">
           <div class="detail-item">
             <img src="@/assets/Chase-filter-as-modal.png" alt="Chase Broken" />
@@ -369,11 +363,12 @@ export default {
           choice at
           all - they care about legibility, familiarity, and responsiveness of the interface. Fundamentally, using the
           app still feels mostly the same.</p>
-        <p>The focus instead should have been to make a UI that was simple and easy enoughto use that it felt
-          ubiquitous. The user should have felt so at home with the flow that it would require additional cognitive
-          load to use a different app instead. In other words, instead of forcing the user to log into Chase and use
-          points, users should want to use Chase Travel <em>by default</em> because other options aren&rsquo;t worth
-          the switch, and in addition, points and Points Boost features are only available through Chase.</p>
+        <p>The focus instead should have been to make a simple, easy-to-use, and familiar UI. Instead of
+          <em>forcing</em> the
+          user to log into Chase before even seeing the value proposition, users should <em>want</em> to use Chase
+          Points features like Points Boost because they happen to be available within the interface they are already
+          familiar with.
+        </p>
 
       </div>
 
@@ -382,20 +377,42 @@ export default {
           Solutions
         </h2>
         <ul>
-          <li>Fixing support should be a top priority. One quick fix to this would be an iMessage integration. About 79%
+          <li><strong>Fixing support should be a top priority.</strong> One quick fix to this would be an iMessage
+            integration. About 79%
             of Americans aged 18-34 use iPhones, and
             the target demographic for Chase Reserve customers is the Millennial and Gen Z age groups (ages 25-44) with
             high incomes ($150,000+). The UI should include options to generate tickets/start conversations with minimal
             input from the user.
           </li>
-          <li>Flights UI is actually a simple fix - this should be a straight port of Kayak's UI.</li>
-          <li>Hotels should be a mix of Hotels.com and Airbnb's UIs. Information density should be akin to Hotels.com,
+          <li>The Flights UI <strong>should be a straight port of Kayak's UI.</strong></li>
+          <li>The Hotels UI <strong>should be a mix of Hotels.com and Airbnb's UIs</strong>. Information density should
+            be akin to Hotels.com,
             and
             map/listing
             views should be akin to Airbnb.</li>
-          <li>The app should mention Chase points and offers prominently, but not inhibit the user when doing so.
-            Absolutely no popups or banners of any kind should ever be displayed. Instead, use different, standout
-            treatments for individual listings or price offerings.</li>
+          <li>The app should mention Chase points and offers prominently, but not inhibit the user by doing so.
+            <strong>Absolutely no popups or banners of any kind should ever be displayed</strong>. Instead, use inline,
+            customized
+            treatments for each promotion or offer.
+          </li>
+          <li><strong>The webapp should actually use some of React's features</strong>, instead of just being rendered
+            with it. These include loading some components while keeping others visible, having proper loading states,
+            etc, which would greatly enhance the user
+            experience. There's also no need to have the client render everything — most
+            of the markup should be server-side generated or rendered (only JS app
+            <em>functionality</em> rendered on
+            client), to improve performance.
+          </li>
+          <li>As for the services, <strong>repeated user requests should be cached</strong> at a minimum,
+            and some requests for general groups of users should be cached and ready to serve, such as flights between
+            Chicago and New York for users in those areas. </li>
+          <li><strong>Additional advanced search analysis should be done</strong> to improve caching decisions as well.
+            Perhaps some usage of LLMs to do this analysis would be beneficial, or even using machine
+            learning, to
+            update caching based on recent and upcoming events. <a
+              href="https://medium.com/expedia-group-tech/search-speed-making-expedia-flights-faster-5c3f7fec4c10"
+              target="_blank" rel="noopener noreferrer">At Expedia, they analyzed top requests</a> to make these
+            decisions, and also used GraphQL on the client to only fetch the data that was needed.</li>
         </ul>
       </div>
 
