@@ -276,8 +276,8 @@ export default {
             <p>
               ...<em>and</em> use a skeleton loader that covers the entire page? These approaches don't help with either
               real or
-              perceived performance. Instead, use a local loading indicator that covers the specific component, or
-              provide informational text to the user while waiting for the data to load.
+              perceived performance. Instead, use a local loading indicators per-component, or
+              provide information to the user <em>about</em> the current loading state (e.g. "Loading flights...").
             </p>
           </div>
 
@@ -288,7 +288,7 @@ export default {
             <img src="@/assets/chase-over-promo.png" alt="Chase Over Promotion" />
             <img src="@/assets/Chase-broken-coupled.png" alt="Chase Broken" />
             <p>
-              Chase packs the page full of promotions, even thought the user is already a logged-in Chase customer!.
+              Why is the page packed full of promotions to a paying, logged-in Chase customer?
               Also, when the Chase login service goes down, the application is unusable. Maybe the tight coupling of
               Chase
               login to
@@ -307,7 +307,7 @@ export default {
             <img src="@/assets/Chase-Travel-hotel-search.webp" alt="Chase Travel hotel search" />
             <video autoplay loop muted playsinline src="@/assets/Chase-cant-move-map.mov" />
             <p>
-              Chase's map interaction for hotel search results is just straight-up broken - the map annoyingly snaps
+              The hotel search results map is just straight-up broken - it annoyingly snaps
               back to the center after every drag. The interface has extremely poor use of white space and only lists
               two properties at a time.
             </p>
@@ -324,8 +324,8 @@ export default {
           <div class="detail-item full-width">
             <img src="@/assets/Airbnb-list-view.png" alt="Airbnb list view" />
             <p>
-              Airbnb keeps the per-property information density down so they can show more properties at a time along
-              with the map view.
+              Airbnb keeps the per-property information density down in order to show more properties at a time and
+              still retain the map view.
             </p>
           </div>
 
@@ -334,8 +334,9 @@ export default {
           <div class="detail-item">
             <img src="@/assets/Chase-filter-as-modal.png" alt="Chase Broken" />
             <p>
-              On desktop, you can't see the list view while adjusting filters - you're forced to use a modal to make
-              adjustments and then hope that your results update accordingly.
+              On desktop while browsing flights, the user can't see the flight list while adjusting filters - they're
+              forced
+              into a modal to make their changes, and then hope that their results update accordingly.
               This is a mobile-only approach that should not be replicated on desktop.
             </p>
           </div>
