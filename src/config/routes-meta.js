@@ -1,7 +1,7 @@
 // Centralized route metadata configuration
 // Used by both the Vue Router and the static HTML generator
 
-export const routesMeta = {
+const routesMeta = {
   '/': {
     displayName: 'Home',
     ogImage: 'https://rkdvis.com/assets/me-burgundy-social.jpg',
@@ -63,4 +63,11 @@ export const routesMeta = {
     ogDescription:
       'Portraits shot for Chicago Sun-Times SPLASH magazine and other clients'
   }
+}
+
+// Export for both CommonJS (build script) and ES modules (Vue Router)
+module.exports = { routesMeta }
+// Also support ES module import
+if (typeof exports !== 'undefined') {
+  exports.routesMeta = routesMeta
 }

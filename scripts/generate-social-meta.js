@@ -2,17 +2,15 @@ const fs = require('fs')
 const path = require('path')
 
 // Import the routes metadata from the shared config
-// Since we're using CommonJS here, we need to dynamically import the ES module
-async function generateStaticHTML() {
-  // Dynamic import for ES module
-  const { routesMeta } = await import('../src/config/routes-meta.js')
+const { routesMeta } = require('../src/config/routes-meta.js')
 
-  // Convert routesMeta to routes array format
-  const routes = Object.entries(routesMeta).map(([path, meta]) => ({
-    path,
-    meta
-  }))
+// Convert routesMeta to routes array format
+const routes = Object.entries(routesMeta).map(([path, meta]) => ({
+  path,
+  meta
+}))
 
+function generateStaticHTML() {
   function updateMetaTags(html, meta) {
     let updatedHtml = html
 
@@ -110,8 +108,10 @@ async function generateStaticHTML() {
   )
 }
 
-// Run the async function
-generateStaticHTML().catch((error) => {
+// Run the function
+try {
+  generateStaticHTML()
+} catch (error) {
   console.error('Error generating static HTML:', error)
   process.exit(1)
-})
+}
