@@ -116,6 +116,10 @@ const routes = [
       ogDescription:
         'Portraits shot for Chicago Sun-Times SPLASH magazine and other clients'
     }
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    redirect: '/'
   }
 ]
 
