@@ -1,135 +1,54 @@
 <script>
 export default {
   name: 'LogoSlider',
+  data() {
+    return {
+      logos: [
+        { src: require('@/assets/logos/ada25-min.png'), height: '50px', tooltip: 'Portrait photography' },
+        { src: require('@/assets/logos/avant-min.png'), height: '50px', tooltip: 'Portrait, event photography' },
+        { src: require('@/assets/logos/barrys-min.png'), height: '40px', tooltip: 'Event photography' },
+        { src: require('@/assets/logos/cct-min.png'), height: '75px', tooltip: 'Portrait, event photography' },
+        { src: require('@/assets/logos/chimag-min.png'), height: '60px', tooltip: 'Web design, development, admin work, photo, video, print design' },
+        { src: require('@/assets/logos/conagra-min.png'), height: '90px', tooltip: 'Portrait photography' },
+        { src: require('@/assets/logos/cps-min.png'), height: '70px', tooltip: 'Portrait, event photography' },
+        { src: require('@/assets/logos/cruises-min.png'), height: '30px', tooltip: 'Videography' },
+        { src: require('@/assets/logos/dalhousie-min.png'), height: '50px', tooltip: 'Portrait photography' },
+        { src: require('@/assets/logos/firsttee-min.png'), height: '50px', tooltip: 'Event photography' },
+        { src: require('@/assets/logos/fitch-min.png'), height: '70px', tooltip: 'Web development, design' },
+        { src: require('@/assets/logos/h5g-min.png'), height: '60px', tooltip: 'Web development' },
+        { src: require('@/assets/logos/hb-min.png'), height: '60px', tooltip: 'Web development, design, video production' },
+        { src: require('@/assets/logos/knstrct-min.png'), height: '30px', tooltip: 'Portrait photography' },
+        { src: require('@/assets/logos/marianos-min.png'), height: '70px', tooltip: 'Portrait, event, product photography' },
+        { src: require('@/assets/logos/printavo-min.png'), height: '50px', tooltip: 'Videography, photography' },
+        { src: require('@/assets/logos/rag-and-bone-min.png'), height: '50px', tooltip: 'Interior photography' },
+        { src: require('@/assets/logos/reuters-min.png'), height: '50px', tooltip: 'Photography assistance' },
+        { src: require('@/assets/logos/splash-min.png'), height: '45px', tooltip: 'Web design, development, admin work; photo, video, print design' },
+        { src: require('@/assets/logos/suntimes-min.png'), height: '72px', tooltip: 'Web design, development, admin work; photo, video, print design' }
+      ]
+    }
+  }
 }
 </script>
 
 <template>
   <div class="outer-logo-slider">
     <div class="inner-logo-slider">
-      <div class="brandlogo">
-        <img src="@/assets/logos/ada25-min.png" class="lazy loading" data-was-processed="true" style="height: 50px;">
-        <div class="tooltip">
-          <span class="tooltip-inner"> Portrait photography </span>
+      <!-- First set of logos -->
+      <div class="logo-track">
+        <div class="brandlogo" v-for="(logo, index) in logos" :key="'set1-' + index">
+          <img :src="logo.src" class="lazy loading" data-was-processed="true" :style="{ height: logo.height }">
+          <div class="tooltip">
+            <span class="tooltip-inner">{{ logo.tooltip }}</span>
+          </div>
         </div>
       </div>
-      <div class="brandlogo">
-        <img src="@/assets/logos/avant-min.png" class="lazy loading" data-was-processed="true" style="height: 50px;">
-        <div class="tooltip">
-          <span class="tooltip-inner"> Portrait, event photography </span>
-        </div>
-      </div>
-      <div class="brandlogo">
-        <img src="@/assets/logos/barrys-min.png" class="lazy loading" data-was-processed="true" style="height: 40px;">
-        <div class="tooltip">
-          <span class="tooltip-inner"> Event photography </span>
-        </div>
-      </div>
-      <div class="brandlogo">
-        <img src="@/assets/logos/cct-min.png" class="lazy loading" data-was-processed="true" style="height: 75px;">
-        <div class="tooltip">
-          <span class="tooltip-inner"> Portrait, event photography </span>
-        </div>
-      </div>
-      <div class="brandlogo">
-        <img src="@/assets/logos/chimag-min.png" class="lazy loading" data-was-processed="true" style="height: 60px;">
-        <div class="tooltip">
-          <span class="tooltip-inner"> Web design, development, admin work, photo, video, print
-            design </span>
-        </div>
-      </div>
-      <div class="brandlogo">
-        <img src="@/assets/logos/conagra-min.png" class="lazy loading" data-was-processed="true" style="height: 90px;">
-        <div class="tooltip">
-          <span class="tooltip-inner"> Portrait photography </span>
-        </div>
-      </div>
-      <div class="brandlogo">
-        <img src="@/assets/logos/cps-min.png" class="lazy loading" data-was-processed="true" style="height: 70px;">
-        <div class="tooltip">
-          <span class="tooltip-inner"> Portrait, event photography </span>
-        </div>
-      </div>
-      <div class="brandlogo">
-        <img src="@/assets/logos/cruises-min.png" class="lazy loading" data-was-processed="true" style="height: 30px;">
-        <div class="tooltip">
-          <span class="tooltip-inner"> Videography </span>
-        </div>
-      </div>
-      <div class="brandlogo">
-        <img src="@/assets/logos/dalhousie-min.png" class="lazy loading" data-was-processed="true"
-          style="height: 50px;">
-        <div class="tooltip">
-          <span class="tooltip-inner"> Portrait photography </span>
-        </div>
-      </div>
-      <div class="brandlogo">
-        <img src="@/assets/logos/firsttee-min.png" class="lazy loading" data-was-processed="true" style="height: 50px;">
-        <div class="tooltip">
-          <span class="tooltip-inner"> Event photography </span>
-        </div>
-      </div>
-      <div class="brandlogo">
-        <img src="@/assets/logos/fitch-min.png" class="lazy loading" data-was-processed="true" style="height: 70px;">
-        <div class="tooltip">
-          <span class="tooltip-inner"> Web development, design </span>
-        </div>
-      </div>
-      <div class="brandlogo">
-        <img src="@/assets/logos/h5g-min.png" class="lazy loading" data-was-processed="true" style="height: 60px;">
-        <div class="tooltip">
-          <span class="tooltip-inner"> Web development </span>
-        </div>
-      </div>
-      <div class="brandlogo">
-        <img src="@/assets/logos/hb-min.png" class="lazy loading" data-was-processed="true" style="height: 60px;">
-        <div class="tooltip">
-          <span class="tooltip-inner"> Web development, design, video production </span>
-        </div>
-      </div>
-      <div class="brandlogo">
-        <img src="@/assets/logos/knstrct-min.png" class="lazy loading" data-was-processed="true" style="height: 30px;">
-        <div class="tooltip">
-          <span class="tooltip-inner"> Portrait photography </span>
-        </div>
-      </div>
-      <div class="brandlogo">
-        <img src="@/assets/logos/marianos-min.png" class="lazy loading" data-was-processed="true" style="height: 70px;">
-        <div class="tooltip">
-          <span class="tooltip-inner"> Portrait, event, product photography </span>
-        </div>
-      </div>
-      <div class="brandlogo">
-        <img src="@/assets/logos/printavo-min.png" class="lazy loading" data-was-processed="true" style="height: 50px;">
-        <div class="tooltip">
-          <span class="tooltip-inner"> Videography, photography </span>
-        </div>
-      </div>
-      <div class="brandlogo">
-        <img src="@/assets/logos/rag-and-bone-min.png" class="lazy loading" data-was-processed="true"
-          style="height: 50px;">
-        <div class="tooltip">
-          <span class="tooltip-inner"> Interior photography </span>
-        </div>
-      </div>
-      <div class="brandlogo">
-        <img src="@/assets/logos/reuters-min.png" class="lazy loading" data-was-processed="true" style="height: 50px;">
-        <div class="tooltip">
-          <span class="tooltip-inner"> Photography assistance </span>
-        </div>
-      </div>
-      <div class="brandlogo">
-        <img src="@/assets/logos/splash-min.png" class="lazy loading" data-was-processed="true" style="height: 45px;">
-        <div class="tooltip">
-          <span class="tooltip-inner"> Web design, development, admin work; photo, video, print
-            design </span>
-        </div>
-      </div>
-      <div class="brandlogo">
-        <img src="@/assets/logos/suntimes-min.png" class="lazy loading" data-was-processed="true" style="height: 72px;">
-        <div class="tooltip">
-          <span class="tooltip-inner"> Web design, development, admin work; photo, video, print
-            design </span>
+      <!-- Duplicate set for seamless loop -->
+      <div class="logo-track">
+        <div class="brandlogo" v-for="(logo, index) in logos" :key="'set2-' + index">
+          <img :src="logo.src" class="lazy loading" data-was-processed="true" :style="{ height: logo.height }">
+          <div class="tooltip">
+            <span class="tooltip-inner">{{ logo.tooltip }}</span>
+          </div>
         </div>
       </div>
     </div>
@@ -142,10 +61,23 @@ export default {
   padding-bottom: 50px;
 }
 
+.inner-logo-slider {
+  display: flex;
+  align-items: center;
+  padding-bottom: 25px;
+  width: fit-content;
+  animation: scroll 30s linear infinite;
+}
+
+.logo-track {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
 .brandlogo {
   position: relative;
   flex-shrink: 0;
-  /* width: 250px; */
   margin: 0 27px;
 }
 
@@ -166,9 +98,12 @@ export default {
   transition: opacity 0.3s;
   position: absolute;
   bottom: -50px;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
   display: block;
   text-align: center;
+  pointer-events: none;
+  white-space: nowrap;
 }
 
 .brandlogo>.tooltip>.tooltip-inner {
@@ -193,47 +128,36 @@ export default {
   }
 }
 
-.inner-logo-slider {
-  position: relative;
-  animation: marquee 40s linear infinite;
-  animation-direction: alternate;
-  display: flex;
-  align-items: center;
-  padding-bottom: 25px;
-}
-
+/* Desktop animation - continuous scroll */
 @media (min-width: 451px) {
-  @keyframes marquee {
+  @keyframes scroll {
     0% {
       transform: translateX(0);
     }
 
     100% {
-      transform: translateX(-3300px);
+      transform: translateX(-50%);
     }
   }
 }
 
+/* Mobile - simpler animation with smaller distance */
 @media (max-width: 450px) {
   .inner-logo-slider {
-    flex-wrap: wrap;
-    justify-content: center;
-    animation: marquee 40s linear infinite;
-    animation-direction: alternate;
-    width: 960px;
+    animation: scrollMobile 20s linear infinite;
   }
 
   .brandlogo {
-    margin: 10px 27px;
+    margin: 0 20px;
   }
 
-  @keyframes marquee {
+  @keyframes scrollMobile {
     0% {
       transform: translateX(0);
     }
 
     100% {
-      transform: translateX(-600px);
+      transform: translateX(-50%);
     }
   }
 }
