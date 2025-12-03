@@ -9,113 +9,62 @@ import HighFiveView from '../views/HighFive.vue'
 import SunTimesView from '../views/SunTimes.vue'
 import PhotoView from '../views/Photo.vue'
 import { startViewTransition } from 'vue-view-transitions'
+import { routesMeta } from '../config/routes-meta'
 
 const routes = [
   {
     path: '/',
     name: 'home',
     component: Home,
-    meta: {
-      displayName: 'Home',
-      ogImage: 'https://rkdvis.com/assets/me-burgundy-social.jpg',
-      ogTitle: 'Ramzi Dreessen — RKDVIS.COM',
-      ogDescription:
-        'A web developer, designer, and photographer based in Chicago.'
-    }
+    meta: routesMeta['/']
   },
   {
     path: '/about',
     name: 'about',
     component: About,
-    meta: {
-      displayName: 'About',
-      ogImage: 'https://rkdvis.com/assets/me-burgundy-social.jpg',
-      ogTitle: 'About — Ramzi Dreessen',
-      ogDescription:
-        'A web developer, designer, and photographer based in Chicago.'
-    }
+    meta: routesMeta['/about']
   },
   {
     path: '/chase',
     name: 'chase',
     component: ChaseView,
-    meta: {
-      displayName: 'JPMC Performance Dashboard',
-      ogImage: 'https://rkdvis.com/assets/PD-night-mock.jpg',
-      ogTitle:
-        'Building the Chase Media Solutions Performance Dashboard — Ramzi Dreessen',
-      ogDescription:
-        'Front-end engineering on a web app for campaign monitoring and reporting for card-linked offers'
-    }
+    meta: routesMeta['/chase']
   },
   {
     path: '/chase-travel',
     name: 'chasetravel',
     component: ChaseTravelView,
-    meta: {
-      displayName: 'Chase Travel Case Study',
-      ogImage: 'https://rkdvis.com/assets/gua-lo.jpg',
-      ogTitle: 'Fixing Chase Travel — Ramzi Dreessen',
-      ogDescription:
-        'Fixing the clunky travel booking app via applying industry standards, user research and some common sense'
-    }
+    meta: routesMeta['/chase-travel']
   },
   {
     path: '/chicagomagazine',
     name: 'chicagomagazine',
     component: ChicagoMagView,
-    meta: {
-      displayName: 'ChiMag Editorial Web Design',
-      ogImage: 'https://rkdvis.com/assets/chimag-mag-spread.jpg',
-      ogTitle: 'Chicago Magazine Editorial Web Design — Ramzi Dreessen',
-      ogDescription: 'Handling web-guy duties at a Chicago media staple'
-    }
+    meta: routesMeta['/chicagomagazine']
   },
   {
     path: '/chicagomagazine-subscription',
     name: 'chicagomagazine-subscription',
     component: ChicagoMagSubscriptionView,
-    meta: {
-      displayName: 'ChiMag Subscription Page',
-      ogImage: 'https://rkdvis.com/assets/ipad-chimag-mock.jpg',
-      ogTitle: 'Chicago Magazine Subscription Page Redesign — Ramzi Dreessen',
-      ogDescription:
-        'Redesigning the subscription experience to drive conversions'
-    }
+    meta: routesMeta['/chicagomagazine-subscription']
   },
   {
     path: '/high5games',
     name: 'high5games',
     component: HighFiveView,
-    meta: {
-      displayName: 'H5G Builder System',
-      ogImage: 'https://rkdvis.com/assets/h5g-social.jpg',
-      ogTitle: 'High 5 Games Tout Builder System — Ramzi Dreessen',
-      ogDescription: 'Building a custom carousel banner-building system and app'
-    }
+    meta: routesMeta['/high5games']
   },
   {
     path: '/suntimes',
     name: 'suntimes',
     component: SunTimesView,
-    meta: {
-      displayName: 'CST Print Design',
-      ogImage: 'https://rkdvis.com/assets/print-design/IMG_0008.jpg',
-      ogTitle: 'Chicago Sun-Times Print Design — Ramzi Dreessen',
-      ogDescription: 'Print design work for Chicago Sun-Times SPLASH magazine'
-    }
+    meta: routesMeta['/suntimes']
   },
   {
     path: '/photo',
     name: 'photo',
     component: PhotoView,
-    meta: {
-      displayName: 'Portrait Photography',
-      ogImage: 'https://rkdvis.com/assets/photo/ruffalo-social.jpg',
-      ogTitle: 'Portrait Photography — Ramzi Dreessen',
-      ogDescription:
-        'Portraits shot for Chicago Sun-Times SPLASH magazine and other clients'
-    }
+    meta: routesMeta['/photo']
   },
   {
     path: '/:pathMatch(.*)*',
@@ -204,6 +153,11 @@ router.beforeResolve(async () => {
 router.afterEach((to) => {
   window.scrollTo(0, 0)
   updateMetaTags(to)
+})
+
+// Update meta tags on initial load
+router.isReady().then(() => {
+  updateMetaTags(router.currentRoute.value)
 })
 
 export default router

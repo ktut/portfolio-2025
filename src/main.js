@@ -9,4 +9,12 @@ import './styles/reset.css'
 import './styles/global.scss'
 import './styles/transitions.css'
 
-createApp(App).use(router).use(ViewTransitionsPlugin()).mount('#app')
+const app = createApp(App)
+app.use(router)
+app.use(ViewTransitionsPlugin())
+app.mount('#app')
+
+// Trigger prerender-ready event after router is ready
+router.isReady().then(() => {
+  document.dispatchEvent(new Event('prerender-ready'))
+})
