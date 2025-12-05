@@ -213,7 +213,7 @@ export default {
             US, all Chase Travel branded.</li>
         </ul>
         <p>
-          Therefore, it would be a logical conclusion to say that <strong>Chase Travel is a significant part of
+          <strong>Chase Travel is a significant part of
             Chase&rsquo;s consumer
             business</strong>,
           and a
@@ -386,10 +386,8 @@ export default {
           <li><strong>Users can't use the application without logging in. </strong>Many potential users will just use a
             different travel booking site instead. If the login service goes down, Chase Travel is inaccessible, too.
           </li>
-          <li><strong>Chase Points features are over-emphasized, to the detriment of the user experience.</strong> The
-            Points
-            Boost
-            feature is over-emphasized- sometimes three or four times per page (!). The user
+          <li><strong>Chase Points features (Points Boost, etc.) are over-emphasized, to the detriment of the user
+              experience.</strong> Sometimes they are displayed three or four times per page (!). The user
             doesn&rsquo;t need to be beaten over the head about &ldquo;value&rdquo; - they can determine value for
             themselves by looking
             at the points and $ spend.</li>
@@ -406,8 +404,11 @@ export default {
         </ul>
         <h3>Product</h3>
         <ul>
-          <li><strong>Why is there no dedicated app?</strong> Or at least a mobile-friendly version of the website?
-            Seems like a pretty basic omission for a travel booking service.</li>
+          <li><strong>Why is there no dedicated app?</strong> Or at least a more mobile-friendly version of the website?
+            Seems like a pretty basic omission for a travel booking service. <a
+              href="https://www.mtomconsulting.com/consumers-make-travel-decisions-inspiration-booking/" target="_blank"
+              rel="noopener noreferrer">41% of US travelers research travel using mobile devices (smartphone or
+              tablet).</a>.</li>
           <li><strong>Prices are uncompetitive and frequently flat-out incorrect.</strong> This is <a
               href="https://www.seat31b.com/2019/05/chases-terrible-horrible-no-good-very-bad-travel-portal/"
               target="_blank" rel="noopener noreferrer">well-documented</a>.
@@ -472,7 +473,7 @@ export default {
             <img src="@/assets/Chase-Travel-hotel-search.webp" alt="Chase Travel hotel search" />
             <video autoplay loop muted playsinline src="@/assets/Chase-cant-move-map.mov" />
             <p>
-              The hotel search results map is just straight-up broken - it annoyingly snaps
+              Chase's hotel search results map is just straight-up broken - it annoyingly snaps
               back to the center after every drag. The interface has extremely poor use of white space and only lists
               two properties at a time.
             </p>
@@ -524,22 +525,21 @@ export default {
           The age-old adage of form over function seems to be at play here.
         </p>
         <p>Perhaps the real goal was to impress executives and just make the product look good enough for slick
-          marketing campaigns. Some evidence: A widely-trumpted recent &ldquo;redesign&rdquo; that added a new custom
-          font based on Queens, introduced new branding elements, and slightly improved the general app layout. </p>
-        <p>This misses the mark in a big way. When building functional web UIs, it's important to remember that
+          marketing campaigns. A widely-trumpted recent &ldquo;redesign&rdquo; added new custom
+          fonts, introduced new branding elements, and slightly improved the general app layout. Unfortunately, using
+          the
+          app still felt mostly the same after these changes.</p>
+        <p>When building functional web UIs, it's important to remember that
           <strong>users don&rsquo;t care about fonts or
             stock image
             choice at
-            all - they care about legibility, familiarity, and responsiveness of the interface.</strong> Fundamentally,
-          using the
-          app still felt mostly the same after these changes.
+            all - they care about legibility, familiarity, and responsiveness of the interface.</strong>
         </p>
-        <p>The focus instead should have been to make a simple, easy-to-use, and <em>familiar</em> UI. Instead of
+        <p>The focus instead should have been to make a simple, easy-to-use, and <em>familiar</em> UI for both personal
+          and business users. Instead of
           <em>forcing</em> the
-          user to log into Chase before even seeing the value proposition for Points Boost, etc, users should
-          <em>want</em> to use Chase
-          Points features like Points Boost because they happen to be available within the interface they are already
-          using.
+          user to log into Chase before even seeing value propositions for Points Boost, etc., users should
+          be <em>tempted</em> to log in to have access to those features.
         </p>
 
       </div>
@@ -584,8 +584,10 @@ export default {
             learning, to
             update caching based on recent and upcoming events. <a
               href="https://medium.com/expedia-group-tech/search-speed-making-expedia-flights-faster-5c3f7fec4c10"
-              target="_blank" rel="noopener noreferrer">At Expedia, they analyzed top requests</a> to make these
-            decisions, and also used GraphQL on the client to only fetch the data that was needed.</li>
+              target="_blank" rel="noopener noreferrer">This is exactly what was done at Expedia</a>, where they
+            analyzed top requests to make backend caching decisions, and also used GraphQL on the client to only fetch
+            the data that was needed.
+          </li>
         </ul>
       </div>
 
