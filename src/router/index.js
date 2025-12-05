@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import ChaseView from '../views/Chase.vue'
 import ChaseTravelView from '../views/ChaseTravel.vue'
+import ChaseTravelFixedView from '../views/ChaseTravelFixed.vue'
 import ChicagoMagView from '../views/ChicagoMag.vue'
 import ChicagoMagSubscriptionView from '../views/ChicagoMagSubscription.vue'
 import HighFiveView from '../views/HighFive.vue'
@@ -35,6 +36,12 @@ const routes = [
     name: 'chasetravel',
     component: ChaseTravelView,
     meta: routesMeta['/chase-travel']
+  },
+  {
+    path: '/chase-travel-fixed',
+    name: 'chasetravelfixed',
+    component: ChaseTravelFixedView,
+    meta: routesMeta['/chase-travel-fixed']
   },
   {
     path: '/chicagomagazine',

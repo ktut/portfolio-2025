@@ -241,7 +241,7 @@ main {
         @media (min-width: 640px) {
           grid-template-columns: 1fr 1fr 1fr;
           .video-bg {
-            height: 400px;
+            height: 375px;
             &.not-mobile {
               display: block;
             }
@@ -255,7 +255,7 @@ main {
 // individual pages
 
 .hero {
-  max-width: 1024px;
+  max-width: 840px;
   margin: 0 auto;
   padding: 3rem 2rem 0;
 
@@ -588,7 +588,7 @@ main {
 
 .rounded-highlight {
   position: relative;
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 1rem;
   background: white;
 

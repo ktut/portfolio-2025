@@ -114,11 +114,11 @@ export default {
         <ul class="project-metadata">
           <li>
             <span><b>Role</b></span>
-            <span>Designer/Developer</span>
+            <span>Product</span>
           </li>
           <li>
             <span><b>Tech</b></span>
-            <span>Claude Code, Vue.js, Typescript, Pinia</span>
+            <span>My brain 🧠</span>
           </li>
           <li>
             <span><b>Date</b></span>
@@ -127,7 +127,37 @@ export default {
         </ul>
       </figure>
     </RouterLink>
-    <RouterLink to="/high5games" class="project-link cover" :class="{ 'animate-in': projectLinksLoaded.includes(2) }">
+    <RouterLink to="/chase-travel-fixed" class="project-link cover"
+      :class="{ 'animate-in': projectLinksLoaded.includes(2) }">
+      <figure>
+        <div class="img-bg chitravel-bg" v-view-transition-name="'chitravel-bg'"
+          :style="{ backgroundImage: projectLinksLoaded.includes(2) ? 'url(' + require('@/assets/CT-laptop-mock.jpg') + ')' : 'none' }">
+        </div>
+        <figcaption>
+          <h2 class="title">
+            Rebuilding Chase Travel’s Web App
+          </h2>
+          <button class="cta">
+            View Project <span class="unicode">&#x2197;</span>
+          </button>
+        </figcaption>
+        <ul class="project-metadata">
+          <li>
+            <span><b>Role</b></span>
+            <span>Designer/Developer</span>
+          </li>
+          <li>
+            <span><b>Tech</b></span>
+            <span>Cursor, Claude Code, Vue.js, Typescript, Pinia</span>
+          </li>
+          <li>
+            <span><b>Date</b></span>
+            <span>2025</span>
+          </li>
+        </ul>
+      </figure>
+    </RouterLink>
+    <RouterLink to="/high5games" class="project-link cover" :class="{ 'animate-in': projectLinksLoaded.includes(3) }">
       <figure>
         <div class="tout-container" ref="toutContainer">
           <Tout v-view-transition-name="'tout-animation'" />
@@ -157,7 +187,7 @@ export default {
       </figure>
     </RouterLink>
     <RouterLink to="/chicagomagazine" class="project-link cover"
-      :class="{ 'animate-in': projectLinksLoaded.includes(3) }">
+      :class="{ 'animate-in': projectLinksLoaded.includes(4) }">
       <figure>
         <div class="video-composite">
           <div class="video-bg">
@@ -204,7 +234,7 @@ export default {
       </figure>
     </RouterLink>
     <RouterLink to="/chicagomagazine-subscription" class="project-link cover"
-      :class="{ 'animate-in': projectLinksLoaded.includes(4) }">
+      :class="{ 'animate-in': projectLinksLoaded.includes(5) }">
       <figure>
         <div class="chimag-subscription-bg" v-view-transition-name="'chimag-subscription-redesign'"
           :style="{ backgroundImage: 'url(' + require('@/assets/ipad-chimag-mock.jpg') + ')' }">
@@ -233,7 +263,7 @@ export default {
         </ul>
       </figure>
     </RouterLink>
-    <RouterLink to="/suntimes" class="project-link cover" :class="{ 'animate-in': projectLinksLoaded.includes(5) }">
+    <RouterLink to="/suntimes" class="project-link cover" :class="{ 'animate-in': projectLinksLoaded.includes(6) }">
       <figure>
         <div class="suntimes-bg" v-view-transition-name="'cst-image'"
           :style="{ backgroundImage: 'url(' + require('@/assets/print-design/IMG_0008.jpg') + ')' }">
@@ -262,7 +292,7 @@ export default {
         </ul>
       </figure>
     </RouterLink>
-    <p :class="{ 'animate-in': projectLinksLoaded.includes(6) }" class="extra-projects project-link"><span>📸</span>
+    <p :class="{ 'animate-in': projectLinksLoaded.includes(7) }" class="extra-projects project-link"><span>📸</span>
       Earlier in my career, I was a <b>photographer</b> as well, shooting portraits and events. You can see <RouterLink
         to="/photo">some of my favorite
         shots from over the years here</RouterLink>.
@@ -292,6 +322,21 @@ figure {
   .travel-anim-container {
     max-width: 1200px;
     overflow: hidden;
+  }
+
+  .chitravel-bg {
+    width: 100% !important;
+    max-width: 840px !important;
+    left: unset !important;
+    right: unset !important;
+    margin-bottom: 10px !important;
+    background-position: 48% 100% !important;
+    background-size: cover !important;
+    padding-bottom: 50% !important;
+
+    @media (min-width: 840px) {
+      padding-bottom: 550px !important;
+    }
   }
 
   .travel-anim-container,
@@ -468,11 +513,13 @@ figure {
       display: flex;
       justify-content: space-between;
       margin-bottom: 8px;
+      gap: 0.5rem;
 
       @media (min-width: 760px) {
         display: block;
         padding-left: 16px;
         padding-right: 16px;
+        gap: unset;
 
         span {
           display: block;

@@ -31,6 +31,13 @@ const routesMeta = {
     ogDescription:
       'Fixing the clunky travel booking app via applying industry standards, user research and some common sense'
   },
+  '/chase-travel-fixed': {
+    displayName: 'Fixing Chase Travel',
+    ogImage: 'https://rkdvis.com/assets/CT-laptop-mock.jpg',
+    ogTitle: 'Fixing Chase Travel in Two Weeks with Cursor and Claude Code',
+    ogDescription:
+      'Rebuilding the clunky travel booking app with improved UI + UX and better customer support access'
+  },
   '/chicagomagazine': {
     displayName: 'ChiMag Editorial Web Design',
     ogImage: 'https://rkdvis.com/assets/chimag-mag-spread.jpg',

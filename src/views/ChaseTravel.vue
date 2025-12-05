@@ -12,34 +12,6 @@ export default {
   },
   data() {
     return {
-      technologies: [
-        {
-          name: 'Claude Code',
-          type: 'image',
-          src: require('@/assets/logos/claude.png')
-        },
-        {
-          name: 'Vue.js',
-          viewBox: '0 0 261.76 226.69',
-          paths: [
-            { d: 'M161.096.001l-30.224 52.35L100.647.002H-.005L130.872 226.69 261.749 0z', fill: '#41b883' },
-            { d: 'M161.096.001l-30.224 52.35L100.647.002H52.346l78.526 136.01L209.398.001z', fill: '#35495e' }
-          ]
-        },
-        {
-          name: 'TypeScript',
-          viewBox: '0 0 128 128',
-          paths: [
-            { d: 'M0 0h128v128H0z', fill: '#3178c6', rx: 6 },
-            { d: 'm74.2622 99.468v14.026c2.2724 1.168 4.9598 2.045 8.0625 2.629 3.1027.585 6.3728.877 9.8105.877 3.3503 0 6.533-.321 9.5478-.964 3.016-.643 5.659-1.702 7.932-3.178 2.272-1.476 4.071-3.404 5.397-5.786 1.325-2.381 1.988-5.325 1.988-8.8313 0-2.5421-.379-4.7701-1.136-6.6841-.758-1.9139-1.85-3.6159-3.278-5.1062-1.427-1.4902-3.139-2.827-5.134-4.0104-1.996-1.1834-4.246-2.3011-6.752-3.353-1.8352-.7597-3.4812-1.4975-4.9378-2.2134-1.4567-.7159-2.6948-1.4464-3.7144-2.1915-1.0197-.7452-1.8063-1.5341-2.3598-2.3669-.5535-.8327-.8303-1.7751-.8303-2.827 0-.9643.2476-1.8336.7429-2.6079s1.1945-1.4391 2.0976-1.9943c.9031-.5551 2.0101-.9861 3.3211-1.2929 1.311-.3069 2.7676-.4603 4.3699-.4603 1.1658 0 2.3958.0877 3.6928.263 1.296.1753 2.6.4456 3.911.8109 1.311.3652 2.585.8254 3.824 1.3806 1.238.5552 2.381 1.198 3.43 1.9285v-13.1051c-2.127-.8182-4.45-1.4245-6.97-1.819s-5.411-.5917-8.6744-.5917c-3.3211 0-6.4674.3579-9.439 1.0738-2.9715.7159-5.5862 1.8336-7.844 3.353-2.2578 1.5195-4.0422 3.4553-5.3531 5.8075-1.311 2.3522-1.9665 5.1646-1.9665 8.4373 0 4.1785 1.2017 7.7433 3.6052 10.6945 2.4035 2.9513 6.0523 5.4496 10.9466 7.495 1.9228.7889 3.7145 1.5633 5.375 2.323 1.6606.7597 3.0954 1.5486 4.3044 2.3668s2.1628 1.7094 2.8618 2.6736c.7.9643 1.049 2.06 1.049 3.2873 0 .9062-.218 1.7462-.655 2.5202s-1.1 1.446-1.9885 2.016c-.8886.57-1.9956 1.016-3.3212 1.337-1.3255.321-2.8768.482-4.6539.482-3.0299 0-6.0305-.533-9.0021-1.6-2.9715-1.066-5.7245-2.666-8.2591-4.799zm-23.5596-34.9136h18.2974v-11.5544h-51v11.5544h18.2079v51.4456h14.4947z', fill: '#fff' }
-          ]
-        },
-        {
-          name: 'Pinia',
-          type: 'image',
-          src: require('@/assets/pinia.png')
-        }
-      ],
       sections: [],
       activeSection: '',
     }
@@ -157,25 +129,20 @@ export default {
     <section class="content-wrapper">
       <header class="project-header">
         <h1 class="project-title">
-          <img src="@/assets/chase-logo.png" alt="Chase Logo" class="chase-logo">Chase Travel: A Case Study and
-          Reimagining
+          <img src="@/assets/chase-logo.png" alt="Chase Logo" class="chase-logo">Chase Travel: A Case Study
         </h1>
         <h2 class="project-subtitle">
           How to fix a clunky travel booking app? Get some real user feedback, then apply industry
           standards, cutting-edge AI tooling and some common sense.
         </h2>
-
-        <div class="tech-stack">
-          <div v-for="tech in technologies" :key="tech.name" class="tech-pill">
-            <svg v-if="tech.type !== 'image'" xmlns="http://www.w3.org/2000/svg" :viewBox="tech.viewBox"
-              class="tech-icon">
-              <path v-for="(path, index) in tech.paths" :key="index" :d="path.d" :fill="path.fill" />
-            </svg>
-            <img v-else :src="tech.src" :alt="tech.name" class="tech-icon">
-            <span>{{ tech.name }}</span>
-          </div>
-        </div>
       </header>
+
+      <div class="disclaimer">
+        <p>
+          <strong>Disclaimer:</strong> Per JPMC confidentiality policies, no internal information was used in any way on
+          this project. Everything was based solely on observations of the public-facing product.
+        </p>
+      </div>
 
       <!-- Sticky Navigation -->
       <div class="sticky-nav">
@@ -187,14 +154,16 @@ export default {
         </select>
       </div>
 
-      <div class="disclaimer">
-        <p>
-          <strong>Disclaimer:</strong> Per JPMC confidentiality policies, no internal information was used in any way on
-          this project. Everything was based solely on observations of the public-facing product.
-        </p>
-      </div>
-
       <div class="project-overview">
+        <p class="rounded-highlight">
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="calc(100% - 2px)" height="calc(100% - 2px)" rx="12" ry="12" />
+          </svg>
+          Skip to <RouterLink to="/chase-travel-fixed">the resulting app-building process</RouterLink> as a result of
+          this
+          case study, if you wish.
+        </p>
+        <br />
         <h2 class="section-title" id="product-importance-and-context">
           Product importance and context
         </h2>
@@ -589,92 +558,14 @@ export default {
             the data that was needed.
           </li>
         </ul>
+
+        <p>
+          <RouterLink to="/chase-travel-fixed">Continue reading here</RouterLink> to see the full app-building process
+          that I undertook over two weeks, that implemented these solutions.
+        </p>
       </div>
 
-      <div class="detail-section">
-        <h2 class="section-title" id="rebuilding-the-web-app">
-          Rebuilding the web app
-        </h2>
-        <p>Let's build a client-side-only proof-of-concept web application that addresses these issues.</p>
-        <p class="rounded-highlight">
-          <svg xmlns="http://www.w3.org/2000/svg">
-            <rect x="1" y="1" width="calc(100% - 2px)" height="calc(100% - 2px)" rx="12" ry="12" />
-          </svg>
-          The project is still in progress, but you can view it here: <a href="https://chasetravel.netlify.app/"
-            target="_blank" rel="noopener noreferrer">https://chasetravel.netlify.app/</a> <br />...and see the code
-          here:
-          <a href="https://github.com/ktut/chasetravel" target="_blank"
-            rel="noopener noreferrer">https://github.com/ktut/chasetravel</a>.
-        </p>
-        <p>Given the complexity and
-          scale of using real data, I decided to use mock data, but it wouldn't be a stretch to implement
-          this with real data if needed, as many of these APIs are already available publicly.</p>
-        <p>Using cutting-edge LLM tools, we can skip the Figma mockups and use Claude and
-          Cursor instead to just generate a working web app with the core user flows, and then iterate on top of it. <a
-            href="https://www.youtube.com/watch?v=bdh8k6DyKxE" target="_blank" rel="noopener noreferrer">Here's a
-            video</a> from Cursor's head of design where he describes a similar workflow.</p>
-        <p>We
-          can start by <strong>tightly defining schemas</strong> in Typescript for <strong>flights, hotels, user
-            searches, and user
-            bookings</strong>.
-          Once
-          we have the schemas in place, we can
-          <strong>generate mock data</strong> with Claude Code.
-        </p>
-        <p>For flights, we'll need the real airlines, but the
-          individual flights can
-          be mocked. For hotels, we'll start with 20 hotels per city, and have Claude pull real geolocation data and
-          descriptions (we'll use stock images for now, we can add real images later, as that's a lot more effort to
-          pull individually). We can then build out app, view by view, in the Cursor IDE, with
-          assitance from
-          Claude for the more repetitive tasks.
-        </p>
-        <p>
-          For the tech stack, I used my standard stack of Vue.js, SASS, Typescript, and Pinia, but for a real production
-          application, I
-          would use Nuxt or vite-ssg for server-side rendering of content on key routes for quicker load times. That
-          way, the only thing the user is actually waiting on is the loading of the actual search results.
-        </p>
-        <p>Here's my current progress:</p>
-        <ul>
-          <li>Start with a stock Vue3/SASS/Vite app. Implement proper routing.
-          </li>
-          <li>Let&rsquo;s get some strong lead art going that isn't a stock
-            photo. I&rsquo;ll use a photo I took on a
-            trip to Lake Atitlan in
-            Guatemala a few
-            years ago. In Photoshop, we can break it apart into layers, then use a <a
-              href="https://keithclark.co.uk/articles/pure-css-parallax-websites/" target="_blank"
-              rel="noopener noreferrer">CSS-only parallax effect</a> on the search page.</li>
-          <li>Let&rsquo;s build schemas for flights and hotels in Typescript.
-            Once we have the schemas in place, we can
-            use
-            Claude to generate some mock data for these schemas.</li>
-          <li>Let's get basic search in place, keeping all the search params in
-            the URL for easy sharing and
-            bookmarking.</li>
-          <li>Let&rsquo;s add E2E testing in Claude as well, and ensure this is
-            run after every Claude operation (along
-            with a
-            fresh build) so we can automatically fix issues as they arise, and negate the need for constant manual
-            testing.</li>
-          <li>Building out the individual listing pages and hotel pages should
-            be a breeze once we have the schemas and
-            UI components in place.</li>
-          <li>Let's add an Itinerary page for all booked flights and hotels.
-          </li>
-          <li>Support is an important component of this application. Let's add
-            that
-            section to Itineraries
-            and make it clear that the user can just iMessage the support team directly.</li>
-          <li>For the purposes of the demo, we can just mirror our application
-            global
-            state for user itineraries to
-            localStorage.</li>
-          <li>Let's ensure references to Points and Points Boost are added to the
-            application.</li>
-        </ul>
-      </div>
+
 
       <PostArticleNav />
     </section>
@@ -693,6 +584,12 @@ export default {
   .hero-image {
     overflow: unset;
     box-shadow: unset;
+  }
+}
+
+.image-top-group {
+  @media (min-width: 1000px) {
+    height: 500px !important;
   }
 }
 
