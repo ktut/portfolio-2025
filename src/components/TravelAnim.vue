@@ -20,16 +20,20 @@ export default {
 </script>
 
 <template>
-  <div class="image-top-group" :class="{ 'image-top-group--loading': !imagesLoaded }" v-view-transition-name="'travel-anim'">
-    <div class="parallax__layer parallax__layer--back" :class="{ 'parallax__layer--loading': !imagesLoaded, 'parallax__layer--loaded': imagesLoaded }">
+  <div class="image-top-group" :class="{ 'image-top-group--loading': !imagesLoaded }"
+    v-view-transition-name="'travel-anim'">
+    <div class="parallax__layer parallax__layer--back"
+      :class="{ 'parallax__layer--loading': !imagesLoaded, 'parallax__layer--loaded': imagesLoaded }">
       <img src="@/assets/g0.png" srcset="@/assets/g0-lo.jpg 480w, @/assets/g0.png 1920w"
         sizes="(max-width: 768px) 480px, 1920px" alt="Background layer" @load="handleImageLoad" />
     </div>
-    <div class="parallax__layer parallax__layer--base" :class="{ 'parallax__layer--loading': !imagesLoaded, 'parallax__layer--loaded': imagesLoaded }">
+    <div class="parallax__layer parallax__layer--base"
+      :class="{ 'parallax__layer--loading': !imagesLoaded, 'parallax__layer--loaded': imagesLoaded }">
       <img src="@/assets/g1.png" srcset="@/assets/g1-lo.png 480w, @/assets/g1.png 1920w"
         sizes="(max-width: 768px) 480px, 1920px" alt="Middle layer" @load="handleImageLoad" />
     </div>
-    <div class="parallax__layer parallax__layer--fore" :class="{ 'parallax__layer--loading': !imagesLoaded, 'parallax__layer--loaded': imagesLoaded }">
+    <div class="parallax__layer parallax__layer--fore"
+      :class="{ 'parallax__layer--loading': !imagesLoaded, 'parallax__layer--loaded': imagesLoaded }">
       <img src="@/assets/g2.png" srcset="@/assets/g2-lo.png 480w, @/assets/g2.png 1920w"
         sizes="(max-width: 768px) 480px, 1920px" alt="Foreground layer" @load="handleImageLoad" />
     </div>
@@ -127,14 +131,14 @@ export default {
   .parallax__layer--base {
     // transform: translateZ(-1px) scale(2);
     // z-index: 2;
-    animation: breathe-base 12s ease-in-out infinite;
+    animation: breathe-base 9s ease-in-out infinite;
   }
 
   /* Top layer - faster scroll (g2.svg) */
   .parallax__layer--fore {
     // transform: translateZ(-0.5px) scale(1.5);
     // z-index: 3;
-    animation: breathe-fore 12s ease-in-out infinite;
+    animation: breathe-fore 9s ease-in-out infinite;
   }
 }
 </style>
