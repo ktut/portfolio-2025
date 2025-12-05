@@ -121,7 +121,7 @@ export default {
             <span>Claude Code, Vue.js, Typescript, Pinia</span>
           </li>
           <li>
-            <span><b>Dates</b></span>
+            <span><b>Date</b></span>
             <span>2025</span>
           </li>
         </ul>
