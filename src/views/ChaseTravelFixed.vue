@@ -232,14 +232,24 @@ export default {
             </p>
           </div>
           <div class="detail-item">
-            <img src="@/assets/ps-travel-composite.jpg"
-              alt="Photoshop composite of Lake Atitlan, Guatemala and iphone overlay" />
+            <video autoplay loop muted playsinline src="@/assets/photoshop-layers.mov" />
             <p>In Photoshop, we can break it apart into layers (three should do - foreground for the leaves, midground
-              for the pool, and deep background for the lake and volcano in the distance), then use a <a
-                href="https://keithclark.co.uk/articles/pure-css-parallax-websites/" target="_blank"
-                rel="noopener noreferrer">CSS-only parallax effect</a> on the search page.</p>
+              for the pool, and deep background for the lake and volcano in the distance), and use generative fill to
+              fill in the gaps. As long as we configure
+              Photoshop correctly and export the PNGs with an ICC profile for Display P3, we should be able to retain
+              that
+              vibrant blue of the pool color (which will be progressively enhanced for P3 displays, like iPhones).</p>
           </div>
-
+          <div class="detail-item full-width">
+            <video autoplay loop muted playsinline src="@/assets/parallax-implement.mov" />
+            <p>Let's add them, layered, to the home page, with a parallax effect. We can actually do this <a
+                href="https://keithclark.co.uk/articles/pure-css-parallax-websites/" target="_blank"
+                rel="noopener noreferrer">only with CSS</a>. In a real production environment, we would actually swap
+              out the
+              PNGs for SVGs with embedded JPGs (again, using that P3 ICC profile) using <a
+                href="https://codepen.io/shshaw/full/LVKEdv" target="_blank" rel="noopener noreferrer">this tool</a>.
+            </p>
+          </div>
         </div>
 
         <h2 class="section-title" id="development">
