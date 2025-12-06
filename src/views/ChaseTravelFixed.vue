@@ -191,7 +191,9 @@ export default {
         </h2>
         <p>Given the complexity and
           scale of using real data, I decided to use mock data, but it wouldn't be a stretch to implement
-          this with real data if needed, as many of these APIs are already available publicly.</p>
+          this with real data if needed, as many of these APIs are already <a
+            href="https://rapidapi.com/search?sortBy=ByRelevance" target="_blank" rel="noopener noreferrer">available
+            publicly</a>.</p>
         <p>We
           can start by <strong>tightly defining schemas</strong> in Typescript for <strong>flights, hotels, user
             searches, and user
@@ -200,18 +202,29 @@ export default {
           we have the schemas in place, we can
           <strong>generate mock data</strong> with Claude Code.
         </p>
-        <p>We can then skip the Figma mockups and use Claude and
-          Cursor instead to just generate a working, "wire-frame"-type web app with the core user flows, and then
-          iterate on top of it. <a href="https://www.youtube.com/watch?v=bdh8k6DyKxE" target="_blank"
-            rel="noopener noreferrer">Here's a
-            video</a> from Cursor's head of design where he describes a similar workflow.</p>
+        <div class="detail-grid">
+          <div class="detail-item">
+            <img src="@/assets/code-schemas.jpg"
+              alt="Typescript schemas for flights, hotels, user searches, and user bookings" />
+            <p>Typescript schemas for flights, hotels, user searches, and user bookings.</p>
+          </div>
+          <div class="detail-item">
+            <img src="@/assets/code-mock-flights.jpg" alt="Mock data generator for flights" />
+            <p>Mock data generator for flights (matching the "Flight" schema on line 19 of the previous file).</p>
+          </div>
+        </div>
         <p>For flights, we'll need the real airlines, but the
           individual flights can
           be mocked. For hotels, we'll start with 20 hotels per city, and have Claude pull real geolocation data and
           descriptions (we'll use stock images for now, we can add real images later, as that's a lot more effort to
-          pull individually). We can then build out app, view by view, in the Cursor IDE, with
-          assitance from
-          Claude for the more repetitive tasks.
+          pull individually).
+        </p>
+        <p>We can then <strong>skip the Figma mockups</strong> and use Claude (for features) and
+          Cursor (as the IDE, namely for autocomplete, but sometimes in place of Claude when tokens run out) instead to
+          <strong>just generate a working, "wire-frame"-type web app with the core user flows</strong>, and then
+          iterate on top of it. <a href="https://www.youtube.com/watch?v=bdh8k6DyKxE" target="_blank"
+            rel="noopener noreferrer">Here's a
+            video</a> from Cursor's head of design where he describes a similar workflow.
         </p>
         <h2 class="section-title" id="design">
           Design
