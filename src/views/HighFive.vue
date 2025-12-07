@@ -109,8 +109,7 @@ export default {
             rel="noreferrer noopener">After Effects/Bodymovin/Lottie</a>, or SVG-masked JPGs/PNGs for image assets).
           Each object would have
           its location in the CSS Grid layer grid, which could change based on breakpoints (mobile,
-          desktop, etc). By leveraging a CSS-first approach, since we already had tight control of the client
-          application where the advertising banner (or “Tout”, as we called it) was placed, we could use <a
+          desktop, etc). By leveraging a CSS-first approach, we could use <a
             href="https://keithclark.co.uk/articles/pure-css-parallax-websites/" target="_blank"
             rel="noreferrer noopener">CSS parallax</a>
           instead of a custom JS approach. This was critical as there was already a lot of JS in the application for the

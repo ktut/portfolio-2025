@@ -202,8 +202,9 @@ export default {
         </h2>
         <p>
           The app was a success, and was used by many brands to monitor their campaigns and download reports. Even two
-          years after launch, it was still in use while a team <em>three times larger</em> was tasked with building
-          a newer version.
+          years after launch, it was still being used by clients while another internal team <em>three times larger</em>
+          was still trying to build out
+          the newer version.
         </p>
       </div>
 
