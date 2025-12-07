@@ -241,7 +241,8 @@ export default {
           <strong>just generate a working app</strong>, and then
           iterate on top of it. <a href="https://www.youtube.com/watch?v=bdh8k6DyKxE" target="_blank"
             rel="noopener noreferrer">Here's a
-            video</a> from Cursor's head of design where he describes a similar workflow.
+            video</a> from Cursor's head of design where he describes a similar workflow — we are doing the same thing,
+          just constraining it by E2E tests and periodic code reviews.
         </p>
       </div>
       <div class="detail-section">
