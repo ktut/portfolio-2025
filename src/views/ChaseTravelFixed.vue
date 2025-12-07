@@ -164,12 +164,17 @@ export default {
           for booking flights and hotels, based on the conclusions of <RouterLink to="/chase-travel">my case study.
           </RouterLink> The app should be functional for users in the Chase ecosystem as well as those outside of it.
         </p>
-        <p class="lead bottom-border">We
+        <p class="lead">We
           will
           stick to the building a front-end
-          app only for this project - most of the issues are client-side anyway. The case study already includes
+          app only for this project - most of the areas for improvement are on the client side anyway. The case study
+          already includes
           incremental
           improvements for the backend.
+        </p>
+        <p class="lead bottom-border">We want to use Cursor and Claude to accelerate the development process, but we
+          still want control over the <em>architecture</em> and <em>design</em>. We'll use some special techniques
+          to accomplish this.
         </p>
       </div>
       <div class="detail-section">
@@ -243,7 +248,8 @@ export default {
         <h2 class="section-title" id="design">
           Design
         </h2>
-        <p>To fine-tune our components' designs, we can take "borrow" from other travel apps we like (like Kayak and
+        <p>To fine-tune our components' designs (modifying what Claude created), we can take "borrow" from other travel
+          apps we like (like Kayak and
           Hotels.com), just as I suggested in the case study, using the method below:</p>
         <div class="detail-grid">
           <div class="detail-item">
@@ -262,11 +268,9 @@ export default {
               With some manual CSS tweaks for
               extra polish, we can get a pretty good approximation of the Kayak flight card. Here, you can see the
               component conditionally rendering the Points Boost information as well,
-              inline, without being obtrusive.</p>
+              subtly and inline, without beating the user over the head with it 😊.</p>
           </div>
         </div>
-        <p>When adding references to Points and Points Boost, we should be subtle about it 😊 instead of beating the
-          user over the head with it.</p>
         <p>We can even make a <a href="https://chasetravel.netlify.app/components" target="_blank"
             rel="noopener noreferrer">component showcase route</a> in the application, to operate
           as a living design system of sorts.</p>
@@ -381,10 +385,6 @@ export default {
   max-width: 1200px !important;
   align-items: flex-start !important;
   margin-bottom: 2rem !important;
-
-  .detail-item p {
-    max-width: 100% !important;
-  }
 }
 
 
