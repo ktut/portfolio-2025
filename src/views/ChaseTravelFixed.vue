@@ -189,6 +189,8 @@ export default {
               areas of interest when building the product.</strong> This is less important but can be addressed after
             completing the core functionality. We can also query Cursor in Max mode for suggestions in this area.</li>
         </ul>
+      </div>
+      <div class="detail-section">
         <h2 class="section-title" id="schemas-and-mock-data">
           Schemas and mock data
         </h2>
