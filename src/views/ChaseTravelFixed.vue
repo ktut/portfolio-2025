@@ -160,35 +160,17 @@ export default {
         <h2 class="section-title" id="objectives">
           Objectives
         </h2>
-        <p class="lead bottom-border">We're going to try to build a performant, beautiful webapp for Chase Travel that
-          meets the needs of the user
-          and the business, based on the conclusions of <RouterLink to="/chase-travel">my case study.
-          </RouterLink>
+        <p class="lead">We're going to try to build a performant, beautiful webapp for Chase Travel that
+          for booking flights and hotels, based on the conclusions of <RouterLink to="/chase-travel">my case study.
+          </RouterLink> The app should be functional for users in the Chase ecosystem as well as those outside of it.
         </p>
-        <p>Let's reference the <a href="https://www.greatfrontend.com/front-end-system-design-playbook/framework"
-            target="_blank" rel="noopener noreferrer">RADIO framework</a>, per industry best practices:</p>
-        <ul>
-          <li><strong>Requirements exploration: Understand the problem thoroughly and determine the scope by
-              asking a number of clarifying questions.</strong> This is complete per
-            <RouterLink to="/chase-travel">my case study</RouterLink>. <strong>We will stick to the building a front-end
-              app only for this project</strong> - most of the issues are client-side, and I clearly outlined approaches
-            for the backend in the case study that could be addressed separately for incremental improvements.
-          </li>
-          <li><strong>Architecture / High-level design: Identify the key components of the product and how they
-              are related to each other.</strong> Also addressed by the case study.</li>
-          <li><strong>Data model / Core entities: Describe the core entities and its data – the fields each
-              entity contains and which component(s) they belong to.</strong> We will begin by using Typescript to
-            define the relevant schemas for flights, hotels, user searches, and user bookings.</li>
-          <li><strong>Interface definition (API): Define the interface (API) between components in the product,
-              functionality of each API, their parameters and responses.</strong> Once the schemas are defined, and the
-            basic user flow is hard-coded into the E2E tests, we can
-            let Cursor and Claude freely generate the interactions between the components based on these un-modifiable
-            ground
-            truths.</li>
-          <li><strong>Optimizations and deep dive: Discuss possible optimization opportunities and specific
-              areas of interest when building the product.</strong> This is less important but can be addressed after
-            completing the core functionality. We can also query Cursor in Max mode for suggestions in this area.</li>
-        </ul>
+        <p class="lead bottom-border">We
+          will
+          stick to the building a front-end
+          app only for this project - most of the issues are client-side anyway. The case study already includes
+          incremental
+          improvements for the backend.
+        </p>
       </div>
       <div class="detail-section">
         <h2 class="section-title" id="schemas-and-mock-data">
@@ -204,9 +186,6 @@ export default {
             hotels, user
             searches, and user
             bookings</strong>.
-          Once
-          we have the schemas in place, we can
-          <strong>generate mock data</strong> with Claude Code.
         </p>
         <div class="detail-grid">
           <div class="detail-item">
@@ -219,22 +198,76 @@ export default {
             <p>Mock data generator for flights (matching the "Flight" schema on line 19 of the previous file).</p>
           </div>
         </div>
-        <p>For flights, we'll need the real airlines, but the
+        <p>We can then
+          <strong>generate mock data</strong> by asking Claude Code to write a function that generates random data based
+          on the schemas. For flights, we'll need the real airlines, but the
           individual flights can
-          be mocked. For hotels, we'll start with 20 hotels per city, and have Claude pull real geolocation data and
-          descriptions (we'll use stock images for now, we can add real images later, as that's a lot more effort to
-          pull individually).
+          be mocked, using six cities and six airlines to keep things manageable.
+        </p>
+        <p>We'll ask Claude to pull 20 hotels per city, along with their real geolocation data and
+          descriptions. We'll use stock images for now, as pulling enough real images (even at this scale) is a lot more
+          effort and not really relevant for the objectives of this project.</p>
+        <div class="detail-grid">
+          <div class="detail-item">
+            <img src="@/assets/code-flight-tests.jpg" alt="Flight tests" />
+            <p>User flow tests for flight bookings.</p>
+          </div>
+          <div class="detail-item">
+            <img src="@/assets/code-claude-instructions.jpg" alt="Claude Code instructions" />
+            <p>Claude Code instructions to ensure tests and builds pass when making any code changes.</p>
+          </div>
+        </div>
+        <p>We can then ask Claude to write the E2E tests based on the overall user
+          flows, one of which you can see <RouterLink to="/chase-travel">in the case study</RouterLink>. We'll ask
+          it to
+          <strong>ensure tests and builds pass going forward when performing any code changes,</strong> as we get ready
+          to start building the app.
+        </p>
+      </div>
+      <div class="detail-section">
+        <h2 class="section-title" id="wireframing">“Wireframing”</h2>
+        <p>Now that the schemas are defined, and the basic user flow is hard-coded into the E2E tests, we can let Cursor
+          and Claude <strong>freely generate the interactions between the components</strong> based on these
+          un-modifiable ground truths.
         </p>
         <p>We can then <strong>skip the Figma mockups</strong> and use Claude (for features) and
-          Cursor (as the IDE, namely for autocomplete, but sometimes in place of Claude when tokens run out) instead to
-          <strong>just generate a working, "wire-frame"-type web app with the core user flows</strong>, and then
+          Cursor (as the IDE, namely for its awesome autocomplete, but sometimes in place of Claude when tokens run out)
+          instead to
+          <strong>just generate a working app</strong>, and then
           iterate on top of it. <a href="https://www.youtube.com/watch?v=bdh8k6DyKxE" target="_blank"
             rel="noopener noreferrer">Here's a
             video</a> from Cursor's head of design where he describes a similar workflow.
         </p>
+      </div>
+      <div class="detail-section">
         <h2 class="section-title" id="design">
           Design
         </h2>
+        <p>To fine-tune our components' designs, we can take "borrow" from other travel apps we like (like Kayak and
+          Hotels.com), just as I suggested in the case study, using the method below:</p>
+        <div class="detail-grid">
+          <div class="detail-item">
+            <img src="@/assets/kayak-flight-view-to-steal.jpg" alt="Kayak flight view to copy" />
+            <p>Ah, what a clean flight card component on Kayak! Let's... borrow it, starting with a screenshot.</p>
+          </div>
+          <div class="detail-item">
+            <img src="@/assets/chase-flight-view-mock.jpg" alt="Photoshopped version of the Kayak flight view" />
+            <p>In Photoshop, we can strip away the unnecessary elements and create a more basic version of the
+              component, to pass to Claude.</p>
+          </div>
+          <div class="detail-item full-width">
+            <img src="@/assets/chase-flightview-final.jpg" alt="Final component in the app" />
+            <p>Let's ask Claude to redesign the existing component in the application, referencing the modified
+              screenshot.
+              With some manual CSS tweaks for
+              extra polish, we can get a pretty good approximation of the Kayak flight card. Here, you can see the
+              component conditionally rendering the Points Boost information as well,
+              inline, without being obtrusive.</p>
+          </div>
+        </div>
+        <p>We can even make a <a href="https://chasetravel.netlify.app/components" target="_blank"
+            rel="noopener noreferrer">component showcase route</a> in the application, to operate
+          as a living design system of sorts.</p>
         <p>For the home page, let&rsquo;s get some strong lead art going. I&rsquo;ll use a photo I took on a
           trip to Lake Atitlan in
           Guatemala a few
@@ -271,38 +304,40 @@ export default {
           </div>
         </div>
 
-        <h2 class="section-title" id="development">
-          Development
+        <h2 class="section-title" id="search-results">
+          Search Results
         </h2>
-        <p>
-          For the tech stack, I used my standard stack of Vue.js, SASS, Typescript, and Pinia, but for a real production
-          application, I
-          would use Nuxt or vite-ssg for server-side rendering of content on key routes for quicker load times. That
-          way, the only thing the user is actually waiting on is the loading of the actual search results.
-        </p>
         <p>Let's get basic search in place, keeping all the search params in
           the URL for easy sharing and
           bookmarking.</p>
-        <p>Let&rsquo;s add E2E testing in Claude as well, and ensure this is
-          run after every Claude operation (along
-          with a
-          fresh build) so we can automatically fix issues as they arise, and negate the need for constant manual
-          testing.</p>
+        <p>Instead of persisting the user's itinerary in a database like a real production application, we can just
+          mirror our application
+          global
+          state to
+          localStorage.</p>
         <p>Building out the individual listing pages and hotel pages should
           be a breeze once we have the schemas and
           UI components in place.</p>
+      </div>
+
+      <div class="detail-section">
+        <h2 class="section-title" id="booking">
+          Confirmation and Booking pages
+        </h2>
         <p>Let's add an Itinerary page for all booked flights and hotels.
         </p>
         <p>Support is an important component of this application. Let's add
           that
           section to Itineraries
           and make it clear that the user can just iMessage the support team directly.</p>
-        <p>For the purposes of the demo, we can just mirror our application
-          global
-          state for user itineraries to
-          localStorage.</p>
+      </div>
+      <div class="detail-section">
+        <h3 class="section-title" id="points-boost">Points and Points Boost</h3>
         <p>Let's ensure references to Points and Points Boost are added to the
-          application.</p>
+          application. We can be subtle about it 😊</p>
+        <p>Periodically, we can query Cursor in Max mode for suggestions for a number of optimizations and deep dives.
+          We can ask it to look for opportunities to reduce duplication of code, simplify methods, and other
+          optimizations.</p>
         <p><em>This article is in progress...</em></p>
       </div>
 
