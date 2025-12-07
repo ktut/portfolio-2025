@@ -162,11 +162,21 @@ export default {
     gap: 1rem;
 
     .nav-link {
-      &--next {
-        text-align: left;
-        justify-content: flex-start;
+      align-items: center;
+      justify-content: space-between;
+
+      &--previous {
         flex-direction: row-reverse;
       }
+
+      &--next {
+        text-align: left;
+      }
+    }
+
+    .nav-content {
+      text-align: left;
+      flex: 1;
     }
   }
 }
