@@ -34,13 +34,13 @@ export default {
         }
       ],
       metrics: [
-        { label: 'Advertisers', value: '7,140' },
-        { label: 'Campaigns', value: '8,620' },
-        { label: 'Deals', value: '12,952' },
-        { label: 'Redemptions', value: '37.2M' },
+        { label: 'Advertisers managed', value: '7,140' },
+        { label: 'Campaigns run', value: '8,620' },
+        { label: 'Deals created for brands', value: '12,952' },
+        { label: 'Redemptions processed', value: '37.2M' },
         // { label: 'Revenue Processed', value: '$3.6B' },
-        { label: 'Budget Delivered', value: '$211.2M' },
-        { label: 'Reports Generated', value: '9,664' }
+        { label: 'Cumulative budget delivered', value: '$211.2M' },
+        { label: 'Reports generated', value: '9,664' }
       ]
     }
   }
@@ -61,7 +61,9 @@ export default {
           <img src="@/assets/chase-logo.png" alt="Chase Logo" class="chase-logo">JPMorgan Chase Performance Dashboard
         </h1>
         <h2 class="project-subtitle">
-          I built a client application for monitoring campaigns and downloading reports for card-linked offers.
+          I built a webapp for monitoring card-linked offer campaigns and downloading reports for <a
+            href="https://www.chase.com/mediasolutions/solutions" target="_blank" rel="noopener noreferrer"
+            aria-label="Chase Media Solutions">Chase Media Solutions</a>.
         </h2>
 
         <div class="tech-stack">
@@ -86,9 +88,7 @@ export default {
           visualizations, and even an admin panel so our internal team could manage users without SQL queries.
         </p>
         <p>
-          The platform (originally from Figg, Inc, then rebranded to <a
-            href="https://www.chase.com/mediasolutions/solutions" target="_blank" rel="noopener noreferrer"
-            aria-label="CMS">Chase Media Solutions</a> following our
+          The platform (originally from Figg, Inc, then rebranded to Chase Media Solutions following our
           acquisition) leveraged transaction data to deliver targeted offers to cardholders
           across
           digital channels. Customers discovered offers based on their purchase history, activated them via the Chase
@@ -136,16 +136,17 @@ export default {
         </p>
         <p>In my experience, overcomplication with
           frontend engineering is absolutely rampant, and usually leads to issues down the road (like state duplication
-          and cache invalidation). Therefore, I made the decision to forgo complex client-side state, and instead used
-          component-based caching and route-based Javascript chunking to
+          and cache invalidation). Therefore, I made the decision to <strong>forgo complex client-side state</strong>,
+          and instead used
+          <strong>component-based caching and route-based Javascript chunking</strong> to
           ensure solid performance. Coupled with prefetching during normal application navigation, the user got a smooth
           and speedy experience, while future engineers debugging any potential issues could be assured that things
-          wouldn't be so hard to fix.</p>
-        <p>Selenium E2E tests integrated with the CI/CD pipeline
-          focused on business-critical user journeys,
-          while strict schema control with Typescript eliminated the need for many of the unit tests. To simplify error
+          wouldn't be so hard to fix.
+        </p>
+        <p>To ensure the most critical user journeys stayed intact during development, we used <strong>Selenium E2E
+            tests integrated with the CI/CD pipeline</strong>. To simplify error
           handling and field validation, I worked with the product and design teams to promote the use of generic error
-          responses over specific ones.</p>
+          responses over specific ones. In general, I kept things simple <span class="emoji">😊</span>.</p>
       </div>
       <div class=" detail-section">
         <h2 class="section-title">
@@ -155,7 +156,7 @@ export default {
           Every interaction was carefully crafted to provide a seamless user experience. From advanced filtering to
           real-time search feedback, these details showcase the polish and precision built into the platform.
         </p>
-        <p>It was my goal to support the design team in addition to building what was asked for —
+        <p>It was my goal to <strong>support the design team in addition to building what was asked for</strong> —
           I frequently contributed design and functionality ideas, many of which made it into the final product.</p>
         <div class="detail-grid">
           <div class="detail-item full-width">
@@ -194,6 +195,16 @@ export default {
             </p>
           </div>
         </div>
+      </div>
+      <div class="detail-section">
+        <h2 class="section-title">
+          Results
+        </h2>
+        <p>
+          The app was a success, and was used by many brands to monitor their campaigns and download reports. Even two
+          years after launch, it was still in use while a team <em>three times larger</em> was tasked with building
+          a newer version.
+        </p>
       </div>
 
       <div class="features-section">
