@@ -341,6 +341,16 @@ export default {
       </div>
 
       <div class="detail-section">
+        <div class="detail-grid">
+          <div class="detail-item full-width">
+            <img src="@/assets/chase-travel-flight-booking-overview.jpg" alt="Chase Travel flight booking overview" />
+            <p>
+              Don't feel alone — remember, millions of users have sifted through this UI before, desparately seeking
+              information relevant to their task.
+            </p>
+          </div>
+          <br />
+        </div>
         <h2 class="section-title" id="major-issues">
           Major issues
         </h2>
@@ -350,8 +360,10 @@ export default {
         </p>
         <h3>UI/UX</h3>
         <ul>
-          <li><strong>Users can't use the application without logging in. </strong>Many potential users will just use a
-            different travel booking site instead. If the login service goes down, Chase Travel is inaccessible, too.
+          <li><strong>Users can't use the application without logging in. </strong>Internal analytics teams - might be
+            worth checking the bounce rates 🦘. Many potential users will just disappear to a
+            different travel booking site instead. If the login service goes down, Chase Travel becomes <em>fully</em>
+            inaccessible.
           </li>
           <li><strong>Chase Points features (Points Boost, etc.) are over-emphasized, to the detriment of the user
               experience.</strong> Sometimes they are displayed three or four times per page (!). The user
