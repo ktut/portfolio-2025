@@ -171,31 +171,31 @@ export default {
         <ul>
           <li>Chase Travel sales volume was about $8 billion in 2022 was estimated at $10
             billion in 2023.</li>
-          <li>At a recent investor day, they have said that they are a &ldquo;Top 5 consumer leisure travel
+          <li>At a recent investor day, Chase has said that they are a &ldquo;Top 5 consumer leisure travel
             provider&rdquo; and that 1 in 4 leisure travel dollars are spent on Chase cards.</li>
           <li>They have seen an average 24% growth in transactions through Chase Travel year
             over year since launch, and approximately 40% YOY growth in the total number of users purchasing travel on
             Chase.</li>
           <li>Chase has spent hundreds of millions of dollars (estimated) on securing lounge locations across the
-            US, all Chase Travel branded.</li>
+            US, all Chase Travel-branded.</li>
         </ul>
         <p>
-          <strong>Chase Travel is a significant part of
-            Chase&rsquo;s consumer
-            business</strong>,
+          Chase Travel is clearly <strong>a significant part of
+            Chase&rsquo;s consumer business</strong>,
           and a
           significant part of
-          the consumer travel market.
+          the US consumer travel market.
         </p>
       </div>
 
       <div class="detail-section">
         <h2 class="section-title" id="typical-user-flows">
-          Typical Hotel Booking User Flow
+          A typical hotel booking user flow
         </h2>
         <p>
           Let's focus on a typical user journey for booking a hotel on Chase Travel, showing both
-          logged-in and logged-out user experience (the flights user journey is similar, except there's no detail page).
+          logged-in and logged-out user experiences (the flights user journey is similar, except there's no detail
+          page).
         </p>
 
         <div class="user-flow-diagram">
@@ -363,9 +363,10 @@ export default {
             to poor use of white space and poor choices of horizontal vs. vertical layouts. Components (filters, maps)
             aren&rsquo;t
             mobile-friendly. </li>
-          <li><strong>Both real performance and perceived performance are poor.</strong> The user is blocked from
-            modifying filters until the page is
-            finished loading. No proper use of loading indicators exist. Missed
+          <li><strong>Both real performance and perceived performance are poor.</strong> Search results load slowly. The
+            user is blocked from
+            modifying filters until the entire page is
+            finished loading. The app does not make use of in-component or in-page loading indicators. Missed
             opportunities for
             pre-fetching abound. Images are not loaded asynchronously (&ldquo;lazily&rdquo;) as they should be.</li>
         </ul>
@@ -556,10 +557,13 @@ export default {
             the data that was needed.
           </li>
         </ul>
-
+        <h2 class="section-title" id="could-i-do-better">
+          Could I do better?
+        </h2>
         <p>
-          <RouterLink to="/chase-travel-fixed">Continue reading here</RouterLink> to see the full app-building process
-          that I undertook to implement these solutions.
+          <strong>I decided to try</strong> — <RouterLink to="/chase-travel-fixed">
+            continue reading here</RouterLink> to see my attempt at building a better webapp, that I undertook over the
+          course of two weeks, implementing the solution listed above (from the client-side, at least).
         </p>
       </div>
 
