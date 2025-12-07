@@ -148,7 +148,7 @@ export default {
           </li>
           <li>
             <span><b>Tech</b></span>
-            <span>Cursor, Claude Code, Vue.js, Typescript, Pinia</span>
+            <span>Cursor, Claude, Vue.js, Typescript, Pinia</span>
           </li>
           <li>
             <span><b>Date</b></span>
@@ -220,7 +220,7 @@ export default {
         <ul class="project-metadata">
           <li>
             <span><b>Role</b></span>
-            <span>Lead Frontend Developer and Site Administrator</span>
+            <span>Lead Developer and Site Administrator</span>
           </li>
           <li>
             <span><b>Tech</b></span>
@@ -250,7 +250,7 @@ export default {
         <ul class="project-metadata">
           <li>
             <span><b>Role</b></span>
-            <span>Lead Frontend Developer and Site Administrator</span>
+            <span>Lead Frontend Developer</span>
           </li>
           <li>
             <span><b>Tech</b></span>

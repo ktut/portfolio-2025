@@ -110,11 +110,12 @@ export default {
     <section class="content-wrapper">
       <header class="project-header">
         <h1 class="project-title">
-          Fixing Chase Travel’s webapp in two weeks with
+          Reimagining Chase Travel using
           Cursor and Claude Code
         </h1>
         <h2 class="project-subtitle">
-          Rebuilt with improved UI + UX and better access to support
+          In two weeks, I built a new proof-of-concept webapp for Chase Travel with improved UI + UX and better
+          access to support
         </h2>
 
         <div class="disclaimer">
