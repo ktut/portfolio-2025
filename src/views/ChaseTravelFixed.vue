@@ -265,6 +265,8 @@ export default {
               inline, without being obtrusive.</p>
           </div>
         </div>
+        <p>When adding references to Points and Points Boost, we should be subtle about it 😊 instead of beating the
+          user over the head with it.</p>
         <p>We can even make a <a href="https://chasetravel.netlify.app/components" target="_blank"
             rel="noopener noreferrer">component showcase route</a> in the application, to operate
           as a living design system of sorts.</p>
@@ -277,15 +279,17 @@ export default {
           <div class="detail-item">
             <img src="@/assets/gua-lo.jpg" alt="Photo of Lake Atitlan, Guatemal" />
             <p>
-              Photo I took of Lake Atitlán, Guatemala, in 2016. A little background: I got sick from eating a salad in a
-              nearby town and
+              Photo I took of Lake Atitlán, Guatemala, in 2016. A little background: While on this trip, I had gotten
+              sick from
+              eating a salad in a
+              nearby town, and
               ended up stuck at my hotel
               with only this view to comfort me.
             </p>
           </div>
           <div class="detail-item">
             <video autoplay loop muted playsinline src="@/assets/photoshop-layers.mov" />
-            <p>In Photoshop, we can break it apart into layers (three should do - foreground for the leaves, midground
+            <p>In Photoshop, we can break it apart into layers (three should do — foreground for the leaves, midground
               for the pool, and deep background for the lake and volcano in the distance), and use generative fill to
               fill in the gaps. As long as we configure
               Photoshop correctly and export the PNGs with an ICC profile for Display P3, we should be able to retain
@@ -307,34 +311,46 @@ export default {
         <h2 class="section-title" id="search-results">
           Search Results
         </h2>
-        <p>Let's get basic search in place, keeping all the search params in
+        <p>Let's keep all the search params in
           the URL for easy sharing and
-          bookmarking.</p>
+          bookmarking, like this:
+          <code>https://chasetravel.netlify.app/search?type=flights&from=New+York,+NY&adults=1&to=Chicago,+IL&tripType=round-trip&checkIn=2026-01-07T06:00:00.000Z&checkOut=2026-01-14T06:00:00.000Z&checkInFlex=exact&checkOutFlex=exact</code>
+        </p>
         <p>Instead of persisting the user's itinerary in a database like a real production application, we can just
           mirror our application
           global
           state to
           localStorage.</p>
-        <p>Building out the individual listing pages and hotel pages should
-          be a breeze once we have the schemas and
-          UI components in place.</p>
       </div>
 
       <div class="detail-section">
         <h2 class="section-title" id="booking">
           Confirmation and Booking pages
         </h2>
-        <p>Let's add an Itinerary page for all booked flights and hotels.
-        </p>
         <p>Support is an important component of this application. Let's add
           that
           section to Itineraries
           and make it clear that the user can just iMessage the support team directly.</p>
+        <div class="detail-grid">
+          <div class="detail-item">
+            <img src="@/assets/chase-travel-help-phone.jpg" alt="Support section in the Itinerary page on iPhone" />
+            <p>
+              On both the bookings and itinerary pages, the user has all of the information they need to
+              contact support. Chase Reserve cardmembers can see their own special dedicated
+              customer support phone number.
+            </p>
+          </div>
+          <div class="detail-item">
+            <img src="@/assets/chase-travel-help.jpg" alt="Support section in the Itinerary page  " />
+            <p>
+              The option to iMessage the support team directly is clearly visible.
+            </p>
+          </div>
+        </div>
+
       </div>
       <div class="detail-section">
-        <h3 class="section-title" id="points-boost">Points and Points Boost</h3>
-        <p>Let's ensure references to Points and Points Boost are added to the
-          application. We can be subtle about it 😊</p>
+        <h3 class="section-title" id="improvements">Improvements</h3>
         <p>Periodically, we can query Cursor in Max mode for suggestions for a number of optimizations and deep dives.
           We can ask it to look for opportunities to reduce duplication of code, simplify methods, and other
           optimizations.</p>
