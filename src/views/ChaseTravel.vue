@@ -138,10 +138,8 @@ export default {
       </header>
 
       <div class="disclaimer">
-        <p>
-          <strong>Disclaimer:</strong> Per JPMC confidentiality policies, no internal information was used in any way on
-          this project. Everything was based solely on observations of the public-facing product.
-        </p>
+        <strong>Disclaimer:</strong> Per JPMC confidentiality policies, no internal information was used in any way on
+        this project. Everything was based solely on observations of the public-facing product.
       </div>
 
       <!-- Sticky Navigation -->
@@ -561,7 +559,7 @@ export default {
 
         <p>
           <RouterLink to="/chase-travel-fixed">Continue reading here</RouterLink> to see the full app-building process
-          that I undertook over two weeks, that implemented these solutions.
+          that I undertook to implement these solutions.
         </p>
       </div>
 
@@ -651,7 +649,6 @@ export default {
     background: #f5f5f5;
     font-style: normal;
     color: #444;
-    font-size: 1.05rem;
     line-height: 1.8;
     font-family: 'comma-sans', sans-serif;
     text-align: left;
@@ -678,7 +675,6 @@ export default {
 
     li {
       margin-bottom: 1rem;
-      line-height: 1.8;
       text-align: left;
     }
   }
@@ -730,12 +726,11 @@ export default {
       flex-direction: column;
 
       .card-header {
+        font-family: $font-body;
         padding: 0.75rem 1rem;
         background: #f5f5f5;
         border-bottom: 1px solid #ddd;
         font-weight: 600;
-        font-size: 0.95rem;
-        font-family: 'comma-sans', sans-serif;
         color: #333;
         text-align: left;
       }
@@ -750,7 +745,6 @@ export default {
           margin: 0 0 0.75rem 0;
           font-weight: 600;
           color: #333;
-          font-size: 0.9rem;
           text-align: left;
         }
 
@@ -761,8 +755,6 @@ export default {
 
           li {
             margin-bottom: 0.4rem;
-            line-height: 1.6;
-            font-size: 0.85rem;
             color: #555;
             text-align: left;
           }

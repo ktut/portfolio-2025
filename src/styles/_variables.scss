@@ -4,9 +4,21 @@
 // Colors
 $redPunch: color(display-p3 1 0 0.27);
 $textColor: #333;
+$textColorBreakout: #585858;
 $logoColor: #a2a2a2;
 $backgroundColor: #eee;
 $linkActiveColor: #42b983;
+
+// Typography
+$font-body: Georgia, serif;
+$font-breakout: 'comma-sans', sans-serif;
+
+// Mixins
+@mixin breakout-font {
+  font-family: $font-breakout;
+  line-height: 1.5;
+  color: $textColorBreakout;
+}
 
 // Add more variables as needed
 // $primary-color: #3498db;

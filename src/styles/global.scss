@@ -83,7 +83,7 @@ p,
 ol,
 ul,
 li {
-  font-family: 'comma-sans', sans-serif;
+  font-family: $font-body;
   font-weight: 400;
   b {
     font-weight: 700;
@@ -92,7 +92,6 @@ li {
   font-size: 1rem;
   margin-bottom: 20px;
   line-height: 180%;
-  letter-spacing: 0.02em;
 }
 
 em {
@@ -113,7 +112,7 @@ ul {
 }
 
 li {
-  line-height: 155%;
+  line-height: 1.8;
 }
 
 a {
@@ -342,7 +341,7 @@ main {
   margin-top: 2rem;
 
   .tech-pill {
-    font-family: 'comma-sans', sans-serif;
+    font-family: $font-body;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -378,7 +377,7 @@ main {
 
   .lead {
     font-family: 'meursault-variable', serif;
-    font-variation-settings: 'wdth' 180, 'wght' 400;
+    font-variation-settings: 'wdth' 150, 'wght' 400;
     font-size: 1.2rem;
     line-height: 1.7;
     margin-bottom: 1.5rem;
@@ -470,8 +469,8 @@ main {
     }
 
     p {
+      @include breakout-font;
       max-width: 400px;
-      color: #4a4a4a;
       margin: 0;
       margin-left: auto;
       margin-right: auto;
@@ -503,7 +502,6 @@ main {
 
     li {
       font-size: 1.05rem;
-      line-height: 1.8;
       color: #4a4a4a;
       padding: 1rem 0;
       position: relative;
@@ -573,7 +571,7 @@ main {
   padding: 0.5rem;
   color: #5a5a5a;
   box-sizing: border-box;
-  font-family: 'comma-sans', sans-serif;
+  font-family: $font-body;
 }
 
 // Animations
@@ -608,4 +606,16 @@ main {
       animation: dash-move 20s linear infinite;
     }
   }
+}
+
+.disclaimer {
+  @include breakout-font;
+  text-align: left;
+  line-height: 1.5;
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1.5rem 1.5rem 1.5rem;
+  background: #fff9e6;
+  border-left: 4px solid #f5a623;
+  border-radius: 4px;
 }

@@ -118,11 +118,9 @@ export default {
         </h2>
 
         <div class="disclaimer">
-          <p>
-            <strong>Disclaimer:</strong> Per JPMC confidentiality policies, no internal information was used in any way
-            on
-            this project. Everything was based solely on observations of the public-facing product.
-          </p>
+          <strong>Disclaimer:</strong> Per JPMC confidentiality policies, no internal information was used in any way
+          on
+          this project. Everything was based solely on observations of the public-facing product.
         </div>
 
         <div class="tech-stack">
@@ -397,34 +395,12 @@ export default {
 
     li {
       margin-bottom: 1rem;
-      line-height: 1.8;
       text-align: left;
     }
   }
 
   ol {
     list-style-type: decimal;
-  }
-
-  .disclaimer {
-    max-width: 700px;
-    margin: 2rem auto;
-    padding: 1.5rem;
-    background: #fff9e6;
-    border-left: 4px solid #f5a623;
-    border-radius: 4px;
-
-    p {
-      margin: 0;
-      font-size: 0.95rem;
-      line-height: 1.6;
-      color: #666;
-    }
-
-    strong {
-      color: #333;
-      font-weight: 700;
-    }
   }
 
   figure {

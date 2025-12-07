@@ -81,6 +81,7 @@ export default {
   }
 
   p {
+    font-family: $font-breakout;
     font-size: 1.18rem;
     margin-top: 1rem;
     color: $textColor;

@@ -242,9 +242,6 @@ export default {
     margin-bottom: 4rem;
 
     p {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: #4a4a4a;
       margin-bottom: 1.5rem;
     }
 
