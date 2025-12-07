@@ -668,7 +668,7 @@ export default {
   ol {
     max-width: 700px;
     margin: 1.5rem auto;
-    padding-left: 2rem;
+    padding-left: 1rem;
     text-align: left;
     list-style-position: outside;
     list-style-type: disc;

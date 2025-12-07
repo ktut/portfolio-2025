@@ -146,7 +146,7 @@ export default {
         </select>
       </div>
 
-      <div class="detail-section">
+      <div class="project-overview">
         <p class="rounded-highlight">
           <svg xmlns="http://www.w3.org/2000/svg">
             <rect x="1" y="1" width="calc(100% - 2px)" height="calc(100% - 2px)" rx="12" ry="12" />
@@ -157,12 +157,16 @@ export default {
           <a href="https://github.com/ktut/chasetravel" target="_blank" rel="noopener noreferrer">see my code</a>.
         </p>
         <br />
-        <h2 class="section-title" id="overview">
-          Overview
+        <h2 class="section-title" id="objectives">
+          Objectives
         </h2>
-        <p>To begin, let's reference the <a
-            href="https://www.greatfrontend.com/front-end-system-design-playbook/framework" target="_blank"
-            rel="noopener noreferrer">RADIO framework</a>, per industry best practices.</p>
+        <p class="lead bottom-border">We're going to try to build a performant, beautiful webapp for Chase Travel that
+          meets the needs of the user
+          and the business, based on the conclusions of <RouterLink to="/chase-travel">my case study.
+          </RouterLink>
+        </p>
+        <p>Let's reference the <a href="https://www.greatfrontend.com/front-end-system-design-playbook/framework"
+            target="_blank" rel="noopener noreferrer">RADIO framework</a>, per industry best practices:</p>
         <ul>
           <li><strong>Requirements exploration: Understand the problem thoroughly and determine the scope by
               asking a number of clarifying questions.</strong> This is complete per
@@ -194,7 +198,8 @@ export default {
             href="https://rapidapi.com/search?sortBy=ByRelevance" target="_blank" rel="noopener noreferrer">available
             publicly</a>.</p>
         <p>We
-          can start by <strong>tightly defining schemas</strong> in Typescript for <strong>flights, hotels, user
+          can start by <strong>tightly defining schemas</strong> (data structures) in Typescript for <strong>flights,
+            hotels, user
             searches, and user
             bookings</strong>.
           Once
@@ -389,7 +394,7 @@ export default {
   ol {
     max-width: 700px;
     margin: 1.5rem auto;
-    padding-left: 2rem;
+    padding-left: 1rem;
     text-align: left;
     list-style-position: outside;
     list-style-type: disc;
