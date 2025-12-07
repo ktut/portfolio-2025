@@ -27,16 +27,17 @@ const routesMeta = {
   '/chase-travel': {
     displayName: 'Chase Travel Case Study',
     ogImage: 'https://rkdvis.com/assets/gua-lo.jpg',
-    ogTitle: 'Fixing Chase Travel — Ramzi Dreessen',
+    ogTitle: 'Fixing Chase Travel: A Case Study',
     ogDescription:
-      'Fixing the clunky travel booking app via applying industry standards, user research and some common sense'
+      'Applying industry standards, user research and some common sense to fix the clunky travel booking app'
   },
   '/chase-travel-fixed': {
     displayName: 'Fixing Chase Travel',
     ogImage: 'https://rkdvis.com/assets/CT-laptop-mock.jpg',
-    ogTitle: 'Fixing Chase Travel in Two Weeks with Cursor and Claude Code',
+    ogTitle:
+      'Fixing the Chase Travel UI in Two Weeks with Cursor and Claude Code',
     ogDescription:
-      'Rebuilding the clunky travel booking app with improved UI + UX and better customer support access'
+      'A former Chase engineer rebuilds the clunky travel booking app with improved UI + UX and better customer support access'
   },
   '/chicagomagazine': {
     displayName: 'ChiMag Editorial Web Design',
