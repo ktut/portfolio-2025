@@ -142,24 +142,45 @@ export default {
   }
 }
 
-/* Mobile - simpler animation with smaller distance */
+/* Mobile - 4 rows grid layout */
 @media (max-width: 450px) {
+  .outer-logo-slider {
+    display: flex;
+    justify-content: center;
+  }
+
   .inner-logo-slider {
-    animation: scrollMobile 20s linear infinite;
+    flex-wrap: wrap;
+    animation: none;
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .logo-track {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 40px;
+    width: 100%;
+    justify-items: center;
+  }
+
+  .logo-track:last-child {
+    display: none;
   }
 
   .brandlogo {
-    margin: 0 20px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 120px;
   }
 
-  @keyframes scrollMobile {
-    0% {
-      transform: translateX(0);
-    }
-
-    100% {
-      transform: translateX(-50%);
-    }
+  .brandlogo img {
+    max-width: 100%;
+    max-height: 40px !important;
+    height: auto !important;
+    object-fit: contain;
   }
 }
 </style>

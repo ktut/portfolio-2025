@@ -118,7 +118,7 @@ footer {
 
   h3 {
     color: $textColor;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     font-size: 1.5rem;
   }
 
