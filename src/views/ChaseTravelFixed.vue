@@ -402,12 +402,12 @@ export default {
       </div>
       <div class="detail-section">
         <h2 class="section-title" id="lessons-learned">
-          Lessons learned from my LLM approach
+          Lessons learned
         </h2>
         <p>Sometimes, Claude/Cursor just couldn't get the details right. I frequently
           had to go in and make manual changes to CSS and the templates, and simplify things considerably from what was
-          intially spit out.</p>
-        <p>Other times, a broad prompt as simple as "Identify areas for improvement and simplification in the
+          intially spit out. Other times, a broad prompt as simple as "Identify areas for improvement and simplification
+          in the
           application" would yield an impressive plan of action that barely had to be modified.</p>
         <div class="detail-grid">
           <div class="detail-item">
@@ -424,7 +424,11 @@ export default {
             </p>
           </div>
         </div>
-        <p><em>This article is in progress...</em></p>
+        <p>In the end, I was able to build a working app that is a significant improvement over the original, and I
+          learned a lot about the potential of LLMs. I don't think there's one "right" way to use these tools, but I
+          think
+          there's a lot of potential in the combination of Cursor and Claude for rapid development of web applications.
+        </p>
       </div>
       <PostArticleNav />
     </section>
