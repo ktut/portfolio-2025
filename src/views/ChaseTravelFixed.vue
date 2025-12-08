@@ -372,7 +372,10 @@ export default {
           and make it clear that the user can just iMessage the support team directly.</p>
         <div class="detail-grid">
           <div class="detail-item full-width">
-            <img src="@/assets/CT-support-mock.jpg" alt="Support section in the Itinerary page on iPhone" />
+            <picture>
+              <source srcset="@/assets/CT-support-mock.jpg" media="(width >= 768px)" />
+              <img src="@/assets/CT-support-mock-mobile.jpg" alt="Support section in the Itinerary page on iPhone" />
+            </picture>
           </div>
         </div>
 
@@ -381,13 +384,14 @@ export default {
         <h2 class="section-title" id="the-final-product">
           The final product
         </h2>
-        <p>After a few weeks of development, we have a working app that is a significant improvement over the original.
+        <p>In a little over a month, we have completed a case study (2 weeks), developed the app (2 weeks), and written
+          these articles (1 week). That's a lot of work, but it's a lot of fun to see the results.</p>
+        <p>We now have a working app that is a significant improvement over the original.
           You can view the final product <a href="https://chasetravel.netlify.app/" target="_blank"
             rel="noopener noreferrer">here</a>, or watch the walkthrough video below.</p>
         <div class="iphone-super-container">
           <iPhone :videoSrc="chaseTravelVideoSrc" />
         </div>
-
       </div>
       <div class="detail-section">
         <h2 class="section-title" id="lessons-learned">
