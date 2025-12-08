@@ -17,6 +17,7 @@ export default {
         { src: require('@/assets/logos/fitch-min.png'), height: '70px', tooltip: 'Web development, design' },
         { src: require('@/assets/logos/h5g-min.png'), height: '60px', tooltip: 'Web development' },
         { src: require('@/assets/logos/hb-min.png'), height: '60px', tooltip: 'Web development, design, video production' },
+        { src: require('@/assets/logos/jpmorgan-min.png'), height: '50px', tooltip: 'Web development' },
         { src: require('@/assets/logos/knstrct-min.png'), height: '30px', tooltip: 'Portrait photography' },
         { src: require('@/assets/logos/marianos-min.png'), height: '70px', tooltip: 'Portrait, event, product photography' },
         { src: require('@/assets/logos/printavo-min.png'), height: '50px', tooltip: 'Videography, photography' },
