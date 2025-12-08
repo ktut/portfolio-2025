@@ -1,15 +1,17 @@
 <script>
-import iPhone from '@/components/iPhone.vue'
+import { defineAsyncComponent } from 'vue'
 import PostArticleNav from '@/components/PostArticleNav.vue'
+import chaseTravelVideo from '@/assets/CT-mobile-walkthrough.mov'
 
 export default {
   name: 'ChaseTravelFixedView',
   components: {
-    iPhone,
+    iPhone: defineAsyncComponent(() => import('@/components/iPhone.vue')),
     PostArticleNav
   },
   data() {
     return {
+      chaseTravelVideoSrc: chaseTravelVideo,
       technologies: [
         {
           name: 'Cursor',
@@ -387,6 +389,18 @@ export default {
 
       </div>
       <div class="detail-section">
+        <h2 class="section-title" id="the-final-product">
+          The final product
+        </h2>
+        <p>After a few weeks of development, we have a working app that is a significant improvement over the original.
+          You can view the final product <a href="https://chasetravel.netlify.app/" target="_blank"
+            rel="noopener noreferrer">here</a>, or watch the walkthrough video below.</p>
+        <div class="iphone-super-container">
+          <iPhone :videoSrc="chaseTravelVideoSrc" />
+        </div>
+
+      </div>
+      <div class="detail-section">
         <h2 class="section-title" id="lessons-learned">
           Lessons learned from my LLM approach
         </h2>
@@ -527,6 +541,17 @@ export default {
       text-align: left;
       padding-top: 1rem;
       padding-bottom: 1rem;
+    }
+  }
+
+  .iphone-super-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
+
+    @media (max-width: 768px) {
+      transform: scale(0.8);
+      transform-origin: center top;
     }
   }
 }
