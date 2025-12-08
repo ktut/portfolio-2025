@@ -363,27 +363,16 @@ export default {
       </div>
 
       <div class="detail-section">
-        <h2 class="section-title" id="booking">
-          Confirmation and Booking pages
+        <h2 class="section-title" id="support">
+          Support section
         </h2>
         <p>Support is an important component of this application. Let's add
           that
           section to both the bookings and itinerary pages
           and make it clear that the user can just iMessage the support team directly.</p>
         <div class="detail-grid">
-          <div class="detail-item">
-            <img src="@/assets/chase-travel-help-phone.jpg" alt="Support section in the Itinerary page on iPhone" />
-            <p>
-              Here, the user has all of the information they need to
-              contact support. Chase Reserve cardmembers can see their own special dedicated
-              customer support phone number.
-            </p>
-          </div>
-          <div class="detail-item">
-            <img src="@/assets/chase-travel-help.jpg" alt="Support section in the Itinerary page  " />
-            <p>
-              The option to iMessage the support team directly is clearly visible.
-            </p>
+          <div class="detail-item full-width">
+            <img src="@/assets/CT-support-mock.jpg" alt="Support section in the Itinerary page on iPhone" />
           </div>
         </div>
 
