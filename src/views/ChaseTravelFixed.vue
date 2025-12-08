@@ -286,7 +286,7 @@ export default {
         </div>
         <p>We can even make a <a href="https://chasetravel.netlify.app/components" target="_blank"
             rel="noopener noreferrer">component showcase route</a> in the application, to operate
-          as a living design system of sorts.</p>
+          as a <strong>living design system</strong> of sorts.</p>
         <p>For the home page, let&rsquo;s get some <strong>strong lead art</strong> going. I&rsquo;ll use a photo I took
           on a
           trip to Lake Atitlán in

@@ -61,7 +61,7 @@ export default {
       </header>
 
       <div class="project-overview">
-        <p class="lead">
+        <p class="lead bottom-border">
           At <a href="http://www.chicagomag.com" target="_blank" rel="noreferrer noopener"><em>Chicago</em>
             magazine</a>, I was in charge of web design and administration
           (taking over from the
@@ -73,7 +73,41 @@ export default {
           full-stack
           coding bootcamp on nights/weekends.
         </p>
-        <p class="lead">Here's some of the work I did there:</p>
+        <p>My process went something like this:</p>
+        <ul>
+          <li><strong>We'd have regular all-staff meetings</strong> about upcoming editorial content. Me and the online
+            editors would get a heads-up on what would
+            be
+            online-only, and what would be coming from the print edition.</li>
+          <li>For the larger features, <strong>I'd have specific meetings with the art team</strong> before any shoots
+            took place, to
+            discuss what
+            additional online-only content would be needed. Sometimes this would be more than just an additional photo
+            for web. For example, for the house music feature, we had one of
+            the writers make a relevant Spotify playlist for online.</li>
+          <li>Occasionally, <strong>I'd join cover photoshoots to shoot behind-the-scenes videos</strong> for social
+            media/YouTube,
+            like this one:
+          </li>
+        </ul>
+        <p><iframe width="100%" height="400" src="https://www.youtube.com/embed/7nJw3GBk9TA"
+            title="Behind the Scenes of Chicago Magazine’s Elena Delle Donne Photo Shoot" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+        <ul>
+          <li>Before articles went to print, the online team would usually have an editorial schedule already in place,
+            and we'd
+            together to plan out the online content for the week. For the major features, I'd
+            also have
+            small meetings with the art teams to <strong>pitch my design ideas and get feedback.</strong></li>
+          <li>One by one, <strong>I'd design the article layouts, ensuring that the design was
+              consistent with
+              the brand and that it was responsive and looked good on all devices</strong>. we'd then publish them
+            according
+            to the
+            editorial schedule.</li>
+        </ul>
+        <p>Here's some of the work I did there:</p>
       </div>
 
       <div class="video-container">
@@ -123,6 +157,30 @@ export default {
           <video src="../assets/vid-15.mov" autoplay loop muted playsinline />
         </div>
       </div>
+      <div class=" detail-section">
+        <br />
+        <br />
+        <h2 class="section-title">
+          Acknowledgments
+        </h2>
+        <p>A special thanks goes out to all of my former colleagues at <em>Chicago</em> whose hard work went into all of
+          these
+          pieces:</p>
+        <ul class="acknowledgments-list">
+          <li>Susanna Wickham (Editor-in-Chief)</li>
+          <li>Terry Noland (Managing Editor)</li>
+          <li>Penny Pollack (Editor, Dining)</li>
+          <li>Dave McAninch (Editor)</li>
+          <li>Tal Rosenberg (Editor)</li>
+          <li>Martha Williams (Art Director)</li>
+          <li>Emily Johnson (Art Director)</li>
+          <li>Jessica Sedgwick (Designer)</li>
+          <li>Bettina Chang (Editor, Digital)</li>
+          <li>Matt Pollock (Editor, Digital)</li>
+          <li>Lynette Smith (Online Producer)</li>
+          <li>...and many more! including countless photographers, writers, and other contributors.</li>
+        </ul>
+      </div>
 
       <PostArticleNav />
     </section>
@@ -132,6 +190,18 @@ export default {
 <style lang="scss" scoped>
 .chicago-mag {
   min-height: 100vh;
+
+  ul {
+    list-style-position: inside;
+    list-style-type: disc;
+
+    li {
+      text-align: left;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 
   .hero {
     max-width: 800px;
