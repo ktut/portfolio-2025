@@ -160,9 +160,9 @@ export default {
         <h2 class="section-title" id="objectives">
           Objectives
         </h2>
-        <p class="lead">We're going to try to build a performant, beautiful webapp for Chase Travel that
-          for booking flights and hotels, based on the conclusions of <RouterLink to="/chase-travel">my case study.
-          </RouterLink> The app should be functional for users in the Chase ecosystem as well as those outside of it.
+        <p class="lead">We're going to try to build a better webapp for Chase Travel, only for
+          booking flights and hotels for now, based on the conclusions of <RouterLink to="/chase-travel">my case study.
+          </RouterLink>
         </p>
         <p class="lead">We
           will
@@ -242,20 +242,20 @@ export default {
           iterate on top of it. <a href="https://www.youtube.com/watch?v=bdh8k6DyKxE" target="_blank"
             rel="noopener noreferrer">Here's a
             video</a> from Cursor's head of design where he describes a similar workflow — we are doing the same thing,
-          just constraining it by E2E tests and periodic code reviews.
+          just constraining it with E2E tests and periodic code reviews.
         </p>
       </div>
       <div class="detail-section">
         <h2 class="section-title" id="design">
           Design
         </h2>
-        <p>To fine-tune our components' designs (modifying what Claude created), we can take "borrow" from other travel
+        <p>To fine-tune the overall design from what Claude created, we can "borrow" components from other travel
           apps we like (like Kayak and
-          Hotels.com), just as I suggested in the case study, using the method below:</p>
+          Hotels.com), using the method below:</p>
         <div class="detail-grid">
           <div class="detail-item">
             <img src="@/assets/kayak-flight-view-to-steal.jpg" alt="Kayak flight view to copy" />
-            <p>Ah, what a clean flight card component on Kayak! Let's... borrow it, starting with a screenshot.</p>
+            <p>Ah, what a beautiful flight card component on Kayak! Let's "borrow" it, starting with a screenshot.</p>
           </div>
           <div class="detail-item">
             <img src="@/assets/chase-flight-view-mock.jpg" alt="Photoshopped version of the Kayak flight view" />
@@ -352,16 +352,9 @@ export default {
             </p>
           </div>
         </div>
-
-      </div>
-      <div class="detail-section">
-        <h3 class="section-title" id="improvements">Improvements</h3>
-        <p>Periodically, we can query Cursor in Max mode for suggestions for a number of optimizations and deep dives.
-          We can ask it to look for opportunities to reduce duplication of code, simplify methods, and other
-          optimizations.</p>
         <p><em>This article is in progress...</em></p>
-      </div>
 
+      </div>
       <PostArticleNav />
     </section>
   </main>
