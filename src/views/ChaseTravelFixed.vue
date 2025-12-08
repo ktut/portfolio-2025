@@ -326,8 +326,8 @@ export default {
           </div>
         </div>
 
-        <h2 class="section-title" id="Login">
-          Login
+        <h2 class="section-title" id="Authentication">
+          Authentication
         </h2>
         <p>The user should be able to use the application without logging in, but if they do log in, they should be able
           to see
