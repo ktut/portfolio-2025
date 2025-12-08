@@ -194,9 +194,13 @@ export default {
         </p>
         <div class="detail-grid">
           <div class="detail-item">
-            <img src="@/assets/code-schemas.jpg"
-              alt="Typescript schemas for flights, hotels, user searches, and user bookings" />
+            <div class="iframe-container">
+              <iframe src="https://gist.github.com/ktut/fe31a3b811527ae8bde75c6a81418b41.pibb" width="100%" height="400"
+                frameborder="0">
+              </iframe>
+            </div>
             <p>Typescript schemas for flights, hotels, user searches, and user bookings.</p>
+
           </div>
           <div class="detail-item">
             <img src="@/assets/code-mock-flights.jpg" alt="Mock data generator for flights" />
