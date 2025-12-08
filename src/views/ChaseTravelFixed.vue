@@ -173,7 +173,7 @@ export default {
           improvements for the backend.
         </p>
         <p class="lead bottom-border">We want to use Cursor and Claude to accelerate the development process, but we
-          still want control over the <em>architecture</em> and <em>design</em>. We'll use some special techniques
+          still want control over the architecture and design. We'll use some special techniques
           to accomplish this.
         </p>
       </div>
@@ -275,8 +275,9 @@ export default {
         <p>We can even make a <a href="https://chasetravel.netlify.app/components" target="_blank"
             rel="noopener noreferrer">component showcase route</a> in the application, to operate
           as a living design system of sorts.</p>
-        <p>For the home page, let&rsquo;s get some strong lead art going. I&rsquo;ll use a photo I took on a
-          trip to Lake Atitlan in
+        <p>For the home page, let&rsquo;s get some <strong>strong lead art</strong> going. I&rsquo;ll use a photo I took
+          on a
+          trip to Lake Atitlán in
           Guatemala a few
           years ago.</p>
 
@@ -313,19 +314,38 @@ export default {
           </div>
         </div>
 
-        <h2 class="section-title" id="search-results">
-          Search Results
+        <h2 class="section-title" id="Login">
+          Login
         </h2>
-        <p>Let's keep all the search params in
+        <p>The user should be able to use the application without logging in, but if they do log in, they should be able
+          to see
+          their points and a hover state CTA for Points Boost. The user shouldn't have to leave the application to log
+          in,
+          as the current implementation of Chase Travel mandates its users to.</p>
+        <div class="detail-grid">
+          <div class="detail-item full-width centered">
+            <video autoplay loop muted playsinline src="@/assets/chase-points-signin.mov" />
+            <p>
+              While this login might appear unrealisticly simple, a real Chase login implementation
+              shouldn't look much more complicated. It should only involve a popup modal with a form to log in, followed
+              by
+              2FA. This is an industry-standard user flow for many apps. Using passkeys, this could be an even quicker
+              experience.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="section-title" id="search-results">
+          State and URL Management
+        </h2>
+        <p>For searches, let's keep all the params in
           the URL for easy sharing and
           bookmarking, like this:
           <code>https://chasetravel.netlify.app/search?type=flights&from=New+York,+NY&adults=1&to=Chicago,+IL&tripType=round-trip&checkIn=2026-01-07T06:00:00.000Z&checkOut=2026-01-14T06:00:00.000Z&checkInFlex=exact&checkOutFlex=exact</code>
         </p>
-        <p>Instead of persisting the user's itinerary in a database like a real production application, we can just
-          mirror our application
-          global
-          state to
-          localStorage.</p>
+        <p>We can just mirror this then to the application global state with Pinia as well as localStorage (using a
+          Pinia plugin), since there is no PII involved. In a
+          real production application, we would simply replace that localStorage logic with database calls.</p>
       </div>
 
       <div class="detail-section">
