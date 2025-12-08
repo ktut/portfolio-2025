@@ -366,13 +366,13 @@ export default {
         </h2>
         <p>Support is an important component of this application. Let's add
           that
-          section to Itineraries
+          section to both the bookings and itinerary pages
           and make it clear that the user can just iMessage the support team directly.</p>
         <div class="detail-grid">
           <div class="detail-item">
             <img src="@/assets/chase-travel-help-phone.jpg" alt="Support section in the Itinerary page on iPhone" />
             <p>
-              On both the bookings and itinerary pages, the user has all of the information they need to
+              Here, the user has all of the information they need to
               contact support. Chase Reserve cardmembers can see their own special dedicated
               customer support phone number.
             </p>
@@ -384,8 +384,33 @@ export default {
             </p>
           </div>
         </div>
-        <p><em>This article is in progress...</em></p>
 
+      </div>
+      <div class="detail-section">
+        <h2 class="section-title" id="lessons-learned">
+          Lessons learned from my LLM approach
+        </h2>
+        <p>Sometimes, Claude/Cursor just couldn't get the details right. I frequently
+          had to go in and make manual changes to CSS and the templates, and simplify things considerably from what was
+          intially spit out.</p>
+        <p>Other times, a broad prompt as simple as "Identify areas for improvement and simplification in the
+          application" would yield an impressive plan of action that barely had to be modified.</p>
+        <div class="detail-grid">
+          <div class="detail-item">
+            <img src="@/assets/git-small-fixes.jpg" alt="Support section in the Itinerary page on iPhone" />
+            <p>
+              Sure, I had to frequently fix basic oversights that even a junior developer wouldn't make...
+            </p>
+          </div>
+          <div class="detail-item">
+            <img src="@/assets/git-big-fixes.jpg" alt="Support section in the Itinerary page  " />
+            <p>
+              ...but I could also refactor the entire application with almost no effort at all in a single commit,
+              removing hundreds of lines of code without a hitch.
+            </p>
+          </div>
+        </div>
+        <p><em>This article is in progress...</em></p>
       </div>
       <PostArticleNav />
     </section>
