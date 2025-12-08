@@ -1,6 +1,7 @@
 <script>
 import iPhone from '@/components/iPhone.vue'
 import PostArticleNav from '@/components/PostArticleNav.vue'
+import iphoneVideo from '@/assets/PD-mobile-walkthrough.mov'
 
 export default {
   name: 'ChaseView',
@@ -10,6 +11,7 @@ export default {
   },
   data() {
     return {
+      iphoneVideoSrc: iphoneVideo,
       technologies: [
         {
           name: 'Vue.js',
@@ -102,7 +104,7 @@ export default {
 
       <div class="mobile-section">
         <div class="mobile-showcase">
-          <iPhone />
+          <iPhone :video-src="iphoneVideoSrc" />
         </div>
         <p>
           The mobile interface provided clients with on-the-go access to performances of multiple campaigns. Built with

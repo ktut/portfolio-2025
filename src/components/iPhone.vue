@@ -3,6 +3,12 @@ import { ref, onMounted, onBeforeUnmount, computed } from 'vue'
 
 export default {
   name: 'IPhone',
+  props: {
+    videoSrc: {
+      type: String,
+      required: true
+    }
+  },
   setup() {
     const iphoneVideo = ref(null)
     const rotationY = ref(-25) // Default rotation (-50 to 50 range)
@@ -105,7 +111,7 @@ export default {
       @mousedown="handleMouseDown"
       @touchstart="handleTouchStart"
     >
-      <video width="100%" autoplay loop muted playsinline src="@/assets/PD-mobile-walkthrough.mov" />
+      <video width="100%" autoplay loop muted playsinline :src="videoSrc" />
     </div>
   </div>
 </template>

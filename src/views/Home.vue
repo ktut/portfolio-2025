@@ -13,6 +13,9 @@ import heroImg4 from '@/assets/photo/IMG-365.jpg'
 import heroImg5 from '@/assets/photo/lefty-3.jpg'
 import heroImg6 from '@/assets/photo/WhoWatchR-SLH-122114.01-2.jpg'
 
+// iPhone video
+import iphoneVideo from '@/assets/PD-mobile-walkthrough.mov'
+
 export default {
   name: 'HomeView',
   components: {
@@ -30,6 +33,7 @@ export default {
       minWidth: 840,
       photoHeroImages: [heroImg1, heroImg2, heroImg3, heroImg4, heroImg5, heroImg6],
       projectLinksLoaded: [],
+      iphoneVideoSrc: iphoneVideo,
     }
   },
   mounted() {
@@ -69,7 +73,7 @@ export default {
       <figure>
         <div class="img-bg" v-view-transition-name="'img'"
           :style="{ backgroundImage: projectLinksLoaded.includes(0) ? 'url(' + require('@/assets/PD-night-mock.jpg') + ')' : 'none' }">
-          <IPhone v-if="shouldMountComponent && projectLinksLoaded.includes(0)" class="iphone-in-image" />
+          <IPhone v-if="shouldMountComponent && projectLinksLoaded.includes(0)" class="iphone-in-image" :video-src="iphoneVideoSrc" />
         </div>
         <figcaption>
           <h2 class="title">
