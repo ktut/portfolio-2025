@@ -190,7 +190,7 @@ export default {
           can start by <strong>tightly defining schemas</strong> (data structures) in Typescript for <strong>flights,
             hotels, user
             searches, and user
-            bookings</strong>.
+            bookings</strong>. Claude can assist with naming the properties, but we still need to review the code.
         </p>
         <div class="detail-grid">
           <div class="detail-item">
@@ -199,12 +199,20 @@ export default {
                 frameborder="0">
               </iframe>
             </div>
-            <p>Typescript schemas for flights, hotels, user searches, and user bookings.</p>
+            <p>Typescript schemas for searches, flights, flight pairs (round-trip flights), hotels and hotel rooms.
+              Claude bundled the URL param validation functions into the schema file by accident — this is why we review
+              code that LLMs generate!</p>
 
           </div>
           <div class="detail-item">
-            <img src="@/assets/code-mock-flights.jpg" alt="Mock data generator for flights" />
-            <p>Mock data generator for flights (matching the "Flight" schema on line 19 of the previous file).</p>
+            <div class="iframe-container">
+              <iframe src="https://gist.github.com/ktut/b0ca38b18d75408689a252ed1bf2c5d5.pibb" width="100%" height="400"
+                frameborder="0">
+              </iframe>
+            </div>
+            <p>A clever mock data generation function for flights made by Claude with some guidance, which even
+              generates realistic flight durations.
+            </p>
           </div>
         </div>
         <p>We can then
