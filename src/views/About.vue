@@ -85,7 +85,7 @@ export default {
     @media (min-width: 540px) {
       width: 300px;
       float: right;
-      margin: 5px 5px 15px 15px;
+      margin: 5px 5px 15px 25px;
     }
   }
 }
