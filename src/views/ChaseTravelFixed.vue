@@ -162,8 +162,11 @@ export default {
         <h2 class="section-title" id="objectives">
           Objectives
         </h2>
-        <p class="lead">We're going to try to build a better webapp for Chase Travel, only for
-          booking flights and hotels for now, based on the conclusions of <RouterLink to="/chase-travel">my case study.
+        <p class="lead">While I was an engineer at JP Morgan Chase, I was never given the opportunity to work on one of
+          our apps
+          that was the most in need of a major overhaul — Chase Travel. Therefore, I decided to try it on my own.
+          We're going to try to build a better webapp (only for
+          booking flights and hotels for now), based on the conclusions of <RouterLink to="/chase-travel">my case study.
           </RouterLink>
         </p>
         <p class="lead">We
