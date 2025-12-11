@@ -162,22 +162,32 @@ export default {
         <h2 class="section-title" id="objectives">
           Objectives
         </h2>
-        <p class="lead">While I was an engineer at JP Morgan Chase, I was never given the opportunity to work on one of
+        <p class="lead bottom-border">While I was an engineer at JP Morgan Chase, I was never given the opportunity to
+          work on one of
           our apps
           that was the most in need of a major overhaul — Chase Travel. Therefore, I decided to try it on my own.
           We're going to try to build a better webapp (only for
           booking flights and hotels for now), based on the conclusions of <RouterLink to="/chase-travel">my case study.
           </RouterLink>
         </p>
-        <p class="lead">We
+        <p>We
           will
           stick to the building a front-end
           app only for this project - most of the areas for improvement are on the client side anyway. The case study
           already includes
           incremental
-          improvements for the backend.
+          improvements for the backend. </p>
+        <p>Based on the solutions outlined in the case study, the new app should:
         </p>
-        <p class="lead bottom-border">We want to use Cursor and Claude to accelerate the development process, but we
+        <ul>
+          <li><strong>Have as strong of a UI/UX presence on mobile as it does on desktop.</strong></li>
+          <li><strong>Use proper loading states and loading indicators.</strong></li>
+          <li><strong>Mirror Kayak's UI for flights and Hotels.com's UI for hotels.</strong></li>
+          <li><strong>Mention Chase points and offers prominently, but not inhibit the user in doing
+              so.</strong></li>
+          <li><strong>Greatly prioritize support visibility, including an iMessage integration.</strong></li>
+        </ul>
+        <p>We want to use Cursor and Claude to accelerate the development process, but we
           still want control over the architecture and design. We'll use some special techniques
           to accomplish this.
         </p>
