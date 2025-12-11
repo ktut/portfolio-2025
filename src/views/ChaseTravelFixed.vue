@@ -274,12 +274,13 @@ export default {
         <p>Here's a sample prompt to add a small feature to the app:</p>
         <p>
           <code
-            style="word-break: unset;">Add a small dropdown for number of passengers within SearchWidget.vue, which allows for selection of Adults or Children. Upon hitting Submit, the SearchWidget should emit an event to its parent (HomeView.vue), which should be logged to the console, detailing all of the information collected.</code>
+            style="word-break: unset;">Add a small dropdown for number of passengers within SearchWidget.vue, which allows for selection of Adults or Children. Upon hitting Submit in SearchWidget, console.log this new information.</code>
         </p>
-        <p>Notice that I'm being explicit about what I want, and I'm not even letting it
-          integrate with the app yet — I'm forcing it to console.log its information initially. If things looks good, I
+        <p>Notice that I'm forcing it to console.log its information initially. If things looks good, I
           can prompt it
-          further to add more functionality.</p>
+          further to add more functionality. Claude is so good that it automatically added appropriate business
+          logic-based validation
+          (ensure at least one adult is on the reservation) solely based on the context of the parent component.</p>
       </div>
       <div class="detail-section">
         <h2 class="section-title" id="design">
