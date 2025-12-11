@@ -162,33 +162,32 @@ export default {
         <h2 class="section-title" id="objectives">
           Objectives
         </h2>
-        <p class="lead bottom-border">While I was an engineer at JP Morgan Chase, I was never given the opportunity to
+        <p class="lead bottom-border">As a software engineer at JPMorgan Chase, I was never given the opportunity to
           work on one of
           our apps
           that was the most in need of a major overhaul — Chase Travel. Therefore, I decided to try it on my own.
-          We're going to try to build a better webapp (only for
+          The goal of this project was to build a better webapp (only for
           booking flights and hotels for now), based on the conclusions of <RouterLink to="/chase-travel">my case study.
           </RouterLink>
         </p>
-        <p>We
-          will
+        <p>I decided to
           stick to the building a front-end
           app only for this project - most of the areas for improvement are on the client side anyway. The case study
-          already includes
+          already included
           incremental
           improvements for the backend. </p>
-        <p>Based on the solutions outlined in the case study, the new app should:
+        <p>Based on the solutions outlined in the case study, I determined that the new app should:
         </p>
         <ul>
           <li><strong>Have as strong of a UI/UX presence on mobile as it does on desktop.</strong></li>
           <li><strong>Use proper loading states and loading indicators.</strong></li>
           <li><strong>Mirror Kayak's UI for flights and Hotels.com's UI for hotels.</strong></li>
-          <li><strong>Mention Chase points and offers prominently, but not inhibit the user in doing
+          <li><strong>Mention Chase points and offers prominently, but not inhibit the user by doing
               so.</strong></li>
-          <li><strong>Greatly prioritize support visibility, including an iMessage integration.</strong></li>
+          <li><strong>Greatly improve support visibility, adding an iMessage integration.</strong></li>
         </ul>
-        <p>We want to use Cursor and Claude to accelerate the development process, but we
-          still want control over the architecture and design. We'll use some special techniques
+        <p>I wanted to use Cursor and Claude to accelerate the development process, but
+          still have control over the architecture and design. I used some special techniques
           to accomplish this.
         </p>
       </div>
@@ -197,15 +196,15 @@ export default {
           Schemas and mock data
         </h2>
         <p>Given the complexity and
-          scale of using real data, I decided to use mock data, but it wouldn't be a stretch to implement
-          this with real data if needed, as many of these APIs are already <a
-            href="https://rapidapi.com/search?sortBy=ByRelevance" target="_blank" rel="noopener noreferrer">available
-            publicly</a>.</p>
-        <p>We
-          can start by <strong>tightly defining schemas</strong> (data structures) in Typescript for <strong>flights,
+          scale of using real data, I decided to use mock data instead, but it wouldn't have been a stretch to implement
+          this with a <a href="https://rapidapi.com/search?sortBy=ByRelevance" target="_blank"
+            rel="noopener noreferrer">publicly
+            available API.</a></p>
+        <p>I
+          started by <strong>tightly defining schemas</strong> (data structures) in Typescript for <strong>flights,
             hotels, user
             searches, and user
-            bookings</strong>. Claude can assist with naming the properties, but we still need to review the code.
+            bookings</strong>:
         </p>
         <div class="detail-grid">
           <div class="detail-item">
@@ -230,15 +229,16 @@ export default {
             </p>
           </div>
         </div>
-        <p>We can then
-          <strong>generate mock data</strong> by asking Claude Code to write a function that generates random data based
-          on the schemas. For flights, we'll need the real airlines, but the
-          individual flights can
-          be mocked, using six cities and six airlines to keep things manageable.
+        <p>I then
+          <strong>generated mock data</strong> by asking Claude Code to write a function that generates random data
+          based
+          on the schemas. For flights, I used real airlines, but mocked the
+          individual flights, using only six cities and six airlines to keep things manageable.
         </p>
-        <p>We'll ask Claude to pull 20 hotels per city, along with their real geolocation data and
-          descriptions. We'll use stock images for now, as pulling enough real images (even at this scale) is a lot more
-          effort and not really relevant for the objectives of this project.</p>
+        <p>I asked Claude to pull 20 hotels per city, along with their real geolocation data and
+          descriptions. I used stock images because pulling enough real images (even at this smaller scale) was a lot
+          more
+          effort and not really relevant to the objectives of this project.</p>
         <div class="detail-grid">
           <div class="detail-item">
             <img src="@/assets/code-flight-tests.jpg" alt="Flight tests" />
@@ -246,38 +246,47 @@ export default {
           </div>
           <div class="detail-item">
             <img src="@/assets/code-claude-instructions.jpg" alt="Claude Code instructions" />
-            <p>Claude Code instructions to ensure tests and builds pass when making any code changes.</p>
+            <p>Claude Code instructions to ensure tests and builds passed when making any code changes.</p>
           </div>
         </div>
-        <p>We can then ask Claude to write the E2E tests based on the overall user
-          flows, one of which you can see <RouterLink to="/chase-travel">in the case study</RouterLink>. We'll ask
+        <p>I asked Claude to write E2E tests based on the overall user
+          flows, one of which you can see <RouterLink to="/chase-travel">in the case study</RouterLink>. I asked
           it to
-          <strong>ensure tests and builds pass going forward when performing any code changes,</strong> as we get ready
+          <strong>ensure tests and builds passed going forward when performing any code changes,</strong> as I got ready
           to start building the app.
         </p>
       </div>
       <div class="detail-section">
         <h2 class="section-title" id="wireframing">“Wireframing”</h2>
-        <p>Now that the schemas are defined, and the basic user flow is hard-coded into the E2E tests, we can let Cursor
-          and Claude <strong>freely generate the interactions between the components</strong> based on these
+        <p>Now that the schemas were defined, and the basic user flow was hard-coded into the E2E tests, I could feel
+          more confident in prompting the LLMS to <strong>iteratively generate new features</strong> based on these
           un-modifiable ground truths.
         </p>
-        <p>We can then <strong>skip the Figma mockups</strong> and use Claude (for features) and
+        <p>I <strong>skipped the Figma mockup stage</strong> and used Claude (for features) and
           Cursor (as the IDE, namely for its awesome autocomplete, but sometimes in place of Claude when tokens run out)
           instead to
-          <strong>just generate a working app</strong>, and then
+          <strong>just generate a working app</strong> and
           iterate on top of it. <a href="https://www.youtube.com/watch?v=bdh8k6DyKxE" target="_blank"
             rel="noopener noreferrer">Here's a
-            video</a> from Cursor's head of design where he describes a similar workflow — we are doing the same thing,
-          just constraining it with E2E tests and periodic code reviews.
+            video</a> from Cursor's head of design where he describes a similar workflow (albeit without the E2E tests
+          and periodic code reviews).
         </p>
+        <p>Here's a sample prompt to add a small feature to the app:</p>
+        <p>
+          <code
+            style="word-break: unset;">Add a small dropdown for number of passengers within SearchWidget.vue, which allows for selection of Adults or Children. Upon hitting Submit, the SearchWidget should emit an event to its parent (HomeView.vue), which should be logged to the console, detailing all of the information collected.</code>
+        </p>
+        <p>Notice that I'm being explicit about what I want, and I'm not even letting it
+          integrate with the app yet — I'm forcing it to console.log its information initially. If things looks good, I
+          can prompt it
+          further to add more functionality.</p>
       </div>
       <div class="detail-section">
         <h2 class="section-title" id="design">
           Design
         </h2>
-        <p>To fine-tune the overall design from what Claude created, we can "borrow" components from other travel
-          apps we like (like Kayak and
+        <p>To fine-tune the overall design from what Claude created, I "borrowed" components from the other travel
+          apps mentioned in the case study (like Kayak and
           Hotels.com), using the method below:</p>
         <div class="detail-grid">
           <div class="detail-item">
@@ -287,7 +296,11 @@ export default {
           <div class="detail-item">
             <img src="@/assets/chase-flight-view-mock.jpg" alt="Photoshopped version of the Kayak flight view" />
             <p>In Photoshop, we can strip away the unnecessary elements and create a more basic version of the
-              component, to pass to Claude.</p>
+              component, to pass to Claude, using a prompt like:
+              <code
+                style="word-break: unset;">Make a FlightCard.vue component designed exactly like the attached screenshot and place it here. Ultra think if necessary to ensure design accuracy.</code>
+              "Ultra think" is a hack to ensure the model spends extra time focusing on the details.
+            </p>
           </div>
           <div class="detail-item full-width">
             <img src="@/assets/chase-flightview-final.jpg" alt="Final component in the app" />
@@ -299,10 +312,10 @@ export default {
               subtly and inline, without beating the user over the head with it 😊.</p>
           </div>
         </div>
-        <p>We can even make a <a href="https://chasetravel.netlify.app/components" target="_blank"
+        <p>I even made a <a href="https://chasetravel.netlify.app/components" target="_blank"
             rel="noopener noreferrer">component showcase route</a> in the application, to operate
           as a <strong>living design system</strong> of sorts.</p>
-        <p>For the home page, let&rsquo;s get some <strong>strong lead art</strong> going. I&rsquo;ll use a photo I took
+        <p>For the home page, to get some <strong>strong lead art</strong> going. I used a photo I took
           on a
           trip to Lake Atitlán in
           Guatemala a few
@@ -322,18 +335,19 @@ export default {
           </div>
           <div class="detail-item">
             <video autoplay loop muted playsinline src="@/assets/photoshop-layers.mov" />
-            <p>In Photoshop, we can break it apart into layers (three should do — foreground for the leaves, midground
-              for the pool, and deep background for the lake and volcano in the distance), and use generative fill to
-              fill in the gaps. As long as we configure
-              Photoshop correctly and export the PNGs with an ICC profile for Display P3, we should be able to retain
+            <p>In Photoshop, I broke it apart into layers (a three-layer approach was enough — foreground for the
+              leaves, midground
+              for the pool, and deep background for the lake and volcano in the distance), and used generative fill to
+              fill in the gaps. As long as I configured
+              Photoshop correctly and exported the PNGs with an ICC profile for Display P3, I was able to retain
               that
               vibrant blue of the pool color (which will be progressively enhanced for P3 displays, like iPhones).</p>
           </div>
           <div class="detail-item full-width">
             <video autoplay loop muted playsinline src="@/assets/parallax-implement.mov" />
-            <p>Let's add these the home page, with a parallax effect. We can actually do this <a
+            <p>I added these the home page, with a parallax effect. I actually did this <a
                 href="https://keithclark.co.uk/articles/pure-css-parallax-websites/" target="_blank"
-                rel="noopener noreferrer">just with CSS</a>. For a real production application, we would swap
+                rel="noopener noreferrer">just with CSS</a>. For a real production application, we'd need to swap
               out the
               PNGs for SVGs with embedded JPGs (again, using that P3 ICC profile), created with <a
                 href="https://codepen.io/shshaw/full/LVKEdv" target="_blank" rel="noopener noreferrer">this tool</a>.
@@ -365,24 +379,22 @@ export default {
         <h2 class="section-title" id="search-results">
           State and URL Management
         </h2>
-        <p>For searches, let's keep all the params in
+        <p>For searches, I kept all the params in
           the URL for easy sharing and
           bookmarking, like this:
           <code>https://chasetravel.netlify.app/search?type=flights&from=New+York,+NY&adults=1&to=Chicago,+IL&tripType=round-trip&checkIn=2026-01-07T06:00:00.000Z&checkOut=2026-01-14T06:00:00.000Z&checkInFlex=exact&checkOutFlex=exact</code>
         </p>
-        <p>We can just mirror this then to the application global state with Pinia as well as localStorage (using a
-          Pinia plugin), since there is no PII involved. In a
-          real production application, we would simply replace that localStorage logic with database calls.</p>
+        <p>I mirrored this to the application global state with Pinia as well as localStorage (using a
+          Pinia plugin), since there was no PII involved. In a
+          real production application, I'd simply replace that localStorage logic with database calls.</p>
       </div>
 
       <div class="detail-section">
         <h2 class="section-title" id="support">
           Support section
         </h2>
-        <p>Support is an important component of this application. Let's add
-          that
-          section to both the bookings and itinerary pages
-          and make it clear that the user can just iMessage the support team directly.</p>
+        <p>I made sure that Support info was included in both the bookings
+          and itinerary pages, and made it clear that the user could just iMessage the support team directly.</p>
         <div class="detail-grid">
           <div class="detail-item full-width">
             <picture>
@@ -397,9 +409,9 @@ export default {
         <h2 class="section-title" id="the-final-product">
           The final product
         </h2>
-        <p>In a little over a month, we have completed a case study (2 weeks), developed the app (2 weeks), and written
-          these articles (1 week). That's a lot of work, but it's a lot of fun to see the results.</p>
-        <p>We now have a working app that is a significant improvement over the original.
+        <p>In a little over a month, I completed a case study (2 weeks), developed the app (2 weeks), and wrote
+          these articles (1 week).</p>
+        <p>The result was a working app that was a significant improvement over the original.
           You can view the final product <a href="https://chasetravel.netlify.app/" target="_blank"
             rel="noopener noreferrer">here</a>, or watch the walkthrough video below.</p>
         <div class="iphone-super-container">
