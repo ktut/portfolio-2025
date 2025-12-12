@@ -73,7 +73,8 @@ export default {
       <figure>
         <div class="img-bg" v-view-transition-name="'img'"
           :style="{ backgroundImage: projectLinksLoaded.includes(0) ? 'url(' + require('@/assets/PD-night-mock.jpg') + ')' : 'none' }">
-          <IPhone v-if="shouldMountComponent && projectLinksLoaded.includes(0)" class="iphone-in-image" :video-src="iphoneVideoSrc" />
+          <IPhone v-if="shouldMountComponent && projectLinksLoaded.includes(0)" class="iphone-in-image"
+            :video-src="iphoneVideoSrc" />
         </div>
         <figcaption>
           <h2 class="title">
@@ -139,7 +140,7 @@ export default {
         </div>
         <figcaption>
           <h2 class="title">
-            Rebuilding Chase Travel’s Web App
+            Fixing Chase Travel’s Web App
           </h2>
           <button class="cta">
             View Project <span class="unicode">&#x2197;</span>
