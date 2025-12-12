@@ -37,7 +37,7 @@ const routesMeta = {
     ogTitle:
       'Fixing the Chase Travel UI in Two Weeks with Cursor and Claude Code',
     ogDescription:
-      'A former Chase engineer rebuilds the clunky travel booking app with improved UI + UX and better customer support access'
+      'A former Chase engineer reimagines the clunky travel booking app with improved UI + UX and better customer support access'
   },
   '/chicagomagazine': {
     displayName: 'ChiMag Editorial Web Design',
