@@ -95,7 +95,7 @@ export default {
           Overview
         </h2>
         <p class="lead bottom-border">
-          As an engineer at <a href="https://high5casino.com/" target="_blank" rel="noreferrer noopener">High 5
+          At <a href="https://high5casino.com/" target="_blank" rel="noreferrer noopener">High 5
             Casino</a>, product and art teams needed a way to create banners (rotating
           in a carousel) for marketing, advertisements, and games, that could accommodate animation and could be
           localized for different
