@@ -189,8 +189,8 @@ export default {
       </div>
 
       <div class="detail-section">
-        <h2 class="section-title" id="typical-user-flows">
-          A typical hotel booking user flow
+        <h2 class="section-title" id="hows-it-supposed-to-work">
+          How is it supposed to work?
         </h2>
         <p>
           Let's focus on a typical user journey for booking a hotel on Chase Travel, showing both
@@ -305,7 +305,7 @@ export default {
         </div>
 
         <p>
-          Now that we understand how the app is used, let's see what users are saying about it.
+          Now that we understand how the app is supposed to work, let's see what users are saying about it.
         </p>
       </div>
 
