@@ -201,7 +201,7 @@ export default {
             rel="noopener noreferrer">publicly
             available API.</a></p>
         <p>I
-          started by <strong>tightly defining schemas</strong> (data structures) in Typescript for <strong>flights,
+          started by tightly defining schemas in Typescript for <strong>flights,
             hotels, user
             searches, and user
             bookings</strong>:
@@ -239,21 +239,10 @@ export default {
           descriptions. I used stock images because pulling enough real images (even at this smaller scale) was a lot
           more
           effort and not really relevant to the objectives of this project.</p>
-        <div class="detail-grid">
-          <div class="detail-item">
-            <img src="@/assets/code-flight-tests.jpg" alt="Flight tests" />
-            <p>User flow tests for flight bookings.</p>
-          </div>
-          <div class="detail-item">
-            <img src="@/assets/code-claude-instructions.jpg" alt="Claude Code instructions" />
-            <p>Claude Code instructions to ensure tests and builds passed when making any code changes.</p>
-          </div>
-        </div>
         <p>I asked Claude to write E2E tests based on the overall user
-          flows, one of which you can see <RouterLink to="/chase-travel">in the case study</RouterLink>. I asked
+          flows (one of which you can see <RouterLink to="/chase-travel">in the case study</RouterLink>). I asked
           it to
-          <strong>ensure tests and builds passed going forward when performing any code changes,</strong> as I got ready
-          to start building the app.
+          <strong>ensure tests and builds passed going forward when performing any code changes.</strong>
         </p>
       </div>
       <div class="detail-section">
@@ -262,46 +251,44 @@ export default {
           more confident in prompting the LLMS to <strong>iteratively generate new features</strong> based on these
           un-modifiable ground truths.
         </p>
-        <p>I <strong>skipped the Figma mockup stage</strong> and used Claude (for features) and
-          Cursor (as the IDE, namely for its awesome autocomplete, but sometimes in place of Claude when tokens run out)
-          instead to
+        <p>I <strong>skipped the Figma mockup stage</strong>, and instead used Claude (to build features) and
+          Cursor (mainly for the IDE, but sometimes in place of Claude when tokens ran out)
+          to
           <strong>just generate a working app</strong> and
           iterate on top of it. <a href="https://www.youtube.com/watch?v=bdh8k6DyKxE" target="_blank"
             rel="noopener noreferrer">Here's a
             video</a> from Cursor's head of design where he describes a similar workflow (albeit without the E2E tests
           and periodic code reviews).
         </p>
-        <p>Here's a sample prompt to add a small feature to the app:</p>
+        <p>For example, here's one of my many feature prompts:</p>
         <p>
           <code
             style="word-break: unset;">Add a small dropdown for number of passengers within SearchWidget.vue, which allows for selection of Adults or Children. Upon hitting Submit in SearchWidget, console.log this new information.</code>
         </p>
-        <p>Notice that I'm forcing it to console.log its information initially. If things looks good, I
+        <p>Notice that I'm forcing it to just console.log its information initially. If things looks good, I
           can prompt it
           further to add more functionality. Claude is so good that it automatically added appropriate business
           logic-based validation
-          (ensure at least one adult is on the reservation) solely based on the context of the parent component.</p>
+          ("ensure at least one adult is on the reservation") solely based on the context of the parent component
+          (<code>SearchWidget.vue</code>).</p>
       </div>
       <div class="detail-section">
         <h2 class="section-title" id="design">
           Design
         </h2>
-        <p>For the home page, to get some <strong>strong lead art</strong> going. I used a photo I took
-          on a
-          trip to Lake Atitlán in
-          Guatemala a few
-          years ago.</p>
+        <p>For the home page, to get some <strong>strong lead art</strong> going.</p>
 
         <div class="detail-grid">
           <div class="detail-item">
             <img src="@/assets/gua-lo.jpg" alt="Photo of Lake Atitlan, Guatemal" />
             <p>
-              Photo I took of Lake Atitlán, Guatemala, in 2016. A little background: While on this trip, I had gotten
+              Photo I took of Lake Atitlán, Guatemala, in 2022, with a dormant volcano in the distance. A little
+              background: While on this trip, I had gotten
               sick from
               eating a salad in a
               nearby town, and
-              ended up stuck at my hotel
-              with only this view to comfort me.
+              ended up stuck at this hotel
+              with only this incredible view to comfort me.
             </p>
           </div>
           <div class="detail-item">
