@@ -286,33 +286,6 @@ export default {
         <h2 class="section-title" id="design">
           Design
         </h2>
-        <p>To fine-tune the overall design from what Claude created, I "borrowed" components from the other travel
-          apps mentioned in the case study (like Kayak and
-          Hotels.com), using the method below:</p>
-        <div class="detail-grid">
-          <div class="detail-item">
-            <img src="@/assets/kayak-flight-view-to-steal.jpg" alt="Kayak flight view to copy" />
-            <p>Ah, what a beautiful flight card component on Kayak! Let's "borrow" it, starting with a screenshot.</p>
-          </div>
-          <div class="detail-item">
-            <img src="@/assets/chase-flight-view-mock.jpg" alt="Photoshopped version of the Kayak flight view" />
-            <p>In Photoshop, we can strip away the unnecessary elements and create a more basic version of the
-              component, to pass to Claude, using a prompt like:
-              <code
-                style="word-break: unset;">Make a FlightCard.vue component designed exactly like the attached screenshot and place it here. Ultra think if necessary to ensure design accuracy.</code>
-              "Ultra think" is a hack to ensure the model spends extra time focusing on the details.
-            </p>
-          </div>
-          <div class="detail-item full-width">
-            <img src="@/assets/chase-flightview-final.jpg" alt="Final component in the app" />
-            <p>Let's ask Claude to redesign the existing component in the application, referencing the modified
-              screenshot.
-              With some manual CSS tweaks for
-              extra polish, we can get a pretty good approximation of the Kayak flight card. Here, you can see the
-              component conditionally rendering the Points Boost information as well,
-              subtly and inline, without beating the user over the head with it 😊.</p>
-          </div>
-        </div>
         <p>For the home page, to get some <strong>strong lead art</strong> going. I used a photo I took
           on a
           trip to Lake Atitlán in
@@ -351,28 +324,69 @@ export default {
                 href="https://codepen.io/shshaw/full/LVKEdv" target="_blank" rel="noopener noreferrer">this tool</a>.
             </p>
           </div>
+        </div>
+        <p>To improve the overall design from what Claude created, I "borrowed" components' designs from the other
+          travel
+          apps mentioned in the case study (like Kayak and
+          Hotels.com), using the method below:</p>
+        <div class="detail-grid">
           <div class="detail-item">
-            <img src="@/assets/Chase-filter-as-modal.png" alt="Chase filter as modal" />
-            <p>
-              Chase Travel's existing filter implementation for flight searches means you can't see the results change
-              while
-              adjusting filters - you're
-              forced into a modal to make your changes.
-              This is a mobile-only approach that should not be replicated on desktop.
-            </p>
+            <img src="@/assets/kayak-flight-view-to-steal.jpg" alt="Kayak flight view to copy" />
+            <p>Ah, what a beautiful flight card component on Kayak! Let's "borrow" it, starting with a screenshot.</p>
           </div>
           <div class="detail-item">
+            <img src="@/assets/chase-flight-view-mock.jpg" alt="Photoshopped version of the Kayak flight view" />
+            <p>In Photoshop, we can strip away the unnecessary elements and create a more basic version of the
+              component, to pass to Claude, using a prompt like:
+              <code
+                style="word-break: unset;">Make a FlightCard.vue component designed exactly like the attached screenshot and place it here. Ultra think if necessary to ensure design accuracy.</code>
+              "Ultra think" is a hack to ensure the model spends extra time focusing on the details.
+            </p>
+          </div>
+          <div class="detail-item full-width centered">
+            <img src="@/assets/chase-flightview-final.jpg" alt="Final component in the app" />
+            <p>Let's ask Claude to redesign the existing component in the application, referencing the modified
+              screenshot.
+              With some manual CSS tweaks for
+              extra polish, we can get a pretty good approximation of the Kayak flight card. Here, you can see the
+              component conditionally rendering the Points Boost information as well,
+              subtly and inline, without beating the user over the head with it 😊.</p>
+          </div>
+          <div class="detail-item full-width">
             <img src="@/assets/New-filter-for-flights.jpg" alt="New filter for flights" />
             <p>
-              I redesigned the filter modal for flights to match Kayak's UI, with the filters visible while
-              the user is adjusting them. The same component adapts on mobile to be as scrollable modal.
+              Here's that flight card, added to the search results page. The filter modal for flights is also based on
+              Kayak's UI. That same component adapts on mobile to be a scrollable modal.
             </p>
+          </div>
+          <div class="detail-item full-width">
+            <img src="@/assets/Chase-filter-as-modal.png" alt="Chase filter as modal" />
+            <p>
+              This is is a big improvement compared to Chase Travel's existing filter implementation for flight
+              searches, shown here. This design results in the user not being able to see the results change
+              while
+              adjusting filters.
+              This is a mobile-only approach that should not be replicated on desktop. Notice how only two flight
+              choices are shown at a time as well, compared to five in my design. Most round-trip flight purchase
+              decisions are made considering both legs of the flight (for trip duration and pricing reasons), so showing
+              only one choice per screen (i.e., select departure then return) is additional
+              cognitive load for the user and quite unnecessary.
+            </p>
+          </div>
+          <div class="detail-item full-width">
+            <picture>
+              <source srcset="@/assets/CT-support-mock.jpg" media="(width >= 768px)" />
+              <img src="@/assets/CT-support-mock-mobile.jpg" alt="Support section in the Itinerary page on iPhone" />
+            </picture>
+            <p>In the new app, I made sure that Support info was included in both the bookings
+              and itinerary pages, with a link to iMessage the support team directly.</p>
           </div>
         </div>
         <p>I even made a <a href="https://chasetravel.netlify.app/components" target="_blank"
-            rel="noopener noreferrer">component showcase route</a> in the application, to operate
+            rel="noopener noreferrer">component showcase route</a> in the application (desktop only) to operate
           as a <strong>living design system</strong> of sorts.</p>
-
+      </div>
+      <div class="detail-section">
         <h2 class="section-title" id="auth-and-state-management">
           Authentication and state management
         </h2>
@@ -402,23 +416,6 @@ export default {
           Pinia plugin), since there was no PII involved. In a
           real production application, I'd simply replace that localStorage logic with database calls.</p>
       </div>
-
-      <div class="detail-section">
-        <h2 class="section-title" id="support">
-          Support section
-        </h2>
-        <p>I made sure that Support info was included in both the bookings
-          and itinerary pages, and made it clear that the user could just iMessage the support team directly.</p>
-        <div class="detail-grid">
-          <div class="detail-item full-width">
-            <picture>
-              <source srcset="@/assets/CT-support-mock.jpg" media="(width >= 768px)" />
-              <img src="@/assets/CT-support-mock-mobile.jpg" alt="Support section in the Itinerary page on iPhone" />
-            </picture>
-          </div>
-        </div>
-
-      </div>
       <div class="detail-section">
         <h2 class="section-title" id="the-final-product">
           The final product
@@ -441,7 +438,7 @@ export default {
           intially spit out. Other times, a broad prompt as simple as "Identify areas for improvement and simplification
           in the
           application" would yield an impressive plan of action that barely had to be modified.</p>
-        <div class="detail-grid">
+        <div class="detail-grid" style="max-width: 700px !important;">
           <div class="detail-item">
             <img src="@/assets/git-small-fixes.jpg" alt="Support section in the Itinerary page on iPhone" />
             <p>
@@ -451,7 +448,7 @@ export default {
           <div class="detail-item">
             <img src="@/assets/git-big-fixes.jpg" alt="Support section in the Itinerary page  " />
             <p>
-              ...but I could also refactor the entire application with almost no effort at all in a single commit,
+              ...but I could also refactor the entire application with almost no effort at all,
               removing hundreds of lines of code without a hitch.
             </p>
           </div>
