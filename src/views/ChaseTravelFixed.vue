@@ -313,9 +313,6 @@ export default {
               subtly and inline, without beating the user over the head with it 😊.</p>
           </div>
         </div>
-        <p>I even made a <a href="https://chasetravel.netlify.app/components" target="_blank"
-            rel="noopener noreferrer">component showcase route</a> in the application, to operate
-          as a <strong>living design system</strong> of sorts.</p>
         <p>For the home page, to get some <strong>strong lead art</strong> going. I used a photo I took
           on a
           trip to Lake Atitlán in
@@ -354,10 +351,30 @@ export default {
                 href="https://codepen.io/shshaw/full/LVKEdv" target="_blank" rel="noopener noreferrer">this tool</a>.
             </p>
           </div>
+          <div class="detail-item">
+            <img src="@/assets/Chase-filter-as-modal.png" alt="Chase filter as modal" />
+            <p>
+              Chase Travel's existing filter implementation for flight searches means you can't see the results change
+              while
+              adjusting filters - you're
+              forced into a modal to make your changes.
+              This is a mobile-only approach that should not be replicated on desktop.
+            </p>
+          </div>
+          <div class="detail-item">
+            <img src="@/assets/New-filter-for-flights.jpg" alt="New filter for flights" />
+            <p>
+              I redesigned the filter modal for flights to match Kayak's UI, with the filters visible while
+              the user is adjusting them. The same component adapts on mobile to be as scrollable modal.
+            </p>
+          </div>
         </div>
+        <p>I even made a <a href="https://chasetravel.netlify.app/components" target="_blank"
+            rel="noopener noreferrer">component showcase route</a> in the application, to operate
+          as a <strong>living design system</strong> of sorts.</p>
 
-        <h2 class="section-title" id="Authentication">
-          Authentication
+        <h2 class="section-title" id="auth-and-state-management">
+          Authentication and state management
         </h2>
         <p>The user should be able to use the application without logging in, but if they do log in, they should be able
           to see
@@ -376,10 +393,6 @@ export default {
             </p>
           </div>
         </div>
-
-        <h2 class="section-title" id="search-results">
-          State and URL Management
-        </h2>
         <p>For searches, I kept all the params in
           the URL for easy sharing and
           bookmarking, like this:
