@@ -66,12 +66,30 @@ export default {
 
   .job-notice {
     @include breakout-font;
-    background-color: #ffc96f;
+    background: linear-gradient(
+      110deg,
+      #ffb84d 0%,
+      #ffc96f 25%,
+      #ffda9d 50%,
+      #ffc96f 75%,
+      #ffb84d 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 8s ease-in-out infinite;
     padding: 1rem 2rem;
     margin-bottom: 2rem;
 
     @media (min-width: 540px) {
       margin-bottom: 4rem;
+    }
+  }
+
+  @keyframes shimmer {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
     }
   }
 
