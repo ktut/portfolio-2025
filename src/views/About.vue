@@ -6,6 +6,10 @@ export default {
 
 <template>
   <main class="about">
+    <div class="job-notice">
+      I am <strong>currently available for work!</strong> Please reach out if you’re interested in working
+      together.
+    </div>
     <section class="content-wrapper">
       <header class="project-header">
         <img src="../assets/me-burgundy-square.jpg" alt="Ramzi Dreessen" class="float">
@@ -56,7 +60,20 @@ export default {
 </template>
 <style lang="scss" scoped>
 .about {
-  min-height: 100vh;
+  min-height: 80vh;
+  display: block;
+  position: relative;
+
+  .job-notice {
+    @include breakout-font;
+    background-color: #ffc96f;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+
+    @media (min-width: 540px) {
+      margin-bottom: 4rem;
+    }
+  }
 
   .project-header {
     max-width: 800px;
@@ -68,11 +85,15 @@ export default {
     text-align: left;
   }
 
-  h1 {
-    text-align: left;
+  .project-title {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
+
+    @media (min-width: 540px) {
+      text-align: left;
+    }
   }
 
   img {
