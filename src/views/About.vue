@@ -69,13 +69,13 @@ export default {
     background: linear-gradient(
       110deg,
       #ffb84d 0%,
-      #ffc96f 25%,
-      #ffda9d 50%,
-      #ffc96f 75%,
+      #ffc96f 20%,
+      #ffe4b3 50%,
+      #ffc96f 80%,
       #ffb84d 100%
     );
     background-size: 200% 100%;
-    animation: shimmer 8s ease-in-out infinite;
+    animation: shimmer 5s ease-in-out infinite;
     padding: 1rem 2rem;
     margin-bottom: 2rem;
 
