@@ -169,7 +169,7 @@ export default {
           According to JPMorgan Chase&rsquo;s public statements:
         </p>
         <ul>
-          <li>Chase Travel sales volume was about $8 billion in 2022 was estimated at $10
+          <li>Chase Travel sales volume was about $8 billion in 2022 and was estimated at $10
             billion in 2023.</li>
           <li>At a recent investor day, Chase has said that they are a &ldquo;Top 5 consumer leisure travel
             provider&rdquo; and that 1 in 4 leisure travel dollars are spent on Chase cards.</li>
