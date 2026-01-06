@@ -504,7 +504,7 @@ figure {
 
   .project-metadata {
     width: 100%;
-    padding: 16px 4px 0;
+    padding: 1rem 1.5rem 0;
     margin-left: 0;
 
     @media (min-width: 760px) {
@@ -520,11 +520,23 @@ figure {
       margin-bottom: 8px;
       gap: 0.5rem;
 
+      &:not(:first-of-type) {
+        border-top: 1px solid #eee;
+        padding-top: 0.5rem;
+        padding-bottom: 0rem;
+      }
+
       @media (min-width: 760px) {
         display: block;
         padding-left: 16px;
         padding-right: 16px;
         gap: unset;
+
+        &:not(:first-of-type) {
+          border-top: unset;
+          padding-top: unset;
+          padding-bottom: unset;
+        }
 
         span {
           display: block;
@@ -533,10 +545,13 @@ figure {
       }
 
       span {
+        @include breakout-font;
         text-align: right;
+        text-wrap: balance;
 
         @media (min-width: 760px) {
           text-align: center;
+          text-wrap: unset;
         }
       }
 
