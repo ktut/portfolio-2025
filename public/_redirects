@@ -1,0 +1,3 @@
+# SPA fallback for Vue Router
+# Existing files (like /chase-travel/index.html) will be served first
+/*    /index.html   200

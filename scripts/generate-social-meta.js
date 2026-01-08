@@ -32,6 +32,14 @@ function generateStaticHTML() {
       `<meta property="og:description" content="${meta.ogDescription}"`
     )
 
+    // Update og:url if provided
+    if (meta.ogUrl) {
+      updatedHtml = updatedHtml.replace(
+        /<meta property="og:url" content="[^"]*"/,
+        `<meta property="og:url" content="${meta.ogUrl}"`
+      )
+    }
+
     // Update twitter:image
     updatedHtml = updatedHtml.replace(
       /<meta name="twitter:image" content="[^"]*"/,

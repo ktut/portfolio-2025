@@ -1,7 +1,18 @@
-# Serve static HTML files for routes with index.html first (for OG crawlers)
-# Then fallback to SPA for client-side routing
+# SPA fallback - serve index.html for all routes
+# The 'force = false' ensures existing files are served first
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
   force = false
+
+# Headers for better caching and OG tag support
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/*/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
