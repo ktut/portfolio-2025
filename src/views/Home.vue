@@ -136,7 +136,7 @@ export default {
       :class="{ 'animate-in': projectLinksLoaded.includes(2) }">
       <figure>
         <div class="img-bg chitravel-bg" v-view-transition-name="'chitravel-bg'"
-          :style="{ backgroundImage: projectLinksLoaded.includes(2) ? 'url(' + require('@/assets/CT-laptop-mock.jpg') + ')' : 'none' }">
+          :style="{ backgroundImage: projectLinksLoaded.includes(2) ? 'url(' + require('@/assets/CT-laptop-mock.webp') + ')' : 'none' }">
         </div>
         <figcaption>
           <h2 class="title">

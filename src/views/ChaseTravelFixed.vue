@@ -104,7 +104,7 @@ export default {
   <main class="chase-travel">
     <section class="hero">
       <figure class="hero-image">
-        <img src="@/assets/CT-laptop-mock.jpg" alt="New Chase Travel booking page"
+        <img src="@/assets/CT-laptop-mock.webp" alt="New Chase Travel booking page"
           v-view-transition-name="'chitravel-bg'" />
       </figure>
     </section>
