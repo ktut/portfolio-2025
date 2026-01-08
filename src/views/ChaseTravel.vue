@@ -135,6 +135,9 @@ export default {
           How to fix a troublesome travel booking webapp? Get some real user feedback, then apply industry
           standards and some common sense.
         </h2>
+        <p class="byline">
+          By <b>Ramzi Dreessen</b> <span class="separator">|</span> December 2025
+        </p>
       </header>
 
       <div class="disclaimer">

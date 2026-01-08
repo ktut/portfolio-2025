@@ -119,6 +119,9 @@ export default {
           In two weeks, I built a new proof-of-concept webapp for Chase Travel with improved UI + UX and better
           access to support
         </h2>
+        <p class="byline">
+          By <b>Ramzi Dreessen</b> <span class="separator">|</span> December 2025
+        </p>
 
         <div class="disclaimer">
           <strong>Disclaimer:</strong> Per JPMC confidentiality policies, no internal information was used in any way
