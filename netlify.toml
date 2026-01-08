@@ -1,4 +1,7 @@
+# Serve static HTML files for routes with index.html first (for OG crawlers)
+# Then fallback to SPA for client-side routing
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  force = false
