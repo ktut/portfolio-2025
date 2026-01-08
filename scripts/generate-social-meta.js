@@ -40,6 +40,22 @@ function generateStaticHTML() {
       )
     }
 
+    // Update og:image:width if provided
+    if (meta.ogImageWidth) {
+      updatedHtml = updatedHtml.replace(
+        /<meta property="og:image:width" content="[^"]*"/,
+        `<meta property="og:image:width" content="${meta.ogImageWidth}"`
+      )
+    }
+
+    // Update og:image:height if provided
+    if (meta.ogImageHeight) {
+      updatedHtml = updatedHtml.replace(
+        /<meta property="og:image:height" content="[^"]*"/,
+        `<meta property="og:image:height" content="${meta.ogImageHeight}"`
+      )
+    }
+
     // Update twitter:image
     updatedHtml = updatedHtml.replace(
       /<meta name="twitter:image" content="[^"]*"/,

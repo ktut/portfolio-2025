@@ -30,6 +30,8 @@ const routesMeta = {
   '/chase-travel': {
     displayName: 'Chase Travel Case Study',
     ogImage: 'https://rkdvis.com/assets/gua-lo.jpg',
+    ogImageWidth: '750',
+    ogImageHeight: '500',
     ogTitle: 'Fixing Chase Travel: A Case Study',
     ogDescription:
       'Applying industry standards, user research and some common sense to fix the clunky travel booking app',
