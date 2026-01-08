@@ -155,7 +155,7 @@ export default {
         </select>
       </div>
 
-      <div class="project-overview">
+      <div class="project-overview detail-section">
         <p class="rounded-highlight">
           <svg xmlns="http://www.w3.org/2000/svg">
             <rect x="1" y="1" width="calc(100% - 2px)" height="calc(100% - 2px)" rx="12" ry="12" />
@@ -189,6 +189,13 @@ export default {
           significant part of
           the US consumer travel market.
         </p>
+
+        <div class="detail-grid">
+          <div class="detail-item full-width centered">
+            <img src="@/assets/ct-marketing.webp " alt="Chase Travel Marketing" />
+            <p>Say what? Chase Travel has a sweet-looking app? Oh, wait, that&rsquo;s just marketing.</p>
+          </div>
+        </div>
       </div>
 
       <div class="detail-section">
