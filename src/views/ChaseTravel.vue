@@ -193,7 +193,8 @@ export default {
         <div class="detail-grid">
           <div class="detail-item full-width centered">
             <img src="@/assets/ct-marketing.webp " alt="Chase Travel Marketing" />
-            <p>Say what? Chase Travel has a sweet-looking app? Oh, wait, that&rsquo;s just marketing.</p>
+            <p>Chase Travel users seeking a clean, modern user experience such as this one might be slightly
+              disappointed 😀.</p>
           </div>
         </div>
       </div>
