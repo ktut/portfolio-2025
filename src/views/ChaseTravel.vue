@@ -563,9 +563,8 @@ export default {
             with it. These include loading some components while keeping others visible, having proper loading states,
             etc, which would greatly enhance the user
             experience. There's also no need to have the client render everything — most
-            of the markup should be server-side generated or rendered (only JS app
-            <em>functionality</em> rendered on
-            client), to improve performance.
+            of the markup should be server-side rendered, with JS hydrated on the client at runtime, to improve
+            performance. This can be done easily with Next.js.
           </li>
           <li>As for the services, <strong>repeated user requests should be cached</strong> at a minimum,
             and some requests for general groups of users should be cached and ready to serve, such as flights between
