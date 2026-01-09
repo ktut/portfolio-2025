@@ -604,6 +604,7 @@ export default {
 .hero {
   width: 100%;
   padding: 1rem 0 0;
+  margin-top: -6rem;
 
   .hero-image {
     overflow: unset;

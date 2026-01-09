@@ -226,6 +226,7 @@ export default {
 
   .hero {
     max-width: 100%;
+    padding-top: 3rem;
 
     figure {
       box-shadow: unset;
