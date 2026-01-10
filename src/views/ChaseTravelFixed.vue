@@ -165,7 +165,7 @@ export default {
         <h2 class="section-title" id="objectives">
           Objectives
         </h2>
-        <p class="lead bottom-border">As a software engineer at JPMorgan Chase, I was never given the opportunity to
+        <p class="lead bottom-border">As a software engineer at JPMorgan Chase, the opportunity never came to
           work on one of
           our apps
           that was the most in need of a major overhaul — Chase Travel. Therefore, I decided to try it on my own.
@@ -185,9 +185,9 @@ export default {
           <li><strong>Have as strong of a UI/UX presence on mobile as it does on desktop.</strong></li>
           <li><strong>Use proper loading states and loading indicators.</strong></li>
           <li><strong>Mirror Kayak's UI for flights and Hotels.com's UI for hotels.</strong></li>
-          <li><strong>Mention Chase points and offers prominently, but not inhibit the user by doing
+          <li><strong>Mention Chase points and offers, but not inhibit the user by doing
               so.</strong></li>
-          <li><strong>Greatly improve support visibility, adding an iMessage integration.</strong></li>
+          <li><strong>Greatly improve support visibility, and add an iMessage integration.</strong></li>
         </ul>
         <p>I wanted to use Cursor and Claude to accelerate the development process, but
           still have control over the architecture and design. I used some special techniques
@@ -278,8 +278,8 @@ export default {
           (<code style="word-break: unset;">SearchWidget.vue</code>).</p>
       </div>
       <div class="detail-section">
-        <h2 class="section-title" id="design">
-          Design
+        <h2 class="section-title" id="basic-design-approach">
+          Basic design approach
         </h2>
         <p>For the home page, to get some <strong>strong lead art</strong> going.</p>
 
@@ -376,9 +376,20 @@ export default {
               and itinerary pages, with a link to iMessage the support team directly.</p>
           </div>
         </div>
-        <p>I even made a <a href="https://chasetravel.netlify.app/components" target="_blank"
-            rel="noopener noreferrer">component showcase route</a> in the application (desktop only) to operate
-          as a living design system of sorts.</p>
+      </div>
+
+      <div class="detail-section">
+        <h2 class="section-title" id="Design-consistency-with-LLMS">
+          Design consistency with LLMS
+        </h2>
+        <p>One of the downsides to this approach is that the LLMS will often generate designs that are not consistent
+          with the overall design language of the application.</p>
+        <p>There are many different schools of thought on how to approach this. For this application, I made a "living
+          design system" of sorts by creating a <a href="https://chasetravel.netlify.app/components" target="_blank"
+            rel="noopener noreferrer">component showcase route</a> in the application (desktop only). As components are
+          fine-tuned here, the LLM can be instructed to replace the other components with the new, improved ones.</p>
+        <p>However, it's still important to determine fonts, colors, and spacing initially, otherwise the amount of work
+          to redesign everything constantly is too substantial.</p>
       </div>
       <div class="detail-section">
         <h2 class="section-title" id="auth-and-state-management">
