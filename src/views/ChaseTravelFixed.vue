@@ -467,8 +467,8 @@ export default {
           there's a lot of potential in the combination of Cursor and Claude for rapid development of web applications.
         </p>
         <p>There were plenty of additional features to add that would be beneficial to Chase Travel customers as well —
-          lounge indicators (Chase is investing heavily in acquiring these locations), flight status updates, etc. If I
-          had more time, I would have added these features.</p>
+          lounge indicators (Chase is investing heavily in acquiring these locations), flight status updates, etc.
+          Perhaps some of these could be added in the future.</p>
       </div>
       <PostArticleNav />
     </section>
