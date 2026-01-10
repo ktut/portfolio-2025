@@ -266,14 +266,16 @@ export default {
         <p>For example, here's one of my many feature prompts:</p>
         <p>
           <code
-            style="word-break: unset;">Add a small dropdown for number of passengers within SearchWidget.vue, which allows for selection of Adults or Children. Upon hitting Submit in SearchWidget, console.log this new information.</code>
+            style="word-break: unset;">Add a small dropdown for number of passengers within SearchWidget.vue, which allows for selection of Adults or Children. Upon hitting Submit in SearchWidget, console.log() this new information.</code>
         </p>
-        <p>Notice that I'm forcing it to just console.log its information initially. If things looks good, I
+        <p>Notice that I'm just asking it to display its information initially in the console. If things looks good, I
           can prompt it
-          further to add more functionality. Claude is so good that it automatically added appropriate business
+          further to fully integrate that functionality.</p>
+        <p>Claude is so good that it automatically added appropriate
+          business
           logic-based validation
-          ("ensure at least one adult is on the reservation") solely based on the context of the parent component
-          (<code>SearchWidget.vue</code>).</p>
+          ("Ensure at least one adult is on the reservation") solely based on the context of the parent component
+          (<code style="word-break: unset;">SearchWidget.vue</code>).</p>
       </div>
       <div class="detail-section">
         <h2 class="section-title" id="design">
@@ -345,19 +347,21 @@ export default {
           <div class="detail-item full-width">
             <img src="@/assets/New-filter-for-flights.jpg" alt="New filter for flights" />
             <p>
-              Here's that flight card, added to the search results page. The filter modal for flights is also based on
-              Kayak's UI. That same component adapts on mobile to be a scrollable modal.
+              Here's that flight card, added to the search results page.</p><br />
+            <p>The Filters component on the left is also based on
+              Kayak's UI. On mobile, it adapts to be a scrollable modal.
             </p>
           </div>
           <div class="detail-item full-width">
             <img src="@/assets/Chase-filter-as-modal.png" alt="Chase filter as modal" />
             <p>
-              This is is a big improvement compared to Chase Travel's existing filter implementation for flight
+              Compare this to Chase Travel's existing filter implementation for flight
               searches, shown here. This design results in the user not being able to see the results change
               while
-              adjusting filters.
-              This is a mobile-only approach that should not be replicated on desktop. Notice how only two flight
-              choices are shown at a time as well, compared to five in my design. Most round-trip flight purchase
+              adjusting filters. This is a mobile-only approach that should not be replicated on desktop. </p><br />
+            <p>
+              Underneath this modal, in the flight results, notice how <b>only two flight
+                choices are shown at a time</b> as well, compared to five in my design. Most round-trip flight purchase
               decisions are made considering both legs of the flight (for trip duration and pricing reasons), so showing
               only one choice per screen (i.e., select departure then return) is additional
               cognitive load for the user and quite unnecessary.
@@ -374,7 +378,7 @@ export default {
         </div>
         <p>I even made a <a href="https://chasetravel.netlify.app/components" target="_blank"
             rel="noopener noreferrer">component showcase route</a> in the application (desktop only) to operate
-          as a <strong>living design system</strong> of sorts.</p>
+          as a living design system of sorts.</p>
       </div>
       <div class="detail-section">
         <h2 class="section-title" id="auth-and-state-management">
@@ -390,29 +394,32 @@ export default {
             <video autoplay loop muted playsinline src="@/assets/chase-points-signin.mov" />
             <p>
               While this login might appear unrealisticly simple, a real Chase login implementation
-              shouldn't look much more complicated. It should only involve a popup modal with a form to log in, followed
+              shouldn't appear much more complicated than this. It should only involve a popup modal with a form to log
+              in, followed
               by
-              2FA. This is an industry-standard user flow for many apps. Using passkeys, this could be an even quicker
-              experience.
+              2FA. This is now <strong>industry-standard</strong>. Using passkeys, this could be an even quicker
+              experience. </p><br />
+            <p>In terms of global authentication design, access to banking/investment features could even require a
+              different level of
+              authentication (2FA/biometric), with read-level features (i.e., seeing balance and points) requiring only
+              simple authentication.
             </p>
           </div>
         </div>
         <p>For searches, I kept all the params in
           the URL for easy sharing and
-          bookmarking, like this:
-          <code>https://chasetravel.netlify.app/search?type=flights&from=New+York,+NY&adults=1&to=Chicago,+IL&tripType=round-trip&checkIn=2026-01-07T06:00:00.000Z&checkOut=2026-01-14T06:00:00.000Z&checkInFlex=exact&checkOutFlex=exact</code>
-        </p>
-        <p>I mirrored this to the application global state with Pinia as well as localStorage (using a
-          Pinia plugin), since there was no PII involved. In a
-          real production application, I'd simply replace that localStorage logic with database calls.</p>
+          bookmarking. I mirrored this to the application global state with Pinia as well as localStorage (using a
+          Pinia plugin), since there was no Personally Identifiable Information (PII) involved. In a
+          real production application, I'd simply replace that <code style="word-break: unset;">localStorage</code>
+          logic with database calls.</p>
       </div>
       <div class="detail-section">
         <h2 class="section-title" id="the-final-product">
           The final product
         </h2>
         <p>In a little over a month, I completed a case study (2 weeks), developed the app (2 weeks), and wrote
-          these articles (1 week).</p>
-        <p>The result was a working app that was a significant improvement over the original.
+          these articles (2 weeks).</p>
+        <p>The result was a working app with a significantly improved UI/UX over the original.
           You can view the final product <a href="https://chasetravel.netlify.app/" target="_blank"
             rel="noopener noreferrer">here</a>, or watch the walkthrough video below.</p>
         <div class="iphone-super-container">
@@ -448,6 +455,9 @@ export default {
           think
           there's a lot of potential in the combination of Cursor and Claude for rapid development of web applications.
         </p>
+        <p>There were plenty of additional features to add that would be beneficial to Chase Travel customers as well —
+          lounge indicators (Chase is investing heavily in acquiring these locations), flight status updates, etc. If I
+          had more time, I would have added these features.</p>
       </div>
       <PostArticleNav />
     </section>
