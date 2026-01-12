@@ -488,21 +488,27 @@ export default {
 
         </div>
         <div class="detail-grid">
-          <div class="detail-item">
-            <img src="@/assets/Chase-filter-as-modal.png" alt="Chase Broken" />
+          <div class="detail-item full-width">
+            <img src="@/assets/Chase-filter-as-modal.png" alt="Chase filter as modal" />
             <p>
-              On desktop while browsing flights, the user can't see the flight list while adjusting filters - they're
-              forced
-              into a modal to make their changes, and then hope that their results update accordingly.
-              This is a mobile-only approach that should not be replicated on desktop.
-            </p>
-          </div>
-          <div class="detail-item">
-            <img src="@/assets/Chase-travel-inconsistent-ui.png" alt="Chase Cart for Travel" />
+              Chase Travel's filter implementation for flight
+              searches results in the user not being able to see the results change
+              while
+              adjusting filters. This is a mobile-only approach that should not be replicated on desktop. </p><br />
             <p>
-              Components seem to be reused from other Chase applications willy-nilly without considering the context of
-              the Travel
-              application in particular.
+              Underneath this modal, in the flight results, <b>only two flight
+                choices are shown at a time</b>. This seems to allow the user to compare
+              fare class pricing between different flights (i.e., economy plus for one flight vs economy for another),
+              but is
+              this really a common use case? I doubt it.</p><br />
+            <p>Additionally, <b>there are
+                separate
+                views for the departure and return flights</b>. Most round-trip flight purchase
+              decisions are made considering both legs of the flight (for trip duration and pricing reasons), so showing
+              only one choice per screen (i.e., select departure then return) is additional
+              cognitive load for the user and quite unnecessary. It's even possible that this design decision was made
+              due to
+              an inability to fit in all the information on the screen at once for both legs of the flight (!!).
             </p>
           </div>
         </div>
