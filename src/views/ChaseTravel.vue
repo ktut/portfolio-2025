@@ -522,7 +522,7 @@ export default {
           The age-old adage of form over function seems to be at play here.
         </p>
         <p>Perhaps the real goal was to impress executives and just make the product look good enough for slick
-          marketing campaigns. A widely-trumpted recent &ldquo;redesign&rdquo; added new custom
+          marketing campaigns. A widely-trumpeted recent &ldquo;redesign&rdquo; added new custom
           fonts, introduced new branding elements, and slightly improved the general app layout. Unfortunately, using
           the
           app still felt mostly the same after these changes.</p>
