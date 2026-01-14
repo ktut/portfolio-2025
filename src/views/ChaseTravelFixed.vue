@@ -459,14 +459,16 @@ export default {
           <div class="detail-item">
             <img src="@/assets/git-small-fixes.jpg" alt="Support section in the Itinerary page on iPhone" />
             <p>
-              Sure, I had to frequently fix basic oversights that even a junior developer wouldn't make...
+              Sure, I frequently had to fix basic front-end mistakes that even a junior developer might not make...
             </p>
           </div>
           <div class="detail-item">
             <img src="@/assets/git-big-fixes.jpg" alt="Support section in the Itinerary page  " />
             <p>
-              ...but I could also refactor the entire application with almost no effort at all,
-              removing hundreds of lines of code without a hitch.
+              ...but I could also instruct Claude to, say, "Extract all duplicate
+              functions to global utilities where possible", removing hundreds of extra lines of code without any ill
+              effects
+              whatsoever.
             </p>
           </div>
         </div>
