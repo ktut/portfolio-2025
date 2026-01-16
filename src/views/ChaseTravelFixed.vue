@@ -282,7 +282,7 @@ export default {
         <h2 class="section-title" id="basic-design-approach">
           Basic design approach
         </h2>
-        <p>For the home page, Let's get some <strong>strong lead art</strong> going.</p>
+        <p>For the home page, let's get some <strong>strong lead art</strong> going.</p>
 
         <div class="detail-grid">
           <div class="detail-item">
