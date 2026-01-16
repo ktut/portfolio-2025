@@ -313,7 +313,7 @@ export default {
                 href="https://keithclark.co.uk/articles/pure-css-parallax-websites/" target="_blank"
                 rel="noopener noreferrer">just CSS</a>). For a real production application, we'd need to swap
               out the
-              PNGs for SVGs with embedded JPGs (again, using that P3 ICC profile), created with <a
+              PNGs for SVGs with embedded JPGs (again, using that P3 ICC profile) and vector masks, created with <a
                 href="https://codepen.io/shshaw/full/LVKEdv" target="_blank" rel="noopener noreferrer">this tool</a>.
             </p>
           </div>
