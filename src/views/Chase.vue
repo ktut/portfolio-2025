@@ -66,8 +66,8 @@ export default {
         <h2 class="project-subtitle">
           I built a client-side webapp for monitoring card-linked offer campaigns and downloading reports, which became
           the
-          Performance Dashboard product for <a href="https://www.chase.com/mediasolutions/solutions" target="_blank"
-            rel="noopener noreferrer" aria-label="Chase Media Solutions">Chase Media Solutions</a> after our
+          <a href="https://www.chase.com/mediasolutions/solutions" target="_blank" rel="noopener noreferrer"
+            aria-label="Chase Media Solutions">Chase Media Solutions</a> Performance Dashboard after our
           acquisition.
         </h2>
 
