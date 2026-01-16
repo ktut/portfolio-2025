@@ -309,9 +309,9 @@ export default {
           </div>
           <div class="detail-item full-width">
             <video autoplay loop muted playsinline src="@/assets/parallax-implement.mov" />
-            <p>I added these the home page, with a parallax effect. I actually did this <a
+            <p>I added these the home page, with a parallax effect (done with <a
                 href="https://keithclark.co.uk/articles/pure-css-parallax-websites/" target="_blank"
-                rel="noopener noreferrer">just with CSS</a>. For a real production application, we'd need to swap
+                rel="noopener noreferrer">just CSS</a>). For a real production application, we'd need to swap
               out the
               PNGs for SVGs with embedded JPGs (again, using that P3 ICC profile), created with <a
                 href="https://codepen.io/shshaw/full/LVKEdv" target="_blank" rel="noopener noreferrer">this tool</a>.
