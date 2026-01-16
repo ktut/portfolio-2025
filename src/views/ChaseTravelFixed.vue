@@ -389,10 +389,10 @@ export default {
       </div>
 
       <div class="detail-section">
-        <h2 class="section-title" id="Design-consistency-with-LLMS">
-          Design consistency with LLMS
+        <h2 class="section-title" id="Design-consistency-with-LLMs">
+          Design consistency with LLMs
         </h2>
-        <p>One of the downsides to this approach is that the LLMS will often generate designs that are not consistent
+        <p>One downside to this approach is that the LLMs will often generate designs that are not consistent
           with the overall design language of the application.</p>
         <p>There are many different schools of thought on how to approach this. For this application, I made a "living
           design system" of sorts by creating a <a href="https://chasetravel.netlify.app/components" target="_blank"
@@ -405,25 +405,26 @@ export default {
         <h2 class="section-title" id="auth-and-state-management">
           Authentication and state management
         </h2>
-        <p>The user should be able to use the application without logging in, but if they do log in, they should be able
+        <p>The user should be able to use the application without logging in, but if they do, they should be able
           to see
-          their points and a hover state CTA for Points Boost. The user shouldn't have to leave the application to log
-          in,
+          their points and a hover state CTA for Points Boost. The user shouldn't have to jump to another tab for a
+          lengthy login process,
           as the current implementation of Chase Travel mandates its users to.</p>
         <div class="detail-grid">
           <div class="detail-item full-width centered">
             <video autoplay loop muted playsinline src="@/assets/chase-points-signin.mov" />
             <p>
-              While this login might appear unrealisticly simple, a real Chase login implementation
+              While this login might appear unrealisticly simple, a real implementation
               shouldn't appear much more complicated than this. It should only involve a popup modal with a form to log
               in, followed
               by
               2FA. This is now <strong>industry-standard</strong>. Using passkeys, this could be an even quicker
               experience. </p><br />
-            <p>In terms of global authentication design, access to banking/investment features could even require a
-              different level of
-              authentication (2FA/biometric), with read-level features (i.e., seeing balance and points) requiring only
-              simple authentication.
+            <p>This experience could also be sped up by improving the global authentication design, with access to
+              serious banking/investment features requiring stricter auth (2FA/biometric), versus read-level features
+              (i.e., seeing
+              balance and points) requiring only
+              simple auth.
             </p>
           </div>
         </div>
