@@ -440,23 +440,25 @@ export default {
           The final product
         </h2>
         <p>In a little over a month, I completed a case study (2 weeks), developed the app (2 weeks), and wrote
-          these articles (2 weeks).</p>
+          these articles (1-2 weeks).</p>
         <p>The result was a working app with a significantly improved UI/UX over the original.
-          You can view the final product <a href="https://chasetravel.netlify.app/" target="_blank"
-            rel="noopener noreferrer">here</a>, or watch the walkthrough video below.</p>
+          <a href="https://chasetravel.netlify.app/" target="_blank" rel="noopener noreferrer">You can view the final
+            product here</a>, or watch the walkthrough video below.
+        </p>
         <div class="iphone-super-container">
           <iPhone :videoSrc="chaseTravelVideoSrc" />
         </div>
       </div>
       <div class="detail-section">
-        <h2 class="section-title" id="lessons-learned">
-          Lessons learned
+        <h2 class="section-title" id="lessons-learned-with-llms">
+          Lessons learned working with LLMs
         </h2>
         <p>Sometimes, Claude/Cursor just couldn't get the details right. I frequently
-          had to go in and make manual changes to CSS and the templates, and simplify things considerably from what was
+          had to go in and make manual changes to CSS and template files, and simplify things considerably from what was
           intially spit out. Other times, a broad prompt as simple as "Identify areas for improvement and simplification
           in the
-          application" would yield an impressive plan of action that barely had to be modified.</p>
+          application" would yield an impressive plan of action that I could pick and choose from to
+          improve the application with broad strokes.</p>
         <div class="detail-grid" style="max-width: 700px !important;">
           <div class="detail-item">
             <img src="@/assets/git-small-fixes.jpg" alt="Support section in the Itinerary page on iPhone" />
@@ -474,14 +476,40 @@ export default {
             </p>
           </div>
         </div>
-        <p>In the end, I was able to build a working app that is a significant improvement over the original, and I
+        <p>In the end, I was able to build a working app that was a significant improvement over the original, and I
           learned a lot about the potential of LLMs. I don't think there's one "right" way to use these tools, but I
           think
           there's a lot of potential in the combination of Cursor and Claude for rapid development of web applications.
         </p>
-        <p>There were plenty of additional features to add that would be beneficial to Chase Travel customers as well —
-          lounge indicators (Chase is investing heavily in acquiring these locations), flight status updates, etc.
-          Perhaps some of these could be added in the future.</p>
+      </div>
+
+      <div class="detail-section">
+        <h2 class="section-title" id="the-future-of-travel-search-uis">
+          The future of travel search UIs
+        </h2>
+        <p>Despite the original purpose of this project being to address <em>existing</em> issues with the Chase Travel
+          UI, it's worth considering near-future scenarios as well.</p>
+        <p>Despite the growing popularity of LLM-powered chat interfaces for flight searches (ChatGPT, or even a chat
+          interface within Chase Travel), I still think there's a
+          need for a solid web UI to
+          give the user the proper assurances before a <em>purchase</em>.</p>
+        <p>For example, if a user asks ChatGPT "What are the
+          cheapest flights from New York to London?", it's unlikely that they'll immediately say, "OK, book it" —
+          they're going to want to see all options sorted in a
+          UI to verify that they are indeed getting the best price. This desire for verification is going to be even
+          stronger as ads are increasingly integrated into the chat interface, making it harder to trust the results.
+        </p>
+        <p>The reality of the user experience is that the user is
+          <em>simultaneously</em> looking for value and schedule fit, so a more complex UI is needed, instead of even a
+          very well-formatted text response (like in ChatGPT). Sure, a user could continue to prompt their way through
+          the whole process ("Can you sort by price?" "Can you show me the cheapest option?" "Can you show me the
+          fastest
+          option?" etc.)", but then they are also expected to continually scroll back up for context (or the response
+          needs to continually include that context). Once you add in all of the features that the user would
+          expect
+          (filtering,
+          sorting, etc), you'd probably come back around to the original web UI anyway.
+        </p>
       </div>
       <PostArticleNav />
     </section>
