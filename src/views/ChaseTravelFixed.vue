@@ -268,7 +268,8 @@ export default {
           <code
             style="word-break: unset;">Add a small dropdown for number of passengers within SearchWidget.vue, which allows for selection of Adults or Children. Upon hitting Submit in SearchWidget, console.log() this new information.</code>
         </p>
-        <p>Notice that I'm just asking it to display its information initially in the console. If things looks good, I
+        <p>Notice that I'm just asking it to display its information initially in the console. If that data is correct,
+          I
           can prompt it
           further to fully integrate that functionality.</p>
         <p>Claude is so good that it automatically added appropriate
@@ -281,7 +282,7 @@ export default {
         <h2 class="section-title" id="basic-design-approach">
           Basic design approach
         </h2>
-        <p>For the home page, to get some <strong>strong lead art</strong> going.</p>
+        <p>For the home page, Let's get some <strong>strong lead art</strong> going.</p>
 
         <div class="detail-grid">
           <div class="detail-item">
