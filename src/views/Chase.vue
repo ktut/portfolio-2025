@@ -85,7 +85,7 @@ export default {
           Overview
         </h2>
         <p class="lead bottom-border">
-          As the sole frontend engineer, my role was to build a client application that was performant, easy to test,
+          As the sole frontend engineer, my task was to build a client application that was performant, easy to test,
           and easy to maintain. I took the project to the next level by implementing advanced filtering,
           visualizations, and even an admin panel so our internal team could manage users without SQL queries.
         </p>
