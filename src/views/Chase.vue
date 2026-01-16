@@ -60,12 +60,15 @@ export default {
     <section class="content-wrapper">
       <header class="project-header">
         <h1 class="project-title">
-          <img src="@/assets/chase-logo.png" alt="Chase Logo" class="chase-logo">JPMorgan Chase Performance Dashboard
+          <img src="@/assets/chase-logo.png" alt="Chase Logo" class="chase-logo">Building a CLO Performance
+          Dashboard for JPMorgan Chase
         </h1>
         <h2 class="project-subtitle">
-          I built a webapp for monitoring card-linked offer campaigns and downloading reports for <a
-            href="https://www.chase.com/mediasolutions/solutions" target="_blank" rel="noopener noreferrer"
-            aria-label="Chase Media Solutions">Chase Media Solutions</a>.
+          I built a client-side webapp for monitoring card-linked offer campaigns and downloading reports, which became
+          the
+          Performance Dashboard product for <a href="https://www.chase.com/mediasolutions/solutions" target="_blank"
+            rel="noopener noreferrer" aria-label="Chase Media Solutions">Chase Media Solutions</a> after our
+          acquisition.
         </h2>
 
         <div class="tech-stack">
@@ -84,14 +87,17 @@ export default {
         <h2 class="section-title">
           Overview
         </h2>
-        <p class="lead bottom-border">
-          As the sole frontend engineer, my task was to build a client application that was performant, easy to test,
+        <p class="lead">
+          At Figg, Inc. (acquired by JPMorgan Chase in July 2022), we needed a web dashboard so our clients could
+          easily keep tabs on campaign KPIs like budget utilization, ROAS, impressions and sales, and download reports.
+        </p>
+        <p class="lead bottom-border">As the
+          sole frontend engineer, my task was to build a client application that was performant, easy to test,
           and easy to maintain. I took the project to the next level by implementing advanced filtering,
           visualizations, and even an admin panel so our internal team could manage users without SQL queries.
         </p>
         <p>
-          The platform (originally from Figg, Inc, then rebranded to Chase Media Solutions following our
-          acquisition) leveraged transaction data to deliver targeted offers to cardholders
+          The platform leveraged transaction data to deliver targeted offers to cardholders
           across
           digital channels. Customers discovered offers based on their purchase history, activated them via the Chase
           app,
