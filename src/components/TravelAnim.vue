@@ -34,18 +34,15 @@ export default {
     v-view-transition-name="'travel-anim'">
     <div class="parallax__layer parallax__layer--back"
       :class="{ 'parallax__layer--loading': !imagesLoaded, 'parallax__layer--loaded': imagesLoaded }">
-      <img v-if="pageLoaded" src="@/assets/g0.png" srcset="@/assets/g0-lo.jpg 480w, @/assets/g0.png 1920w"
-        sizes="(max-width: 768px) 480px, 1920px" alt="Background layer" @load="handleImageLoad" />
+      <img v-if="pageLoaded" src="@/assets/g0.jpg" lt="Background layer" @load="handleImageLoad" />
     </div>
     <div class="parallax__layer parallax__layer--base"
       :class="{ 'parallax__layer--loading': !imagesLoaded, 'parallax__layer--loaded': imagesLoaded }">
-      <img v-if="pageLoaded" src="@/assets/g1.png" srcset="@/assets/g1-lo.png 480w, @/assets/g1.png 1920w"
-        sizes="(max-width: 768px) 480px, 1920px" alt="Middle layer" @load="handleImageLoad" />
+      <img v-if="pageLoaded" src="@/assets/g1-lo.png" alt="Middle layer" @load="handleImageLoad" />
     </div>
     <div class="parallax__layer parallax__layer--fore"
       :class="{ 'parallax__layer--loading': !imagesLoaded, 'parallax__layer--loaded': imagesLoaded }">
-      <img v-if="pageLoaded" src="@/assets/g2.png" srcset="@/assets/g2-lo.png 480w, @/assets/g2.png 1920w"
-        sizes="(max-width: 768px) 480px, 1920px" alt="Foreground layer" @load="handleImageLoad" />
+      <img v-if="pageLoaded" src="@/assets/g2-lo.png" alt="Foreground layer" @load="handleImageLoad" />
     </div>
   </div>
 </template>
