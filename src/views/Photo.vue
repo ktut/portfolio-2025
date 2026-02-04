@@ -1,7 +1,6 @@
 <script>
 import PhotoSwipeLightbox from 'photoswipe/lightbox'
 import 'photoswipe/style.css'
-import PortraitSlivers from '@/components/PortraitSlivers.vue'
 import PostArticleNav from '@/components/PostArticleNav.vue'
 
 // Import all images from photo directory
@@ -19,23 +18,13 @@ import img13 from '@/assets/photo/ruffalo-1.jpg'
 import img14 from '@/assets/photo/smyth.jpg'
 import img15 from '@/assets/photo/will-1100.jpg'
 
-// Hero composite images
-import heroImg1 from '@/assets/photo/ruffalo-1.jpg'
-import heroImg2 from '@/assets/photo/1100-westwick.jpg'
-import heroImg3 from '@/assets/photo/00-aless.jpg'
-import heroImg4 from '@/assets/photo/IMG-365.jpg'
-import heroImg5 from '@/assets/photo/lefty-3.jpg'
-import heroImg6 from '@/assets/photo/WhoWatchR-SLH-122114.01-2.jpg'
-
 export default {
   name: 'PhotoView',
   components: {
-    PortraitSlivers,
     PostArticleNav
   },
   data() {
     return {
-      heroImages: [heroImg1, heroImg2, heroImg3, heroImg4, heroImg5, heroImg6],
       technologies: [
         {
           name: 'Adobe Creative Suite',
@@ -75,12 +64,6 @@ export default {
 
 <template>
   <main class="photo">
-    <section class="hero">
-      <figure class="hero-image">
-        <PortraitSlivers :images="heroImages" v-view-transition-name="'portraits'" />
-      </figure>
-    </section>
-
     <section class="content-wrapper">
       <header class="project-header">
         <h1 class="project-title">
@@ -125,41 +108,6 @@ export default {
 <style lang="scss" scoped>
 .photo {
   min-height: 100vh;
-
-  .hero {
-    max-width: 900px;
-    width: 100%;
-
-    @media (min-width: 840px) {
-      max-width: 1000px;
-    }
-
-    .hero-image {
-      padding-bottom: 60%;
-    }
-
-    figure {
-      box-shadow: unset;
-      width: 100%;
-      height: 0;
-      padding-bottom: 64%;
-      position: relative;
-
-      @media (min-width: 840px) {
-        padding-bottom: 450px;
-        max-width: 2400px;
-      }
-
-      @media (min-width: 1400px) {
-        padding-bottom: 500px;
-      }
-
-      @media (min-width: 1800px) {
-        max-width: 2800px;
-        padding-bottom: 550px;
-      }
-    }
-  }
 
   .project-overview {
     ol {

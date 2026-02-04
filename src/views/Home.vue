@@ -2,16 +2,7 @@
 import IPhone from '@/components/iPhone.vue';
 import HomepageTopText from '../components/HomepageTopText.vue'
 import Tout from '@/components/Tout.vue'
-import PortraitSlivers from '@/components/PortraitSlivers.vue'
 import TravelAnim from '@/components/TravelAnim.vue'
-
-// Hero composite images for Portrait Photography
-import heroImg1 from '@/assets/photo/ruffalo-1.jpg'
-import heroImg2 from '@/assets/photo/1100-westwick.jpg'
-import heroImg3 from '@/assets/photo/00-aless.jpg'
-import heroImg4 from '@/assets/photo/IMG-365.jpg'
-import heroImg5 from '@/assets/photo/lefty-3.jpg'
-import heroImg6 from '@/assets/photo/WhoWatchR-SLH-122114.01-2.jpg'
 
 // iPhone video
 import iphoneVideo from '@/assets/PD-mobile-walkthrough.mov'
@@ -22,7 +13,6 @@ export default {
     HomepageTopText,
     IPhone,
     Tout,
-    PortraitSlivers,
     TravelAnim
   },
   data() {
@@ -31,7 +21,6 @@ export default {
       loaded: false,
       windowWidth: window.innerWidth,
       minWidth: 840,
-      photoHeroImages: [heroImg1, heroImg2, heroImg3, heroImg4, heroImg5, heroImg6],
       projectLinksLoaded: [],
       iphoneVideoSrc: iphoneVideo,
     }
@@ -349,8 +338,7 @@ figure {
   .img-bg,
   .video-composite,
   .chimag-subscription-bg,
-  .suntimes-bg,
-  .photo-composite-wrapper {
+  .suntimes-bg {
     display: block;
     width: 100%;
     border-radius: 16px;
@@ -402,19 +390,6 @@ figure {
     background-position: 54% 49%;
     background-repeat: no-repeat;
     border-radius: 16px;
-  }
-
-  .photo-composite-wrapper {
-    width: 800px;
-    max-width: 100%;
-    height: 0;
-    padding-bottom: 64%;
-    position: relative;
-    overflow: hidden;
-
-    @media (min-width: 840px) {
-      padding-bottom: 500px;
-    }
   }
 
   figcaption {
@@ -485,8 +460,7 @@ figure {
     .img-bg,
     .video-composite,
     .chimag-subscription-bg,
-    .suntimes-bg,
-    .photo-composite-wrapper {
+    .suntimes-bg {
       border: 2px solid $redPunch;
     }
 
