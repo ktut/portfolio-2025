@@ -487,28 +487,11 @@ export default {
         <h2 class="section-title" id="the-future-of-travel-search-uis">
           The future of travel search UIs
         </h2>
-        <p>Despite the original purpose of this project being to address <em>existing</em> issues with the Chase Travel
-          UI, it's worth considering near-future scenarios as well.</p>
-        <p>Despite the growing popularity of LLM-powered chat interfaces for flight searches (ChatGPT, or even a chat
-          interface within Chase Travel), I still think there's a
-          need for a solid web UI to
-          give the user the proper assurances before a <em>purchase</em>.</p>
-        <p>For example, if a user asks ChatGPT "What are the
-          cheapest flights from New York to London?", it's unlikely that they'll immediately say, "OK, book it" —
-          they're going to want to see all options sorted in a
-          UI to verify that they are indeed getting the best price. This desire for verification is going to be even
+        <p>Despite the growing popularity of LLM-powered chat interfaces for flight searches, a solid web UI is still
+          essential for purchase decisions. Users need to verify options, compare prices and schedules simultaneously,
+          and use features like filtering and sorting — tasks that a chat interface handles poorly compared to a
+          well-designed visual layout. This desire for verification is going to be even
           stronger as ads are increasingly integrated into the chat interface, making it harder to trust the results.
-        </p>
-        <p>The reality of the user experience is that the user is
-          <em>simultaneously</em> looking for value and schedule fit, so a more complex UI is needed, instead of even a
-          very well-formatted text response (like in ChatGPT). Sure, a user could continue to prompt their way through
-          the whole process ("Can you sort by price?" "Can you show me the cheapest option?" "Can you show me the
-          fastest
-          option?" etc.)", but then they are also expected to continually scroll back up for context (or the response
-          needs to continually include that context). Once you add in all of the features that the user would
-          expect
-          (filtering,
-          sorting, etc), you'd probably come back around to the original web UI anyway.
         </p>
       </div>
       <PostArticleNav />
