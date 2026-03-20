@@ -1,17 +1,12 @@
 <script>
-import IPhone from '@/components/iPhone.vue';
 import HomepageTopText from '../components/HomepageTopText.vue'
 import Tout from '@/components/Tout.vue'
 import TravelAnim from '@/components/TravelAnim.vue'
-
-// iPhone video
-import iphoneVideo from '@/assets/PD-mobile-walkthrough.mov'
 
 export default {
   name: 'HomeView',
   components: {
     HomepageTopText,
-    IPhone,
     Tout,
     TravelAnim
   },
@@ -19,30 +14,14 @@ export default {
     return {
       // is app loaded
       loaded: false,
-      windowWidth: window.innerWidth,
-      minWidth: 840,
       projectLinksLoaded: [],
-      iphoneVideoSrc: iphoneVideo,
     }
   },
   mounted() {
     this.loaded = true;
-    window.addEventListener('resize', this.updateWidth);
-    this.updateWidth();
     this.animateProjectLinks();
   },
-  computed: {
-    shouldMountComponent() {
-      return this.windowWidth > this.minWidth;
-    }
-  },
-  unmounted() {
-    window.removeEventListener('resize', this.updateWidth);
-  },
   methods: {
-    updateWidth() {
-      this.windowWidth = window.innerWidth;
-    },
     animateProjectLinks() {
       const projectLinks = document.querySelectorAll('.project-link');
       projectLinks.forEach((link, index) => {
@@ -58,38 +37,7 @@ export default {
 <template>
   <main :class="{ loaded: loaded }">
     <HomepageTopText />
-    <RouterLink to="/chase" class="project-link cover" :class="{ 'animate-in': projectLinksLoaded.includes(0) }">
-      <figure>
-        <div class="img-bg" v-view-transition-name="'img'"
-          :style="{ backgroundImage: projectLinksLoaded.includes(0) ? 'url(' + require('@/assets/PD-night-mock.jpg') + ')' : 'none' }">
-          <IPhone v-if="shouldMountComponent && projectLinksLoaded.includes(0)" class="iphone-in-image"
-            :video-src="iphoneVideoSrc" />
-        </div>
-        <figcaption>
-          <h2 class="title">
-            JPMorgan Chase Performance Dashboard
-          </h2>
-          <button class="cta">
-            View Project <span class="unicode">&#x2197;</span>
-          </button>
-        </figcaption>
-        <ul class="project-metadata">
-          <li>
-            <span><b>Role</b></span>
-            <span>Lead Frontend Software Engineer</span>
-          </li>
-          <li>
-            <span><b>Tech</b></span>
-            <span>Vue.js, Typescript, Pinia</span>
-          </li>
-          <li>
-            <span><b>Dates</b></span>
-            <span>2022-2025</span>
-          </li>
-        </ul>
-      </figure>
-    </RouterLink>
-    <RouterLink to="/chase-travel" class="project-link cover" :class="{ 'animate-in': projectLinksLoaded.includes(1) }">
+    <RouterLink to="/chase-travel" class="project-link cover" :class="{ 'animate-in': projectLinksLoaded.includes(0) }">
       <figure>
         <div class="travel-anim-container">
           <TravelAnim />
@@ -122,10 +70,10 @@ export default {
       </figure>
     </RouterLink>
     <RouterLink to="/chase-travel-fixed" class="project-link cover"
-      :class="{ 'animate-in': projectLinksLoaded.includes(2) }">
+      :class="{ 'animate-in': projectLinksLoaded.includes(1) }">
       <figure>
         <div class="img-bg chitravel-bg" v-view-transition-name="'chitravel-bg'"
-          :style="{ backgroundImage: projectLinksLoaded.includes(2) ? 'url(' + require('@/assets/CT-laptop-mock.webp') + ')' : 'none' }">
+          :style="{ backgroundImage: projectLinksLoaded.includes(1) ? 'url(' + require('@/assets/CT-laptop-mock.webp') + ')' : 'none' }">
         </div>
         <figcaption>
           <h2 class="title">
@@ -151,7 +99,7 @@ export default {
         </ul>
       </figure>
     </RouterLink>
-    <RouterLink to="/high5games" class="project-link cover" :class="{ 'animate-in': projectLinksLoaded.includes(3) }">
+    <RouterLink to="/high5games" class="project-link cover" :class="{ 'animate-in': projectLinksLoaded.includes(2) }">
       <figure>
         <div class="tout-container" ref="toutContainer">
           <Tout v-view-transition-name="'tout-animation'" />
@@ -181,7 +129,7 @@ export default {
       </figure>
     </RouterLink>
     <RouterLink to="/chicagomagazine" class="project-link cover"
-      :class="{ 'animate-in': projectLinksLoaded.includes(4) }">
+      :class="{ 'animate-in': projectLinksLoaded.includes(3) }">
       <figure>
         <div class="video-composite">
           <div class="video-bg">
@@ -228,7 +176,7 @@ export default {
       </figure>
     </RouterLink>
     <RouterLink to="/chicagomagazine-subscription" class="project-link cover"
-      :class="{ 'animate-in': projectLinksLoaded.includes(5) }">
+      :class="{ 'animate-in': projectLinksLoaded.includes(4) }">
       <figure>
         <div class="chimag-subscription-bg" v-view-transition-name="'chimag-subscription-redesign'"
           :style="{ backgroundImage: 'url(' + require('@/assets/ipad-chimag-mock.jpg') + ')' }">
@@ -257,7 +205,7 @@ export default {
         </ul>
       </figure>
     </RouterLink>
-    <RouterLink to="/suntimes" class="project-link cover" :class="{ 'animate-in': projectLinksLoaded.includes(6) }">
+    <RouterLink to="/suntimes" class="project-link cover" :class="{ 'animate-in': projectLinksLoaded.includes(5) }">
       <figure>
         <div class="suntimes-bg" v-view-transition-name="'cst-image'"
           :style="{ backgroundImage: 'url(' + require('@/assets/print-design/IMG_0008.jpg') + ')' }">
@@ -286,7 +234,7 @@ export default {
         </ul>
       </figure>
     </RouterLink>
-    <p :class="{ 'animate-in': projectLinksLoaded.includes(7) }" class="extra-projects project-link"><span>📸</span>
+    <p :class="{ 'animate-in': projectLinksLoaded.includes(6) }" class="extra-projects project-link"><span>📸</span>
       Earlier in my career, I was a <b>photographer</b> as well, shooting portraits and events. You can see <RouterLink
         to="/photo">some of my favorite
         shots from over the years here</RouterLink>.

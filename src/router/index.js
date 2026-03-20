@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
-import ChaseView from '../views/Chase.vue'
 import ChaseTravelView from '../views/ChaseTravel.vue'
 import ChaseTravelFixedView from '../views/ChaseTravelFixed.vue'
 import ChicagoMagView from '../views/ChicagoMag.vue'
@@ -24,12 +23,6 @@ const routes = [
     name: 'about',
     component: About,
     meta: routesMeta['/about']
-  },
-  {
-    path: '/chase',
-    name: 'chase',
-    component: ChaseView,
-    meta: routesMeta['/chase']
   },
   {
     path: '/chase-travel',

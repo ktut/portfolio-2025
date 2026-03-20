@@ -18,15 +18,6 @@ const routesMeta = {
       'A web developer, designer, and photographer based in Chicago.',
     ogUrl: 'https://rkdvis.com/about'
   },
-  '/chase': {
-    displayName: 'JPMC Performance Dashboard',
-    ogImage: 'https://rkdvis.com/assets/PD-night-mock.jpg',
-    ogTitle:
-      'Building the Chase Media Solutions Performance Dashboard — Ramzi Dreessen',
-    ogDescription:
-      'Front-end engineering on a web app for campaign monitoring and reporting for card-linked offers',
-    ogUrl: 'https://rkdvis.com/chase'
-  },
   '/chase-travel': {
     displayName: 'Chase Travel Case Study',
     ogImage: 'https://rkdvis.com/assets/gua-lo.jpg',

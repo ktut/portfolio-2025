@@ -46,8 +46,8 @@ Created a post-build script that generates route-specific static HTML files with
 
 1. **For Social Media Crawlers:**
 
-   - Crawler requests `https://rkdvis.com/chase`
-   - Netlify serves `/dist/chase/index.html` with correct OG tags
+   - Crawler requests `https://rkdvis.com/chase-travel`
+   - Netlify serves `/dist/chase-travel/index.html` with correct OG tags
    - Crawler sees the proper image and metadata ✅
 
 2. **For Real Users:**
@@ -74,7 +74,7 @@ To test OG images locally:
 To test on iMessage:
 
 1. Deploy to Netlify
-2. Share a link (e.g., `https://rkdvis.com/chase`)
+2. Share a link (e.g., `https://rkdvis.com/chase-travel`)
 3. Check preview shows correct image
 
 ## Files Modified
