@@ -156,10 +156,7 @@ export default {
           <svg xmlns="http://www.w3.org/2000/svg">
             <rect x="1" y="1" width="calc(100% - 2px)" height="calc(100% - 2px)" rx="12" ry="12" />
           </svg>
-          <RouterLink to="/chase-travel">View the case study first,</RouterLink> then
-          <a href="https://chasetravel.netlify.app/" target="_blank" rel="noopener noreferrer">view the rebuilt app</a>
-          or
-          <a href="https://github.com/ktut/chasetravel" target="_blank" rel="noopener noreferrer">see my code</a>.
+          Be sure to read <RouterLink to="/chase-travel">the case study</RouterLink> first.
         </p>
         <br />
         <h2 class="section-title" id="objectives">
@@ -442,8 +439,7 @@ export default {
         <p>In a little over a month, I completed a case study (2 weeks), developed the app (2 weeks), and wrote
           these articles (1-2 weeks).</p>
         <p>The result was a working app with a significantly improved UI/UX over the original.
-          <a href="https://chasetravel.netlify.app/" target="_blank" rel="noopener noreferrer">You can view the final
-            product here</a>, or watch the walkthrough video below.
+          You can watch the walkthrough video below.
         </p>
         <div class="iphone-super-container">
           <iPhone :videoSrc="chaseTravelVideoSrc" />

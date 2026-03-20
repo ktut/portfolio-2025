@@ -129,7 +129,7 @@ export default {
     <section class="content-wrapper">
       <header class="project-header">
         <h1 class="project-title">
-          <img src="@/assets/chase-logo.png" alt="Chase Logo" class="chase-logo">Chase Travel: A Case Study
+          Chase Travel: A Case Study
         </h1>
         <h2 class="project-subtitle">
           How to fix a troublesome travel booking webapp? Get some real user feedback, then apply industry
