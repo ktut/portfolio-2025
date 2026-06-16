@@ -1,10 +1,11 @@
 # Proxy /thisbigbaby to the Z-soundboard Netlify site.
-# MUST stay above the /* SPA fallback — rules are evaluated top-to-bottom.
-# The /thisbigbaby/* proxy MUST come before the bare /thisbigbaby redirect:
-# Netlify normalizes trailing slashes, so a bare /thisbigbaby rule placed first
-# would also match /thisbigbaby/ and redirect it to itself (infinite loop).
+# Canonical URL is /thisbigbaby/ WITH the trailing slash — the soundboard uses
+# relative asset paths, which only resolve correctly under the trailing slash.
+# Must stay above the /* SPA fallback (rules evaluated top-to-bottom).
+# Note: Netlify normalizes trailing slashes when matching, so this one rule also
+# catches bare /thisbigbaby. We cannot add a bare -> /thisbigbaby/ 301 (it would
+# match /thisbigbaby/ too and loop). So always link with the trailing slash.
 /thisbigbaby/*          https://z-sounds.netlify.app/:splat    200!
-/thisbigbaby            /thisbigbaby/                          301!
 
 # SPA fallback for Vue Router
 # Existing files (like /chase-travel/index.html) will be served first
