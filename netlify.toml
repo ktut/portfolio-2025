@@ -1,21 +1,5 @@
-# Bare /thisbigbaby -> /thisbigbaby/ so the soundboard's relative asset paths
-# (style.css, script.js, sounds/, assets/) resolve under the subpath.
-[[redirects]]
-  from = "/thisbigbaby"
-  to = "/thisbigbaby/"
-  status = 301
-  force = true
-
-# Proxy /thisbigbaby/* to the Z-soundboard Netlify site.
-# MUST come before the SPA catch-all below — Netlify matches top-to-bottom,
-# first match wins, so the /* fallback would otherwise swallow these requests.
-# status = 200 = rewrite (proxy): the URL stays rkdvis.com/thisbigbaby.
-# force = true so it takes priority even though no local file matches.
-[[redirects]]
-  from = "/thisbigbaby/*"
-  to = "https://z-sounds.netlify.app/:splat"
-  status = 200
-  force = true
+# Proxy/redirect rules for /thisbigbaby live in public/_redirects (single
+# source of truth) so ordering is unambiguous. See that file.
 
 # SPA fallback - serve index.html for all routes
 # The 'force = false' ensures existing files are served first
