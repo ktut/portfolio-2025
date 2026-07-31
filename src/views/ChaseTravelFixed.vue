@@ -47,16 +47,43 @@ export default {
       ],
       sections: [],
       activeSection: '',
+      // The walkthrough is a single <iPhone> that hands off between two slots
+      // (see setupIphoneSlotObserver). Teleport moves the existing node rather
+      // than recreating it, so the video element — and its buffer — survives
+      // the move and the 58MB asset is only ever fetched once.
+      iphoneSlot: '#iphone-slot-objectives',
+      iphoneSlotsReady: false,
+      iphoneSlotObserver: null,
     }
   },
   mounted() {
     this.collectSections()
     window.addEventListener('scroll', this.handleScroll)
+    // Teleport targets must exist before the Teleport renders.
+    this.iphoneSlotsReady = true
+    this.$nextTick(this.setupIphoneSlotObserver)
   },
   unmounted() {
     window.removeEventListener('scroll', this.handleScroll)
+    this.iphoneSlotObserver?.disconnect()
   },
   methods: {
+    setupIphoneSlotObserver() {
+      const finalSlot = document.getElementById('iphone-slot-final')
+      if (!finalSlot || !('IntersectionObserver' in window)) return
+
+      this.iphoneSlotObserver = new IntersectionObserver(
+        ([entry]) => {
+          this.iphoneSlot = entry.isIntersecting
+            ? '#iphone-slot-final'
+            : '#iphone-slot-objectives'
+        },
+        // Half a viewport of slack on either side, so the hand-off happens
+        // well off-screen and the reader never catches an empty slot.
+        { rootMargin: '50% 0px 50% 0px' }
+      )
+      this.iphoneSlotObserver.observe(finalSlot)
+    },
     collectSections() {
       const headings = document.querySelectorAll('.content-wrapper h2.section-title')
       this.sections = Array.from(headings).map(heading => ({
@@ -170,6 +197,7 @@ export default {
           booking flights and hotels for now), based on the conclusions of <RouterLink to="/chase-travel">my case study.
           </RouterLink>
         </p>
+        <div id="iphone-slot-objectives" class="iphone-slot" />
         <p>I decided to
           stick to the building a front-end
           app only for this project - most of the areas for improvement are on the client side anyway. The case study
@@ -441,10 +469,15 @@ export default {
         <p>The result was a working app with a significantly improved UI/UX over the original.
           You can watch the walkthrough video below.
         </p>
-        <div class="iphone-super-container">
-          <iPhone :videoSrc="chaseTravelVideoSrc" />
-        </div>
+        <div id="iphone-slot-final" class="iphone-slot" />
       </div>
+
+      <!-- Rendered once, teleported into whichever slot is in play. Both slots
+           reserve the phone's footprint, so the hand-off never changes document
+           height or jumps the reader's scroll position. -->
+      <Teleport v-if="iphoneSlotsReady" :to="iphoneSlot">
+        <iPhone :videoSrc="chaseTravelVideoSrc" />
+      </Teleport>
       <div class="detail-section">
         <h2 class="section-title" id="lessons-learned-with-llms">
           Lessons learned working with LLMs
@@ -610,10 +643,14 @@ export default {
     }
   }
 
-  .iphone-super-container {
+  .iphone-slot {
     display: flex;
     justify-content: center;
     margin: 2rem auto;
+    // Reserve the phone's footprint in BOTH slots. Without this the empty slot
+    // collapses on hand-off, the document shrinks by ~810px, and the reader's
+    // scroll position lurches.
+    min-height: 810px;
 
     @media (max-width: 768px) {
       transform: scale(0.8);
