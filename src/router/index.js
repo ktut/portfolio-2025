@@ -147,6 +147,18 @@ function updateMetaTags(route) {
 
 router.beforeResolve(async () => {
   const viewTransition = startViewTransition()
+
+  // An aborted transition — a second navigation starting before the first
+  // settles, or a reload mid-flight — rejects ready/finished/updateCallbackDone.
+  // vue-view-transitions exposes those but never attaches handlers, and we only
+  // await captured, so the rejection surfaces as an unhandled error. The
+  // navigation itself is unaffected; only the animation is skipped.
+  ;[
+    viewTransition.ready,
+    viewTransition.finished,
+    viewTransition.updateCallbackDone
+  ].forEach((promise) => promise?.catch(() => {}))
+
   await viewTransition.captured
 })
 
