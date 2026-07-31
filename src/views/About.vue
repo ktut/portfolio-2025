@@ -6,10 +6,13 @@ export default {
 
 <template>
   <main class="about">
+    <!-- Temporarily hidden — restore when open to work again.
     <div class="job-notice">
       I am <strong>currently available for work!</strong> Please reach out if you’re interested in working
       together.
     </div>
+    -->
+
     <section class="content-wrapper">
       <header class="project-header">
         <img src="../assets/me-burgundy-square.jpg" alt="Ramzi Dreessen" class="float">

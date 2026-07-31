@@ -1,6 +1,7 @@
 <script>
 import NavBar from './components/NavBar.vue'
 import FooterSection from './components/FooterSection.vue'
+import fontsReady from './utils/fontsReady'
 
 export default {
   name: 'App',
@@ -15,9 +16,13 @@ export default {
     }
   },
   mounted() {
-    setTimeout(() => {
-      this.loaded = true;
-    }, 100);
+    // Hold the intro until the webfonts are in, otherwise they swap in
+    // partway through the animation.
+    fontsReady().then(() => {
+      setTimeout(() => {
+        this.loaded = true;
+      }, 100);
+    });
   },
 }
 </script>

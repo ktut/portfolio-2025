@@ -1,4 +1,6 @@
 <script>
+import fontsReady from '@/utils/fontsReady'
+
 export default {
   name: 'HomepageTopText',
   data() {
@@ -7,10 +9,14 @@ export default {
     }
   },
   mounted() {
-    // Delay to appear after NavBar starts loading (NavBar loads at 100ms in App.vue)
-    setTimeout(() => {
-      this.isLoaded = true;
-    }, 200);
+    // Wait on the webfonts first — the h1 animates font-variation-settings, so a
+    // late swap reflows it mid-animation.
+    fontsReady().then(() => {
+      // Delay to appear after NavBar starts loading (NavBar loads at 100ms in App.vue)
+      setTimeout(() => {
+        this.isLoaded = true;
+      }, 200);
+    });
   }
 }
 </script>

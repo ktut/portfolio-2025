@@ -2,6 +2,7 @@
 import HomepageTopText from '../components/HomepageTopText.vue'
 import Tout from '@/components/Tout.vue'
 import TravelAnim from '@/components/TravelAnim.vue'
+import fontsReady from '@/utils/fontsReady'
 
 export default {
   name: 'HomeView',
@@ -18,8 +19,10 @@ export default {
     }
   },
   mounted() {
-    this.loaded = true;
-    this.animateProjectLinks();
+    fontsReady().then(() => {
+      this.loaded = true;
+      this.animateProjectLinks();
+    });
   },
   methods: {
     animateProjectLinks() {
@@ -49,9 +52,6 @@ export default {
           <h2 class="title">
             Case Study: Chase Travel
           </h2>
-          <button class="cta">
-            View Project <span class="unicode">&#x2197;</span>
-          </button>
         </figcaption>
         <ul class="project-metadata">
           <li>
@@ -79,9 +79,6 @@ export default {
           <h2 class="title">
             Fixing Chase Travel’s Web App
           </h2>
-          <button class="cta">
-            View Project <span class="unicode">&#x2197;</span>
-          </button>
         </figcaption>
         <ul class="project-metadata">
           <li>
@@ -108,9 +105,6 @@ export default {
           <h2 class="title">
             High 5 Games Casino
           </h2>
-          <button class="cta">
-            View Project <span class="unicode">&#x2197;</span>
-          </button>
         </figcaption>
         <ul class="project-metadata">
           <li>
@@ -155,9 +149,6 @@ export default {
           <h2 class="title">
             <em>Chicago</em> editorial web design
           </h2>
-          <button class="cta">
-            View Projects <span class="unicode">&#x2197;</span>
-          </button>
         </figcaption>
         <ul class="project-metadata">
           <li>
@@ -185,9 +176,6 @@ export default {
           <h2 class="title">
             <em>Chicago</em> subscription page overhaul
           </h2>
-          <button class="cta">
-            View Project <span class="unicode">&#x2197;</span>
-          </button>
         </figcaption>
         <ul class="project-metadata">
           <li>
@@ -214,9 +202,6 @@ export default {
           <h2 class="title">
             Chicago <em>Sun-Times</em> print design
           </h2>
-          <button class="cta">
-            View Project <span class="unicode">&#x2197;</span>
-          </button>
         </figcaption>
         <ul class="project-metadata">
           <li>
@@ -365,42 +350,6 @@ figure {
     }
   }
 
-  .cta {
-    margin-top: 12px;
-    display: block;
-    background: transparent;
-    border: 2px solid $redPunch;
-    -webkit-border-radius: 8px;
-    border-radius: 8px;
-    padding: 0 6px 3px;
-
-    .example {
-      font-family: "meursault-variable", serif;
-      font-variation-settings: 'wdth' 200, 'wght' 300;
-    }
-
-    cursor: pointer;
-    margin-top: 12px;
-    display: inline-block;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    color: $redPunch;
-    text-transform: uppercase;
-
-    @media (min-width: 840px) {
-      margin-top: 0;
-      position: relative;
-      top: -8px;
-    }
-
-    .unicode {
-      color: $redPunch;
-      -webkit-transition: transform 0.3s ease;
-      transition: transform 0.3s ease;
-      display: inline-block;
-    }
-  }
-
   &:hover {
 
     .travel-anim-container,
@@ -410,17 +359,6 @@ figure {
     .chimag-subscription-bg,
     .suntimes-bg {
       border: 2px solid $redPunch;
-    }
-
-    .cta {
-      background: $redPunch;
-      color: white;
-
-      .unicode {
-        color: white;
-        -webkit-transform: translate(2px, -2px);
-        transform: translate(2px, -2px);
-      }
     }
   }
 
