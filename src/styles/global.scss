@@ -12,14 +12,16 @@ html {
   font-size: 16px;
   scrollbar-gutter: stable;
   // This site is light-theme by design — every text colour is a hardcoded
-  // dark value and there is no dark palette. Nothing ever set a page
-  // background, so on a device with prefers-color-scheme: dark the browser
-  // painted its own dark canvas behind that dark text and every page became
-  // unreadable. $backgroundColor already existed for this; it was just never
-  // applied. `color-scheme` additionally stops dark UA form controls.
-  // The html background propagates to the canvas, so this alone is enough.
+  // dark value and there is no dark palette. On a device set to dark mode the
+  // browser was painting its own dark canvas behind that dark text, making
+  // every page unreadable.
+  //
+  // Declaring the scheme is the whole fix: the UA then uses its LIGHT
+  // defaults — white canvas, light form controls and scrollbars — regardless
+  // of the device setting. Deliberately NOT setting a background-color here:
+  // the site has always rendered on the browser's default white, so painting
+  // one would change how it looks for every light-mode visitor.
   color-scheme: light;
-  background-color: $backgroundColor;
 }
 
 .webkitForceHardwareAcceleration {
